@@ -1,0 +1,62 @@
+/* Chapter 5 problem 6 */
+/* Made by Tyler Holland */
+/* CPE 101-01/02 10/19/08 */
+/* Fixed on 10/22/08 */
+
+/* Declarations */
+#include <stdio.h>
+#define HOT 85
+#define COLD 60
+
+/* Start main function */
+int main(void)
+{
+   /* Variables */
+   int hot; /* # of hot days */
+   int pleas; /* # of pleasant days */
+   int cold; /* # of cold days */
+   int totalTemp; /* total temperature (used for avg) */
+   int days; /* how many days the user wants */
+   int looper; /* controls the loop, looper < days */
+   int tempTemp; /* temporary temperature for the loop */
+   int avgTemp; /* Average Temp */
+
+   /* Get input */
+   printf("Please enter the # of days you have temperatures for: ");
+   scanf("%d", &days);
+
+   /* Zero out the totals */
+   totalTemp = 0;
+   hot = 0;
+   cold = 0;
+   pleas = 0;
+
+   /* Start Loop */
+   for (looper = 1; looper <= days; looper++) {
+      printf("Enter temperature %d: ", looper);
+      scanf("%d", &tempTemp);
+
+      totalTemp = tempTemp + totalTemp; /* Add temp for total */
+
+      if (tempTemp >= HOT) {
+         hot = hot + 1;
+      }
+      if (tempTemp < HOT && tempTemp >= COLD) {
+         pleas = pleas + 1;
+      }
+      if (tempTemp < COLD) {
+         cold = cold + 1;
+      }
+   } /* End Loop */
+
+   /* Calculate Average */
+   avgTemp = totalTemp / days;
+
+   /* Print Results */
+   printf("Total hot days: %d\n", hot);
+   printf("Total pleasant days: %d\n", pleas);
+   printf("Total cold days: %d\n", cold);
+   printf("Average temperature: %d\n", avgTemp);
+
+   return(0);
+}

@@ -1,0 +1,6 @@
+Book, 1000, -100, Description 1000,1000.11, 1000.22, Some Title 1000, Some Publisher 1000, Author Last1000, Author First1000, Author Middle1000, 1, 1000, 2
+BookOnTape, 2000, -200, Description 2000,2000.11, 2000.22, Some Title 2000, Some Publisher 2000, Author Last2000, Author First2000, Author Middle2000, 1, Reader Last2000, Reader First2000, Reader Middle2000, 2000, 0
+CD, 3000, -300, Description 3000,3000.11, 3000.22, Some Title 3000, Artist Last3000, Artist First3000, Artist Middle3000
+Book, 1001, -2002, Description 1001,1001.11, 1001.22, Some Title 1001, Some Publisher 1001, Author Last1001, Author First1001, Author Middle1001, 1, 1001, 2
+BookOnTape, 2001, -4002, Description 2001,2001.11, 2001.22, Some Title 2001, Some Publisher 2001, Author Last2001, Author First2001, Author Middle2001, 1, Reader Last2001, Reader First2001, Reader Middle2001, 2001, 0
+CD, 3001, -6002, Description 3001,3001.11, 3001.22, Some Title 3001, Artist Last3001, Artist First3001, Artist Middle3001

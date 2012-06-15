@@ -1,0 +1,9 @@
+On Test:
+Basic Knowledge
+interfaces
+inheritance
+exceptions
+recursion
+linked lists
+iterators
+comparable/comparator

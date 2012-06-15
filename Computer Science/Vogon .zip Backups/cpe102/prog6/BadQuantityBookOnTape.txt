@@ -1,0 +1,1 @@
+BookOnTape, 2000, -3801, Description 2000,2000.11, 2000.22, Some Title 2000, Some Publisher 2000, Author Last2000, Author First2000, Author Middle2000, 1, Reader Last2000, Reader First2000, Reader Middle2000, 2000, 0

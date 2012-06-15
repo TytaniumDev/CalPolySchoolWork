@@ -1,0 +1,21 @@
+Digital design day 1:
+We do stuff:
+
+For whom:
+consumers/end users/ $
+corporate overloards (bosses)
+self
+other companies
+coworkers
+
+Doing what:
+Design (ideas -> solutions)
+Analyzing (problem solving, design backwards)
+Implementing (form)
+
+Attributes:
+Efficient
+   fast
+   cheap
+useful
+reliable

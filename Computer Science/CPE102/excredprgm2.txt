@@ -1,0 +1,21 @@
+Notes for ExPrgm2
+
+JFrame:
+makes a frame
+inner frame = Content Pane
+
+add(Component)- adds something to the frame
+
+
+Layout Managers:
+-BorderLayout
+--Default manager forJframe's content pane
+--stuff you put on it grow to fit availiable space
+
+-FlowLayout
+--Default manager for JPanel
+--stuff you put on it maintain PREFERRED size
+
+-GridLayout
+--Divides availiable space intto equally sized "cells" in specified row/columns
+--stuff you put in a cell grows to fit cell

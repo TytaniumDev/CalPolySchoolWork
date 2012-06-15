@@ -1,0 +1,33 @@
+this is a text file. newline
+here is another line
+   that is one  tab
+          that is two tabs
+   that is a space and a tab
+    
+space tab space newline
+           space tab tab space newlinenow
+something in front        tab        tab asdfd
+s                         
+                    1 tab
+                                        2 tab
+                                                            3tab
+                                                                                4tab
+                                                                                                    5tab
+                    1 tab
+                                        2 tab
+                                        tab space tab
+                                                            3 tab
+                                                            2 tab space tab
+                                                            tab space 2 tab
+                    tab                 tab                 tab                 tab                 tab                 tab                 tab                 tab                 tab
+          8 space + tab
+        8 spaces
+          7 spaces + tab
+          6 spaces + tab
+          5 spaces + tab
+          4 spaces + tab
+          3 spaces + tab
+   2 spaces + tab
+   1 spaces + tab
+   0 spaces + tab
+finish

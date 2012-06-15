@@ -1,0 +1,8 @@
+Name: Tyler Holland (tyhollan)
+Assignment: Project 2
+Instructions: Compiles with make
+              liblwp.a is made with: make liblwp.a
+
+Note: It will run a couple processes, but then seg fault. I could not
+      figure out the reason why, even after staring at it for hours.
+      At least it can run the first thread, and the scheduler works.

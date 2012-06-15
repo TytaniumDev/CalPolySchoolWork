@@ -1,0 +1,41 @@
+/* EvalCoins.c
+   Coin conversion. Compute pennies and nickels
+	converted to dollars and change. 
+	**Tyler Holland**
+*/
+#include <stdio.h>
+
+int main(void)
+{
+    /* Data fields */
+    int pennies; /* input - the number of pennies */
+    int nickels; /* input - the number of nickels */
+    int bank;    /* the calculated total worth (in cents) */
+    int dollars; /* the dollar portion of the total */
+    int change;  /* the change portion of the total */
+    int dimes;   /* input - the number of dimes */
+	  
+    /* Obtain input amounts */ 
+    printf("How many pennies: ");
+    scanf("%d", &pennies);
+	 
+    printf("How many nickels: ");
+    scanf("%d", &nickels);
+
+    printf("How many dimes: ");
+    scanf("%d", &dimes);
+    
+   /* Calculate the total amount in cents */
+   bank =  (10 * dimes) + (5 * nickels) + pennies;
+
+   /* Calculate the dollar portion */
+   dollars = bank / 100;
+
+   /* Calculate the change portion*/
+   change = bank % 100;
+
+   /* Display results */
+   printf("Your collection is worth:\n  $%d dollars and %2d cents\n", dollars,change);
+
+   return 0;
+}

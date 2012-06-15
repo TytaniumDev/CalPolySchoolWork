@@ -1,0 +1,213 @@
+/* Programming project 3, THE GAME OF LIFE */
+/* Made by Tyler Holland, CPE101-01/02 */
+
+/* Declarations */
+#include <stdio.h>
+#define BOARDH 10 /* Board height */
+#define BOARDW 10 /* Board width */
+/* Function Prototypes: */
+
+void PrintSetup(void);
+void Setup(int liveArray[BOARDH][BOARDW]);
+void TheGame(int liveArray[BOARDH][BOARDW], int tempArray[BOARDH][BOARDW]);
+void Copier(int liveArray[BOARDH][BOARDW], int tempArray[BOARDH][BOARDW]);
+void Change(int tempArray[BOARDH][BOARDW], int liveArray[BOARDH][BOARDW]);
+void Printer(int liveArray[BOARDH][BOARDW]);
+int NumLiving(int tempArray[BOARDH][BOARDW], int cell);
+
+/* Start main function */
+int main(void)
+{
+   /* Variables */
+   int liveBoard[BOARDH][BOARDW]; /* Live game board */
+   int tempBoard[BOARDH][BOARDW]; /* Temporary game board */
+   int i; /* Height LCV */
+   int j; /* Width LCV */
+
+   /* Array Setting to 0 */
+   for(i = 0; i < BOARDH; i++) {
+      for(j = 0; j < BOARDW; j++) {
+         liveBoard[i][j] = 0;
+         tempBoard[i][j] = 0;
+      }
+   }
+
+   PrintSetup();
+   Setup(liveBoard);
+
+   printf("You chose:\n");
+   Printer(liveBoard);
+
+   TheGame(liveBoard, tempBoard);
+
+   return(0);
+}
+
+/* Functions */
+void PrintSetup(void)
+{
+   int x; /* X coord on game board */
+   int y; /* Y coord on game board */
+   int cell = 0; /* Cell # */
+
+   for(y = 0; y < BOARDH; y++) {
+      for(x = 1; x <= BOARDW; x++) {
+         cell = (y * BOARDW) + x;
+         if (x == BOARDW) {
+            if (cell < 10) {
+               printf("| %d |", cell);
+            }
+            else if (cell < 100) {
+               printf("| %d|", cell);
+            }
+            else {
+               printf("|%d|", cell);
+            }
+         }
+         else if (cell < 10) {
+            printf("| %d ", cell);
+         }
+         else if (cell < 100) {
+            printf("| %d", cell);
+         }
+         else {
+            printf("|%d", cell);
+         }
+      }
+      printf("\n");
+   }
+}
+
+void Setup(int liveArray[BOARDH][BOARDW])
+{
+   int cell; /* Cell # */
+   int x; /* X coord on game board */
+   int y; /* Y coord on game board */
+
+   printf("Enter # of cells to make living (Type 0 to stop):\n");
+   do {
+      printf("Cell # (0 to stop): ");
+      scanf("%d", &cell);
+
+      y = cell / BOARDH;
+      x = cell - (y * BOARDH) - 1;
+      liveArray[y][x] = 1;
+   } while (cell != 0);
+}
+
+void TheGame(int liveArray[BOARDH][BOARDW], int tempArray[BOARDH][BOARDW])
+{
+   int i = 1; /* Counter */
+   char generation = 'y'; /* Keep playing the game y/n variable */
+
+   do {
+      Copier(liveArray, tempArray);
+
+      Change(tempArray, liveArray);
+
+      printf("Generation %d:\n", i);
+      Printer(liveArray);
+
+      printf("Print next generation? (y/n): ");
+      scanf(" %c", &generation);
+
+      i++;
+   } while(generation == 'y');
+}
+
+void Copier(int liveArray[BOARDH][BOARDW], int tempArray[BOARDH][BOARDW])
+{
+   int i; /* Height LCV */
+   int j; /* Width LCV */
+
+   for(i = 0; i < BOARDH; i++) {
+      for(j = 0; j < BOARDW; j++) {
+         tempArray[i][j] = liveArray[i][j];
+      }
+   }
+}
+
+void Change(int tempArray[BOARDH][BOARDW], int liveArray[BOARDH][BOARDW])
+{
+   int i; /* Height LCV */
+   int j; /* Width LCV */
+   int neighbor = 0; /* Number of neighbors */
+
+   for(i = 0; i < BOARDH; i++) {
+      for(j = 0; j < BOARDW; j++) {
+         neighbor = NumLiving(tempArray, (j + (i * BOARDH)));
+         if (neighbor < 2) {
+            liveArray[i][j] = 0;
+         }
+         if (neighbor > 3) {
+            liveArray[i][j] = 0;
+         }
+         if (neighbor == 2) {
+            liveArray[i][j] = liveArray[i][j];
+         }
+         if (neighbor == 3) {
+            liveArray[i][j] = 1;
+         }
+      }
+   }
+}
+
+void Printer(int liveArray[BOARDH][BOARDW])
+{
+   int x; /* X coord on game board */
+   int y; /* Y coord on game board */
+
+   for(y = 0; y < BOARDH; y++) {
+      for(x = 0; x < BOARDW; x++) {
+         if (x == (BOARDW - 1)) {
+            printf("| %d |", liveArray[y][x]);
+         }
+         else {
+            printf("| %d ", liveArray[y][x]);
+         }
+      }
+      printf("\n");
+   }
+}
+
+int NumLiving(int tempArray[BOARDH][BOARDW], int cell)
+{
+   int numLive = 0;
+   int x; /* Cell conversion X coord */
+   int y; /* Cell conversion Y coord */
+
+   y = cell / BOARDH;
+   x = cell - (y * BOARDH) - 1;
+
+   if (y != 0 && x != 0 && tempArray[y + 1][x - 1] == 1) {
+      numLive = numLive + 1;
+   }
+   if (y != 0 && tempArray[y + 1][x] == 1) {
+      numLive = numLive + 1;
+   }
+   if (y != 0 && x != (BOARDW - 1) && tempArray[y + 1][x + 1] == 1) {
+      numLive = numLive + 1;
+   }
+
+
+   /* Middle Row */
+   if (x != 0 && tempArray[y][x - 1] == 1) {
+      numLive = numLive + 1;
+   }
+   if (x != (BOARDW - 1) && tempArray[y][x + 1] == 1) {
+      numLive = numLive + 1;
+   }
+
+   /* Bottom Row */
+   if (y != (BOARDH -1) && x != 0 && tempArray[y - 1][x - 1] == 1) {
+      numLive = numLive + 1;
+   }
+   if (y != (BOARDH -1) && tempArray[y - 1][x] == 1) {
+      numLive = numLive + 1;
+   }
+   if (y != (BOARDH - 1) && x != (BOARDW - 1) && tempArray[y - 1][x + 1] == 1) {
+      numLive = numLive + 1;
+   }
+
+   return numLive;
+}

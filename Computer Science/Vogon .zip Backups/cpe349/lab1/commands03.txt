@@ -1,0 +1,9 @@
+find(34);
+find(27);
+delete(34);
+find(34);
+delete(34);
+insert(4);
+find(4);
+find(17);
+

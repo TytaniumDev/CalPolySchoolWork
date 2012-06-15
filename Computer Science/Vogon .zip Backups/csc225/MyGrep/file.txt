@@ -1,0 +1,16 @@
+Lots of text
+text text text
+blank line
+more text
+SUPER LONG LINE it has 36 characters
+MORE TEXT
+text
+stuff to search for
+writing lines
+line
+line
+line
+more blank line
+mac
+pc
+linux

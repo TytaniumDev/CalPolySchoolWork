@@ -1,0 +1,23 @@
+22
+1337 leet
+-112 bad
+id anotherbad
+10202
+
+12312 afsdf asdfisdf
+12395 2134 adsf 534a
+12 lastname
+13371 test1
+13371 test1
+13373 test3
+13374 test4
+13375 test5
+13376 test6
+13377 test7
+13378 test8
+13379 test9
+20000 test12312
+badinput badinput badinput
+123456 lastinput
+123456 lastinput
+123456 lastinput

@@ -1,0 +1,15 @@
+Name: Tyler Holland
+Assignment: Project 3
+Instructions: Compiles with make
+
+Notice: I was unable to get directories working. I was also unable to get qsort working.
+        This project will provide unordered, but correct, information for files only.
+        It will also not work with stdin.
+
+
+Documentation can be found at http://users.csc.calpoly.edu/~tyhollan/CSC357/proj3/
+
+Used code/code samples from:
+Hash function: Dan Bernstein's
+   http://www.cse.yorku.ca/~oz/hash.html
+   Also availiable at http://fr.wikipedia.org/wiki/Table_de_hachage#Fonction_de_Hachage

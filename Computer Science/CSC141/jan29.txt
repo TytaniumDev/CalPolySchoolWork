@@ -1,0 +1,54 @@
+HW:
+4.3:
+-read up to example 5
+-read pg 300(recursive sets)
+-7,8,10,13,23,48,49,50
+
+ON BOARD:
+#8b) an = 1+(-1)^n(explicit definition)      find recursive definition
+an = ? (as an implicit formula)
+n=1: a1 = 0
+n=2: a2 = 2
+n=3: a3 = 0
+n=4: a4 = 2
+
+COMPLETE DEFINITION:
+an = a(n-2)
+a1 = 0
+a2 = 2
+
+
+#8c)
+an = n(n+1) (explicit)
+n=1:2
+n=2:6
+n=3:12
+n=4:20
+n=5:30
+
+(implicit)
+an = (an-1 + 2n)
+a1=2
+
+#48d)
+A(2,2) = A(1,A(2,1)) = A(1,2) = A(0,A(1,1)) = A(0,2) = 4
+
+
+
+On test: up to 4.1
+Basis: P(1)
+Hypothesis: P(k)
+Prove: P(k+1)
+But: solve it
+
+4.3 Notes:
+example of recursive:
+f(1) = 1
+F(n+1) = (n+1) * F(n)
+f(n) = n! ------------ explicit
+
+example:
+f0 = 0
+f1 = 1          > basis step
+fn = fn-1 + fn-2 --------------recursive step
+

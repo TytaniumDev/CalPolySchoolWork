@@ -1,0 +1,92 @@
+HW:
+8.3:
+2,3,4,21,22,25,26
+READ examples 1,2,3
+READ pages 541,542
+
+
+NOTES FOR TEST:
+   solve an+38 = an+37 - 2an+36, a0=1 a1=2
+
+   degree 2
+
+BE AWARE OF:
+   if (a,b) e R and a!=b => (b,a) is NOT in R
+or
+   if (a,b) e R and (b,a) e R => a=b
+
+HW on Board:
+8.3:
+3a)
+R{(1,1)(3,1)(2,2)(3,1)(3,3)}
+
+22)
+R ={(a,a)(a,b)(b,c)(c,b)(c,d)(d,a)(d,b)}
+symmetry: arrows there and back
+reflexive: loops on every node
+transitive: 
+a -> b
+b -> c
+a -> c
+
+
+
+Notes:
+8.1:
+EXAMPLE
+let R be the relation divides on the set of positive>0 integers
+symmetric - no
+antisymmetric- no
+
+continuation of 8.1:
+
+COMPOSITION
+S o R = {(a,c) | (a,b) e R ^ (b,c) e S}
+R relation from A to B
+S relation from B to C
+
+Example:
+R = {(1,1)(1,4)(2,3)(3,1)(3,4)}
+S = {(1,0)(2,0)(3,1)(3,2)(4,1)}
+find SoR:
+{(1,0),(1,1),
+(1,1)eR (1,0)eS
+(1,4)eR (4,1)eS
+
+let R be a relation on A
+We define R^2 = RoR
+          R^3 = R^2 o R
+
+example
+let R={(1,1)(2,1)(3,2)(4,3)}
+R^2 ={(1,1)(2,1)(3,1)(4,2)}
+
+
+8.3:
+A relation can be represented as a 0-1 matrix
+   Let A = {a1, .... am}
+       B = {b1, .... bn}
+   Let R <= AxB
+   We denote Mr = [mij]
+      mij = {1, if(ai, bj) e R
+            {0, if (ai, bj) !e R
+
+EXAMPLE
+A = {1,2,3}
+B = {1,2}
+R = {(2,1)(3,1)(3,2)} <-- IF ITS IN HERE, FILL SPOT IN WITH A 1 ELSE 0
+Mr = [0  0]
+     [1  0]
+     [1  1]
+
+if R is a relation on set A
+R <= AxA
+Mr IS SQUARE
+Mr = [  ]
+     [  ]
+The diagonal from top left matrix corner to bottom right is like a mirror
+IF it is a mirror, then the matrix and relations are symmetric
+IF all the elements ON the diagonal are 1s, then it is reflexive
+IF all the elements above the diagonal are opposite of the ones below, it is  antisymmetric
+UNLESS everything except the things on the diagonal are 0s, then it is also antisymmetric
+

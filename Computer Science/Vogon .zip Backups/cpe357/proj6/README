@@ -1,0 +1,69 @@
+Name: Tyler Holland
+Assignment: Project 6
+Instructions: Compiles with make
+Edited files: (Changes are commented with /*357: <reason> */
+   main.c
+   pipeline.c
+   longstr.c
+   
+All changed code is lead by a /* 357 : <reason> */ comment
+
+Memory leak / given code bug fixes:
+
+  In myline.c (from kogorman's solution):
+  {
+    Command that causes leak: run mice, press ctrl+d as first command
+    Valgrind result:
+      ==21177== 128 bytes in 1 blocks are definitely lost in loss record 1 of 1
+      ==21177==    at 0x4006AEE: malloc (vg_replace_malloc.c:207)
+      ==21177==    by 0x804C42D: myline (myline.c:39)
+      ==21177==    by 0x804B1E8: readLongString (longstr.c:54)
+      ==21177==    by 0x8048D1B: main (main.c:125)
+      
+    Happens consistantly when ctrl+d is given as input.
+    Fix:
+      In longstr.c, added a free(buff) line. It is commented.
+  }
+  
+  In function make_stage in pipeline.c:
+  {
+    Command that causes leak: run mice, give an incorrect filename (ex: something random like "hi")
+    Valgrind result:
+      ==17687== 3 bytes in 1 blocks are still reachable in loss record 1 of 8
+      ==17687==    at 0x4006AEE: malloc (vg_replace_malloc.c:207)
+      ==17687==    by 0x804B750: make_stage (pipeline.c:148)
+      ==17687==    by 0x804AEA1: yyparse (parser.y:49)
+      ==17687==    by 0x804B255: crack_pipeline (pipeline.c:51)
+      ==17687==    by 0x8048D50: main (main.c:134)
+
+    Happens whenever a "no such file or directory" error occurs.
+    The number of bytes leaked is the number of characters in the command + 1 byte for the newline.
+    Fix:
+      I could not think of a fix for this leak.
+  }
+  
+  In function crack_pipeline:
+  {
+    Command that causes leak: any valid input
+    Valgrind Result:
+      ==26809== 1,000 bytes in 1 blocks are still reachable in loss record 2 of 3
+      ==26809==    at 0x4006AEE: malloc (vg_replace_malloc.c:207)
+      ==26809==    by 0x804A9C8: yygrowstack (y.tab.c:217)
+      ==26809==    by 0x804AABC: yyparse (y.tab.c:261)
+      ==26809==    by 0x804B255: crack_pipeline (pipeline.c:51)
+      ==26809==    by 0x8048D50: main (main.c:134)
+      ==26809== 
+      ==26809== 
+      ==26809== 2,000 bytes in 1 blocks are still reachable in loss record 3 of 3
+      ==26809==    at 0x4006AEE: malloc (vg_replace_malloc.c:207)
+      ==26809==    by 0x804AA2C: yygrowstack (y.tab.c:225)
+      ==26809==    by 0x804AABC: yyparse (y.tab.c:261)
+      ==26809==    by 0x804B255: crack_pipeline (pipeline.c:51)
+      ==26809==    by 0x8048D50: main (main.c:134)
+
+    Happens when valid input is given, so the function crack_pipeline is created. It then calls yyparse, which calls yygrowstack.
+    In the end two variables, newss and newvs become malloced to 1,000 and 2,000 bytes, respectively. The variables yyss and yyvs are also assigned to the variables of the corresponding new__.
+    It looks to me that these variables are always malloced to the same size, but are either never freed, or freed during the next prompt->input cycle. If they were never freed, the 1,000 and 2,000 would multiply, but because they are constant I would think they are either a constant sized buffer or they are freed when the function is called again.
+    Fix:
+      I could not think of a fix for this leak.
+  }

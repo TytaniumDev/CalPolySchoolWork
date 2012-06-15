@@ -1,0 +1,62 @@
+HW:
+7.1:
+read examples 1-5
+7,8cef,11,14,18
+
+
+
+HW On Board:
+7.1:
+7c)
+an = a(n-1) + 2an-2 + 2n - 9
+check if an = 3(-1)^n + 2^n - n + 2 is a solution
+
+RIGHT HAND SIDE:
+[3(-1)^n-1 + 2^(n-1) - (n-1) + 2] + [2(3(-1)^(n-2) + 2^(n-2) - (n-2) + 2))] + [2n - 9]
+=
+3(-1)^n-2 * (-1 + 2) + 2^(n-2) * (2+2) - n+2
+do the algebra
+clever: (-1 + 2) = 1 = (-1)^2
+
+18a)
+Pn
+^
+# of permutations of n elements
+
+P(n-1)
+^
+#of permutations of (n-1) elements
+
+b)?
+Pn = n * P(n-1)
+n(n-1)Pn-2
+n(n-1)(n-2)Pn-3
+n(n-1)(n-2)(n-3)Pn-4
+
+
+
+
+Notes:
+7.1:Recurrance Relations
+
+Problem(biology):
+The # of bacteria in a colony double every hour. If we
+start with 10 bacteria how many do we have after n hours?
+
+Model: let an = # of bacteria after n hours.
+   an = 2a(n-1)
+   a0 = 10
+
+Towes of Hanoi:
+Hn = 2H(n-1) + 1
+iteration = 2(2H*n-2+1) + 1
+2^2(h(n-2) + 2 + 1
+2^2(2H(n-3)+ 1) + 2 + 1)
+2^3(H(n-3) + 2^2 + 2^1 + 2^0
+2^(n+1) + 2^(n-2) + .. + 2 + 1
+= 2^n - 1
+plugged in geometric series:
+2^n - 1 / 2-1
+
+geometric series ^^^
+x^0 + x^1 + x^n-27 =  n^-26 - 1 / x-1

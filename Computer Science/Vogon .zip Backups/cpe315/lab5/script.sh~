@@ -1,0 +1,7 @@
+#!/bin/sh
+bin/mips-elf-gcc -S test.c -static -msoft-float -o test.s
+bin/mips-elf-gcc test.c -static -msoft-float -o testmips
+bin/mips-elf-objdump -D testmips | bin/gensimcode > test.sim
+bin/mips-elf-gcc -O0 -S shang.c -static -msoft-float -o shang.s
+bin/mips-elf-gcc shang.c -O0 -static -msoft-float -o shangmips
+bin/mips-elf-objdump -D shangmips | bin/gensimcode > shang.sim

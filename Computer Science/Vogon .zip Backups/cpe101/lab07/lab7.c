@@ -1,0 +1,105 @@
+/* Test score reading program, Lab 7 */
+/* Made by Tyler Holland, CPE101-01/02 */
+
+/* Declarations */
+#include <stdio.h>
+#define MAXSCORES 35
+
+/* Functions */
+double Average(int scores[], int scrEnt)
+{
+   int total = 0; /* Total value of test scores */
+   double final = 0.0; /* Final average value */
+   int i; /* Loop counting variable */
+
+   for(i = 0; i < scrEnt; i++) {
+      total = total + scores[i];
+   }
+
+   final = (double) total / (double) scrEnt;
+
+   return final;
+}
+
+int Search(int scores[], int scrEnt, int search)
+{
+   int location = -1; /* location of the wanted variable */
+   int i = 0; /* Loop counting variable */
+   int found = 0; /* variable to record found search */
+
+   while (i < scrEnt && found != 1) {
+      if (scores[i] == search) {
+         found = 1;
+         location = i;
+      }
+      else {
+         i = i + 1;
+      }
+   }
+   if (found == 1) {
+      return location;
+   }
+   else {
+      return -1;
+   }
+}
+
+/* Start main function */
+int main(void)
+{
+   /* Variables */
+   int scores[MAXSCORES]; /* Array of entered test scores */
+   int i; /* Counting variable for loops */
+   int tempscore = -9000; /* Temp score in input loop */
+   int scrEnt = 0; /* # of scores entered */
+   int search = -1; /* Score to search for */
+   int searchLoc = 0; /* Score found's location */
+
+   /* Get input */
+   i = 1;
+   do {
+      tempscore = -9000;
+      printf("Enter test score %d: ", i);
+      scanf(" %d", &tempscore);
+      if (tempscore != -1) {
+         if (tempscore >= 0 && tempscore <= 100) {
+            scores[i - 1] = tempscore;
+            scrEnt = scrEnt + 1;
+            i = i + 1;
+         }
+         else {
+            printf("Please enter a score between 0 and 100.\n");
+         }
+      }
+      else {
+         printf("Please enter a numerical test score.\n");
+      }
+   } while (i <= MAXSCORES && tempscore != -1);
+   printf("Enter test score to search for: ");
+   scanf("%d", &search);
+
+   /* Final printout: */
+   /* # of Scores entered */
+   printf("\n\nNumber of scores entered: %d\n", scrEnt);
+
+   /* Actual scores entered */
+   printf("Test scores entered  :");
+   for(i = 0; i < scrEnt; i++) {
+      printf("%d ", scores[i]);
+   }
+   printf("\n");
+
+   /* Average of scores entered */
+   printf("Average test score   :%.1f\n", Average(scores, scrEnt));
+
+   /* Test score search */
+   searchLoc = Search(scores, scrEnt, search);
+   if (searchLoc != -1) {
+      printf("The score %d first occurs at index %d.\n", search, searchLoc);
+   }
+   else {
+      printf("The score %d does not occur in the array.\n", search);
+   }
+
+   return(0);
+}

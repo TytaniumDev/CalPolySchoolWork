@@ -1,0 +1,6 @@
+Name: Tyler Holland
+Lab 4
+
+I could only find one error in the 3 myline.o files:
+
+When the program gets a Windows Unicode text file with multiple lines of text, all 3 given myline.o's only read in one line, while getline() reads in all lines correctly. Also, when given a standard Windows .txt file as input, the myline.o files all give back different values for the buffer size size_t *n parameter than getline() does.

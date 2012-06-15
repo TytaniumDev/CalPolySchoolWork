@@ -1,0 +1,67 @@
+HW:
+5.1: read examples 1-21 except 16
+1,6,10,12,17,32,35a+b,28,24,25,26,42,43,49,50
+
+5.2: read examples 1-6 pg350-352
+2,4,6,9
+
+
+Problems on board: 5.1
+#6)
+4 * 6 = 24
+
+#1)
+a) 18 * 325 (product rule from the AND)
+b) 18 + 325 (sum rule from the EITHER)
+
+#12)
+null = 2^0 = 1
+_ = 2^1
+_ _ = 2^2  
+_ _ _ = 2^3
+_ _ _ _ = 2^4
+_ _ _ _ _ = 2^5 
+_ _ _ _ _ _ = 2^6
+Add the answers: 
+2^0 + 2 + 2^1 + 2^2 + 2^3 + 2^4 + 2^5 + 2^6
+      ^
+   (# of bit strings of length 1)
+
+
+
+5.2 probs on board:
+2)
+[30/26] = 2
+
+
+
+
+Counting:
+example: number of characters in a good password
+page 336: product rule of counting
+Example: How many 1-1 functions are there from a set of m-elements to a set of n-elements?
+   Cases:
+   1) Let m > n:
+      No 1-1 functions.
+
+   2) Let n <= n:
+      (#of ways a1 can be mapped to an element in B) = n
+      (#of ways a2...) = n-1
+      (#of ways am...) = (n-(m-1)) = (n-m+1)
+
+      # of functions =  n(n-1)(n-2)...(n-m+1)
+
+Example: how many bit strings of length 8 start with a 0 or end with 11?
+   # of strings that start with 0: 2^7
+   # of strings that end with 11: 2^6
+   Answer: 2^7 + 2^6 - 2^5
+                        ^
+                    (strings that start with 0 and end with 11)
+
+5.2:
+pigeonhole principle
+-look at the book pg 347
+*-generalized principle: if n objects are placed into k boxes,
+                         there is at least one box that contains
+                         at least n/k objects (around n/k are upside down L's ** CEILING - round up**)
+

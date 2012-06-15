@@ -1,0 +1,35 @@
+HW:
+examples 1-16 20-22
+3,4,8ab,25,30,54ab,6ab
+
+
+HW on board:
+
+
+notes:
+RELATIONS
+
+definition:
+Let A,B be sets
+A relation from A to B, is R <= AxB (subset of cross product of AB)
+AxB = {(a,b) | a belongsto A AND b belongsto B}
+
+Notation: aRb means (a,b) belongsto R
+
+
+Definition:
+A relation R from A to A
+   this is a  subset of AxA = A^2
+
+Example:
+A = {1,2,3,4}
+R = {(a,b) | a divides b}
+R = {(1,1)(1,2)(1,3)(1,4)(2,2)(2,4)(3,3)(4,4)}
+
+Problem: how many relations are there on a set of n elements?
+same as R <= AxA = A^2
+how many subsets of the set A^2
+-#of elem in A^2 = nxn = n^2
+-#of subsets: 2^(n^2)
+*a set with n elements has 2^n elements
+

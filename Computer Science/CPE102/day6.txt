@@ -1,0 +1,47 @@
+// Day 6 notes
+Lab Quiz: like program1 or lab2
+
+UML: unified modeling language
+
+program1 UML: (all in boxes)
+
+
+"uses (open line, open arrow)"   "isA (closed line, closed arrowhead)"
+Fraction <- - - - P1TestDriver <|------Object
+   ^                                |
+   |                                |
+   L - - - - - - -MyTestDriver <|---|(and to Fraction)
+
+
+Overwriting equals() method:
+public boolean equals(Object other)
+{
+   if(other == null)
+   {
+      return false;
+   }
+   if(this.getClass() != other.getClass())
+   {
+      return false;
+   }
+   if(this.n != ((Fraction)other).n)
+   {
+      return false;
+   }
+   .........
+}
+
+
+Java docs:
+
+/**
+   Write a sentance that concisely describes what your method does.
+   You may then write detailed stuff on as many lines as you wish.
+   There can even be lots of sentances.
+   @param x represents the age of a tortoise. Must be between 0-150, exclusive.
+
+   @param name The name of the tortoise.
+
+   @return Returns true when the age is correct and name is not "Bob".
+*/
+public boolean whatEver(int x, String name);

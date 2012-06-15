@@ -1,0 +1,5 @@
+in makefile: -D_XOPEN_SOURCE=500
+
+include in programs:
+#include <unistd.h>
+#include <stdlib.h>

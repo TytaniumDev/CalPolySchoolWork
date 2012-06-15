@@ -1,0 +1,75 @@
+Exceptions:
+
+call stack:
+abc() -throw IllegalArgumentException
+x()
+.
+.
+.
+b()
+a()
+main()
+
+example:
+public int b(...)
+{
+   try
+   {
+      c();
+   }
+   catch(IllegalArgumentException exp)
+   {
+      whatever you want to do when error occurs
+   }
+}
+
+another example:
+try
+{
+}
+catch(...)
+{
+   must do something here
+}
+catch(...)
+{
+   more catches for different errors
+}
+finally
+{
+   code here will execute whether exception occurs or not(the 2 methods above this)
+}
+class called Throwable
+   subclass called Error
+   subclass called Exception (checked in compiler)
+      subclass called RuntimeException (unchecked in compiler)
+
+
+Feb 2nd:
+
+when catching a checked exception:
+try{
+method a
+}
+catch
+{
+throw new RuntimeError();
+}
+
+
+if you can't catch an error:
+public void method(someclass ref) throws BlahException, AnotherException   (only non-caught checked exceptions)
+
+Making you own exception:
+
+public class OverdraftException extends Exception (checked exception)
+{
+}
+
+public class OverdraftException extends RuntimeException (unchecked exception)
+{
+   public OverDraftException(String msg) //If you want to return a  message
+   {
+      super(msg);
+   }
+}

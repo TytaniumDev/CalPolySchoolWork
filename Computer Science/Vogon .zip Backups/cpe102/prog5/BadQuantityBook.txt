@@ -1,0 +1,1 @@
+Book, 1000, -1901, Description 1000,1000.11, 1000.22, Some Title 1000, Some Publisher 1000, Author Last1000, Author First1000, Author Middle1000, 1, 1000, 2

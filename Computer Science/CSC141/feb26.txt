@@ -1,0 +1,57 @@
+8.5:
+Equivalence Relation:
+-A relation is an equivalence relation if:
+--reflexive
+--symmetric
+--transitive
+
+Equivalence Class:
+For an element a e A, the equivalence class is [a]R = {S e A | (a,s) e R}
+
+Example:
+A = {1,2,3,4,5}
+R = {(1,1)(1,2)(2,1)(2,2)(1,3)(3,1)(3,3)(2,3)(3,2)(4,5)(5,4)(4,4)(5,5)}
+
+[3]R = {1,3,2}
+
+
+
+
+9.2 HW:
+7,8,9,16,17,18,23,24,25,46,47,48
+
+9.2 HW ON BOARD:
+
+
+9.1 Notes:
+page 590 + 591
+
+9.2 Notes:
+Terminology:
+-u,v are vertices
+-An edge in an undericted graph is e = {u,v} (order is unimportaant
+-if graph is directed, e = (u,v) (order is important)
+-degree of a vetex: The degree of a vertex in an undirected graph is the # of edges incident to this vertex.
+
+Theorem:
+Let G=(V,E) (G is a graph, V = vertices, E = edges) be a graph
+Let e = |E| <-- cardinallity of set E
+Then 2e = sumof(deg(v))
+          v e V
+
+Theorem:
+in an undirectd graph has an even numbeer of all degree vertices
+   Proof:
+   Let v = v V1 U v2
+   Then 2e = sumof from v e V1 deg(v) + sumof from v e V2 deg(v)
+   sumof form v e V1 deg(v) = 2e - sumof from v e V2 deg(v)
+           ^even              ^even       ^even
+
+Directed Graph:
+definition: deg+ (u)   <-- called out degree
+            deg- (u)   <-- called in degree    PAGE 600 figure 2
+
+Theorem:
+Let G = (V,E) directed graph
+    e = sumof from v e V deg+(v) = sumof deg-(v)
+

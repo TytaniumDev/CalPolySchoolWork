@@ -1,0 +1,2 @@
+echo "world"
+echo -n "hello"

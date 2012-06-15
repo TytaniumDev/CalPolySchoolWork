@@ -1,0 +1,56 @@
+HW:
+7.2
+read examples 1-6 and pages 460-465
+2,4adefg,12,14,8
+
+HW On Board:
+7.2
+
+
+Notes:
+7.2
+Homogenous, Linear(everything on first power)
+   Degree-K
+   an = c1an-1 + c2an-2 + ... + ckan-k
+      first power
+      no products of terms
+      ci constants
+
+Non-Homogeneous
+   an =  c1an-1 + c2an-2 + ... + ckan-k + f(n)
+                                           ^ could be a constant
+
+examples:
+Hn = 2Hn-1 + 1
+   linear
+   degree 1
+   non-homogeneous
+an = an-1 + 2an-3^2
+   degree 3
+   non-homogenous
+
+How to find solution:
+--from the homogeneous linear notes--
+to find the solutioin of ^^^ we try a solution an = r^n and then try to find r.
+
+so,
+r^n = c1r^n-1 + c2r^n-2 + ... + ckr^n-k
+divide by r^n-k
+r^k = c1r^k-1 + c2r^k-2 + ... + ck
+r^k - c1r^k-1 - c2r^k-2 + ... + ck = 0
+Need to solve the above algebraic equation for r
+
+DEGREE 2, linear, homogeneous
+   an = c1an-1 + c2an-2            *****2**** CHARACTERISTIC EQUATION
+   r^2 - c1r -c2 = 0
+   solve for r
+   Case1
+      real roots, distinct
+      then an = c1r1^n + c2r2^n
+         r1,r2 are the roots of **2**
+      c1, c2 to be found using initial conditions
+   Case2
+      real, double solution
+      call the solution r = r1 = r2
+      then an = c1r^n + n + c2nr^n = r
+

@@ -1,0 +1,12 @@
+Lab 7
+Winter 2009
+Tyler Holland
+Time: 2.00 hours
+
+   ShrinkingString Version 1: length
+   ShrinkingString Version 2: removeChar
+   ShrinkingString Version 3: contains
+   ShrinkingString Version 4: none
+   ShrinkingString Version 5: removeChar
+   ShrinkingString Version 6: removeIndex
+   ShrinkingString Version 7: constructor

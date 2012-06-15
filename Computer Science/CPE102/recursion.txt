@@ -1,0 +1,67 @@
+Recursion:
+   a method that calls itself
+   a stopping point(no recursive call)
+
+public double factorial (int n)
+{
+   if(n <= 1)
+   {
+      if(n < 0)
+      {
+         throw new lolmathexception;
+      }
+      else
+      {
+         return 1;
+      }
+   }
+   else
+   {
+      return factorial(n-1) * n;
+   }
+}
+
+
+call stack:
+
+f(1) <-- returns 1
+f(2)
+f(3)
+f(4)
+f(5)
+main()
+
+
+Extra Credit Program 1:
+
+non-empty set:
+interface listNode
+   void add(int index, E data)
+   E get(int index)
+   int size()
+
+empty set:
+add
+get
+size
+
+classes:
+NonEmptyList implements ListNode
+{
+   public E data;
+   public ListNode next;
+
+   public int size()
+   {
+      return 1 + next.size();
+   }
+}
+EmptyList implements ListNode
+{
+
+   public int size()
+   {
+      return 0;
+   }
+}
+

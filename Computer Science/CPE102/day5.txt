@@ -1,0 +1,29 @@
+//Day 5 notes
+prog 2:
+interface methods:
+public double getArea();
+puiblic Color getColor();
+public void setColor(Color color);
+
+public class Rectangle implements Shape
+{
+}
+
+now you can do something like:
+Shape s;
+s = new Rectangle();
+
+
+reference      class name or interface name
+   V             V
+_____instanceof_____
+ lhs            rhs
+
+if(s instanceof Rectangle) <returns true/false>
+{
+   Rectangle r = (Rectangle)s;
+}
+
+public int order(Shape x, Shape y)
+{
+}

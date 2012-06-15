@@ -1,0 +1,5 @@
+50 dbbacababababababababababdbbacabababababababababab
+111 dabacabcdabcdabcdabcdabcddbbacabababababababababab
+102 dcbdcadadadadadadadaddadadbbacabababababababababab
+251 dbbacacdcdcadcdacadcdacdadbbacabababababababababab
+

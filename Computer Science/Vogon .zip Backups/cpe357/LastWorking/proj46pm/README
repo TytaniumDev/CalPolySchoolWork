@@ -1,0 +1,13 @@
+Name: Tyler Holland
+Assignment: Project 4
+Instructions: Compiles with make
+Notice: I ignore any input after a file name is given on the command line. The program will exit
+         with error code 16 when input is found after a file name.
+         
+        Also: with the short commands, I assumed they are supposed to function as if we are using
+         getopt. Therefore, for short options, the = sign is not needed, but instead the value
+         needs to be immediately after the option.
+         Example; -b100 is the same as --brighten=100
+                  not -b=100
+
+Documentation can be found at http://users.csc.calpoly.edu/~tyhollan/CSC357/proj4/

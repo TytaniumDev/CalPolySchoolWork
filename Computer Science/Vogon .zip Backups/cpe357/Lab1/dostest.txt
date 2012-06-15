@@ -1,0 +1,7 @@
+testing testing heres some text WATCH OUT ITS A CR 
+now here is a random CR, dont erase  now more text, newline inc
+some more text
+
+that was a blank line
+ending this file
+a last line

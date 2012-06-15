@@ -1,0 +1,11 @@
+Tyler Holland & Spencer Ellsworth
+CPE 349
+Lab 1 part 2
+
+Files:
+BinaryTree, the BST ADT implementation with methods
+BinaryNode, used in BinaryTree
+BSTStudy, required file
+Finds, our efficient implementation of findMax and findSecondMax
+MaxValidate, our validation wrapper for Finds
+MaxStudy, our required file, only works for arrays up to 128 in size

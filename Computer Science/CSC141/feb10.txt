@@ -1,0 +1,82 @@
+HW:
+5.3
+8,10,11,12,14,16,19,22abc,33,34,27
+
+5.4
+examples 1,2,3,4
+4,7,8,9
+
+On Board:
+5.3
+11)
+a)
+C(10,4)
+b)
+C(10,4)+C(10,3)+C(10,2)+C(10,1)+C(10,0)
+
+19)
+a)
+2^10
+b)
+C(10,2)
+
+d)
+C(10,5)
+
+22)
+a)
+P(7,7) because ED is treated as one letter
+EX:P(Number of spots, Number of things to put in those spots)
+
+b)
+P(6,6)
+
+c)
+P(5,5)
+
+5.4
+8) based on examples 3 and 4
+(3x+2y)^17
+x^8 y^9
+(x+y)^17
+which is summation from j=0 to 17 of (17 choose j) * (3x)^17-j * (2y)^j
+figure out: (17 choose 9)3^8 * 2^9 = coefficient
+answer = C(17,9) * 3^8 * 2^9
+
+
+
+5.3 notes:
+Permutations
+-# of ways to arrange "objects", order of arrangement is important
+page 356 for theorem
+
+n=positive int
+r= int
+1<= r <= n
+P(n,r) = n(n-1)(n-2)...(n-r+1) = n! / (n-r)!
+  ^
+# of ways to arrange r elements from a set of n
+
+Combinations
+-# of ways to arrange objects, order is NOT important
+C(n,r) = n! / (n-r)!*r! = P(n,r) / r!
+
+Examples:
+How many ways can i select 5 players from a 12 member team?
+C(12,5) = 12! / (12-5)! * 5!
+
+****C(n,r) = # of subsets with r elements from a set of n elements
+
+5.4 notes:
+Binomial Coefficients
+(x+y)^n = Summation from j=0 to n (n choose j) x^n-j * y^j
+        = summation from j=0 to n C(n,j) * x^n-j * y^j
+ugly version on page 363
+
+exercise:
+if a set has n elements, the #of subsets is 2^n
+
+how to remember: ON PAGE 363
+2^n = (1+1)^n = (n) 1^n + (n) 1^n+1 * 1^1 + (n) 1^n-2 * 1^2   (n) 1^n
+                (0)       (1)               (2)               (n)
+

@@ -1,0 +1,8 @@
+Name: Tyler Holland
+Assignment: Lab 9
+Instructions: Compiles with make
+Cannot prevent a kill -s SIGKILL
+
+Commands used:
+ps -ef | grep tyhollan
+kill -s SIGKILL

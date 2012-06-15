@@ -1,0 +1,9 @@
+Name: Tyler Holland
+Assignment: Project 3
+Instructions: Compiles with make
+Documentation can be found at http://users.csc.calpoly.edu/~tyhollan/CSC357/proj3/
+
+Used code/code samples from:
+Hash function: Dan Bernstein's
+   http://www.cse.yorku.ca/~oz/hash.html
+   Also availiable at http://fr.wikipedia.org/wiki/Table_de_hachage#Fonction_de_Hachage

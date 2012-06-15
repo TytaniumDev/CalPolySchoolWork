@@ -1,0 +1,15 @@
+public class A {}
+
+public class B extends A {} <-- B inherits every public thing from A
+
+New equals method:
+if(!super.equals(other))
+{
+   return false;
+}
+
+Abstract methods:
+public abstract class AbstractShape
+{
+   public abstract double getArea();
+}

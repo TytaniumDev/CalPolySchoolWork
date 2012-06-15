@@ -1,0 +1,10 @@
+ForEach statement:
+
+for(________ ___________: _________)
+      Type    identifier   iterable
+(class/interface)          (thing)
+
+
+example:
+
+for(Product p : store)

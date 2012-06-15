@@ -1,0 +1,9 @@
+hi
+there
+i
+am
+a
+file
+to
+test
+lab8
