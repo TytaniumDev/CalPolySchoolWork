@@ -1,0 +1,182 @@
+<head>
+<title>2.5 - Taking Exams Inspection Test</title>
+</head>
+
+<style type="text/css">
+td {
+    border: 1px solid black;
+}
+
+th {
+    border: 1px solid black;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+</style>
+
+<h3>
+2.5.  Taking Exams Inspection Test
+</h3>
+
+<table>
+<tr>
+    <th>Component</th>
+    <th>Inspector</th>
+    <th>Date</th>
+    <th>Status</th>
+    <th>Remarks</th>
+</tr>
+<tr>
+    <td>2.5 H1</td>
+    <td>SMG</td>
+    <td>10/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.5 P1</td>
+    <td>SMG</td>
+    <td>10/22/2010</td>
+    <td>FIX</td>
+    <td>Editorial Remark still there</td>
+</tr>
+<tr>
+    <td>2.5 P2</td>
+    <td>SMG</td>
+    <td>10/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.5 P3</td>
+    <td>SMG</td>
+    <td>10/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.5 I1</td>
+    <td>SMG</td>
+    <td>10/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.5 P4</td>
+    <td>SMG</td>
+    <td>10/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.5 I2</td>
+    <td>SMG</td>
+    <td>10/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.5 P5</td>
+    <td>SMG</td>
+    <td>10/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.5 I3</td>
+    <td>SMG</td>
+    <td>10/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.5 P6</td>
+    <td>SMG</td>
+    <td>10/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.5 P7</td>
+    <td>SMG</td>
+    <td>10/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.5 I4</td>
+    <td>SMG</td>
+    <td>10/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.5 P8</td>
+    <td>SMG</td>
+    <td>10/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.5 I5</td>
+    <td>SMG</td>
+    <td>10/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.5 P9</td>
+    <td>SMG</td>
+    <td>10/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.5 I6</td>
+    <td>SMG</td>
+    <td>10/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.5 P10</td>
+    <td>SMG</td>
+    <td>10/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.5 A1</td>
+    <td>SMG</td>
+    <td>10/22/2010</td>
+    <td>FIX</td>
+    <td>Previous should link to Handling Exams</td>
+</tr>
+<tr>
+    <td>2.5 A2</td>
+    <td>SMG</td>
+    <td>10/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.5 A3</td>
+    <td>SMG</td>
+    <td>10/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.5 A4</td>
+    <td>SMG</td>
+    <td>10/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+
+</table>
+

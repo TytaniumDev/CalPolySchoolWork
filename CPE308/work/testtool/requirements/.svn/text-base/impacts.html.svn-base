@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestTool | Requirements | Impacts</title>
+  <link href="../public/css/layout.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>TestTool</h1>
+      <h2 class="title">1.4 Impacts</h2>
+  </div>
+  <div id="content">
+    
+      The positive potential impacts of the Test Tool as a functioning system
+      are an efficient way for teachers to create unique tests easily and quickly
+      and a way for them to distribute the test to students with a emphasis on
+      computer science with a built-in programming	environment. Through this 
+      e-test implementation, users will be saving paper and will have a more 
+      convenient interface to take tests, rather than traditional pen and paper. 
+      The positive impacts of the Test Tool as a course example are:
+      
+      <ul class="nested">
+        <li> the presentation of a non-trivial software system that students can use as a guide for their own software development work</li>
+   		  <li>an illustration of how formal methods of can be put to practical use.</li>
+      </ul>
+
+      Potential negative impacts include common problems such as delays and a 
+      decrease in productivity to teachers and students, but that can be avoided
+      if the system is well implemented and functions as designed. Specific problems
+      that could occur involve the databases integrity and in general for all 
+      programs that use connectivity to a server, network outages.  Integrity has
+      two possible flaws. First, a hacker can use SQL injection to steal all the 
+      information within the database, including the solutions. Secondly, the program
+      itself might reveal this same information through a flawed hole in the program.
+      As with all test taking scenarios, there is always the chance that a student may
+      look at another students test or use outside source material(cheat sheet).  The
+      proctor will have the power to disqualify users from the test if they are caught 
+      cheating. In terms of network outages, if this occurs anytime a teacher is creating a 
+      test or a student is taking a test, then it will cause major disruption to both
+      users, which will result in all new work being lost and requiring the user to start over.<br/>
+      <br/>
+      As a course example, the use of the Test Tool has no significant negative impacts, 
+      unless its development methodology is considered weak or unrelated to the concepts
+      being taught in a particular course. Such negative impacts can be easily avoided 
+      if instructors carefully examine the example before using it in a particular 
+      software engineering curriculum. 
+      </p>
+    </div>
+  </div>
+</body>
+</html>

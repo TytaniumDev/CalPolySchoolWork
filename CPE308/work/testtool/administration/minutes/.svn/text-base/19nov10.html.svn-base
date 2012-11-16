@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nov. 19th Minutes</title>
+  <link href="../../public/css/layout.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>TestTool</h1>
+
+      <h2 class="title">Minutes for Meeting on 11/19</h2>
+    </div>
+    <div id="content">
+      <p>
+        <strong>Present:</strong> J.Rawson, J.Stewart, J.Good, M.Ortiz, A.Yang, T.Holland (all)
+      </p>
+      <p>
+        <strong>Absent:</strong> None
+      </p>
+
+      <p>
+        <strong>Excused:</strong> N/A
+      </p>
+      <p>
+        Today, we met with Professor Fisher regarding feedback for the last milestone, specifically about
+        the specifications, data dictionary and operations. 
+      </p>
+      <p>
+        The majority of the comments are towards fixing up the Test Gen operations and objects
+        <br/><br/>
+        <ul class="nested">
+
+           <li>Next is basically the generate button for each step. </li> 
+           <li>Test Preview is also another operation.</li> 
+           <li>Is a Generated Test different from current Test object? </li>
+           <li>Every Test Generation Step is an operation. Inputs: Test, Questions. Outputs: Test </li>
+
+       </ul>
+       <br/>
+        Missing: make Test Generation stages operations and Generated Test objects.
+    </div>
+  </div>
+</body>
+</html>

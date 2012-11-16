@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>
+Minutes of the TestTool_S Team Meeting, 27 October 2010
+</title>
+</head>
+<body bgcolor=white>
+<p align=center>
+<font size=+2>
+<strong>Minutes of the TestTool_S Team Meeting
+<br>
+3:10 PM - 3:30PM, 27 October 2010</strong>
+</font>
+</p>
+<br>
+<br>
+<strong>Present</strong>:
+Ben Voogd, Richard Steiger, Sarah Hoke, Nathan Mock, Connor Lange, Sean Glover
+<br>
+<br>
+<strong>Absent</strong>:
+<br>
+<br>
+<strong>Excused:</strong>:
+<br>
+<br>
+<br>
+Milestone Evaluations<br>
+http://users.csc.calpoly.edu/~gfisher/classes/308/grades/testtool-9956/<br>
+<br><br>
+2.1 Change Splash Screen<br>
+-"students see this page", "instructor sees this page"<br>
+-make sure tabs/links are consistent, "handle/deploy/distribute"<br>
+<br><br>
+2.2 <br>
+-good job with refinements since last milestone<br>
+-see refinements on <br>
+-have more people work on this?<br>
+-have questions match 2.3 examples<br>
+<br><br>
+2.3<br>
+-have examples match 2.2 examples<br>
+<br><br>
+2.4<br>
+-have it be able the test be able to be taken in a specific room?<br>
+<br><br>
+2.5<br>
+add the ability to attach html code<br><br>
+<br>
+Other<br><br>
+Make sure things are consistent across all UI mockups<br>
+Read through most recent milestone evaluation for more details<br>
+<br><br>
+Test Generation SpecL<br>
+<br><br>
+Criteria, question bank (inputs) -> generate -> test (output)
+</body>
+</html>

@@ -1,0 +1,108 @@
+<?
+$title = "3. Non-Functional Requirements";
+require "../header.php";
+?>
+<h3>3. Non-Functional Requirements</h3>
+<p> 
+The non-functional requirements for the
+Test Tool are organized into these categories:
+<ul> 
+   <li>Performance</li> 
+   <li>General Characteristics</li>
+   <ul> 
+      <li>Security and Privacy</li>
+      <li>Simplicity versus Power</li>
+   </ul>
+</ul> 
+</p> 
+
+<h3>3.1.  Performance</h3> 
+<p> 
+All test tool operations must execute instantaneously, except for the following:
+<ul> 
+   <li>
+   The time it takes to generate a test must be on the order of seconds.
+   </li>
+   <li>
+   The time it takes to automatically grade a test must be on the order of
+   seconds.
+   </li>
+   <li>
+   The time it takes for a custom code grading script varies. Any program that
+   takes over 30 seconds of CPU time is terminated.
+   </li> 
+</ul>
+</p>
+
+<p> 
+The time to execute all administrative commands must be instantaneous, except
+for any delays due to network transmission of data from the central host.
+</p>
+<p> 
+In general, the performance of Test Tool commands that must access data
+across a network is subject to potential network delays.  The Test Tool must
+transmit data as fast as is possible on any given network, but delays due to
+external network circumstances are beyond the control of the Test Tool.
+</p>
+<p> 
+There are no specific requirements for the allowable size of a test in terms
+of the number of questions.  A Test on the order of hundereds of questions
+is the maximum expected size during normal use.
+</p>
+<p>
+The maximum expected sizes of the Test Tool databases are the following:
+</p>
+<ul> 
+   <li>user database -- up to tens of thousands of records
+   <li>question database -- up to hundereds of thousands of records
+   <li>test database -- up to tens of thousands of records
+</ul> 
+<p>
+While there may on the order of tens of thousands of registered users, the
+expected maximum number of users connected to any given server at any given
+time is on the order or hundreds.
+</p>
+<p> 
+The Test Tool must be able to operate with tests and databases of sizes
+larger than these normal maximums.  However, the tool need not the meet the
+previously-enumerated time performance requirements for tests or databases
+larger than normal maximum sizes.
+</p>
+ 
+<h3>3.2.  General Characteristics</h3> 
+<h4>3.2.1.  Security and Privacy</h4> 
+<p> 
+Students must only be able to view their own tests and their own grades.
+Students must also be able to take their own tests and only in the time
+specified by the professor. Students must not have access to the question
+database and the must not have access to the test database.  The central host
+passwords of any user must be kept secure from viewing or modification by any
+other Test Tool user, and from any user at all on the central host.
+</p>
+<p>
+Grading scripts run by the system must protect system resources and confidential
+data. The program must sandbox these scripts so they may not access any parts of
+the application or the system it is running on other than itself and the code
+file that it is set to grade.
+</p>
+ 
+<h4>3.2.2.  Simplicity versus Power</h4> 
+<p>
+On a spectrum of simple-to-use versus powerful, the Test Tool is on
+the side of <em>simple-to-use</em>.  Users are assumed to understand basic
+concepts about the internet and web browsers.
+</p>
+<hr width=80% size=3> 
+<center> 
+<font size=-1> 
+<font color=black> Prev: </font><a href="functional.html">functional</a> 
+ | <font color=black> Next: </font><a
+href="developer-overview.html">developer-overview</a> 
+ | <font color=black> Up: </font><a href="index.html">index</a> 
+ | <font color=black> Top: </font><a href="index.html">index</a></font> 
+</center> 
+<hr width=80% size=3> 
+</body> 
+</html> 
+</body>
+</html>

@@ -1,0 +1,131 @@
+--------------------------------------------------------------------------------
+-- Copyright (c) 1995-2003 Xilinx, Inc.
+-- All Right Reserved.
+--------------------------------------------------------------------------------
+--   ____  ____ 
+--  /   /\/   / 
+-- /___/  \  /    Vendor: Xilinx 
+-- \   \   \/     Version : 9.1.03i
+--  \   \         Application : ISE
+--  /   /         Filename : proc1test.ant
+-- /___/   /\     Timestamp : Wed May 27 15:38:11 2009
+-- \   \  /  \ 
+--  \___\/\___\ 
+--
+--Command: 
+--Design Name: proc1test
+--Device: Xilinx
+--
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+USE IEEE.STD_LOGIC_TEXTIO.ALL;
+USE STD.TEXTIO.ALL;
+
+ENTITY proc1test IS
+END proc1test;
+
+ARCHITECTURE testbench_arch OF proc1test IS
+    FILE RESULTS: TEXT OPEN WRITE_MODE IS "C:\Documents and Settings\s169s4b1\Desktop\Lab8\proc1test.ano";
+
+    COMPONENT tflipflop
+        PORT (
+            EN : In std_logic;
+            T : In std_logic;
+            CLK : In std_logic;
+            Q : Out std_logic
+        );
+    END COMPONENT;
+
+    SIGNAL EN : std_logic := '0';
+    SIGNAL T : std_logic := '0';
+    SIGNAL CLK : std_logic := '0';
+    SIGNAL Q : std_logic := '0';
+
+    SHARED VARIABLE TX_ERROR : INTEGER := 0;
+    SHARED VARIABLE TX_OUT : LINE;
+
+    constant PERIOD : time := 200 ns;
+    constant DUTY_CYCLE : real := 0.5;
+    constant OFFSET : time := 100 ns;
+
+    BEGIN
+        UUT : tflipflop
+        PORT MAP (
+            EN => EN,
+            T => T,
+            CLK => CLK,
+            Q => Q
+        );
+
+        PROCESS    -- clock process for CLK
+        BEGIN
+            WAIT for OFFSET;
+            CLOCK_LOOP : LOOP
+                CLK <= '0';
+                WAIT FOR (PERIOD - (PERIOD * DUTY_CYCLE));
+                CLK <= '1';
+                WAIT FOR (PERIOD * DUTY_CYCLE);
+            END LOOP CLOCK_LOOP;
+        END PROCESS;
+
+        PROCESS    -- Annotation process for CLK
+            VARIABLE TX_TIME : INTEGER := 0;
+
+            PROCEDURE ANNOTATE_Q(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", Q, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, Q);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+        BEGIN
+            WAIT for 1 fs;
+            ANNOTATE_Q(0);
+            WAIT for OFFSET;
+            TX_TIME := TX_TIME + 100;
+            ANNO_LOOP : LOOP
+                --Rising Edge
+                WAIT for 115 ns;
+                TX_TIME := TX_TIME + 115;
+                ANNOTATE_Q(TX_TIME);
+                WAIT for 85 ns;
+                TX_TIME := TX_TIME + 85;
+            END LOOP ANNO_LOOP;
+        END PROCESS;
+
+        PROCESS
+            BEGIN
+                -- -------------  Current Time:  185ns
+                WAIT FOR 185 ns;
+                EN <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  385ns
+                WAIT FOR 200 ns;
+                T <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  785ns
+                WAIT FOR 400 ns;
+                T <= '0';
+                -- -------------------------------------
+                WAIT FOR 415 ns;
+
+                STD.TEXTIO.write(TX_OUT, string'("Total[]"));
+                STD.TEXTIO.writeline(RESULTS, TX_OUT);
+                ASSERT (FALSE) REPORT
+                    "Success! Simulation for annotation completed"
+                    SEVERITY FAILURE;
+            END PROCESS;
+
+    END testbench_arch;
+

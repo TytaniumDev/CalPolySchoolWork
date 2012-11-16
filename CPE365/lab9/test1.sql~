@@ -1,0 +1,13 @@
+/**
+ * Lab 9 Part 1 Q 2
+ * Tyler Holland (tyhollan)
+ * CPE 365
+ */
+ 
+--1.
+select orderValue(ono)
+from orders
+order by ono;
+
+--2. 
+select orderValue(12345);

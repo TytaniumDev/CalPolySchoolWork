@@ -1,0 +1,23 @@
+tyhollan@vogon:~/cpe365/lab10 $ java Password
+Enter your Oracle userID: tyhollan
+Enter your Oracle password: 
+Connecting...
+Driver class found and loaded.
+connected.
+Enter your login name to access your bank account
+tom
+Enter your password
+tom1234
+Welcome to your bank account!
+tyhollan@vogon:~/cpe365/lab10 $ java Password
+Enter your Oracle userID: tyhollan
+Enter your Oracle password: 
+Connecting...
+Driver class found and loaded.
+connected.
+Enter your login name to access your bank account
+'
+Enter your password
+
+Enter your login name to access your bank account
+^Ctyhollan@vogon:~/cpe365/lab10 $ 

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestTool | Requirements | Test Taking | Proctor Home | Drop Student</title>
+  <link href="../../../../../public/css/layout.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>TestTool</h1>
+      <h2 class="title">2.3.1.3 Drop Student</h2>
+    </div>
+    <div id="content">
+      <p>
+        <img src="../ProctorHomeChooseTest.png" height="400" width="600"/>
+         <p align="center">Figure 2.3.1.1.1: Proctor Default Screen</p>
+        <img src="ProctorHomeTestChosen.png" height="400" width="600"/>
+         <p align="center">Figure 2.3.1.1.2: Proctor Test Screen</p>
+        <img src="removestudent/ProctorHomeRemoveStudent.png" height="400" width="600"/>
+         <p align="center">Figure 2.3.1.3.1: Default Drop Student Dialogue</p>
+        <img src="removestudent/selectstudent/ProctorHomeRemoveStudent.png" height="400" width="600"/>
+         <p align="center">Figure 2.3.1.3.2: Checked Drop Student Dialogue</p>
+        <img src="removestudent/selectstudent/done/ProctorHomeStudentRemoved.png" height="400" width="600"/>
+         <p align="center">Figure 2.3.1.3.3: Result of Removing Student(s)</p>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

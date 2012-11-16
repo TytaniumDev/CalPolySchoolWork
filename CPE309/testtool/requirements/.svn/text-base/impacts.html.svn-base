@@ -1,0 +1,61 @@
+<?
+   $title = "Impacts";
+   require "../header.php";
+?>
+<a name="Impacts">
+<h3>
+1.4.  Impacts
+</h3>
+</a>
+<p>
+The potential positive impacts of the Test Tool as a functioning system are
+increased convenience and efficiency in creating, managing, and distributing tests. Additionally,  
+the system will allow a more convenient and versatile system to proctor tests. A breakdown of the 
+major benefits are defined below:
+<ul>
+<li> <B>Efficiency</B> - the system will automatically grade selected types of questions, thus saving
+ the instructor or grader valuable time and allowing for quicker exam turnaround. Additionally, the instructor 
+ or grader will no longer have to invest time in deciphering student handwriting due to the uniform format of 
+ the test answers </li>
+ 
+<li> <B>Versatility</B> - the system will allow for tests to be proctored in a variety of test settings. In addition, 
+the test generator will allow for the generation of multiple different types of tests tailored to a specific class. </li>
+
+<li> <B>Reusability</B> - the question and test pools will be dramatically increased through the usage of a central database. 
+Furthermore, since exams and questions are stored in a database, they can easily be retrieved and used again. </li></ul> 
+<p>
+Potential negative impacts include those common to any user-oriented software
+system.  Viz., if the system is poorly designed and implemented, it can be
+inconvenient to use and decrease rather than increase user productivity. Other
+serious negative impacts are privacy, reliability, fairness, and security. More specific examples
+of these serious impacts are defined below:
+<ul>
+<li> <B>Privacy</B> - student IDs, grades, or other personal information may be released
+to unintended parties
+
+<li> <B>Reliability</B> - the testing system may malfunction during or before an exam
+
+<li> <B>Fairness:</B> - taking a test in an electronic environment may be unfair due to the lack of a 
+one-to-one equivalency between paper tests and electronic tests. Specifically, graphs or other diagrams may
+be more difficult and time consuming to draw than on paper.
+ 
+<li> <B>Security</B> - cheating may be possible in the form of being able to see answers before
+answering a question, being able to see others' tests, or being able to edit the final results
+of an exam. In addition, students may be able to cheat in the form of inter-student communication during 
+the exam. Furthermore, students may be able to access untaken tests, taken tests, and graded tests if the system isn't 
+implemented properly
+<br>
+<br>
+<br>
+</p><hr size="3" width="80%">
+<center>
+<font size="-1">
+<font color="black"> Prev: </font><a href="setting.html">Operational Setting</a>
+ | <font color="black"> Next: </font><a href="related.html">Related Systems</a>
+ | <font color="black"> Up: </font><a href="intro.html">intro</a>
+ | <font color="black"> Top: </font><a href="index.html">index</a></font>
+</center>
+<hr size="3" width="80%">
+<?
+require "../footer.php"
+?>

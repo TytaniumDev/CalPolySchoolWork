@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestTool | Requirements </title>
+  <link href="../public/css/layout.css" rel="stylesheet" media="screen" /></head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>TestTool</h1>
+      <h2 class="title">3 Non-Functional Requirements</h2>
+    </div>
+    <div>
+    <p id = "performance">     
+    <h3>
+    3.1.  Performance 
+    
+    </h3>
+    </p><p>
+    All commands must execute instantaneously,
+    except for the following:
+    <ul class = "nested">
+        <li> Time to generate a test, which will in a manner of seconds</li>
+    </ul>
+    </p><p>
+    The time to execute all administrative commands must be instantaneous, except
+    for any delays due to network transmission of data from the central host.
+    </p><p>
+    In general, the performance of Test Tool commands that must access data
+    across a network is subject to potential network delays.  The Test Tool
+    must transmit data as fast as is possible on any given network, but delays due
+    to external network circumstances are beyond the control of the Test Tool.
+    </p><p>
+    There are no specific requirements for the allowable size of a test in
+    terms of the number of questions of lengths.  A test generated with hundreds
+    of questions is the maximum expected size during normal use.
+    
+    </p><p>
+    The maximum expected sizes of the Test Tool databases are the following:
+    <ul class = "nested">
+        <li> user database -- up to tens of thousands of users </li>
+        <li> test database -- up to thousands of test </li>
+        <li> question database -- up to tens of thousands of questions </li>
+    </ul>
+    While there may on the order of tens of thousands of registered users, the
+    expected maximum number of users connected to any given server at any given
+    time is on the order of thousands.
+    </p><p>
+    The Test Tool must be able to operate with test and databases of sizes
+    larger than these normal maximums.  However, the tool need not meet the
+    previously-enumerated time performance requirements for tests or databases
+    larger than normal maximum sizes.   
+  
+    <h3>
+    <br></br>
+    3.2.  General Characteristics
+    
+    </h3>
+    </p><p id = "gCharacter">
+    <h4>
+    3.2.1.  Security and Privacy
+    </h4>
+    </p><p>
+    All students have limited access in the Test Tool program which only allows the users to either take an activated test or view their <b>own</b> graded test from a specific class. The administrators or professor accounts allows full access to the question and test database whether it be viewing, adding, deleting, or editing the data. The proctor user accounts allow access to a generated test by a specific professor in order to distribute it to the students, but it doesn't allow access to the full test database.  The central host passwords of any user must be kept secure from viewing or modification by any other Test Tool user, and from any user at all on the central host.
+    
+    <h4>
+    <br></br>
+    3.2.2.  Simplicity versus Power
+    </h4>
+    
+    </p><p>
+    On a spectrum of simple-to-use versus powerful, the Test Tool is heavily on
+    the side of <em>powerful</em>.  Users are assumed to be fully computer literate
+    and knowledgeable on the use of computer networks consisting of local computers
+    and central data servers.
+
+
+
+    </div>
+</div>
+ </body>
+</html>

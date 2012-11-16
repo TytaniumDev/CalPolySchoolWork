@@ -1,0 +1,277 @@
+m255
+13
+cModel Technology
+dC:\Documents and Settings\s169s4b1\Desktop\Lab9A
+Ealarmfsm
+w1243832018
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8../FINAL/AlarmFSM_D_Struct.vhd
+F../FINAL/AlarmFSM_D_Struct.vhd
+l0
+L23
+VA@jadjjJLZ7[f^=Ul0^4l1
+OX;C;6.2g;35
+31
+o-explicit -93 -O0
+tExplicit 1
+Aalarmfsm_d_struct
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work alarmfsm A@jadjjJLZ7[f^=Ul0^4l1
+l46
+L33
+VfjFIG`O]WW4BHcdccAD8O1
+OX;C;6.2g;35
+31
+M3 ieee std_logic_1164
+M2 ieee std_logic_arith
+M1 ieee std_logic_unsigned
+o-explicit -93 -O0
+tExplicit 1
+Ealarmtest
+w1243988012
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee std_logic_textio 8YS?iX`WD1REQG`ZRYQGB2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8alarmtest.vhw
+Falarmtest.vhw
+l0
+L27
+VaAmmzgdm0BF<5^BS2MYOc2
+OX;C;6.2g;35
+31
+o-explicit -93 -O0
+tExplicit 1
+Atestbench_arch
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee std_logic_textio 8YS?iX`WD1REQG`ZRYQGB2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work alarmtest aAmmzgdm0BF<5^BS2MYOc2
+l61
+L30
+VM9D_5AD18hBh3;nE<>i5T1
+OX;C;6.2g;35
+31
+M5 ieee std_logic_1164
+M4 ieee std_logic_arith
+M3 ieee std_logic_unsigned
+M2 ieee std_logic_textio
+M1 std textio
+o-explicit -93 -O0
+tExplicit 1
+Ebcdto7
+w1243987017
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8../FINAL/BCDto7.vhd
+F../FINAL/BCDto7.vhd
+l0
+L30
+VkN:U=>En;]WiS^mf:Q[W20
+OX;C;6.2g;35
+31
+o-explicit -93 -O0
+tExplicit 1
+Abehavioral
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work bcdto7 kN:U=>En;]WiS^mf:Q[W20
+l42
+L40
+VE5NKPUEidG@EV4c`age<U0
+OX;C;6.2g;35
+31
+M3 ieee std_logic_1164
+M2 ieee std_logic_arith
+M1 ieee std_logic_unsigned
+o-explicit -93 -O0
+tExplicit 1
+Ecomparator2bit
+w1242865026
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8../Experiment7/Comparator2Bit.vhd
+F../Experiment7/Comparator2Bit.vhd
+l0
+L30
+V6U_RBR66=9[oA=LJgYe[Y2
+OX;C;6.2g;35
+31
+o-explicit -93 -O0
+tExplicit 1
+Abehavioral
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work comparator2bit 6U_RBR66=9[oA=LJgYe[Y2
+l38
+L36
+VieSR?<4K^6F6=lGz@82aK3
+OX;C;6.2g;35
+31
+M3 ieee std_logic_1164
+M2 ieee std_logic_arith
+M1 ieee std_logic_unsigned
+o-explicit -93 -O0
+tExplicit 1
+Ed_ff
+w1243832014
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8../FINAL/D_FF.vhd
+F../FINAL/D_FF.vhd
+l0
+L26
+VPa1LnYFGOO_znVNdQi7Ph2
+OX;C;6.2g;35
+31
+o-explicit -93 -O0
+tExplicit 1
+Abehavioral
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work d_ff Pa1LnYFGOO_znVNdQi7Ph2
+l35
+L33
+V9^5n>YHMOH]kaVYPG^_`o0
+OX;C;6.2g;35
+31
+M3 ieee std_logic_1164
+M2 ieee std_logic_arith
+M1 ieee std_logic_unsigned
+o-explicit -93 -O0
+tExplicit 1
+Eencoder
+w1242260720
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8../Experiment6/Exp6/encoder.vhd
+F../Experiment6/Exp6/encoder.vhd
+l0
+L30
+V;dDX?M51<`4BP5cXHiZkD3
+OX;C;6.2g;35
+31
+o-explicit -93 -O0
+tExplicit 1
+Abehavioral
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work encoder ;dDX?M51<`4BP5cXHiZkD3
+l38
+L36
+VOFoBT:^Da?CEnbBSaOknl3
+OX;C;6.2g;35
+31
+M3 ieee std_logic_1164
+M2 ieee std_logic_arith
+M1 ieee std_logic_unsigned
+o-explicit -93 -O0
+tExplicit 1
+Eproc2test
+w1243985401
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee std_logic_textio 8YS?iX`WD1REQG`ZRYQGB2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8Proc2test.vhw
+FProc2test.vhw
+l0
+L27
+V[9KOOE?R5Xe<KXnIIl]eD1
+OX;C;6.2g;35
+31
+o-explicit -93 -O0
+tExplicit 1
+Atestbench_arch
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee std_logic_textio 8YS?iX`WD1REQG`ZRYQGB2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work proc2test [9KOOE?R5Xe<KXnIIl]eD1
+l53
+L30
+Vod8maEWlRmNEfn1P=KST<3
+OX;C;6.2g;35
+31
+M5 ieee std_logic_1164
+M4 ieee std_logic_arith
+M3 ieee std_logic_unsigned
+M2 ieee std_logic_textio
+M1 std textio
+o-explicit -93 -O0
+tExplicit 1
+Eprocedure4
+w1242864892
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8../Experiment7/Procedure4.vhd
+F../Experiment7/Procedure4.vhd
+l0
+L30
+VW3`UHEJY87F>?j0EZmbUS2
+OX;C;6.2g;35
+31
+o-explicit -93 -O0
+tExplicit 1
+Abehavioral
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work procedure4 W3`UHEJY87F>?j0EZmbUS2
+l46
+L36
+Vm`AflcM6iJdZGFO8m7Tkb1
+OX;C;6.2g;35
+31
+M3 ieee std_logic_1164
+M2 ieee std_logic_arith
+M1 ieee std_logic_unsigned
+o-explicit -93 -O0
+tExplicit 1
+Etopunit
+w1243988421
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8TopUnit.vhd
+FTopUnit.vhd
+l0
+L30
+VdJDi9ilc34Hh6zN?cHld30
+OX;C;6.2g;35
+31
+o-explicit -93 -O0
+tExplicit 1
+Abehavioral
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work topunit dJDi9ilc34Hh6zN?cHld30
+l79
+L42
+V55ecW:BdM6kfM5;_G_QW53
+OX;C;6.2g;35
+31
+M3 ieee std_logic_1164
+M2 ieee std_logic_arith
+M1 ieee std_logic_unsigned
+o-explicit -93 -O0
+tExplicit 1

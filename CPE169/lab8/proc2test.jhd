@@ -1,0 +1,3 @@
+MODULE proc2test
+SUBMODULE proc2
+INSTANCE UUT

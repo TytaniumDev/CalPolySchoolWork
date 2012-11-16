@@ -1,0 +1,61 @@
+<?
+$title = "2.4.  Handling Exams";
+require "../header.php";
+?>
+
+<a name="Handling Exams">
+<h3>
+2.4.  Handling Exams
+</h3>
+</a>
+
+<p>
+The complete path that exams take throughout the generation, distribution, taking, and grading processes is illustrated
+in Figure 2.4a.
+</p>
+<br>
+<br>
+<hr>
+<center>
+<p><img src='images/data-flow.png'></p>
+<p>Figure 2.4a:  Data Flow Diagram</p>
+</center>
+<hr>
+<br>
+<p>
+The arrow labeled as 1 describes the test generation process.  The instructor first generates the test from his personal machine and places
+it into the exam database.  The exam can then take two different paths, represented by multiple arrows described with the number 2.  If the 
+instructor wants to distribute the exam in the proctored scenario, then the exams will travel to the classroom test taking machines, to be
+taken by students.  However, if the instructor chooses the take at home distribution method, then the exams will travel directly
+to each student's home machine.<br>
+<br>
+Both arrows labeled with number 3 indicate that the completed exams are sent back to the exam database, from either the classroom or personal student
+computers.  Arrow 4 describes completed exams traveling to the machine of the instructor for a second time for the purpose of grading.  After the
+instructor grades each exam, he sends it back to the exam database, as represented by arrow 5.  Finally, once the exam has been fully graded, it
+becomes available for students to view their results, as presented through arrow 6.<br>
+<p>
+The scenarios in this section describe a user previewing existing exams and distributing exams to be students.  
+</p>
+<ul>
+<li><a href="preview.html">Previewing Exams Before Distribution</a></li>
+<li><a href="distribute-top.html">Distributing Exams</a></li>
+</ul>
+
+<br>
+<br>
+<br>
+<br>
+<hr width=80% size=3>
+<center>
+<font size=-1>
+<font color=black> Prev: </font><a href="questionbank-top.html">question-bank</a>
+ | <font color=black> Next: </font><a href="taking-test.html">taking-test</a>
+ | <font color=black> Up: </font><a href="functional.html">functional</a>
+ | <font color=black> Top: </font><a href="index.html">index</a></font>
+  
+</center>
+<hr width=80% size=3>
+
+<?
+require "../footer.php";
+?>

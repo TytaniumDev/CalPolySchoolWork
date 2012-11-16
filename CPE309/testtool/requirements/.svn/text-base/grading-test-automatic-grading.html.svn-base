@@ -1,0 +1,79 @@
+<?
+$title = "2.6.3. Automatic Grading";
+require "../header.php";
+?>
+<h3>2.6.3. Automatic Grading</h3>
+<p>This section describes the process of automatic grading.<p>
+
+<p>Once a student submits a test, the automatic grading function executes in the
+background. The automatic grading function iterates through each individual
+question in the test and grades the questions independently of one another. For
+each question, it looks up the type of the question in the question database and
+grades by the following rules for each question type.</p>
+
+<p>The automatic grading script grades these types of questions:<p>
+<ul>
+   <li>Multiple choice</li>
+   <li>True/False</li>
+   <li>Matching</li>
+   <li>Fill in the blank</li>
+   <li>Code</li>
+</ul>
+
+<h4>Multiple Choice</h4>
+<p>For a multiple choice question, the program gives student response points if
+and only if his or her only selection matches the only correct selection. If the
+response matches the correct answer, then the program gives the response full
+credit, where full credit is the number of points assigned to the question by
+the instructor when creating the test. If the student response does not match
+the correct answer, then the student receives zero points.</p>
+
+<h4>True/False</h4>
+<p>The program grades a true/false question the same way that it grades a
+multiple choice question is graded, but with exactly two possible responses 
+instead of a varying number of possible responses.</p>
+
+<h4>Matching</h4>
+<p>The program grades a matching question by checking each of the student's
+responses against the correct responses. The program calculates a percentage of
+correct answers selected and multiplies that percentage by the full score in
+order to determine the student's score on the section. For example, if a
+matching question has three responses and the student gets one correct, the
+percentage of correct answers is 33.33...%. If the instructor assigns 6 points
+to the question, then the student receives 33.33% times 6, which is 2 points. 
+</p>
+
+<h4>Fill in the blank</h4>
+<p>For a fill in the blank question, the program compares the student's response
+string to the correct response string for equality. The program is case
+insensitive and strips preceding and trailing whitespace. The program gives a
+response points if and only if his or her response string matches the professors
+response string.</p>
+
+<h4>Code</h4>
+<p>The program grades a code question by executing a shell script provided by
+the instructor with the file containing the student's code submission as the
+first parameter. The shell supports all bourne shell commands and all utilities
+specified by in IEEE Std 1003.1-2008. The shell script is run for each student
+response, and the shell script must write one number to standard output to be
+used as the student's grade. Any errors will mark the grade as a zero. If the
+shell script takes longer than thirty seconds to execute, the program terminates
+the script.  The program runs the script in a sandboxed environment, so the
+individual scripts and programs are separated from each other and from the rest
+of the system.</p>
+
+<h4>Other question types</h4>
+Every other question type must be graded manually by the intstructor. The
+program does not provide immediate feedback for the students for the remaining
+question types.
+
+<hr size=3 />
+Prev: <a href="grading-test-view-results.html">View Results</a> |
+Next: <a href="grading-test-manual-grading.html">Manual Grading</a> |
+Up: <a href="grading-test.html">Grading</a> | 
+Top: <a href="index.html">index</a>
+<hr size=3 />
+
+<?
+require "../footer.php";
+?>

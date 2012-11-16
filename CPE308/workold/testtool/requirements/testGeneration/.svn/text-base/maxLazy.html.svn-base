@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestTool</title>
+  <link href="../../public/css/layout.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>Test Tool</h1>
+      <h2 class="title"> 2.3.1 Test Generation Step 1 </h2>
+    </div>
+    <div id="content">
+       <!-- this is where you put stuff, replace the ul block with whatever -->
+	 
+      <br/>
+      <p>
+         When the instructor first presses the Test Generation button, the first screen that comes up is the 
+	 first step of the process. This step generates a completely random exam with the number of questions
+	 specified. 
+         </br></br>
+	 Figure 1 shows the first screen:
+      </p>
+      </br>
+         <IMG SRC="Vizio2 PNGs/Step1R" height=400 width=600 />
+
+      <p align="center">Figure 2.3.1.1: First step in Test Generation</p>
+	 <br/>
+
+	 <p>
+            This step requires the fewest inputs required to generate a full test:
+	    </br>
+	    <ol class="nested">
+	       <li> The first required input is the Test Name  </li>
+	       <li> The second required input is the Class Name. The professor will specify the identifying suffix 
+	            and number of the class. The generator will use this as a parameter in its search for questions
+		    in the Question Database.  </li>
+	       <li> The third required input is the number of Questions on the test. This number must be an integer
+	            The generator will use this as one of the parameters in its search for questions in the Question
+		    Database. </li>
+	       <li> The fourth required input is the total time this test should take. This number must be an integer 
+	            and represents the number of minutes this test should take. The generator will use this as one of
+		    the parameters in its search for questions in the Question database.  </li>
+	   </ol>
+	 </p>
+	 </br>
+	 <p>
+	    The figure below shows the first screen with inputs filled out:
+	 <p>
+	 <br/>
+	    <IMG SRC="Vizio2 PNGs/Step1RE" height=400 width=600 />
+            <p align="center">Figure 2.3.1.2: First step filled out in Test Generation</p>
+	 <br/>
+	 <br/>
+	 <p>
+	    <ul class="nested">
+	       <li> At any time, the instructor can go to an overview of the test generated so far in the process by 
+	            pressing the button: "TEST PREVIEW" </li>
+	       <li> To move on to the next step, the instructor will press the button: "NEXT" </li>
+	       <li> If the instructor wants to abort the process and go back to the home page, he can press the button: "BACK" 
+	            </br> NOTE: This will cause all progress on this particular test to be discarded. </li>
+           </ul>
+    </div>
+    
+     <div id="navigation">
+       Prev: [none] | Next: <a href="lessLazy.html">Less Lazy</a> | Up: <a href="../functional.html">functional</a> 
+       | Top: <a href="../index.html">index</a>
+     </div>
+  </div>
+</body>
+</html>

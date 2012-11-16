@@ -1,0 +1,43 @@
+Release 9.1.03i ngdbuild J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\ISE91\bin\nt\ngdbuild.exe -ise C:/Documents and
+Settings/s169s4b1/Desktop/Lab9A/Lab9A.ise -intstyle ise -dd _ngo -nt timestamp
+-uc finalpins.ucf -p xc3s500e-fg320-4 TopUnit.ngc TopUnit.ngd
+
+Reading NGO file "C:/Documents and Settings/s169s4b1/Desktop/Lab9A/TopUnit.ngc"
+...
+
+Applying constraints in "finalpins.ucf" to the design...
+INFO:NgdBuild:738 - A case sensitive search for the INST, PAD, or NET element
+   referred to by a constraint entry in 'finalpins.ucf' that accompanies this
+   design has failed, while a case insensitive search is in progress. The result
+   of the case insensitive search will be used, but messages will accompany each
+   and every use of a case insensitive result. Constraints are case sensitive
+   with respect to user-specified identifiers, which includes names of logic
+   elements in a design.
+INFO:NgdBuild:740 - "finalpins.ucf" Line 26: Found case insensitive match for
+   NET name 'Sys_armed'. NET is 'SYS_ARMED'.
+INFO:NgdBuild:740 - "finalpins.ucf" Line 28: Found case insensitive match for
+   NET name 'alarm'. NET is 'ALARM'.
+
+Checking timing specifications ...
+Checking Partitions ...
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 68968 kilobytes
+
+Writing NGD file "TopUnit.ngd" ...
+
+Writing NGDBUILD log file "TopUnit.bld"...

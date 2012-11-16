@@ -1,0 +1,20 @@
+/*
+  CPE 365 Lab 7b
+  Tyler Holland
+*/
+--1.
+insert into parts (12345, pname, qoh, price, olevel)
+select *
+from parts
+where pname = 'Sleeping Beauty'
+update odetails
+set pno = 12345
+where zip = (
+  select zip
+  from parts
+  where pname = 'Sleeping Beauty'
+);
+
+--2.
+
+

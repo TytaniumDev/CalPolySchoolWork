@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestTool</title>
+  <link href="../../public/css/layout.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>Test Tool</h1>
+      <h2 class="title"> 2.3.4 Editing a Question </h2>
+      <br/>
+      <p>
+         From the manual step, should the Instructor want to edit a question, he/she should check the check box  
+	 beside a question and then press the "EDIT" button.
+      </p>
+    </div>
+    <div id="content">
+       <!-- this is where you put stuff, replace the ul block with whatever -->
+         <br/> <br/> <br/>
+
+	 <IMG SRC="Step3RR" id="figure-2-3-4-1" />
+            <p align="center">Figure 2.3.4.1: Step 3 of Test Generation</p>
+	 <br/>
+	 <p>
+	    When the "EDIT" button is clicked, a Qustion Edit Panel will pop up as shown below:
+	 </p>
+	 <br/>
+	 <IMG SRC="EditQuestionR.png" id="figure-2-3-4-2"/>
+            <p align="center">Figure 2.3.4.2: Edit Pane</p>
+	 <br/>
+	 <p>
+	 <h4> Explanation of Inputs </h4>
+	    From this panel, there are a few things the instructor can do.
+	    <ul class="nested">
+	       <li> The Instructor can edit the question body </li>
+	       <li> The Instructor can save his edits to the database </li>
+	       <li> After editing and saving the question, the Professor can then add the question to the test </li>
+	       <li> The Instructor can also delete this question from the test </li>
+	       <li> When the Instructor is finished, he/she can click on the "BACK" button to go back to Step 3 of Test Generation. </li>
+	   </ul>
+          <br/> 
+
+
+	   <h4> The "Search and Replace" function </h4>
+	   <br/>
+	   If the Instructor wants to replace this question with another, he can use the "SEARCH and REPLACE" function. 
+	   <br/>
+	      <ul class="nested">
+	      <li> To the right of the panel, a list of Question Attributes are listed for the specific question the Instructor is editing.</li>
+	      <li> The Instructor can tweak with the Question Attributes and search for another Question that is similar in nature to the current
+	           one but is different. </li>
+	      <li> Or, the Instructor can totally change the Question Attributes, resulting in a new search using the given constraints. For example
+	           in the figure below, the Instructor is searching for a Question with a common author as the Question he is editing. However, he
+		   wants an easier "Short Answer" type Question which will take less time. </li>
+	      <li> The results of each search are located in the box below the "SEARCH and REPLACE" button. To view details of each hit, the 
+	           Instructor can press the <a href="../databaseHome/databasemain.html">Database Button</a> to the far right of each entry, as seen in the figure below. This will bring up a new
+		   screen which shows the Question in the Question DB. </li>
+	      <li> After looking at the matches in the Question DB window, the Instructor can choose to save any matches he wants to the test  by clicking the
+	           SAVE button to the right of each entry, as seen in the figure below.
+	      </ul>
+
+	 </p>
+	 <p>
+            The figure below is the result of the Replace function: <br/><br/>
+
+	 <IMG SRC="EditQuestionRE.png" id="figure-2-3-4-3"/>
+            <p align="center">Figure 2.3.4.3: Edit Pane Replace Results</p>
+	 <br/>
+	 </p>
+
+
+	<h4> Rules For "Search and Replace" Function </h4>
+	 <p>
+	   <ul class="nested">
+	   <li> The "Search and Replace" Function will only display exact matches to the provided constraints. </li>
+	   <li> Its main purpose is to allow the Instructor to search for similar Questions to the one he is editing. However
+	        it can also be used as a manual search function </li>
+	   </ul>	
+	 </p>
+    </div>
+    
+     <div id="navigation">
+       Prev: <a href="manualStep.html">Manual Step</a>  | Next: <a href="AdditionalDetails.html">Additional Test Generation Details</a> | Up: <a href="../functional.html">functional</a> 
+       | Top: <a href="../index.html">index</a>
+     </div>
+  </div>
+</body>
+</html>

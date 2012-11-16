@@ -1,0 +1,19 @@
+/*
+ CPE 365
+ Tyler Holland
+ */
+-- 1. List each row in the RECIPE table, in increasing alphabetical order of rname.
+ select *
+ from RECIPE
+ order by rname;
+ 
+-- 2. List each row in the INGREDIENT table, in increasing alphabetical order of rname.
+ select *
+ from INGREDIENT
+ order by iname;
+ 
+-- 3. List each row in the CONTAINS table, in increasing alphabetical order of
+--    rname then increasing alphabetical order of iname.
+ select *
+ from CONTAINS
+ order by rname, iname;

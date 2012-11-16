@@ -1,0 +1,110 @@
+<?
+$title = "List of Figures";
+require "../header.php";
+?>
+<font size=+2>
+<head>
+<title>
+List of Figures
+</title>
+</head>
+<body bgcolor=white>
+<p align=center>
+<strong>List of Figures</strong>
+</p>
+</font>
+<br>
+<B>Section 2.1</B>
+<ul>
+<li><a href="./ui-overview.html#2.1.1">Figure 2.2.1: Instructor Welcome Screen</a></li>
+<li><a href="./ui-overview.html#2.1.2">Figure 2.2.2: Student Welcome Screen</a></li>
+</ul>
+<br>
+<B>Section 2.2</B>
+<ul>
+<li><a href="./images/testgenerationfrontpage.jpg">Figure 2.2.1: Generating a Test Front Page</a></li>
+<li><a href="./images/basicgenerationclean.jpg">Figure 2.2.2: Basic Question Generation</a></li>
+<li><a href="./images/basicgenerationfilled.jpg">Figure 2.2.2.1: Filled in Basic Generation Screen</a></li>
+<li><a href="./images/testgenerationfrontfilled1.jpg">Figure 2.2.2.2: Partially Filled in Front Page</a></li>
+<li><a href="./images/basictoadvanced.jpg">Figure 2.2.3: Basic to Advanced Generation</a></li>
+<li><a href="./images/advancedgenerationfilled.jpg">Figure 2.2.4: Filled in Advanced Generation Dialog</a></li>
+<li><a href="./images/testgenerationfrontfilled2.jpg">Figure 2.2.4.1: Filled in Front Page</a></li>
+<li><a href="./images/advancedgenerationfilled2.jpg">Figure 2.2.4.2: Filled in Advanced Generation Dialog Example 2</a></li>
+<li><a href="./images/testgenerationfrontfilled3.jpg">Figure 2.2.4.3: Additional Front Page Image</a></li>
+<li><a href="./images/advancedgenerationfilled3.jpg">Figure 2.2.5: Advanced Generation with Criteria That Cannot be Met</a></li>
+<li><a href="./images/testgenerationfrontfilled4.jpg">Figure 2.2.6: Additional Front Page Image</a></li>
+
+<li><a href="./generatingatest-manualediting.html#2.2.7.1">Figure 2.2.7.1: Test Generator Before Manual Editing</a></li>
+<li><a href="./generatingatest-manualediting.html#2.2.7.2">Figure 2.2.7.2: Manual Test Creation Test Database</a></li>
+<li><a href="./generatingatest-manualediting.html#2.2.7.3">Figure 2.2.7.3: Narrowing Down Database Questions</a></li>
+<li><a href="./generatingatest-manualediting.html#2.2.7.4">Figure 2.2.7.4: Prior To Adding Questions To Question Queue</a></li>
+<li><a href="./generatingatest-manualediting.html#2.2.7.5">Figure 2.2.7.5: Test Queue After Adding Questions to The Question Queue</a></li>
+<li><a href="./generatingatest-manualediting.html#2.2.7.6">Figure 2.2.7.6: Prior To Deleting Question's From Question Queue</a></li>
+<li><a href="./generatingatest-manualediting.html#2.2.7.7">Figure 2.2.7.7: After Deleting Question's From Question Queue</a></li>
+<li><a href="./generatingatest-manualediting.html#2.2.7.8">Figure 2.2.7.8: Questions Added From Question Queue To Test Generator</a></li>
+
+<li><a href="./images/addattributeinitial.jpg">Figure 2.2.8: Adding an Attribute Dialog</a></li>
+<li><a href="./images/addattributetext.JPG">Figure 2.2.9: Adding a Text Attribute</a></li>
+<li><a href="./images/addattributeimage.JPG">Figure 2.2.10: Adding an Image Attribute</a></li>
+<li><a href="./images/testgenerationfrontfilled5.jpg">Figure 2.2.10: Front Page with Attributes</a></li>
+<li><a href="./images/addattributetest.jpg">Figure 2.2.11: Attribute shown on Exam</a></li>
+
+
+<li><a href="./images/FullyManual.JPG">Figure 2.2.5: Fully Manual Generation</a></li>
+</ul>
+<br>
+<B>Section 2.3</B>
+<ul>
+<li><a href="./images/TestGeneratorWireMain.png">Figure 2.3.1: Question Bank Main Screen</a></li> 
+<li><a href="./images/addquestion-base.png">Figure 2.3.2: Question Add Dialog</a></li> 
+<li><a href="./images/WireMainFilled-click.png">Figure 2.3.3: Right Click Dialog</a></li> 
+<li><a href="./images/questionbank-saempty.png">Figure 2.3.4: The expanded dialog for a short answer question</a></li> 
+<li><a href="./images/questionbank-safilled.png">Figure 2.3.5: The completed dialog for a short answer question</a></li> 
+<li><a href="./images/questionbank-1added.png">Figure 2.3.6: The question bank after the initial question addition</a></li> 
+<li><a href="./images/questionbank-essempty.png">Figure 2.3.7: The expanded dialog for the essay questions</a></li> 
+<li><a href="./images/questionbank-essfilled.png">Figure 2.3.8: The completed dialog for the essay question</a></li> 
+<li><a href="./images/questionbank-2added.png">Figure 2.3.9: The question bank after the second question addition</a></li> 
+<li><a href="./images/questionbank-flblempty.png">Figure 2.3.10: The expanded dialog for Fill in the Blank Questions</a></li> 
+<li><a href="./images/questionbank-flblfilled.png">Figure 2.3.11: The completed dialog for Fill in the Blank Questions</a></li>
+<li><a href="./images/questionbank-3added.png">Figure 2.3.12: The question bank after the third question addition</a></li>
+<li><a href="./images/questionbank-TrueFalseEmpty.png">Figure 2.3.13: Empty true/false question</a></li>
+<li><a href="./images/questionbank-TrueFalseFilled.png">Figure 2.3.14: Completed true/false question</a></li>
+<li><a href="./images/questionbank-4added.png">Figure 2.3.15: The question bank after the fourth question addition</a></li>
+<li><a href="./images/questionbank-CodeEmpty.png">Figure 2.3.16: Empty code question</a></li>
+<li><a href="./images/questionbank-CodeFilled.png">Figure 2.3.17: Completed code question</a></li>
+<li><a href="./images/questionbank-5added.png">Figure 2.3.18: The question bank after the fifth question addition</a></li>
+<li><a href="./images/questionbank-MatchingEmpty.png">Figure 2.3.19: Empty matching question</a></li>
+<li><a href="./images/questionbank-MatchingFilled.png">Figure 2.3.20: Completed matching question</a></li>
+<li><a href="./images/questionbank-6added.png">Figure 2.3.21: The question bank after the sixth question addition</a></li>
+<li><a href="./images/questionbank-MultipleChoiceEmpty.png">Figure 2.3.22: Empty multiple choice question</a></li>
+<li><a href="./images/questionbank-MultipleChoiceFilled.png">Figure 2.3.23: Completed multiple choice question</a></li>
+<li><a href="./images/questionbank-7added.png">Figure 2.3.24: The question bank after the seventh question addition</a></li>
+<li><a href="./images/questionbank-htmlformat.png">Figure 2.3.25: The completed formatted short answer question</a></li>
+<li><a href="./images/questionbank-8added.png">Figure 2.3.26: The question bank after the eighth question addition</a></li>
+<li><a href="./images/questionbank-edit.png">Figure 2.3.27: Example edit dialog with preexisting information</a></li>
+<li><a href="./images/questionbank-edit-ex.png">Figure 2.3.28: Question Edit Dialog - In Progress</a></li>
+<li><a href="./images/questionbank-added-edit.png">Figure 2.3.29: The edited question now appears in the question bank</a></li>
+<li><a href="./images/questionbank-searchquery.png">Figure 2.3.30: A Query Inputted into the Search Box</a></li>
+<li><a href="./images/questionbank-searchreturn.png">Figure 2.3.31: Questions Returned by the Search</a></li>
+<li><a href="./images/questionbank-removemult.png">Figure 2.3.32: Example Selection of Questions to Remove</a></li> 
+<li><a href="./images/questionbank-removemultdone.png">Figure 2.3.33: The Question Bank After the Multiple Remove Completes</a></li> 
+<li><a href="./images/questionbank-removesingledone.png">Figure 2.3.34: The Question Bank After the Single Remove Completes</a></li>
+<li><a href="./images/questionbank-reorgdiag.png">Figure 2.3.35: The reorganization dialog</a></li>
+<li><a href="./images/questionbank-organize.png">Figure 2.3.36: The five selected columns in the dialog</a></li>
+<li><a href="./images/questionbank-colreorgdone.png">Figure 2.3.37: Reordered columns in the question bank</a></li>
+<li><a href="./images/questionbank-sort.png">Figure 2.3.38: Questions sorted in ascending order</a></li>
+<li><a href="./images/questionbank-sortasc.png">Figure 2.3.39: Questions sorted in descending order</a></li>
+</ul>
+<br>
+<B>Section 2.4</B>
+<ul>
+<li><a href ="./images/handling-top.png">Figure 2.4.1.1: Handling Exam Main Screen</a></li>
+<li><a href ="./images/distribute-initial.png">Figure 2.4.2.1: Distributing Exam Main Screen</a></li>
+<li><a href ="./images/distribute-pre-proctor.png">Figure 2.4.2.2: Waiting for Students to Connect</a></li>
+<li><a href ="./images/distribute-proctor.png">Figure 2.4.2.3: Proctored Exam Setting</a></li>
+<li><a href ="./images/distribute-post-proctor.png">Figure 2.4.2.4: Proctored Exam Setting Finished</a></li>
+</ul>
+<br>
+<?
+require "../footer.php";
+?>

@@ -1,0 +1,3 @@
+MODULE procedure2test
+SUBMODULE Procedure2
+INSTANCE UUT

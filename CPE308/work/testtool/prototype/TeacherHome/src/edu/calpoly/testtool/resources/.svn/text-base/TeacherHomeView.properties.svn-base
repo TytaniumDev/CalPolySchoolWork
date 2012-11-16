@@ -1,0 +1,72 @@
+# Resources for the TeacherHomeView class
+
+# top-level menus
+
+fileMenu.text = File
+helpMenu.text = Help
+
+# @Action resources
+
+showAboutBox.Action.text = &About...
+showAboutBox.Action.shortDescription = Show the application's information dialog
+
+# status bar resources
+
+StatusBar.messageTimeout = 5000
+StatusBar.busyAnimationRate = 30
+StatusBar.idleIcon = busyicons/idle-icon.png
+StatusBar.busyIcons[0]  = busyicons/busy-icon0.png
+StatusBar.busyIcons[1]  = busyicons/busy-icon1.png
+StatusBar.busyIcons[2]  = busyicons/busy-icon2.png
+StatusBar.busyIcons[3]  = busyicons/busy-icon3.png
+StatusBar.busyIcons[4]  = busyicons/busy-icon4.png
+StatusBar.busyIcons[5]  = busyicons/busy-icon5.png
+StatusBar.busyIcons[6]  = busyicons/busy-icon6.png
+StatusBar.busyIcons[7]  = busyicons/busy-icon7.png
+StatusBar.busyIcons[8]  = busyicons/busy-icon8.png
+StatusBar.busyIcons[9]  = busyicons/busy-icon9.png
+StatusBar.busyIcons[10] = busyicons/busy-icon10.png
+StatusBar.busyIcons[11] = busyicons/busy-icon11.png
+StatusBar.busyIcons[12] = busyicons/busy-icon12.png
+StatusBar.busyIcons[13] = busyicons/busy-icon13.png
+StatusBar.busyIcons[14] = busyicons/busy-icon14.png
+editMenu.text=Edit
+dbMenu.text=Database
+testsMenu.text=Tests
+optionsMenu.text=Options
+welcomeLabel.text=Welcome,
+#NOI18N
+welcomeLabel.font=Century Gothic-Plain-36
+professorLabel.text=Professor Fisher
+#NOI18N
+professorLabel.font=Arial-Bold-36
+dbIcon.text=
+#NOI18N
+dbIcon.icon=db_icon.png
+testIcon.text=
+#NOI18N
+testIcon.icon=test_icon.png
+gradeIcon.text=
+#NOI18N
+gradeIcon.icon=grade_icon.png
+dbButton.text=View Database
+#NOI18N
+dbButton.icon=button.png
+#NOI18N
+dbButton.foreground=250, 250, 250
+#NOI18N
+dbButton.font=Arial-Bold-14
+testButton.text=Generate Test
+#NOI18N
+testButton.icon=button.png
+#NOI18N
+testButton.font=Arial-Bold-14
+#NOI18N
+testButton.foreground=250, 250, 250
+#NOI18N
+gradeButton.font=Arial-Bold-14
+gradeButton.text=Grade Test
+#NOI18N
+gradeButton.foreground=250, 250, 250
+#NOI18N
+gradeButton.icon=button.png

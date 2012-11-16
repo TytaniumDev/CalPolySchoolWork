@@ -1,0 +1,18 @@
+# begin LFP file E:\CPE169\Experiment6\Exp6\Exp6.lfp
+designfile encoder.vhd
+parttype xc3s500e-4-fg320
+bus_delimiter 0;
+set_busdelim_onsave 1;
+IO_GROUP "I"  ;
+IO_GROUP "Y"  ;
+NET "I<7>" IO_GROUP="I"  ;
+NET "I<6>" IO_GROUP="I"  ;
+NET "I<5>" IO_GROUP="I"  ;
+NET "I<4>" IO_GROUP="I"  ;
+NET "I<3>" IO_GROUP="I"  ;
+NET "I<2>" IO_GROUP="I"  ;
+NET "I<1>" IO_GROUP="I"  ;
+NET "I<0>" IO_GROUP="I"  ;
+NET "Y<2>" IO_GROUP="Y"  ;
+NET "Y<1>" IO_GROUP="Y"  ;
+NET "Y<0>" IO_GROUP="Y"  ;

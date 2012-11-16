@@ -1,0 +1,80 @@
+--------------------------------------------------------------------------------
+Release 9.1.03i Trace 
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\ISE91\bin\nt\trce.exe -ise
+C:/Documents and Settings/s169s4b1/Desktop/Lab8/Lab8.ise -intstyle ise -e 3 -s
+4 -xml proc3 proc3.ncd -o proc3.twr proc3.pcf -ucf proc3.ucf
+
+Design file:              proc3.ncd
+Physical constraint file: proc3.pcf
+Device,package,speed:     xc3s500e,fg320,-4 (PRODUCTION 1.26 2006-10-19)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock CLK to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+CACG<0>     |   10.606(R)|CLK_IBUF          |   0.000|
+CACG<1>     |   10.648(R)|CLK_IBUF          |   0.000|
+CACG<2>     |   10.591(R)|CLK_IBUF          |   0.000|
+CACG<3>     |   10.074(R)|CLK_IBUF          |   0.000|
+CACG<4>     |   10.036(R)|CLK_IBUF          |   0.000|
+CACG<5>     |   10.058(R)|CLK_IBUF          |   0.000|
+CACG<6>     |   10.880(R)|CLK_IBUF          |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    1.563|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+CLK            |CACG<0>        |    9.027|
+CLK            |CACG<1>        |   10.347|
+CLK            |CACG<2>        |    9.145|
+CLK            |CACG<3>        |    8.553|
+CLK            |CACG<4>        |    8.668|
+CLK            |CACG<5>        |    8.572|
+CLK            |CACG<6>        |   10.584|
+---------------+---------------+---------+
+
+
+Analysis completed Wed May 27 17:29:56 2009 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 109 MB
+
+
+

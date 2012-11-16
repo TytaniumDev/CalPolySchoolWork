@@ -1,0 +1,83 @@
+<head>
+<title>2.4.2 - Distributing Exams Inspection Test</title>
+</head>
+
+<style type="text/css">
+td {
+    border: 1px solid black;
+}
+
+th {
+    border: 1px solid black;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+</style>
+
+<h3>
+2.4.2.  Distributing Exams Inspection Test
+</h3>
+
+<table>
+<tr>
+    <th>Component</th>
+    <th>Inspector</th>
+    <th>Date</th>
+    <th>Status</th>
+    <th>Remarks</th>
+</tr>
+<tr>
+    <td>2.4.2 H1</td>
+    <td>BSV</td>
+    <td>10/29/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4.2 P1</td>
+    <td>BSV</td>
+    <td>10/29/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4.2 A1</td>
+    <td>BSV</td>
+    <td>10/29/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4.2 A2</td>
+    <td>BSV</td>
+    <td>10/29/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4.2 A3</td>
+    <td>BSV</td>
+    <td>10/29/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4.2 A4</td>
+    <td>BSV</td>
+    <td>10/29/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4.2 A5</td>
+    <td>BSV</td>
+    <td>10/29/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+</table>
+

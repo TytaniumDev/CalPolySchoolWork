@@ -1,0 +1,168 @@
+<?
+$title = "2.2.2  Advanced Generation";
+require "../header.php";
+?>
+<a name="Advanced Generation">
+<h3>
+2.2.2 Advanced Generation
+</h3>
+</a>
+
+<p>When the user wants to add more specific parameters to the test he is creating, an advanced generation or intermediate level of laziness is used. In the add a question dialog there is a link above the generate button entitled <i>more</i>. When the user clicks this an extra field the user can set is shown below the four main criteria, along with a plus button. This is shown in Figure 2.2.3. This added field contains a drop down menu where the user can specify what parameter to set. These include what type of question, the difficulty, a question specific time limit, and keywords within the question. Once the user clicks one of the parameters another drop down menu is available where the user can set the exact criteria. Next to these two fields is a <i>qty</i> field where the user inputs the number of questions he wants to have this specific criteria. The plus button below this will add another row where the user can specify the next parameter. He can add as many as he wants to the test. 
+
+
+<p>
+<hr>
+<a name="Advanced Generation">
+<p align=center>
+<img src="images/basictoadvanced.jpg" border="1" width="900" height="500">
+</p>
+</a>
+<p align=center> <i>Figure 2.2.3: Shows the changes in the adding a question dialog when the more link is clicked.</i></p>
+<hr>
+<br>
+<p><p><p>
+An example is shown in Figure 2.2.4 of a type, difficulty, time limit, and keyword parameter set. 
+<hr>
+<p><br>
+<a name="Advanced Generation">
+<p align=center>
+<img src="images/advancedgenerationfilled.jpg" border="1">
+</p>
+</a>
+<p align=center> <i>Figure 2.2.4: Shows an example of an intermediate level of laziness.</i></p>
+<hr>
+<p><p><p>
+
+The generating a test front page is now shown in figure 2.2.4.1 with the six new questions the test generator will pull added. Two of these questions at least will be multiple choice. One of them at least will have a difficulty of 4, one of them will have a time limit of 20 minutes, and one question will contain one or both of the keywords. The test generator will not pull questions that have been previously added to a test. As mentioned in the previous section the turn-out would be the same for different types of questions (i.e. short answer, coding, etc), different levels of difficulty, different keywords, and different question specific time limits.
+
+<p><p><br>
+
+<hr>
+ 
+<p><br>
+<a name="Front Page with Added Questions">
+<p align=center>
+<img src="images/testgenerationfrontfilled2.jpg" border="1">
+</p>
+</a>
+<p align=center> <i>Figure 2.2.4.1: The front page of the generating a test section with the added questions from the advanced generation portion. This test is the same test that was used in the previous sections under generating a test. </i></p>
+<hr>
+<p><p><p>
+
+Another example is used to show different criteria that can be added.
+
+</br></p>
+<p><br>
+<a name="Adding a Question">
+<p align=center>
+<img src="images/advancedgenerationfilled2.jpg" border="1">
+</p>
+</a>
+<p align=center> <i>Figure 2.2.4.2: Adding a question </i></p>
+<hr>
+</br></p>
+<br><p>
+
+<a name="Front Page">
+<p align=center>
+<img src="images/testgenerationfrontfilled3.jpg" border="1">
+</p>
+</a>
+<p align=center> <i>Figure 2.2.4.3: Front page</i></p>
+<hr>
+</br></p>
+
+
+
+
+<p><br><b><u>When all parameters cannot be met</u></b></p>
+
+<p>The rule regarding the four main criteria are discussed in the previous section.</p>
+
+<p><br>
+In the event none of the extra parameters can be met (excluding the <i>difficulty</i> criteria, see table below) the test generator will still generate a test that meets the main four criteria following the rules mentioned previously. </p>
+<p><br>
+When a parameter cannot be met an error message is always displayed to the user with the specific parameter mentioned.
+
+</br></p>
+<p>
+
+<table width="100%" border="1">
+  <tr>
+    <th width="20%" scope="col">Criteria</th>
+    <th width="60%" scope="col">When generator cannot meet (range)</th>
+  </tr>
+  <tr>
+    <td>Quantity</td>
+    <td>Must Meet</td>
+  <tr>
+    <td>Time Limit</td>
+    <td>Plus or Minus 1 min. Will repeat until limit can be met or a range of max. 5
+ min. has been reached.</td>
+  </tr>
+  <tr>
+    <td>Question Used in Last Range</td>
+    <td>Next closest question, continually</td>
+  </tr>
+  <tr>
+    <td>Difficulty</td>
+    <td>Plus or Minus 1 only.</td>
+  </tr>
+  <tr>
+    <td>Question Type</td>
+    <td>Will ignore.</td>
+  </tr>
+  <tr>
+    <td>Keyword</td>
+    <td>Will ignore.</td>
+  </tr>
+</table>
+</p></br>
+<br><p><p><br>
+
+Lets assume the user wants to generate a test but inputs criteria that cannot all be met. Figure 2.2.4 will be used again but the difficulty cannot be met and the keywords cannot be met. There will be a new test that is being generated.</br>
+<br><p>
+<hr>
+<a name="Advanced Generation">
+<p align=center>
+<img src="images/advancedgenerationfilled3.jpg" border="1" width="500" height="600">
+</p>
+</a>
+<p align=center> <i>Figure 2.2.5: Advanced generation, some criteria cannot be met.</i></p>
+<hr> 
+</br>
+<br><p>
+The resulting front page will look like Figure 2.2.6.
+</br></p>
+<p><br>
+<hr>
+<a name="Advanced Generation">
+<p align=center>
+<img src="images/testgenerationfrontfilled4.jpg" border="1" width="700" height="700">
+</p>
+</a>
+<p align=center> <i>Figure 2.2.6: Front page for test when not all criteria could be met</i></p>
+<hr>
+
+
+</a>
+<br>
+<p>
+
+<br>
+<br>
+<br>
+<br>
+<hr width=80% size=3>
+<center>
+<font size=-1>
+<font color=black> Prev: </font><a href="generatingatest-addingquestion">Basic Generation</a></font>
+ | <font color=black> Next: </font><a href="generatingatest-manualediting.html">Manual Editing</a></font>
+  | <font color=black> Up: </font><a href="generatingatest-overview.html">Generating A Test</a>
+ | <font color=black> Top: </font><a href="index.html">Index</a></font>
+</center>
+<hr width=80% size=3>
+<?
+require "../footer.php";
+?>

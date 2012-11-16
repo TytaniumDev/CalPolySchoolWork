@@ -1,0 +1,101 @@
+<?
+$title = "2.2.4  Adding an Attribute";
+require "../header.php";
+?>
+<a name="Adding an Attribute">
+<h3>
+2.2.4 Adding an Attribute
+</h3>
+</a>
+<p>
+
+<br>
+<p>
+An attribute is extra text and/or images that can be added to a test that is not contained within a question. It can be useful in sectioning the exam, or providing formulas, clarifications, etc.
+</p>
+<p>
+<br>
+<br>
+When the user clicks the <i>Add an Attribute</i> button the adding an attribute dialog is displayed (see figure 2.2.8).</p>
+<p>
+This dialog contains a <i>type</i> field in the top left corner. This field is a drop-down menu where the user can click either <i>text</i> or <i>image</i>. To the right of the <i>type</i> field is the <i>index</i> field. The user will enter where in the exam he wants the attribute added. The number corresponds to the <i>following</i> question. i.e. if the user inputs "1" the attribute is added to the beginning of the test. If the user inputs "5" the attribute is displayed between questions four and five. If the user enters a number higher than the last question index the attribute is added to the end of the test.</p>
+<p><br>
+<hr>
+<p><br>
+
+<a name="Adding an Attribute">
+<p align=center>
+<img src="images/addattributeinitial.jpg" border="1">
+</p>
+</a>
+<p align=center> <i>Figure 2.2.8: The adding an attribute dialog</i></p>
+<hr>
+<p><p><p>
+
+When the user selects <i>text</i> in the <i>type</i> field a text field is shown below the <i>type</i> field. Here the user can enter in what he wants the attribute to say. This is shown in figure 2.2.9. </p>
+<p><br><p>
+<hr>
+<p><br>
+<a name="Adding a Text Attribute">
+<p align=center>
+<img src="images/addattributetext.JPG" border="1">
+</p>
+</a>
+<p align=center> <i>Figure 2.2.9: Adding a text attribute to an exam</i></p>
+<hr>
+<p><p><p>
+
+When the user selects <i>image</i> in the <i>type</i> field a text field shown below the <i>type</i> field with a <i>browse</i> button next to it. Here the user can manually type the location of the image he wants to add or select browse and his file directory will be displayed and he can navigate to and select the desired image. This is shown in figure 2.2.10. </p>
+<p><br><p>
+<hr>
+<p><br>
+<a name="Adding an Image Attribute">
+<p align=center>
+<img src="images/addattributeimage.JPG" border="1">
+</p>
+</a>
+<p align=center> <i>Figure 2.2.10: Adding an image attribute to an exam</i></p>
+<hr>
+<p><p><p>
+
+Attributes are added one at a time to an exam. Multiple attributes can be added in a single location. Figure 2.2.11 shows the generating a test front page with the text attribute shown in figure 2.2.8. An image attribute would look the same. 
+
+
+<p><br><p>
+<hr>
+<p><br>
+<a name="Adding Attributes">
+<p align=center>
+<img src="images/testgenerationfrontfilled5.jpg" border="1">
+</p>
+</a>
+<p align=center> <i>Figure 2.2.10: Generating a test front page with a text attribute added.</i></p>
+<hr>
+<p><p><p>
+The <i>replace</i> and <i>delete</i> buttons coorespond to attributes as well as questions. If an attribute is selected and the <i>replace</i> button is clicked then the add an attribute dialog will open. The index will automatically be filled in with the same index as the attribute being replaced. The user will still have the ability to change it however. If an attribute is selected and the <i>delete</i> button is clicked, the selected attribute will be removed from the test. 
+</br></p>
+<p><br>
+Figure 2.2.11 shows the text attribute being displayed on an exam.
+
+<p><br><p><hr><p><br><a name="Adding Attributes">
+<p align=center>
+<img src="images/addattributetest.jpg" border="1">
+</p>
+</a><p align=center> <i>Figure 2.2.11: A text attribute being displayed while an exam is being taken.</i></p>
+<hr>
+<p><p><p>
+
+<br>
+<br>
+<hr width=80% size=3>
+<center>
+<font size=-1>
+<font color=black> Prev: </font><a href="generatingatest-manualediting">Manual Editing</a></font>
+ | <font color=black> Next: </font><a href="questionbank-top.html">Question Bank Management</a></font>
+ | <font color=black> Up: </font><a href="generatingatest-overview.html">Generating A Test</a>
+ | <font color=black> Top: </font><a href="index.html">Index</a></font>
+</center>
+<hr width=80% size=3>
+<?
+require "../footer.php";
+?>

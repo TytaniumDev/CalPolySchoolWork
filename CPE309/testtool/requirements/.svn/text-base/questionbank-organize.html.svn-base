@@ -1,0 +1,56 @@
+<?
+$title = "2.3.4. Organizing Questions";
+require "../header.php";
+?>
+
+<a name="OrganizeQuestions"></a>
+<h3>
+2.3.4. Organizing the Question Bank
+</h3>
+<p>
+This shows a scenario in which the user is reorganizing the question bank. The reorganization allows the user to select which properties of questions they
+see in the main question bank window (see <a href="./images/TestGeneratorWireMain.png">Figure 2.3.1</a>)
+<br>
+Once the user clicks the "Reorganize" button on the <a href="./images/TestGeneratorWireMain.png">main GUI</a>, a dialog box similar to Figure 2.3.35 below will appear. 
+<br>
+<a name="Figure2328"></a>
+<CENTER>
+<IMG SRC="./images/questionbank-reorgdiag.png">
+</CENTER>
+<p align=center> Figure 2.3.35: The reorganization dialog</p>
+<br>
+<br>
+Once this window appears, the user then selects the five properties of the questions they want displayed in the first five columns in the question database. As shown in
+ figure 2.3.36 below, the user has chosen the questions to be displayed in the following order:<br>
+Type, Author, Course, Answer, Difficulty
+<a name="Figure2329"></a>
+<CENTER>
+<IMG SRC="./images/questionbank-organize.png">
+</CENTER>
+<p align=center> Figure 2.3.36: The five selected columns in the dialog</p>
+<br>
+<br>
+ 
+Once the user clicks "OK", the first five columns are swapped with the chosen columns in the chosen order as shown in figure 2.3.37 below. The question property columns are 
+now reorganized according to the 5 newly chosen properties, as opposed to the default values shown in <a href="./images/WireMainFilled.png">previously</a>. The column ordering is 
+also saved to a file so reorganizing doesn't have to be done at every startup.
+<br>
+<CENTER>
+<IMG SRC="./images/questionbank-colreorgdone.png">
+</CENTER>
+<p align=center> Figure 2.3.37: Reordered columns in the question bank</p>
+<br>
+<br>
+
+<br> <hr width=80% size=3>
+<center>
+<font size=-1>
+<font color=black> Prev: </font><a href="questionbank-remove.html">questionbank-remove</a>
+ | <font color=black> Next: </font><a href="questionbank-sort.html">questionbank-sort</a>
+ | <font color=black> Up: </font><a href="questionbank-top.html">question bank</a>
+ | <font color=black> Top: </font><a href="index.html">index</a></font>
+</center>
+<hr width=80% size=3>
+<?
+require "../footer.php";
+?>

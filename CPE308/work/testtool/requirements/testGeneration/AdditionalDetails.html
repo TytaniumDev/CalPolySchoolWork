@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestTool</title>
+  <link href="../../public/css/layout.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>Test Tool</h1>
+      <h2 class="title"> 2.3.5 Additional Test Generation Details </h2>
+    </div>
+    <div id="content">
+       <!-- this is where you put stuff, replace the ul block with whatever -->
+	 
+      <p>
+     <h5> The sections below describe different use cases, outlining how the Generator will respond when confronted with difficulties.</h5> 
+      </p>
+
+      <br/><br/>
+
+      <h3>Use Case 1:<u> An Ideal Case for Step 1: </u></h3>
+      <p>
+      Figure 2.3.5.1 shows the result of an ideal, partially generated test after Step 1.<br/>
+      This test is generated from a Questions Database that is amply filled with questions for each class; at least 5 Questions for each Question type. The constraints
+       found in <a href="maxLazy.html">Step 1</a>
+      <br/><br/>
+          <IMG SRC="5.1" id="figure-2-3-5-1">
+          <p align="center">Figure 2.3.5.1: First Step Ideal result</p>
+      </p>
+      <p> Notice that all constraints are met and that there is 1 of each question type. </p>
+      <p> NOTE: you can see the Question body by clicking on the drop down arrow in Question body box.</p><br/>
+
+      <h3> Use Case 2:<u> Insufficient Questions in DB </u></h3>
+      <p>
+      Assume we have a Questions Database that only contains 3 Questions for both classes: CPE102 and CPE 103.    
+      and we give the constraints that are shown in <a href="maxLazy.html">Step 1</a>. 
+      <br/><br/>
+      <b>PROBLEM:</b> The constraint asked for 10 Questions and there are only a total of six valid Questions in the Database for both classes combined.
+      <br/><br/>
+      <b>ACTION:</b> The Generator will return a test with only the 6 Questions possible. If the Questions' combined time are lower than the specified range, the Generator
+              will give a warning as shown in the figure below. If the Questions' combined time is greater than the specified range, the Generator will remove 
+	      the fewest number of Questions from the test until the Time Range constraint is met.
+      </p>
+      <p>
+         <IMG SRC="5.2" id="figure-2-3-5-2"/>
+         <p align="center">Figure 2.3.5.2: Warning sign</p>
+	 <br/>
+      </p> 
+      <p> The figure below shows the resultant Test after Step 1. Note that the Number of Questions constraint is not met but the Time Range constraint is. </p>
+
+         <IMG SRC="5.3" id="figure-2-3-5-3"/>
+         <p align="center">Figure 2.3.5.3: Insufficient Questions result</p>
+      </p><br/>	 
+
+      
+      <h3> Use Case 3: <u>Time Range conflict with Questions </u></h3>
+      <p>
+      Assume we have an amply filled Questions Database that has at least 5 different Questions for each Question type in each desired class, and we give the constraints
+      that are shown in figure 2.3.5.4.<br/><br/>
+
+         <IMG SRC="5.4" id="figure-2-3-5-4"/>
+         <p align="center">Figure 2.3.5.4: Step 1 constraints</p>
+
+      <br/><br/>
+      <b>PROBLEM 1:</b> The constraint asked for 2 Questions and a total Time Range of 60 min. However, there does not exist a group of 2 Questions whose combined time adds up to 60 min.
+      <br/><br/>
+      <b>ACTION:</b> The Generator will return a test with the two Questions whose combined time is closest to 60 as seen in the figure below. It will also give a warning 
+      to the Instructor as seen in figure 2.3.5.2. 
+      </p>
+      <p>
+
+         <IMG SRC="5.5" id="figure-2-3-5-5"/>
+         <p align="center">Figure 2.3.5.5: Test with two Questions</p>
+	 
+<br/>
+     </p>
+     <p>
+     <b>PROBLEM 2: </b> The constraint asked for 2 Questions and a total Time Range of 60 min. However, every possible grouping of two Questions will result in a combined time greater than 60 min.
+     <br/><br/>
+     <b>ACTION 2:</b> The Generator will return a test with only 1 Question whose time is closest to 60 min as seen in the figure below. It will also give the warning as shown in figure 
+     2.3.5.2.<br/><br/>
+     
+         <IMG SRC="5.6" id="figure-2-3-5-6"/>
+         <p align="center">Figure 2.3.5.6 Test with 1 Question</p>
+     </p><br/>
+
+
+     <h3>Use Case 4: <u>An Ideal Case for Step 2: </u></h3>
+      <p>
+      Figure 2.3.3.1 shows the result of an ideal, partially generated test after Step 2.<br/>
+      This test is generated from a Questions Database that is amply filled with questions for each class; at least 5 Questions for each Question type. 
+      The constraints used are found in <a href="lessLazy.html">Step 2</a>.
+      <br/><br/>
+          <IMG SRC="5.7" id="figure-2-3-5-7"/>
+          <p align="center">Figure 2.3.5.7: Ideal Test after Step 2</p>
+      </p>
+      <p> Notice that all the constraints from Step 1 and Step 2 are met. </p>
+      <br/>
+
+
+      <h3>Use Case 5:<u>Few Questions match Constraints</u></h3>
+      <p>
+      Assume we have an amply filled Questions Database that has at least 5 different Questions for each Question type in each desired class, and we give the constraints
+      that are shown in <a href="lessLazy.html">Step 2</a>.<br/><br/>
+
+      <b>PROBLEM:</b>The constraints asked for in this example are very specific and the Generator could only find 3 Questions that matched all the given constraints. 
+      <br/><br/>
+      <b>ACTION:</b> The Generator will return a test that only includes the Questions that matched all given constraints. It will also send a warning to the Instructor 
+      stating what constraints are currently failing and strongly urging him to change the constraints.  
+      </p>
+      <p>
+          <IMG SRC="5.8" id="figure-2-3-5-8"/>
+          <p align="center">Figure 2.3.5.8: Warning </p>
+     </p>
+
+
+
+
+    </div>
+    
+     <div id="navigation">
+       Prev: <a href="QEdit.html">Edit a Question</a> | Next: [none] | Up: <a href="../functional.html">functional</a> 
+       | Top: <a href="../index.html">index</a>
+     </div>
+  </div>
+</body>
+</html>

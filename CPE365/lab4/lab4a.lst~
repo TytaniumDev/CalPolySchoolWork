@@ -1,0 +1,75 @@
+10:19:38 TYHOLLAN> @insert_recipe_xtra
+10:19:51 TYHOLLAN> ---------------------------------------------------------------
+10:19:51 TYHOLLAN> -- insert_recipe_xtra.sql -- Recipe Database - extra insertions.
+10:19:51 TYHOLLAN> -- Created by M. Liu,  Fall 2010
+10:19:51 TYHOLLAN> ---------------------------------------------------------------
+10:19:51 TYHOLLAN> -- 1
+10:19:51 TYHOLLAN> insert into RECIPE values
+10:19:51   2  	('Nachos', 'appetizer', 'cheap', 20);
+  ('Nachos', 'appetizer', 'cheap', 20)
+                          *
+ERROR at line 2:
+ORA-01722: invalid number
+** Domain constraint violated
+** EXPLANATION: The third value, for price, is supposed to be numeric, not a string
+
+10:19:51 TYHOLLAN> -- 2
+10:19:51 TYHOLLAN> insert into RECIPE values
+10:19:51   2  	('mochi', 'dessert', 6.5, 5.2);
+
+1 row created.
+
+Commit complete.
+** No error
+
+10:19:51 TYHOLLAN> -- 3
+10:19:51 TYHOLLAN> insert into RECIPE values
+10:19:51   2  	('Tacos', 'entree', 6.5, 0);
+insert into RECIPE values
+*
+ERROR at line 1:
+ORA-02290: check constraint (TYHOLLAN.SYS_C00244645) violated
+** check constraint violated
+** EXPLANATION:4th value is 0 instead of > 0
+
+10:19:51 TYHOLLAN> -- 4
+10:19:51 TYHOLLAN> insert into RECIPE values
+10:19:51   2  	('Fried Cheese', 'appetizer', 6.50, 10);
+insert into RECIPE values
+*
+ERROR at line 1:
+ORA-00001: unique constraint (TYHOLLAN.SYS_C00244646) violated
+** Primary Key constraint violated
+** EXPLANATION: There is already a Fried Cheese in the Recipe database
+
+10:19:51 TYHOLLAN> -- 5
+10:19:51 TYHOLLAN> insert into CONTAINS values
+10:19:51   2  	('Hummus', 'garbanzo beans', 10);
+insert into CONTAINS values
+*
+ERROR at line 1:
+ORA-00001: unique constraint (TYHOLLAN.SYS_C00244658) violated
+
+
+10:19:51 TYHOLLAN> -- 6
+10:19:51 TYHOLLAN> insert into CONTAINS values
+10:19:51   2  	('Hummus', 'fish sauce', 0.25);
+insert into CONTAINS values
+*
+ERROR at line 1:
+ORA-02291: integrity constraint (TYHOLLAN.SYS_C00244659) violated - parent key
+not found
+
+
+10:19:51 TYHOLLAN> -- 7
+10:19:51 TYHOLLAN> insert into CONTAINS values
+10:19:51   2  	('Tacos', 'beef', 0.25);
+insert into CONTAINS values
+*
+ERROR at line 1:
+ORA-02291: integrity constraint (TYHOLLAN.SYS_C00244660) violated - parent key
+not found
+
+
+10:19:51 TYHOLLAN> --------------------------------------
+10:19:51 TYHOLLAN> spool off

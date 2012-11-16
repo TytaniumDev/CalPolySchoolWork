@@ -1,0 +1,570 @@
+#lang plai
+
+; only print errors
+(print-only-errors #t)
+
+; contains functions and definitions for AnyStores
+(require "p6-support.rkt")
+
+; import the immutable hash table creation function:
+(require (only-in mzscheme make-immutable-hash-table))
+
+; represents an expression
+(define-type OCFAE
+  [num (n number?)]
+  [bool (b boolean?)]
+  [str (s string?)]
+  [unop (op symbol?) (arg OCFAE?)]
+  [binop (op symbol?) (lhs OCFAE?) (rhs OCFAE?)]
+  [varref (name symbol?)]
+  [switch (val OCFAE?) (clauses (listof SClause?)) (elseval OCFAE?)]
+  [fun (params (listof Pattern?)) (body OCFAE?)]
+  [withrec (name symbol?) (rhs OCFAE?) (body OCFAE?)]
+  [app (f OCFAE?) (args (listof OCFAE?))]
+  [newexp (name symbol?) (fields (listof OCFAE?))]
+  [is-a (name symbol?) (arg OCFAE?)]
+  [seq (exps (listof OCFAE?))])
+
+; represents a 'switch' clause
+(define-type SClause
+  [clause (patval OCFAE?) (result OCFAE?)])
+
+; represents a pattern
+(define-type Pattern
+  [idPat (name symbol?)]
+  [objPat (name symbol?) (subPats (listof Pattern?))])
+
+; represents a possible result of evaluation
+(define-type OCFAE-Value
+  [numV (n number?)]
+  [boolV (b boolean?)]
+  [strV (s string?)]
+  [closureV (params (listof Pattern?))
+            (body OCFAE?)
+            (env hash?)]
+  [objectV (name symbol?)
+           (fields (listof OCFAE-Value?))]
+  [boxV (loc number?)])
+
+; represents a store containing a hash and the next unused address
+(define-type Store
+  [sto (memory (and/c immutable? hash?)) (next-loc number?)])
+
+; An environment is represented as a hash mapping symbols
+;  to (racket) boxes containing OCFAE-Values
+(define empty-env (make-immutable-hash-table '()))
+
+; run a computation. Discard the store at the end of
+; the computation.
+(define (run/trim c) (a*s-val (run c (sto empty-env 0))))
+
+;
+; parsing helper functions
+;
+
+; unique-bindings? : (listof symbol?) -> boolean?
+; Determines if a list o/f bindings is void of duplicates
+(define (unique-bindings? sym-list)
+  ;(define flat (flatten sym-list))
+  ;(equal? (length sym-list) (length (remove-duplicates sym-list)))
+  (define objs (filter list? sym-list))
+  (define ids (remove* objs sym-list))
+  (and (equal? (length ids) (length (remove-duplicates ids)))
+       (andmap (λ (i) (andmap (λ (o) (equal? (member i o) #f)) objs)) ids)))
+
+; parse-clause : s-exp? -> SClause?
+; This procedure parses an s-expression into an SClause
+(define (parse-clause cl)
+  (cond [(equal? (first cl) 'else) (parse-exp (second cl))]
+        [else (clause (parse-exp (first cl)) (parse-exp (third cl)))]))
+
+; parse-clauses : (listof s-exp?) -> (listof SClause?)
+; This procedure parses a list of s-expressions into a list of SClauses
+(define (parse-clauses exp)
+  (define temp (remove (first exp) exp))
+  (define cls (remove (first temp) temp))
+  (define full (map (λ (c) (parse-clause c)) cls))
+  (remove (last full) full))
+
+; grab-arg : (listof symbol?) -> OCFAE?
+; grabs the argument to a binding
+(define (grab-arg sexp)
+  (parse-exp (last sexp)))
+
+; is-reserved? symbol? -> boolean?
+; determines if a symbol is reserved by the parser for special operations
+(define (is-reserved? sym)
+  (or (equal? sym '+) (equal? sym '-) (equal? sym '*) (equal? sym '/) (equal? sym 'switch)
+      (equal? sym 'with) (equal? sym '<=) (equal? sym '=)))
+
+; contains-reserved? (listof symbol?) -> boolean?
+; determines if a list of symbols contains a reserved symbol
+(define (contains-reserved? l)
+  (ormap (λ (x) (is-reserved? x)) l))
+
+; all-bindings? (listof (listof symbol?)) -> boolean?
+; determines if a list contains lists that can be parsed into bindings
+(define (all-bindings? l)
+  (and (list? l) (andmap (λ (x) (equal? (second x) '=)) l)))
+
+; parse-pattern : sexp? -> Pattern?
+; parses a s-expression into a Pattern
+(define (parse-pattern sexp)
+  (cond [(list? sexp) (objPat (first sexp) (map parse-pattern (rest sexp)))]
+        [else (idPat sexp)]))
+
+; parse-patterns : (listof symbol?) -> (listof Pattern?)
+; parses a list of symbols into patterns
+(define (parse-patterns sexp)
+  (map parse-pattern sexp))
+
+; get-new-fields : s-exp? -> s-exp?
+; removes the first two parts of a newexp expression (couldn't find a good library function for it)
+(define (get-new-fields sexp)
+  (define tmp (remove (first sexp) sexp))
+  (remove (first tmp) tmp))
+
+; parse-exp : s-exp -> OCFAE
+; Consumes an s-expression and generates the corresponding OCFAE
+(define (parse-exp sexp)
+  (cond [(number? sexp) (num sexp)]
+        [(symbol? sexp) (cond [(equal? sexp 'true) (bool true)]
+                              [(equal? sexp 'false) (bool false)]
+                              [(equal? sexp 'if) (error "bad expression")]
+                              [(equal? sexp 'with) (error "bad expression")]
+                              [else (varref sexp)])]
+        [(string? sexp) (str sexp)]
+        [(boolean? sexp) (bool sexp)]
+        [(and (list? sexp)
+              (or (equal? (first sexp) 'not)
+                  (equal? (first sexp) 'null?)
+                  (equal? (first sexp) 'pair?)
+                  (equal? (first sexp) 'first)
+                  (equal? (first sexp) 'rest)
+                  (equal? (first sexp) 'number?)
+                  (equal? (first sexp) 'string?)
+                  (equal? (first sexp) 'makebox)
+                  (equal? (first sexp) 'openbox))
+              (equal? (length sexp) 2))
+         (unop (first sexp) (parse-exp (second sexp)))]
+        [(and (list? sexp)
+              (or (equal? (first sexp) '+)
+                  (equal? (first sexp) '-)
+                  (equal? (first sexp) '*)
+                  (equal? (first sexp) '/)
+                  (equal? (first sexp) '<=)
+                  (equal? (first sexp) 'equal?)
+                  (equal? (first sexp) 'and)
+                  (equal? (first sexp) 'or)
+                  (equal? (first sexp) 'changebox!))
+              (equal? (length sexp) 3))
+         (binop
+          (first sexp) (parse-exp (second sexp)) (parse-exp (third sexp)))]
+        [(and (list? sexp) (equal? (first sexp) 'with)
+              (equal? (length sexp) 3) (all-bindings? (second sexp)))
+         (cond [(unique-bindings? (map (λ (s) (first s)) (second sexp)))
+                (app (fun (parse-patterns (map first (second sexp))) (parse-exp (third sexp)))
+                     (map (λ (x) (grab-arg x)) (second sexp)))]
+               [else (error "multiple bindings")])]
+        [(and (list? sexp) (equal? (first sexp) 'switch))
+         (switch (parse-exp (second sexp))
+                 (parse-clauses sexp)
+                 (parse-clause (last sexp)))]
+        [(and (list? sexp) (equal? (first sexp) 'fun))
+         (cond [(not (and (unique-bindings? (second sexp)))) (error "multiple bindings")]
+               [(contains-reserved? (second sexp)) (error "bad binding")]
+               [else (fun (parse-patterns (second sexp)) (parse-exp (third sexp)))])
+         ]
+        [(and (list? sexp) (equal? (first sexp) 'withrec))
+         (withrec (first (second sexp)) (parse-exp (last (second sexp))) (parse-exp (third sexp)))]
+        [(and (list? sexp) (equal? (first sexp) 'new) (equal? (contains-reserved? sexp) #f))
+         (newexp (second sexp) (map parse-exp (get-new-fields sexp)))]
+        [(and (list? sexp) (equal? (first sexp) 'is-a?))
+         (is-a (second sexp) (parse-exp (third sexp)))]
+        [(and (list? sexp) (equal? (first sexp) 'seq))
+         (seq (map parse-exp (remove (first sexp) sexp)))]
+        [(and (list? sexp) (equal? (contains-reserved? sexp) #f))
+         (cond [(> (length sexp) 2)
+                (app (parse-exp (first sexp)) (map parse-exp (rest sexp)))]
+               [(equal? (length sexp) 1)
+                (app (parse-exp (first sexp)) empty)]
+               [(and (list? (last sexp)) (equal? (not (is-reserved? (first (last sexp)))) #t)
+                     (equal? (symbol? (first (last sexp))) #f)) ; <-- ?
+                (app (parse-exp (first sexp)) (map parse-exp (last sexp)))]
+               [else (app (parse-exp (first sexp)) (list (parse-exp (last sexp))))])]
+        [else (error "bad expression")]))
+
+; myadd : numV?, numV? -> numV?
+; Adds the two numbers together
+(define (myadd lhs rhs)
+  (numV (+ (numV-n lhs) (numV-n rhs))))
+
+; mysub : numV?, numV? -> numV?
+; Subtracts the right hand number from the left one
+(define (mysub lhs rhs)
+  (numV (- (numV-n lhs) (numV-n rhs))))
+
+; mymult : numV?, numV? -> numV?
+; Multiplies the two numberss together
+(define (mymult lhs rhs)
+  (numV (* (numV-n lhs) (numV-n rhs))))
+
+; mydiv : numV?, numV? -> numV?
+; Divides the left hand number by the right one
+(define (mydiv lhs rhs)
+  (if (equal? rhs (numV 0))
+      (error "dividing by 0") (numV (/ (numV-n lhs) (numV-n rhs)))))
+
+; myand : boolV?, boolV? -> boolV?
+; Returns true if both values are true, false otherwise
+(define (myand arg1 arg2)
+  (if (and (boolV? arg1) (boolV? arg2))
+      (boolV (and (boolV-b arg1) (boolV-b arg2)))
+      (error "bad values")))
+
+; myor : boolV?, boolV? -> boolV?
+; Returns true if one or both values are true, false otherwise
+(define (myor arg1 arg2)
+    (if (and (boolV? arg1) (boolV? arg2))
+      (boolV (or (boolV-b arg1) (boolV-b arg2)))
+      (error "bad values")))
+
+; myequal? : OCFAE-Value?, OCFAE-Value? -> boolV?
+; Returns true if both values are equal, false otherwise
+(define (myequal? arg1 arg2)
+  (boolV (equal? arg1 arg2)))
+
+; my<= : numV?, numV? -> boolV?
+; Returns true if arg1 is <= arg2, false otherwise
+(define (my<= arg1 arg2)
+  (if (and (numV? arg1) (numV? arg2))
+      (boolV (<= (numV-n arg1) (numV-n arg2)))
+      (error "bad values")))
+
+; mynot : boolV? -> boolV?
+; true if false, false if true
+(define (mynot exp)
+  (if (boolV? exp)
+      (if (equal? exp (boolV true)) (boolV false) (boolV true))
+      (error "bad values")))
+
+; mynumber? OCFAE? -> boolV?
+; Returns true if the arg is a number, false otherwise
+(define (mynumber? exp)
+  (cond [(numV? exp) (boolV true)]
+        [else (boolV false)]))
+
+; mystring? OCFAE? -> boolV?
+; Returns true if the arg is a string, false otherwise
+(define (mystring? exp)
+  (cond [(strV? exp) (boolV true)]
+        [else (boolV false)]))
+
+; makebox any/c? -> boxV?
+; a unary operator that accepts a value and returns a boxV containing a newly
+; allocated location, and sets the new location to contain the given value.
+(define (makebox val)
+  (sdo (st <- getstore)
+       (loc <- alloc)
+       (setstore (sto (hash-set (sto-memory st) loc val) loc))
+       (lift (boxV loc))))
+
+; openbox boxV? -> any/c?
+; a unary operator that accepts a boxV and returns the value associated with the box’s location
+(define (openbox box)
+  (sdo (st <- getstore)
+       (bv <- box)
+       (type-case OCFAE-Value bv
+         [boxV (loc) (lift (hash-ref (sto-memory st) loc))]
+         [else (error "not a boxV")])
+       #|(lift (hash-ref (sto-memory st) (boxV-loc bv)))|#))
+
+; changebox! boxV? any/c? -> false
+; a binary operator that accepts a boxV and an arbitrary new value and sets the location referred
+; to by the box to contain the given new value. The result is the value "false".
+(define (changebox! box val)
+  (sdo (st <- getstore)
+       (bv <- box)
+       (dc <- (hash-set (sto-memory st) (boxV-loc bv) val))
+       (lift boolV #f)))
+
+; alloc : Store? -> AnyStore?
+; allocates a location in memory for a store
+(define alloc
+  (sdo (sto1 <- getstore)
+       (sto2 <- (setstore (sto (sto-memory sto1) (+ 1 (sto-next-loc sto1)))))
+       (lift (sto-next-loc sto1))))
+
+; lookup-op : symbol? -> procedure?
+; Maps an arithmetic symbol to it's operation
+(define (lookup-op sym)
+  (cond [(equal? sym '+) myadd]
+        [(equal? sym '-) mysub]
+        [(equal? sym '*) mymult]
+        [(equal? sym '/) mydiv]
+        [(equal? sym 'string?) mystring?]
+        [(equal? sym 'number?) mynumber?]
+        [(equal? sym 'and) myand]
+        [(equal? sym 'or) myor]
+        [(equal? sym 'equal?) myequal?]
+        [(equal? sym '<=) my<=]
+        [(equal? sym 'not) mynot]
+        [(equal? sym 'makebox) makebox]
+        [(equal? sym 'openbox) openbox]
+        [(equal? sym 'changebox!) changebox!]))
+
+; check-clause : (listof SClause?) OCFAE-Value? hash? (listof FunDef?) -> boolean?
+; returns true if the target-exp matches the current clause, false otherwise
+(define (check-clause cls target-val env)
+  (type-case SClause cls
+    [clause (exp result) (cond [(equal? (run/trim (interp exp env)) target-val) #t]
+                               [else #f])]))
+
+; match-extend : hash? Pattern? OCFAE-Value -> hash?
+; extends the environment with a given binding
+(define (match-extend env param val)
+  (type-case Pattern param
+    [idPat (n) (hash-set env n (box val))]
+    [objPat (p-name pats)
+            (type-case OCFAE-Value val
+              [objectV (o-name fields)
+                       (cond [(equal? p-name o-name) (extend-env env pats fields)]
+                             [else (error "name mismatch")])]
+              [else (error "not an object")])]))
+
+; extend-env : hash? (listof Pattern?) (listof OCFAE-Value?) -> hash?
+; extends the environment to accomodate necessary bindings
+(define (extend-env env params vals)
+  (cond [(empty? params) env]
+        [else (extend-env (match-extend env (first params) (first vals))
+                            (rest params) (rest vals))]))
+
+; doMap : function? (listof OCFAE-Value?) -> (listof OCFAE-Value? computation)
+; accepts a monadic function and a list and returns the result of 
+; mapping the function across the arguments.
+(define (doMap fun listargs)
+  (cond [(empty? listargs) (lift empty)]
+        [else (sdo (result <- (fun (first listargs)))
+                   (rests <- (doMap fun (rest listargs)))
+                   (lift (cons result rests)))]))
+
+;  This procedure interprets the given OCFAE and produces a result
+;  in the form of a function that accepts a Store and produces
+;  a OCFAE-Value. paired with a new store.
+;  interp : OCFAE? hash? -> (OCFAE-Value? computation)
+(define (interp expr env)
+  (type-case OCFAE expr
+    [num (n) (lift (numV n))]
+    [bool (b) (lift (boolV b))]
+    [str (s) (lift (strV s))]
+    [unop (op arg) (cond [(or (equal? op 'makebox)
+                              (equal? op 'openbox)
+                              (equal? op 'changebox!))
+                          (sdo (a <- (interp arg env))
+                               ((lookup-op op) a))]
+                         [else (sdo (a <- (interp arg env))
+                                    (lift ((lookup-op op) a)))])]
+    [binop (op lhs rhs) (sdo (l <- (interp lhs env))
+                             (r <- (interp rhs env))
+                             (lift ((lookup-op op) l r)))]
+    [varref (n) (lift (unbox (hash-ref env n)))]
+    [switch (val cls els)
+            (sdo (a <- (interp val env)) 
+             (cond [(empty? (filter (λ (c) (check-clause c a env)) cls))
+                                 (interp els env)]
+                                [else (type-case SClause
+                                        (first (filter (λ (c)
+                                                         (check-clause c a env)) cls))
+                                        [clause (e r) (interp r env)])]))]
+    [fun (params body) (lift (closureV params body env))]
+    [withrec (name rhs body)
+             (begin
+               (define new-box (box false))
+               (define new-env (hash-set env name new-box))
+               (define closure (run/trim (interp rhs new-env)))
+               (set-box! new-box closure)
+               (interp body new-env))]
+    [app (f args)
+         (sdo (closure <- (interp f env))
+              (argvs <- (doMap (λ (a) (interp a env)) args))
+              (type-case OCFAE-Value closure
+                [closureV (params body clo-env)
+                          (interp body (extend-env clo-env params
+                                                   argvs))]
+           [else (error "bad?")]))]
+    [newexp (name fields) (sdo (fargs <- (doMap (λ (f) (interp f env)) fields))
+                               (lift (objectV name fargs)))]
+    [is-a (name arg)
+          (sdo (argv <- (interp arg env))
+           (type-case OCFAE-Value argv
+            [objectV (n fs) (if (equal? name n) (lift (boolV #t)) (lift (boolV #f)))]
+            [else (lift (boolV #f))]))]
+    [seq (exps)
+         (sdo (argvs <- (doMap (λ (a) (interp a env)) exps))
+              (last argvs))]))
+
+; parse-exp tests
+(test (parse-exp 5) (num 5))
+(test (parse-exp 'x) (varref 'x))
+(test/exn (parse-exp 'if) "bad expression")
+(test/exn (parse-exp 'with) "bad expression")
+(test (parse-exp "hello, world") (str "hello, world"))
+(test (parse-exp true) (bool true))
+(test (parse-exp false) (bool false))
+(test (parse-exp '{number? 3}) (unop 'number? (num 3)))
+(test (parse-exp '{string? "abc"}) (unop 'string? (str "abc")))
+(test (parse-exp '{+ 3 4}) (binop '+ (num 3) (num 4)))
+(test (parse-exp '{+ (- 7 4) 4}) (binop '+ (binop '- (num 7) (num 4)) (num 4)))
+(test (parse-exp '{* 3 4}) (binop '* (num 3) (num 4)))
+(test (parse-exp '{/ 12 4}) (binop '/ (num 12) (num 4)))
+(test (parse-exp '{<= 1 2}) (binop '<= (num 1) (num 2)))
+(test (parse-exp '{equal? 1 2}) (binop 'equal? (num 1) (num 2)))
+(test (parse-exp '{and true false}) (binop 'and (bool true) (bool false)))
+(test (parse-exp '{or true false}) (binop 'or (bool true) (bool false)))
+(test (parse-exp '{switch "a" {"a" => "b"}{"c" => "d"}{else "e"}})
+      (switch (str "a") (list (clause (str "a") (str "b")) (clause (str "c") (str "d") ))
+              (str "e")))
+(test (parse-exp '{switch 13 {3 => 4} {else 2}})
+      (switch (num 13) (list (clause (num 3) (num 4))) (num 2)))
+(test (parse-exp '{fun {a b} {+ a b}})
+      (fun (list (idPat 'a) (idPat 'b)) (binop '+ (varref 'a) (varref 'b))))
+(test/exn (parse-exp '{fun {a a} {+ a 3}}) "multiple bindings")
+(test (parse-exp '{{fun {x y} {+ x y}} 9})
+      (app (fun (list (idPat 'x) (idPat 'y)) (binop '+ (varref 'x) (varref 'y))) (list (num 9))))
+(test (parse-exp '{{fun {x y} {+ x y}} {3 4}})
+      (app (fun (list (idPat 'x) (idPat 'y))
+                (binop '+ (varref 'x) (varref 'y))) (list (num 3) (num 4))))
+(test (parse-exp '{with {{x = 9}{y = 1}} {+ x y}})
+      (app (fun (list (idPat 'x) (idPat 'y))
+                (binop '+ (varref 'x) (varref 'y))) (list (num 9) (num 1))))
+(test (parse-exp '{with {{ab = {+ 11 12}}} {cd {with {{de = 4}} 6}}})
+      (app
+       (fun (list (idPat 'ab)) (app (varref 'cd)
+                                    (list (app (fun (list (idPat 'de)) (num 6)) (list (num 4))))))
+       (list (binop '+ (num 11) (num 12)))))
+(test (parse-exp '(makebox 1)) (unop 'makebox (num 1)))
+(test (parse-exp '(openbox (makebox 4))) (unop 'openbox (unop 'makebox (num 4))))
+(test (parse-exp '(changebox! (makebox 5) 2)) (binop 'changebox! (unop 'makebox (num 5)) (num 2)))
+(test (parse-exp '{x y z}) (app (varref 'x) (list (varref 'y) (varref 'z))))
+(test (parse-exp '{{x}}) (app (app (varref 'x) empty) empty))
+(test/exn (parse-exp '{with {{x = 9}{x = 1}} {+ x x}}) "multiple bindings")
+(test/exn (parse-exp '{with 1 2}) "bad expression")
+(test/exn (parse-exp '{with {{a b c}} 4}) "bad expression")
+(test/exn (parse-exp '{fun {x <= y} 3}) "bad binding")
+(test/exn (parse-exp '{+ 3 4 5}) "bad expression")
+(test/exn (parse-exp '{z switch}) "bad expression")
+(test (parse-exp '{withrec {countDown {fun {x} {switch x [0 => 0] [else {countDown {- x 1}}]}}}
+                           {countDown 13}})
+      (withrec 'countDown (fun
+                (list (idPat 'x))
+                (switch
+                 (varref 'x)
+                 (list (clause (num 0) (num 0)))
+                 (app
+                  (varref 'countDown)
+                  (list (binop '- (varref 'x) (num 1))))))
+               (app (varref 'countDown) (list (num 13)))))
+(test (parse-exp '{new name "Herbert" "Simon"})
+      (newexp 'name (list (str "Herbert") (str "Simon"))))
+(test (parse-exp '{is-a? name {new name "Herbert" "Simon"}})
+      (is-a 'name (newexp 'name (list (str "Herbert") (str "Simon")))))
+(test (parse-exp '{new pair
+                       {new name "Herbert" "Simon"}
+                       {new book "The Sciences of the Artificial" 
+                            {new name "Herbert" "Simon"}
+                            {+ 2 1994}}})
+      (newexp 'pair
+              (list
+               (newexp 'name (list (str "Herbert") (str "Simon")))
+               (newexp 'book (list
+                              (str "The Sciences of the Artificial")
+                              (newexp 'name (list (str "Herbert") (str "Simon")))
+                              (binop '+ (num 2) (num 1994)))))))
+(test (parse-exp '{fun {{book title auth date}} {+ 1 date}})
+      (fun
+       (list
+        (objPat 'book (list (idPat 'title) (idPat 'auth) (idPat 'date))))
+       (binop '+ (num 1) (varref 'date))))
+(test (parse-exp '{seq 1 2 3}) (seq (list (num 1) (num 2) (num 3))))
+(test/exn (parse-exp '{with {{x = 10} {x = 20}} 50}) "multiple bindings")
+(test/exn (parse-exp '{fun {x x} 10}) "multiple bindings")
+(test/exn (parse-exp '{fun {weight {zebra name weight}} {equal? weight weight}})
+          "multiple bindings")
+(test (parse-exp '{pair 13 "abcd"}) (app (varref 'pair) (list (num 13) (str "abcd"))))
+(test/exn (parse-exp '{new <= 3 4}) "bad expression")
+(test/exn (parse-exp '{fun {x = y} 3}) "bad binding")
+; box tests
+#|(test (run/trim (interp (parse-exp '{with {{b = {makebox 14}}}
+                                          {seq {changebox! b 15}
+                                               {changebox! b 16}
+                                               {openbox b}}}) env)) (numV 16))|#
+(test (run/trim (makebox (num 16))) (boxV 0))
+(test (run (interp (unop 'makebox (num 16)) empty-env) (sto empty-env 0))
+      (a*s (boxV 0) (sto (make-immutable-hash (list (cons 0 (numV 16)))) 0)))
+(test (run/trim (interp (unop 'openbox (unop 'makebox (num 16))) empty-env))
+                (numV 16))
+
+; interp tests
+(test (run/trim (interp (num 4) empty-env)) (numV 4))
+(test (run/trim (interp (bool #t) empty-env)) (boolV #t))
+(test (run/trim (interp (str "abc") empty-env)) (strV "abc"))
+(test (run/trim (interp (unop 'not (bool false)) empty-env)) (boolV true))
+(test (run/trim (interp (unop 'string? (str "string")) empty-env)) (boolV true))
+(test (run/trim (interp (unop 'number? (num 1)) empty-env)) (boolV true))
+(test (run/trim (interp (unop 'not (bool true)) empty-env)) (boolV false))
+(test (run/trim (interp (unop 'string? (num 1)) empty-env)) (boolV false))
+(test (run/trim (interp (unop 'number? (str "string")) empty-env)) (boolV false))
+(test/exn (run/trim (interp (unop 'not (num 3)) empty-env)) "bad values")
+(test (run/trim (interp (binop '+ (num 1) (num 2)) empty-env)) (numV 3))
+(test (run/trim (interp (binop '- (num 3) (num 2)) empty-env)) (numV 1))
+(test (run/trim (interp (binop '* (num 3) (num 2)) empty-env)) (numV 6))
+(test (run/trim (interp (binop '/ (num 3) (num 3)) empty-env)) (numV 1))
+(test/exn (run/trim (interp (binop '/ (num 3) (num 0)) empty-env)) "dividing by 0")
+(test (run/trim (interp (binop 'and (bool true) (bool true)) empty-env)) (boolV true))
+(test (run/trim (interp (binop 'or (bool false) (bool true)) empty-env)) (boolV true))
+(test (run/trim (interp (binop 'equal? (num 2) (num 2)) empty-env)) (boolV true))
+(test (run/trim (interp (binop '<= (num 1) (num 2)) empty-env)) (boolV true))
+(test/exn (run/trim (interp (binop 'and (num 1) (num 2)) empty-env)) "bad values")
+(test/exn (run/trim (interp (binop 'or (num 2) (num 2)) empty-env)) "bad values")
+(test/exn (run/trim (interp (binop '<= (bool true) (bool true)) empty-env)) "bad values")
+(test (run/trim (interp (switch (num 13) (list (clause (num 3) (num 4))) (num 2)) empty-env)) (numV 2))
+(test (run/trim (interp (switch (str "a") (list (clause (str "a") (str "b"))
+                                      (clause (str "c") (str "d") )) (str "e")) empty-env))
+      (strV "b"))
+(test (run/trim (interp (fun (list (idPat 'x) (idPat 'y)) (binop '+ (varref 'x) (varref 'y))) empty-env))
+      (closureV (list (idPat 'x) (idPat 'y)) (binop '+ (varref 'x) (varref 'y)) empty-env))
+(test (run/trim (interp (app (fun (list (idPat 'x) (idPat 'y))
+                        (binop '+ (varref 'x) (varref 'y))) (list (num 1) (num 2))) empty-env))
+      (numV 3))
+(test (run/trim (interp (parse-exp '{with {{x = 1}{y = 2}} {+ x y}}) empty-env)) (numV 3))
+(test (run/trim (interp (parse-exp '{with {{x = 1}} {with {{y = 2}} {+ x y}}}) empty-env)) (numV 3))
+(test/exn (run/trim (interp (app (num 1) empty) empty-env)) "bad?")
+(test (run/trim (interp (withrec 'countDown (fun
+                (list (idPat 'x))
+                (switch
+                 (varref 'x)
+                 (list (clause (num 0) (num 0)))
+                 (app
+                  (varref 'countDown)
+                  (list (binop '- (varref 'x) (num 1))))))
+               (app (varref 'countDown) (list (num 13)))) empty-env)) (numV 0))
+(test (run/trim (interp (newexp 'name (list (str "Marcus") (str "Ortiz"))) empty-env))
+      (objectV 'name (list (strV "Marcus") (strV "Ortiz"))))
+(test (run/trim (interp (parse-exp '{is-a? book {new book "Harry Potter and the Beacon of Urgwurt"
+                                           {new author "Julius K." "Growling"}
+                                           2009}}) empty-env))
+      (boolV #t))
+(test (run/trim (interp (parse-exp '{is-a? book {new pair 3 4}}) empty-env)) (boolV #f))
+(test (run/trim (interp (parse-exp '{{fun {{book title auth date}} {+ 1 date}}
+                 {{new book "Ender's Game" "Orson Scott Card" 1985}}}) empty-env)) (numV 1986))
+(test/exn (match-extend empty-env (objPat 'name (list (idPat 'first) (idPat 'last))) (numV 1))
+          "not an object")
+(test/exn (match-extend empty-env (objPat 'book (list (idPat 'title)))
+                        (objectV 'name (list (strV "Marcus") (strV "Ortiz")))) "name mismatch")
+(test (run/trim (interp (parse-exp '((fun (a (zip dc1 fst (zip dc2 snd (zip dc3 thd rest)))
+                                   (zip dc4 fst2 rest2))
+                                (and dc1 (and dc2 (and (not dc3) dc4)))) (+ 4 5)
+                           (new zip true 3 (new zip true 4 (new zip false 5 6)))
+                           (new zip true 7 8))) empty-env))
+      (boolV true))
+(test (run/trim (interp (is-a 'dab (str "bad")) empty-env)) (boolV #f))

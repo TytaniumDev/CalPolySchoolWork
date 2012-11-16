@@ -1,0 +1,89 @@
+/* 0. I will use int arrays as my main data type, using 0's for dead spaces and
+ * 1's for alive spaces. This uses less memory and gives it a binary feel 
+ * which I like. It is also easier to debug without having to worry about 
+ * newlines, etc. */
+
+/* Function Prototypes: */
+
+int NumLiving(int tempArray[])
+{
+   int numLive;
+/* Takes in the temp array, counts the number of alive neighbors, and returns
+ * the number of living neighbors. The numLive variable is used to count these
+ * neighbors.
+ */
+}
+
+void Copier(int liveArray[], int tempArray[])
+{
+/* Transfers the liveArray to the tempArray to be manipulated. Does not need
+ * output because the arrays are pointers.
+ */
+}
+
+void Printer(int liveArray[])
+{
+/* Prints out the liveArray to the screen. No output because it is just
+ * printing stuff. I will use a for loop to print everything.
+ */
+}
+
+void PrintSetup(void)
+{
+/* This function prints out the set initial game board to the screen so the
+ * user can input what spaces they want living. No input/output because
+ * it is just a set printout.
+ */
+}
+
+int Setup(int liveArray[])
+{
+   int x;
+   int y;
+   int sentinel;
+   int generations
+
+/* This function prompts the user continually until a sentinel is entered.
+ * The user will input an x and y coordinate and those coords will become alive
+ * in the liveArray. It will then ask the user for the # of generations and 
+ * return that value.
+ */
+}
+
+void TheGame(int liveArray[], int tempArray[], int generations)
+{
+/* This function is the main game itself. It runs Copier, Change, NumLiving, and
+ * Printer for a set # of generations given by the user. It does not need output
+ * because it is basically just another main function. 
+ */
+}
+
+void Change(int tempArray[], int liveArray[])
+{
+/* This function uses the NumLiving function to see how many living neighbors a 
+ * certain space has, and creates/kills it as needed. It uses the tempArray to 
+ * reference what needs to be killed/created, but then changes it in the
+ * liveArray.
+ */
+}
+
+                            Static Call Graph:
+         ---- note: each function is only called in one function -----
+
+                                 main(void)
+                             /       |       \
+                    PrintSetup     Setup     TheGame
+                                            /   |   \
+                                    Copier   Change  Printer
+                                                |
+                                             NumLiving
+
+
+/* Explanation:
+ *  First, the setup is printed to the user and the user inputs what coords they
+ *  want to have living. They then enter a # of generations they want TheGame
+ *  to calculate. TheGame function then runs the Copier function to put the 
+ *  liveArray into the tempArray. Then, Change uses NumLiving to find out which
+ *  coords need to be dead and which should be alive. Finally, Printer prints out
+ *  the final lifeArray for that generation.
+ */

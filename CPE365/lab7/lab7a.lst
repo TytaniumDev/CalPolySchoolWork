@@ -1,0 +1,172 @@
+10:52:22 TYHOLLAN> @lab7a
+10:52:25 TYHOLLAN> /*
+10:52:25 TYHOLLAN>   CPE 365 Lab 7a
+10:52:25 TYHOLLAN>   Tyler Holland
+10:52:25 TYHOLLAN> */
+10:52:25 TYHOLLAN> --1.
+10:52:25 TYHOLLAN> CREATE OR REPLACE VIEW GAME_SCORES as
+10:52:25   2  	 select gnum, tname, sum(points) as SCORE
+10:52:25   3  	 from plays_in
+10:52:25   4  	 group by gnum, tname;
+
+View created.
+
+10:52:25 TYHOLLAN> --2.
+10:52:25 TYHOLLAN> select view_name
+10:52:25   2  from USER_VIEWS;
+VIEW_NAME
+------------------------------
+GAME_SCORES
+
+1 row selected.
+
+10:52:25 TYHOLLAN> 
+10:52:25 TYHOLLAN> --3.
+10:52:25 TYHOLLAN> select GNUM, TNAME, SCORE
+10:52:25   2  from GAME_SCORES
+10:52:25   3  order by gnum, score desc;
+      GNUM TNAME           SCORE
+---------- ---------- ----------
+         1 Lakers            102
+         1 Celtics            89
+         2 Celtics           103
+         2 Lakers             94
+         3 Lakers             87
+         3 Celtics            84
+         4 Celtics            96
+         4 Lakers             89
+         5 Celtics            92
+         5 Lakers             86
+         6 Lakers             89
+         6 Celtics            67
+         7 Lakers             83
+         7 Celtics            79
+
+14 rows selected.
+
+10:52:25 TYHOLLAN> 
+10:52:25 TYHOLLAN> --4.
+10:52:25 TYHOLLAN> update plays_in
+10:52:25   2  set points = (points - 5)
+10:52:25   3  where pid = 24 and tname = 'Lakers' and gnum =
+10:52:25   4  (
+10:52:25   5  	select max(gnum)
+10:52:25   6  	from plays_in
+10:52:25   7  );
+
+1 row updated.
+
+10:52:25 TYHOLLAN> 
+10:52:25 TYHOLLAN> --5.
+10:52:25 TYHOLLAN> select GNUM, TNAME, SCORE
+10:52:25   2  from GAME_SCORES
+10:52:25   3  order by gnum, score desc;
+      GNUM TNAME           SCORE
+---------- ---------- ----------
+         1 Lakers            102
+         1 Celtics            89
+         2 Celtics           103
+         2 Lakers             94
+         3 Lakers             87
+         3 Celtics            84
+         4 Celtics            96
+         4 Lakers             89
+         5 Celtics            92
+         5 Lakers             86
+         6 Lakers             89
+         6 Celtics            67
+         7 Celtics            79
+         7 Lakers             78
+
+14 rows selected.
+
+--This shows the view is constructed dynamically because the Lakers' score
+--for game 7 is 78 instead of 83 because of how I decreased the score in
+--part 4. If it wasn't dynamic, the views would be the same.
+
+10:52:25 TYHOLLAN> 
+10:52:25 TYHOLLAN> --6.
+10:52:25 TYHOLLAN> drop view GAME_SCORES;
+
+View dropped.
+
+10:52:25 TYHOLLAN> 
+10:52:25 TYHOLLAN> --7.
+10:52:25 TYHOLLAN> drop sequence GNUM_SEQ;
+drop sequence GNUM_SEQ
+              *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+10:52:25 TYHOLLAN> create sequence GNUM_SEQ
+10:52:25   2  start with 8
+10:52:25   3  increment by 1;
+
+Sequence created.
+
+10:52:25 TYHOLLAN> 
+10:52:25 TYHOLLAN> --8.
+10:52:25 TYHOLLAN> insert into game
+10:52:25   2  values (gnum_seq.nextVal, to_date('June 19 2009 07:30 PM', 'MONTH DD YYYY HH12:MI AM'), 'Nipomo');
+
+1 row created.
+
+10:52:25 TYHOLLAN> 
+10:52:25 TYHOLLAN> insert into game
+10:52:25   2  values (gnum_seq.nextVal, to_date('June 21 2009 10:15 AM', 'MONTH DD YYYY HH12:MI AM'), 'Chicago');
+
+1 row created.
+
+10:52:25 TYHOLLAN> 
+10:52:25 TYHOLLAN> --9.
+10:52:25 TYHOLLAN> select gnum, to_char(datetime, 'MONTH DD YYYY HH12:MI AM') as DATETIME, place
+10:52:25   2  from game
+10:52:25   3  order by gnum;
+      GNUM DATETIME                   PLACE
+---------- -------------------------- ---------------
+         1 JUNE      03 2010 09:00 PM Los Angeles
+         2 JUNE      06 2010 08:00 PM Los Angeles
+         3 JUNE      08 2010 09:00 PM Boston
+         4 JUNE      10 2010 09:00 PM Boston
+         5 JUNE      13 2010 08:00 PM Boston
+         6 JUNE      15 2010 09:00 PM Los Angeles
+         7 JUNE      17 2010 09:00 PM Los Angeles
+         8 JUNE      19 2009 07:30 PM Nipomo
+         9 JUNE      21 2009 10:15 AM Chicago
+
+9 rows selected.
+
+10:52:25 TYHOLLAN> 
+10:52:25 TYHOLLAN> --10.
+10:52:25 TYHOLLAN> delete from game
+10:52:25   2  where gnum = 9 or gnum = 8;
+
+2 rows deleted.
+
+10:52:25 TYHOLLAN> 
+10:52:25 TYHOLLAN> --11.
+10:52:25 TYHOLLAN> select gnum, to_char(datetime, 'MONTH DD YYYY HH12:MI AM') as DATETIME, place
+10:52:25   2  from game
+10:52:25   3  order by gnum;
+      GNUM DATETIME                   PLACE
+---------- -------------------------- ---------------
+         1 JUNE      03 2010 09:00 PM Los Angeles
+         2 JUNE      06 2010 08:00 PM Los Angeles
+         3 JUNE      08 2010 09:00 PM Boston
+         4 JUNE      10 2010 09:00 PM Boston
+         5 JUNE      13 2010 08:00 PM Boston
+         6 JUNE      15 2010 09:00 PM Los Angeles
+         7 JUNE      17 2010 09:00 PM Los Angeles
+
+7 rows selected.
+
+10:52:25 TYHOLLAN> 
+10:52:25 TYHOLLAN> 
+10:52:25 TYHOLLAN> --12.
+10:52:25 TYHOLLAN> drop sequence gnum_seq;
+
+Sequence dropped.
+
+10:52:25 TYHOLLAN> 
+10:52:25 TYHOLLAN> spool off

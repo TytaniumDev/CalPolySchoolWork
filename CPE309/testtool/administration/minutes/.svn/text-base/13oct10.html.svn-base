@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>
+Minutes of the Test Tool Team Meeting, 13 October 2010
+</title>
+</head>
+<body bgcolor=white>
+<p align=center>
+<font size=+2>
+<strong>Minutes of the Test Tool Team Meeting
+<br>
+03:10PM - 3:35PM, 13 October 2010</strong>
+</font>
+</p>
+<br>
+<br>
+<strong>Present</strong>:
+<br>Sean Glover
+<br>Sarah Hoke
+<br>Connor Lange
+<br>Nathan Mock
+<br>Richard Steiger
+<br>Ben Voogd 
+<br>
+<br>
+<strong>Absent:</strong>
+<br>
+N/A
+<br><br>
+<strong>Excused:</strong>
+<br>
+N/A
+<br><br>
+<ul>
+<li>Discussion of the evaluation. Unless 100% was achieved, the person responsible for a section is responsible for revising it for the next milestone.</li>
+<li>Discussion of the Table of Contents. A modified order was created, specifically the test generation and question database section need to be swapped. The next milestone will contain these changes. </li>
+<li>The rules that are automatically filled in during test generation need to be discussed in the scenarios. Ex. What if all criteria cannot be met? </li>
+<li>Discussion of what kind of database to use. A centralized one vs multiple ones (for questions and tests). Centralized is what we're aimed for. This one will contain tests like a 'Test database'. </li>
+<li>If there is no test database file formatting could be use. Pros & Cons were discussed. Although this appears to be simpler we're still leaning towards a test database as mentioned. </li>
+<li>Reports of the grades will NOT contain statistics. They will contain information on the point values only. Collaboration with the Grading program is needed. </li>
+</ul>
+</body>
+</html>

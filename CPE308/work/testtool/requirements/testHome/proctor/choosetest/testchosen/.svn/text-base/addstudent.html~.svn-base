@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestTool | Requirements | Test Taking | Proctor Home | Add Student</title>
+  <link href="../../../../../public/css/layout.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>TestTool</h1>
+      <h2 class="title">2.4.1.2 Add Student</h2>
+    </div>
+    <div id="content">
+      <p>
+        <img src="../ProctorHomeChooseTest.png" height="400" width="600"/>
+         <p align="center">Figure 2.4.1.1.1: Proctor Default Screen</p>
+        <img src="ProctorHomeTestChosen.png" height="400" width="600"/>
+         <p align="center">Figure 2.4.1.1.2: Proctor Test Screen</p>
+        <img src="addstudent/ProctorHomeAddStudentEmpty.png" height="400" width="600"/>
+         <p align="center">Figure 2.4.1.2.1: Empty Add Student Dialogue</p>
+        <img src="addstudent/addfail/ProctorHomeAddNonStudent.png" height="400" width="600"/>
+         <p align="center">Figure 2.4.1.2.2: Filled Add Student Dialogue</p>
+        <img src="addstudent/addfail/ProctorHomeAddStudentNotExistError.png" height="400" width="600"/>
+         <p align="center">Figure 2.4.1.2.3: Failed Add Student Dialogue</p>
+        <img src="addstudent/addsuccess/ProctorHomeAddStudent.png" height="400" width="600"/>
+         <p align="center">Figure 2.4.1.2.4: Filled Add Student Dialogue</p>
+        <img src="addstudent/addsuccess/ProctorHomeAddStudentSuccess.png" height="400" width="600"/>
+         <p align="center">Figure 2.4.1.2.5: Failed Add Student Dialogue</p>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestTool | Requirements | Developer Overview</title>
+  <link href="../public/css/layout.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>TestTool</h1>
+      <h2 class="title">Developer Overview</h2>
+    </div>
+    <div id="content">
+      <p>
+        As outlined in the UI Overview, the TestTool system is compromised of three separate applications. The application for an instructor is associated with his own computer, which allows him to start the program without having to go through any extra login steps. The student application runs on any of the computers within the provided classroom, and the students will have to log in on starting the program up. The proctor application will be available on one computer in this room and will also have to log in.
+      </p>
+      <p>
+        In the TestTool system, the major object in the program is the question database. Its implementation will need to provide efficient access for a number of operations, including efficient adding, deleting, editing, and finding of questions. It will need to use an appropriate data structure that supports these forms of access, so it would be reasonable to propose using a well-known and trusted database system like MySQL.
+      </p>
+      <p>
+        The other main object in the TestTool system is the user database. Its implementation will be very similar to that of the question database, except for the fact that its data will be composed of users, which are comprised of teachers, students, and proctors.
+      </p>
+      <p>
+        The remaining objects in the TestTool system should have relatively straightforward implementations. They will be dynamically created, as they do not need to exist in persistent storage and are generated from the underlying data in the database. 
+      </p>
+      <p>
+        Due to the heavy use of databases in the TestTool system, the developers will need to be knowledgeble in this area and preferrably have experience with using them. There is no specific language that is recommended for interfacing with the databases as there are many different languages that support libraries for this purpose and are documented well.
+      </p>
+      <div id="navigation">
+        Prev: <a href="nonfunctional.html">non-functional</a> | Next: <a href="formal/database.html">models</a> | Up: <a href="index.html">index</a> | Top: <a href="index.html">index</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+
+jLabel1.text=CPE 101: Fall MD #2
+jLabel2.text=Points
+jLabel4.text=Type: True False
+jLabel5.text=Author: Gene Fisher
+jLabel6.text=out of 2
+jLabel8.text=Student Answer:
+jLabel9.text=Correct Answer:
+jButton1.text=save
+jButton2.text=Prev
+jButton3.text=Next
+jTextField1.text=2
+jLabel11.text=Question: Are there eight bits in a byte?
+jRadioButton1.text=True
+jRadioButton2.text=False
+jRadioButton5.text=True
+jRadioButton6.text=False
+jTextField2.text=

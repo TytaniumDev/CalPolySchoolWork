@@ -1,0 +1,67 @@
+# Resources for the QuestionDBView class
+
+# top-level menus
+
+fileMenu.text = File
+
+# @Action resources
+
+showAboutBox.Action.text = &About...
+showAboutBox.Action.shortDescription = Show the application's information dialog
+
+# status bar resources
+
+StatusBar.messageTimeout = 5000
+StatusBar.busyAnimationRate = 30
+StatusBar.idleIcon = busyicons/idle-icon.png
+StatusBar.busyIcons[0]  = busyicons/busy-icon0.png
+StatusBar.busyIcons[1]  = busyicons/busy-icon1.png
+StatusBar.busyIcons[2]  = busyicons/busy-icon2.png
+StatusBar.busyIcons[3]  = busyicons/busy-icon3.png
+StatusBar.busyIcons[4]  = busyicons/busy-icon4.png
+StatusBar.busyIcons[5]  = busyicons/busy-icon5.png
+StatusBar.busyIcons[6]  = busyicons/busy-icon6.png
+StatusBar.busyIcons[7]  = busyicons/busy-icon7.png
+StatusBar.busyIcons[8]  = busyicons/busy-icon8.png
+StatusBar.busyIcons[9]  = busyicons/busy-icon9.png
+StatusBar.busyIcons[10] = busyicons/busy-icon10.png
+StatusBar.busyIcons[11] = busyicons/busy-icon11.png
+StatusBar.busyIcons[12] = busyicons/busy-icon12.png
+StatusBar.busyIcons[13] = busyicons/busy-icon13.png
+StatusBar.busyIcons[14] = busyicons/busy-icon14.png
+jMenuItem1.text=New
+jMenuItem2.text=Open
+jMenuItem3.text=Save
+jMenuItem4.text=Export
+jMenu1.text=Edit
+jMenuItem5.text=Undo
+jMenuItem6.text=Redo
+jMenuItem7.text=Cut
+jMenuItem8.text=Copy
+jMenuItem9.text=Paste
+jMenuItem10.text=Select All
+jMenuItem11.text=Find
+jMenu2.text=Database
+jMenuItem12.text=Add Question
+jMenuItem13.text=Edit Question
+jMenuItem14.text=Delete Question
+jMenu3.text=Tests
+jMenuItem15.text=Generate
+jMenuItem16.text=Take
+jMenuItem17.text=Grade
+jMenu4.text=Options
+jMenuItem18.text=General
+jMenu5.text=Help
+jMenuItem19.text=About
+jMenuItem20.text=Exit
+jTable1.columnModel.title1=Class
+jTable1.columnModel.title0=#
+jTable1.columnModel.title2=Difficulty
+jTable1.columnModel.title3=Time Allowed
+jTable1.columnModel.title4=Last Used
+jTable1.columnModel.title5=Type of Question
+jTable1.columnModel.title6=Question
+jTable1.columnModel.title7=Answer
+jTable1.columnModel.title8=HTML File
+jMenuItem12Clicked.Action.text=
+jMenuItem12Clicked.Action.shortDescription=

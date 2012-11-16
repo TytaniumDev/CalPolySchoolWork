@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestTool</title>
+  <link href="public/css/layout.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>TestTool</h1>
+      <h3>
+        "TestTool is software that can be used to automatically generate and allow people to take tests as simply and efficiently as possible."
+      </h3>
+    </div>
+    <div id="content">
+       <!-- this is where you put stuff, replace the ul block with whatever -->
+       <ul class="checkmarks">
+         <li><a href="requirements">Requirements</a></li>
+         <li><a href="specification">Specification</a></li>
+         <li><a href="prototype">Prototype</a></li>
+         <li><a href="design">Design</a></li>
+         <li><a href="implementation">Implementation</a></li>
+         <li><a href="testing">Testing</a></li>
+         <li><a href="administration">Administration</a></li>
+         <li><a href="documentation">Documentation</a></li>
+       </ul>
+    </div>
+  </div>
+</body>
+</html>

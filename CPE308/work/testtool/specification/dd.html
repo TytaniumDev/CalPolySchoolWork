@@ -1,0 +1,1186 @@
+<html>
+<head>
+<title>Data Dictionary</title>
+</head>
+<body bgcolor=white>
+<p align=center style="font-family:arial,helvetica"><font size=+2><strong>Data Dictionary</strong>
+</font>
+</p>
+<table align=center border=1 cellpadding=4>
+<tr>
+<td valign=top>
+<font size=+1>
+<p style="font-family:arial,helvetica"><strong>Object&nbsp;Name</strong></p>
+</font>
+<td valign=top>
+<font size=+1>
+<p style="font-family:arial,helvetica"><strong>Components</strong></p>
+</font>
+<td valign=top>
+<font size=+1>
+<p style="font-family:arial,helvetica"><strong>Description</strong></p>
+</font>
+<tr>
+<td valign=top>
+<a name="CheckBoxes">CheckBoxes</a>
+</td>
+
+<td valign=top>
+&nbsp
+</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="DrawnAnswer">DrawnAnswer</a>
+</td>
+
+<td valign=top>
+&nbsp
+</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="Essay">Essay</a>
+</td>
+
+<td valign=top>
+&nbsp
+</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="FillInTheBlank">FillInTheBlank</a>
+</td>
+
+<td valign=top>
+&nbsp
+</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="Matching">Matching</a>
+</td>
+
+<td valign=top>
+&nbsp
+</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="MultipleChoice">MultipleChoice</a>
+</td>
+
+<td valign=top>
+&nbsp
+</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="Option">Option</a>
+</td>
+
+<td valign=top>
+string</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="PointAndClick">PointAndClick</a>
+</td>
+
+<td valign=top>
+&nbsp
+</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="Proctor">Proctor</a>
+</td>
+
+<td valign=top>
+&nbsp
+</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="ProctoredTest">ProctoredTest</a>
+</td>
+
+<td valign=top>
+Inherits from: <a href="#Test">Test</a>
+<br><br>
+<a href="#Proctor">Proctor</a></td>
+<td valign=top>
+
+         A ProctoredTest contains a Proctor.
+     &nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="Programming">Programming</a>
+</td>
+
+<td valign=top>
+&nbsp
+</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="Question">Question</a>
+</td>
+
+<td valign=top>
+<a href="#id">id</a> and <a href="#difficulty">difficulty</a> and <a href="#timeAllowed">timeAllowed</a> and <a href="#lastUsed">lastUsed</a> and <a href="#content">content</a> and <a href="#answer">answer</a> and <a href="#htmlAttachment">htmlAttachment</a> and <a href="#questionType">questionType</a></td>
+<td valign=top>
+
+      A Question contains data for an individual Question in the QuestionDB.
+    &nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="QuestionDB">QuestionDB</a>
+</td>
+
+<td valign=top>
+<a href="#Question">Question</a><sub><font size = +1>*</font></sub></td>
+<td valign=top>
+
+      A QuestionDB contains zero or more Questions.
+    &nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="ShortAnswer">ShortAnswer</a>
+</td>
+
+<td valign=top>
+&nbsp
+</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="Student">Student</a>
+</td>
+
+<td valign=top>
+&nbsp
+</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="Teacher">Teacher</a>
+</td>
+
+<td valign=top>
+&nbsp
+</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="Test">Test</a>
+</td>
+
+<td valign=top>
+<a href="#name">name</a> and <a href="#message">message</a> and <a href="#Teacher">Teacher</a> and <a href="#Proctor">Proctor</a> and <a href="#Student">Student</a> and <a href="#TestQuestion">TestQuestion</a><sub><font size = +1>*</font></sub></td>
+<td valign=top>
+
+         A Test contains set of testQuestions, a Teacher, a Student and a message from the Teacher to the Student.
+     &nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="TestDB">TestDB</a>
+</td>
+
+<td valign=top>
+<a href="#Test">Test</a><sub><font size = +1>*</font></sub></td>
+<td valign=top>
+
+         The TestDB contains zero or more Tests.
+     &nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="TestGeneraterLazy">TestGeneraterLazy</a>
+</td>
+
+<td valign=top>
+<a href="#testName">testName</a> and <a href="#class">class</a> and <a href="#totalQuestions">totalQuestions</a> and <a href="#totalTime">totalTime</a></td>
+<td valign=top>
+
+      A TestGeneratorLazy contains the least amount of information necessary to generate a test.
+    &nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="TestGeneratorLessLazy">TestGeneratorLessLazy</a>
+</td>
+
+<td valign=top>
+<a href="#difficulty">difficulty</a> and <a href="#includeByProf">includeByProf</a> and <a href="#discludeSince">discludeSince</a> and <a href="#keywords">keywords</a></td>
+<td valign=top>
+
+      A TestGeneratorLessLazy contains more refining information than a TestGeneratorLazy about how to generate a test.
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="TestGeneratorManual">TestGeneratorManual</a>
+</td>
+
+<td valign=top>
+<a href="#questions">questions</a> and <a href="#difficulty">difficulty</a> and <a href="#lastUsed">lastUsed</a> and <a href="#timeReq">timeReq</a> and <a href="#author">author</a></td>
+<td valign=top>
+
+      A TestGeneratorManual contains all the information a professor needs to manually edit his test. 
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="TestQuestion">TestQuestion</a>
+</td>
+
+<td valign=top>
+Inherits from: <a href="#Question">Question</a>
+<br><br>
+<a href="#number">number</a> and <a href="#pointsPossible">pointsPossible</a> and <a href="#pointsEarned">pointsEarned</a> and <a href="#studentAnswer">studentAnswer</a> and <a href="#teacherFeedback">teacherFeedback</a> and <a href="#gradingStatus">gradingStatus</a></td>
+<td valign=top>
+
+         A testQuestion contains things necessary for a testQuestion...
+     &nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="TestReport">TestReport</a>
+</td>
+
+<td valign=top>
+<a href="#average">average</a> and <a href="#score">score</a> and <a href="#Test">Test</a></td>
+<td valign=top>
+
+         A TestReport contains data for an individual User’s test results.
+     &nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="TrueFalse">TrueFalse</a>
+</td>
+
+<td valign=top>
+&nbsp
+</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="User">User</a>
+</td>
+
+<td valign=top>
+<a href="#emplid">emplid</a> and <a href="#login">login</a> and <a href="#password">password</a> and <a href="#name">name</a> and <a href="#email">email</a> and <a href="#userType">userType</a></td>
+<td valign=top>
+
+         A User contains data for an individual User in the UserDB.
+     &nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="UserDB">UserDB</a>
+</td>
+
+<td valign=top>
+<a href="#User">User</a><sub><font size = +1>*</font></sub></td>
+<td valign=top>
+
+         A UserDB contains zero or more Users.
+     &nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="answer">answer</a>
+</td>
+
+<td valign=top>
+string</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="author">author</a>
+</td>
+
+<td valign=top>
+string</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="average">average</a>
+</td>
+
+<td valign=top>
+integer</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="class">class</a>
+</td>
+
+<td valign=top>
+string</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="content">content</a>
+</td>
+
+<td valign=top>
+string</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="difficulty">difficulty</a>
+</td>
+
+<td valign=top>
+integer</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="discludeSince">discludeSince</a>
+</td>
+
+<td valign=top>
+string</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="email">email</a>
+</td>
+
+<td valign=top>
+string</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="emplid">emplid</a>
+</td>
+
+<td valign=top>
+string</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="gradedComputer">gradedComputer</a>
+</td>
+
+<td valign=top>
+&nbsp
+</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="gradedUser">gradedUser</a>
+</td>
+
+<td valign=top>
+&nbsp
+</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="gradingStatus">gradingStatus</a>
+</td>
+
+<td valign=top>
+<a href="#taken">taken</a> or <a href="#gradedComputer">gradedComputer</a> or <a href="#gradedUser">gradedUser</a></td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="htmlAttachment">htmlAttachment</a>
+</td>
+
+<td valign=top>
+string</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="id">id</a>
+</td>
+
+<td valign=top>
+integer</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="includeByProf">includeByProf</a>
+</td>
+
+<td valign=top>
+string</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="keywords">keywords</a>
+</td>
+
+<td valign=top>
+string</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="lastUsed">lastUsed</a>
+</td>
+
+<td valign=top>
+string</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="login">login</a>
+</td>
+
+<td valign=top>
+string</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="message">message</a>
+</td>
+
+<td valign=top>
+string</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="name">name</a>
+</td>
+
+<td valign=top>
+string</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="number">number</a>
+</td>
+
+<td valign=top>
+integer</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="password">password</a>
+</td>
+
+<td valign=top>
+string</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="pointsEarned">pointsEarned</a>
+</td>
+
+<td valign=top>
+integer</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="pointsPossible">pointsPossible</a>
+</td>
+
+<td valign=top>
+integer</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="questionType">questionType</a>
+</td>
+
+<td valign=top>
+<a href="#CheckBoxes">CheckBoxes</a> or <a href="#DrawnAnswer">DrawnAnswer</a> or <a href="#Essay">Essay</a> or <a href="#FillInTheBlank">FillInTheBlank</a> or <a href="#Matching">Matching</a> or <a href="#MultipleChoice">MultipleChoice</a> or <a href="#PointAndClick">PointAndClick</a> or <a href="#Programming">Programming</a> or <a href="#ShortAnswer">ShortAnswer</a> or <a href="#TrueFalse">TrueFalse</a></td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="questions">questions</a>
+</td>
+
+<td valign=top>
+string</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="score">score</a>
+</td>
+
+<td valign=top>
+integer</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="studentAnswer">studentAnswer</a>
+</td>
+
+<td valign=top>
+string</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="taken">taken</a>
+</td>
+
+<td valign=top>
+&nbsp
+</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="teacherFeedback">teacherFeedback</a>
+</td>
+
+<td valign=top>
+string</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="testName">testName</a>
+</td>
+
+<td valign=top>
+string</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="timeAllowed">timeAllowed</a>
+</td>
+
+<td valign=top>
+integer</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="timeReq">timeReq</a>
+</td>
+
+<td valign=top>
+integer</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="totalQuestions">totalQuestions</a>
+</td>
+
+<td valign=top>
+integer</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="totalTime">totalTime</a>
+</td>
+
+<td valign=top>
+integer</td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="userType">userType</a>
+</td>
+
+<td valign=top>
+<a href="#Teacher">Teacher</a> or <a href="#Proctor">Proctor</a> or <a href="#Student">Student</a></td>
+<td valign=top>
+&nbsp;
+</td>
+</tr>
+
+</table>
+<br><br><br>
+<p align=center style="font-family:arial,helvetica"><font size=+2><strong>Operation Dictionary</strong>
+</font>
+</p>
+<table align=center border=1 cellpadding=4>
+<tr>
+<td valign=top>
+<font size=+1>
+<p style="font-family:arial,helvetica"><strong>Operation&nbsp;Name</strong></p>
+</font>
+<td valign=top>
+<font size=+1>
+<p style="font-family:arial,helvetica"><strong>Inputs</strong></p>
+</font>
+<td valign=top>
+<font size=+1>
+<p style="font-family:arial,helvetica"><strong>Outputs</strong></p>
+</font>
+<td valign=top>
+<font size=+1>
+<p style="font-family:arial,helvetica"><strong>Description</strong></p>
+</font>
+<tr>
+<td valign=top>
+<a name="AddQuestion">AddQuestion</a>
+</td>
+
+<td valign=top>
+<a href="#QuestionDB">QuestionDB</a>, <a href="#answer">answer</a>, <a href="#content">content</a>, <a href="#difficulty">difficulty</a>, <a href="#htmlAttachment">htmlAttachment</a>, <a href="#questionType">questionType</a>, <a href="#timeAllowed">timeAllowed</a></td>
+<td valign=top>
+<a href="#QuestionDB">QuestionDB</a></td>
+<td valign=top>
+
+      Add the given question to the QuestionDB. 
+      The variable lastUsed is set to null because the question was just added. 
+      The variable id is set to the next availiable integer, starting from 1 for the first question.
+      The htmlAttachment is optional, but all of the other variables are required.
+      As for constraints: the difficulty is an number between 1 and 5, and timeAllowed can be up to a 3 digit number
+      representing minutes.
+    &nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="AddTest">AddTest</a>
+</td>
+
+<td valign=top>
+<a href="#Test">Test</a>, <a href="#TestDB">TestDB</a></td>
+<td valign=top>
+<a href="#TestDB">TestDB</a></td>
+<td valign=top>
+
+      Add the given Test to the TestDB. 
+      Preconditions: all fields except message and proctor must be not null and Teacher, name must be a unique combination.
+    &nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="AddUser">AddUser</a>
+</td>
+
+<td valign=top>
+<a href="#User">User</a>, <a href="#UserDB">UserDB</a></td>
+<td valign=top>
+<a href="#UserDB">UserDB</a></td>
+<td valign=top>
+
+      Add the given User to the UserDB. 
+      Preconditions: all fields except email must be not null and emplid, userType must be a unique combination.
+    &nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="DeleteQuestion">DeleteQuestion</a>
+</td>
+
+<td valign=top>
+<a href="#Question">Question</a>, <a href="#QuestionDB">QuestionDB</a></td>
+<td valign=top>
+<a href="#QuestionDB">QuestionDB</a></td>
+<td valign=top>
+
+      Delete the given question from the QuestionDB. The given question must already be in the QuestionDB.
+      The returned QuestionDB no longer has Question in it.      
+    &nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="DeleteUser">DeleteUser</a>
+</td>
+
+<td valign=top>
+<a href="#UserDB">UserDB</a>, <a href="#emplid">emplid</a>, <a href="#userType">userType</a></td>
+<td valign=top>
+<a href="#UserDB">UserDB</a></td>
+<td valign=top>
+
+      Delete the given User from the UserDB. 
+      Preconditions: giving just an emplid will remove all instances of the user, giving a userType in addition
+                     only deletes that unique combination.     
+    &nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="EditQuestion (overload 1)">EditQuestion (overload 1)</a>
+</td>
+
+<td valign=top>
+<a href="#Question">Question</a>, <a href="#QuestionDB">QuestionDB</a>, <a href="#Test">Test</a></td>
+<td valign=top>
+<a href="#Test">Test</a></td>
+<td valign=top>
+
+    This operation takes in a Question. The Instructor can remove the Question from the Test, or he can search for a particular Question in the QuestionDB. Then the Instructor can add the Question to the Test.
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="EditQuestion (overload 2)">EditQuestion (overload 2)</a>
+</td>
+
+<td valign=top>
+<a href="#Question">Question</a>, <a href="#QuestionDB">QuestionDB</a>, <a href="#answer">answer</a>, <a href="#content">content</a>, <a href="#difficulty">difficulty</a>, <a href="#htmlAttachment">htmlAttachment</a>, <a href="#questionType">questionType</a>, <a href="#timeAllowed">timeAllowed</a></td>
+<td valign=top>
+<a href="#QuestionDB">QuestionDB</a></td>
+<td valign=top>
+
+      Edit the given question in the QuestionDB. The same things happen as if the user was adding a question,
+      but instead of putting a new question in the QuestionDB the given question is simply changed to match the given inputs.
+      The htmlAttachment is optional, but all of the other variables are required.
+      As for constraints: the difficulty is an number between 1 and 5, and timeAllowed can be up to a 3 digit number
+      representing minutes.
+    &nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="EditTest">EditTest</a>
+</td>
+
+<td valign=top>
+<a href="#Test">Test</a>, <a href="#TestDB">TestDB</a></td>
+<td valign=top>
+<a href="#TestDB">TestDB</a></td>
+<td valign=top>
+
+      Looks up test with name and Teacher from Test from the TestDB and changes all fields except for name and Teacher. 
+      Preconditions: name and Teacher combination must exist in TestDB.
+    &nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="EditUser">EditUser</a>
+</td>
+
+<td valign=top>
+<a href="#User">User</a>, <a href="#UserDB">UserDB</a></td>
+<td valign=top>
+<a href="#UserDB">UserDB</a></td>
+<td valign=top>
+
+      Looks up user with emplid from User from the UserDB and changes all fields except for userType. 
+      Preconditions: emplid of given user must match that of User in UserDB.
+    &nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="FindQuestion">FindQuestion</a>
+</td>
+
+<td valign=top>
+<a href="#QuestionDB">QuestionDB</a>, <a href="#answer">answer</a>, <a href="#content">content</a>, <a href="#difficulty">difficulty</a>, <a href="#htmlAttachment">htmlAttachment</a>, <a href="#id">id</a>, <a href="#lastUsed">lastUsed</a>, <a href="#questionType">questionType</a>, <a href="#timeAllowed">timeAllowed</a></td>
+<td valign=top>
+&nbsp;
+</td>
+<td valign=top>
+
+      Find a question by id, difficulty, timeAllowed, lastUsed, content, answer, htmlAttachment, or questionType.
+      It is possible to search for more than one field at once. However, each type of variable does not have to be input.
+      If the user just wanted to search by id, that is the only variable that needs to be not null. Null variables will
+      be ignored in the searching.
+      Once a possible match is found, it is put into a list of Questions as a result that the user can view.
+    &nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="GetTest">GetTest</a>
+</td>
+
+<td valign=top>
+<a href="#TestDB">TestDB</a>, <a href="#User">User</a>, <a href="#name">name</a></td>
+<td valign=top>
+<a href="#Test">Test</a></td>
+<td valign=top>
+
+      Returns instance of Test with given name and User from the UserDB. 
+      Preconditions: User and name must match that of Test in TestDB.
+    &nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="GetUser">GetUser</a>
+</td>
+
+<td valign=top>
+<a href="#UserDB">UserDB</a>, <a href="#emplid">emplid</a>, <a href="#userType">userType</a></td>
+<td valign=top>
+<a href="#User">User</a></td>
+<td valign=top>
+
+      Returns instance of User with given emplid and userType from the UserDB. 
+      Preconditions: emplid and userType must match that of User in UserDB.
+    &nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="addQuestion">addQuestion</a>
+</td>
+
+<td valign=top>
+<a href="#Question">Question</a></td>
+<td valign=top>
+<a href="#Test">Test</a></td>
+<td valign=top>
+
+    This operation takes in a Question object and adds it to the Test
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="analyzeScores">analyzeScores</a>
+</td>
+
+<td valign=top>
+<a href="#Option">Option</a></td>
+<td valign=top>
+<a href="#TestReport">TestReport</a></td>
+<td valign=top>
+
+   This operation takes in a group of the same completed tests and generates a test report based on the option(Question, Type, Point Value) the user has specified.
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="courseScores">courseScores</a>
+</td>
+
+<td valign=top>
+&nbsp;
+</td>
+<td valign=top>
+<a href="#TestReport">TestReport</a></td>
+<td valign=top>
+
+   This operation takes in a group of completed tests from a specific course and generates a test report based of all the tests administered for the course.
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="deleteQuestion">deleteQuestion</a>
+</td>
+
+<td valign=top>
+&nbsp;
+</td>
+<td valign=top>
+&nbsp;
+</td>
+<td valign=top>
+
+    This operation takes in a Question and deletes 1 Question object from it
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="generate">generate</a>
+</td>
+
+<td valign=top>
+&nbsp;
+</td>
+<td valign=top>
+<a href="#Test">Test</a></td>
+<td valign=top>
+
+    This operation takes in Question objects and makes it into a Test.
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="gradeTest">gradeTest</a>
+</td>
+
+<td valign=top>
+<a href="#Test">Test</a></td>
+<td valign=top>
+<a href="#TestReport">TestReport</a></td>
+<td valign=top>
+
+   This operation takes in a completed test and generates a test report.
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="studentScores">studentScores</a>
+</td>
+
+<td valign=top>
+&nbsp;
+</td>
+<td valign=top>
+<a href="#TestReport">TestReport</a></td>
+<td valign=top>
+
+   This operation takes in a group of completed tests from a specific student and generates a test report based of all the tests completed for the student.
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<a name="testPreview">testPreview</a>
+</td>
+
+<td valign=top>
+&nbsp;
+</td>
+<td valign=top>
+&nbsp;
+</td>
+<td valign=top>
+
+    This operation takes in Question objects and displays them to the Instructor
+&nbsp;
+</td>
+</tr>
+
+</table>
+</body>
+</html>

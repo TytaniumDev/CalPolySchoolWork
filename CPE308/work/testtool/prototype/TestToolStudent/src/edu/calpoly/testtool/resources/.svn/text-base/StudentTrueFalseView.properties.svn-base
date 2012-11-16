@@ -1,0 +1,31 @@
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+
+jLabel2.text=Time Left:
+timeLeft.text=60 mins
+jLabel3.text=Questions Left:
+questionsLeft.text=20
+#NOI18N
+jLabel2.font=DejaVu Sans-Bold-12
+#NOI18N
+jLabel3.font=DejaVu Sans-Bold-12
+jLabel1.text=1) Question 4: Choice B) should be uml instead of xml
+question1.text=Question 1
+question2.text=Question 2
+jLabel6.text=Question 3
+jLabel7.text=Question 4
+jLabel8.text=Question 5
+jLabel9.text=Question 6
+jLabel10.text=Question 7
+jLabel11.text=Question 8
+jLabel12.text=Question 9
+jLabel13.text=Question 10
+jLabel14.text=Question 11
+submit.text=Submit Answer
+previous.text=Previous Question
+next.text=Next Question
+begin.text=Begin Test
+questLabel.text=Question 1
+question.text=Are there eight bits in one?
+jRadioButton1.text=True
+jRadioButton2.text=False

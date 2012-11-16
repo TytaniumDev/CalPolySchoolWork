@@ -1,0 +1,38 @@
+Step 1: I went through all of the NotePad Tutorial and understand it all. I didn't have any problems.
+
+Step 2:
+a) ListActivity differs from Activity in that it specializes in Lists (obviously). ListActivity deals with ListView objects, and works well with Cursors.
+   For ListActivity, the setContentView call would be made in the onCreate() method, and you would provide it your custom view layout for the list.
+b) saveState() is in onPause so that when the application gets the signal to pause, all the user's current data is saved. Leaving this out would mean that in some situations data would be lost because the Android OS would kill the app in low memory situations without having the current state saved.
+c) startManagingCursor is a nice method that lets us not worry about the life cycle of the cursor, the system will manage it for us. It matters in circumstances where it would be too complex for us to manage cursors (saving their state, restoring, etc) or just for general convienance.
+d) getColumnIndexOrThrow throws an IllegalArgumentException, and we don't have to catch it because the method we are in isn't calling it directly. It is nested inside other method calls. First we call .setText, which then calls getString, which then calls getColumnIndexOrThrow. This means that getString is the one that needs to deal with the exception immediately.
+
+Step 3: I completed this step by editing the xml files. Since the xml file deals with all of the layout and style, it was easy to add a few more lines of code to get the necessary changes. I used the :textColor, :height, and :background attributes to complete this step.
+
+Step 4:
+a) Whenever the app is paused (pressing the home button, etc), the app doesn't save the current state. However, since onSaveInstanceState is also called in such a situation, the saveState() method gets called as well so there is no visible difference.
+b) Now, since saveState() is never called, it never saves the new notes. We never call the mDbHelper to create or update the note that we just tried to add.
+c) No, I was unable to get a note saved without hitting "confirm". I tried using the back button to try to get it to save, switching apps, and pressing the home button, but none of them saved the note. This is because we aren't calling saveState() so the notes are never being saved.
+
+Step 5: 
+a) When the back arrow is pressed, ActivityPaused is called, which then also calls saveState.
+b) When you press home, saveState is called first, then onPause is called which then calls saveState again. When you go back to the application, only onResume is called.
+c) Log is attached as exercise1DDMS.jpg, couldn't figure out how to transfer it into a text file. The stacktrace was cause by a nullPointerException thrown from the saveState method in NoteEdit, line 105. Because we commented out the line where mTitleText gets its real string, when saveState tries to call .getText on it, it gets a null pointer exception because the string is never created.
+
+Step 6: Snapshots included as step6filldata.jpg and step6notesrow.jpg
+
+Step 7:
+a) To add "update" to the context menu, I created a new UPDATE_ID variable, and added it to the onCreateContextMenu method in the same way delete was implemented. I then edited the onContextItemSelected method to have a case for UPDATE_ID, and then I just copy pasted the code from the onListItemClick method to retain the functionality we wanted.
+b) When this line is commented out, none of the context menu items work. This is strange because you wouldn't think the onMenuItemSelected method would ever get used for the ContextMenu.
+
+Step 8: Changed the return in fetchAllNotes to:
+        return mDb.query(DATABASE_TABLE, new String[] {KEY_ROWID, KEY_TITLE,
+                KEY_BODY}, null, null, null, null, KEY_TITLE);
+
+Step 9: This is the line that sets <No Title> (which is declared in strings.xml), it is in the saveState method:
+if(title.length() == 0)
+        {
+        	title = this.getResources().getString(R.string.empty_note);
+        }
+
+Note: this does not change existing blank lines to <No Title>, but your spec wanted it to record blanks as <No Title> so I though putting it in saveState would be appropriate rather than in onCreate/populateFields

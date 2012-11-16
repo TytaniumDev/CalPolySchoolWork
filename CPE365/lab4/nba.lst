@@ -1,0 +1,339 @@
+10:33:54 TYHOLLAN> @insert_nba_xtra
+10:34:01 TYHOLLAN> select count(*) from TEAM;
+  COUNT(*)
+----------
+         2
+
+1 row selected.
+
+10:34:03 TYHOLLAN> select count(*) from TEAM_COLOR;
+  COUNT(*)
+----------
+         4
+
+1 row selected.
+
+10:34:03 TYHOLLAN> select count(*) from PLAYER;
+  COUNT(*)
+----------
+        27
+
+1 row selected.
+
+10:34:03 TYHOLLAN> select count(*) from CAPTAIN;
+  COUNT(*)
+----------
+         2
+
+1 row selected.
+
+10:34:03 TYHOLLAN> select count(*) from GAME;
+  COUNT(*)
+----------
+         7
+
+1 row selected.
+
+10:34:04 TYHOLLAN> select count(*) from PLAYS_IN;
+  COUNT(*)
+----------
+       136
+
+1 row selected.
+
+10:34:04 TYHOLLAN> 
+10:34:04 TYHOLLAN> ---- The tuples below should not be allowed to be inserted -----
+10:34:04 TYHOLLAN> insert into TEAM values ('AVeryLongName', 'X', null);
+insert into TEAM values ('AVeryLongName', 'X', null)
+                         *
+ERROR at line 1:
+ORA-12899: value too large for column "TYHOLLAN"."TEAM"."TNAME" (actual: 13,
+maximum: 10)
+
+
+10:34:04 TYHOLLAN> insert into TEAM values ('Celtics', 'X', null);
+insert into TEAM values ('Celtics', 'X', null)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (TYHOLLAN.SYS_C00248718) violated
+
+
+10:34:04 TYHOLLAN> insert into TEAM values ('Alpha', null, null);
+insert into TEAM values ('Alpha', null, null)
+                                  *
+ERROR at line 1:
+ORA-01400: cannot insert NULL into ("TYHOLLAN"."TEAM"."CONFERENCE")
+
+
+10:34:04 TYHOLLAN> insert into TEAM values ('Alpha', 'X', 'AVeryVeryVeryLongName');
+insert into TEAM values ('Alpha', 'X', 'AVeryVeryVeryLongName')
+                                       *
+ERROR at line 1:
+ORA-12899: value too large for column "TYHOLLAN"."TEAM"."CITY" (actual: 21,
+maximum: 15)
+
+
+10:34:04 TYHOLLAN> 
+10:34:04 TYHOLLAN> insert into TEAM_COLOR values ('X', 'teal');
+insert into TEAM_COLOR values ('X', 'teal')
+*
+ERROR at line 1:
+ORA-02291: integrity constraint (TYHOLLAN.SYS_C00248720) violated - parent key
+not found
+
+
+10:34:04 TYHOLLAN> insert into TEAM_COLOR values ('Lakers', 'AVeryVeryLongName');
+insert into TEAM_COLOR values ('Lakers', 'AVeryVeryLongName')
+                                         *
+ERROR at line 1:
+ORA-12899: value too large for column "TYHOLLAN"."TEAM_COLOR"."COLOR" (actual:
+17, maximum: 12)
+
+
+10:34:04 TYHOLLAN> insert into TEAM_COLOR values ('Lakers', 'yellow');
+insert into TEAM_COLOR values ('Lakers', 'yellow')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (TYHOLLAN.SYS_C00248719) violated
+
+
+10:34:04 TYHOLLAN> 
+10:34:04 TYHOLLAN> insert into PLAYER values
+10:34:04   2  	('Lakers', 23, 'Matt Foo', 'G', '14-NOV-1984', 80, 205, 'Massachusetts', null);
+insert into PLAYER values
+*
+ERROR at line 1:
+ORA-00001: unique constraint (TYHOLLAN.SYS_C00248725) violated
+
+
+10:34:04 TYHOLLAN> insert into PLAYER values
+10:34:04   2  	('Lakers', 0, 'Matt Foo', 'G', '14-NOV-1984', 80, 205, 'Massachusetts', null);
+insert into PLAYER values
+*
+ERROR at line 1:
+ORA-02290: check constraint (TYHOLLAN.SYS_C00248721) violated
+
+
+10:34:04 TYHOLLAN> insert into PLAYER values
+10:34:04   2  	('Lakers', 101, 'Matt Foo', 'G', '14-NOV-1984', 80, 205, 'Massachusetts', null);
+  ('Lakers', 101, 'Matt Foo', 'G', '14-NOV-1984', 80, 205, 'Massachusetts', null)
+             *
+ERROR at line 2:
+ORA-01438: value larger than specified precision allowed for this column
+
+
+10:34:04 TYHOLLAN> insert into PLAYER values
+10:34:04   2  	('Lakers', 100, 'Matt Foo', 'XXXX', '14-NOV-1984', 80, 205, 'Massachusetts', null);
+  ('Lakers', 100, 'Matt Foo', 'XXXX', '14-NOV-1984', 80, 205, 'Massachusetts', null)
+             *
+ERROR at line 2:
+ORA-01438: value larger than specified precision allowed for this column
+
+
+10:34:04 TYHOLLAN> insert into PLAYER values
+10:34:04   2  	('Lakers', 100, 'Matt Foo', 'F', '32-NOV-1984', 80, 205, 'Massachusetts', null);
+  ('Lakers', 100, 'Matt Foo', 'F', '32-NOV-1984', 80, 205, 'Massachusetts', null)
+             *
+ERROR at line 2:
+ORA-01438: value larger than specified precision allowed for this column
+
+
+10:34:04 TYHOLLAN> insert into PLAYER values
+10:34:04   2  	('Lakers', 100, 'Matt Foo', 'G', '14-NOV-1984', 0, 205, 'Massachusetts', null);
+  ('Lakers', 100, 'Matt Foo', 'G', '14-NOV-1984', 0, 205, 'Massachusetts', null)
+             *
+ERROR at line 2:
+ORA-01438: value larger than specified precision allowed for this column
+
+
+10:34:04 TYHOLLAN> insert into PLAYER values
+10:34:04   2  	('Lakers', 100, 'Matt Foo', 'G', '14-NOV-1984', 80, 0, 'Massachusetts', null);
+  ('Lakers', 100, 'Matt Foo', 'G', '14-NOV-1984', 80, 0, 'Massachusetts', null)
+             *
+ERROR at line 2:
+ORA-01438: value larger than specified precision allowed for this column
+
+
+10:34:04 TYHOLLAN> insert into PLAYER values
+10:34:04   2  	('Lakers', 100, 'Matt Foo', 'G', '14-NOV-1984', 80, 200, 'Massachusetts', 0);
+  ('Lakers', 100, 'Matt Foo', 'G', '14-NOV-1984', 80, 200, 'Massachusetts', 0)
+             *
+ERROR at line 2:
+ORA-01438: value larger than specified precision allowed for this column
+
+
+10:34:04 TYHOLLAN> insert into PLAYER values
+10:34:04   2  	('Lakers', 100, 'Matt Foo', 'G', '14-NOV-1984', 80, 200, 'Massachusetts',
+10:34:04   3  	  12345678901.12);
+  ('Lakers', 100, 'Matt Foo', 'G', '14-NOV-1984', 80, 200, 'Massachusetts',
+             *
+ERROR at line 2:
+ORA-01438: value larger than specified precision allowed for this column
+
+
+10:34:04 TYHOLLAN> 
+10:34:04 TYHOLLAN> insert into CAPTAIN values ('Lakers', 24);
+insert into CAPTAIN values ('Lakers', 24)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (TYHOLLAN.SYS_C00248727) violated
+
+
+10:34:04 TYHOLLAN> insert into CAPTAIN values ('Celtic', 20);
+insert into CAPTAIN values ('Celtic', 20)
+*
+ERROR at line 1:
+ORA-02291: integrity constraint (TYHOLLAN.SYS_C00248728) violated - parent key
+not found
+
+
+10:34:04 TYHOLLAN> insert into CAPTAIN values ('Lakers', 99);
+insert into CAPTAIN values ('Lakers', 99)
+*
+ERROR at line 1:
+ORA-02291: integrity constraint (TYHOLLAN.SYS_C00248728) violated - parent key
+not found
+
+
+10:34:04 TYHOLLAN> 
+10:34:04 TYHOLLAN> insert into GAME values (0, null, null);
+insert into GAME values (0, null, null)
+*
+ERROR at line 1:
+ORA-02290: check constraint (TYHOLLAN.SYS_C00248729) violated
+
+
+10:34:04 TYHOLLAN> insert into GAME values (1, null, null);
+insert into GAME values (1, null, null)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (TYHOLLAN.SYS_C00248730) violated
+
+
+10:34:04 TYHOLLAN> insert into GAME values (8, '0-NOV-1984', null);
+insert into GAME values (8, '0-NOV-1984', null)
+                            *
+ERROR at line 1:
+ORA-01847: day of month must be between 1 and last day of month
+
+
+10:34:04 TYHOLLAN> insert into GAME values (8, 'not a date', null);
+insert into GAME values (8, 'not a date', null)
+                            *
+ERROR at line 1:
+ORA-01858: a non-numeric character was found where a numeric was expected
+
+
+10:34:04 TYHOLLAN> insert into GAME values (8, null, 'Not a good place at all');
+insert into GAME values (8, null, 'Not a good place at all')
+                                  *
+ERROR at line 1:
+ORA-12899: value too large for column "TYHOLLAN"."GAME"."PLACE" (actual: 23,
+maximum: 15)
+
+
+10:34:04 TYHOLLAN> 
+10:34:04 TYHOLLAN> insert into PLAYS_IN values(7, 'Celtics', 5, 35, 16, 'Y');
+insert into PLAYS_IN values(7, 'Celtics', 5, 35, 16, 'Y')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (TYHOLLAN.SYS_C00248734) violated
+
+
+10:34:04 TYHOLLAN> insert into PLAYS_IN values(8, 'Celtics', 5, 35, 16, 'Y');
+insert into PLAYS_IN values(8, 'Celtics', 5, 35, 16, 'Y')
+*
+ERROR at line 1:
+ORA-02291: integrity constraint (TYHOLLAN.SYS_C00248736) violated - parent key
+not found
+
+
+10:34:04 TYHOLLAN> insert into PLAYS_IN values(7, 'Celtics', 5, 35, 16, 'Y');
+insert into PLAYS_IN values(7, 'Celtics', 5, 35, 16, 'Y')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (TYHOLLAN.SYS_C00248734) violated
+
+
+10:34:04 TYHOLLAN> insert into PLAYS_IN values(7, 'Celtic', 5, 35, 16, 'Y');
+insert into PLAYS_IN values(7, 'Celtic', 5, 35, 16, 'Y')
+*
+ERROR at line 1:
+ORA-02291: integrity constraint (TYHOLLAN.SYS_C00248735) violated - parent key
+not found
+
+
+10:34:04 TYHOLLAN> insert into PLAYS_IN values(7, 'Celtics', 95, 35, 16, 'Y');
+insert into PLAYS_IN values(7, 'Celtics', 95, 35, 16, 'Y')
+*
+ERROR at line 1:
+ORA-02291: integrity constraint (TYHOLLAN.SYS_C00248735) violated - parent key
+not found
+
+
+10:34:04 TYHOLLAN> insert into PLAYS_IN values(7, 'Celtics', 5, -5, 16, 'Y');
+insert into PLAYS_IN values(7, 'Celtics', 5, -5, 16, 'Y')
+*
+ERROR at line 1:
+ORA-02290: check constraint (TYHOLLAN.SYS_C00248731) violated
+
+
+10:34:04 TYHOLLAN> insert into PLAYS_IN values(7, 'Celtics', 5, 35, -1, 'Y');
+insert into PLAYS_IN values(7, 'Celtics', 5, 35, -1, 'Y')
+*
+ERROR at line 1:
+ORA-02290: check constraint (TYHOLLAN.SYS_C00248732) violated
+
+
+10:34:04 TYHOLLAN> insert into PLAYS_IN values(7, 'Celtics', 5, 35, -1, 'y');
+insert into PLAYS_IN values(7, 'Celtics', 5, 35, -1, 'y')
+*
+ERROR at line 1:
+ORA-02290: check constraint (TYHOLLAN.SYS_C00248733) violated
+
+
+10:34:04 TYHOLLAN> --------------------------------------------------------------
+10:34:04 TYHOLLAN> select count(*) from TEAM;
+  COUNT(*)
+----------
+         2
+
+1 row selected.
+
+10:34:04 TYHOLLAN> select count(*) from TEAM_COLOR;
+  COUNT(*)
+----------
+         4
+
+1 row selected.
+
+10:34:05 TYHOLLAN> select count(*) from PLAYER;
+  COUNT(*)
+----------
+        27
+
+1 row selected.
+
+10:34:05 TYHOLLAN> select count(*) from CAPTAIN;
+  COUNT(*)
+----------
+         2
+
+1 row selected.
+
+10:34:05 TYHOLLAN> select count(*) from GAME;
+  COUNT(*)
+----------
+         7
+
+1 row selected.
+
+10:34:06 TYHOLLAN> select count(*) from PLAYS_IN;
+  COUNT(*)
+----------
+       136
+
+1 row selected.
+
+10:34:06 TYHOLLAN> 
+10:34:06 TYHOLLAN> spool off

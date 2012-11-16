@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLParsers" num="3607" delta="unknown" >Unit <arg fmt="%s" index="1">work/AlarmFSM</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Documents and Settings/s169s4b1/Desktop/Lab9A/../FINAL/AlarmFSM_D_Struct.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Documents and Settings/s169s4b1/Desktop/FINAL/AlarmFSM_D_Struct.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="unknown" >Unit <arg fmt="%s" index="1">work/AlarmFSM/AlarmFSM_D_Struct</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Documents and Settings/s169s4b1/Desktop/Lab9A/../FINAL/AlarmFSM_D_Struct.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Documents and Settings/s169s4b1/Desktop/FINAL/AlarmFSM_D_Struct.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/s169s4b1/Desktop/FINAL/AlarmFSM_D_Struct.vhd</arg>&quot; line <arg fmt="%d" index="2">50</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">Qnot</arg>&apos; of component &apos;<arg fmt="%s" index="4">D_FF</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">Q0not</arg>&gt; is never used or assigned.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">Qnot</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">D0_ff</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">AlarmFSMthing/D0_ff/Qnot</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TopUnit</arg>&gt;.
+</msg>
+
+</messages>
+

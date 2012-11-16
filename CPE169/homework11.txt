@@ -1,0 +1,15 @@
+--Homework 11 VHDL Assignment
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY Some_Circuit IS
+	PORT( A0, B0 : IN STD_LOGIC;
+	           S0, C0 : OUT STD_LOGIC );
+END Some_Circuit;
+
+ARCHITECTURE the_gates OF Some_Circuit IS
+BEGIN
+	S0 <= A0 XOR B0; --Top gate, XOR
+	C0 <= A0 AND B0; --Bottom gate, AND
+END the_gates;

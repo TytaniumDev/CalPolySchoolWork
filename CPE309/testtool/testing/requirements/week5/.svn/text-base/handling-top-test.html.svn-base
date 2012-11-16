@@ -1,0 +1,98 @@
+<head>
+<title>2.4 - Handling Exams Inspection Test</title>
+</head>
+
+<style type="text/css">
+td {
+    border: 1px solid black;
+}
+
+th {
+    border: 1px solid black;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+</style>
+
+<h3>
+2.4.  Handling Exams Inspection Test
+</h3>
+
+<table>
+<tr>
+    <th>Component</th>
+    <th>Inspector</th>
+    <th>Date</th>
+    <th>Status</th>
+    <th>Remarks</th>
+</tr>
+<tr>
+    <td>2.4 H1</td>
+    <td>SMG</td>
+    <td>10/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4 P1</td>
+    <td>SMG</td>
+    <td>10/22/2010</td>
+    <td>FIX</td>
+    <td>Editorial Remark still there</td>
+</tr>
+<tr>
+    <td>2.4 P2</td>
+    <td>SMG</td>
+    <td>10/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4 A1</td>
+    <td>SMG</td>
+    <td>10/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4 A2</td>
+    <td>SMG</td>
+    <td>10/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4 A3</td>
+    <td>SMG</td>
+    <td>10/22/2010</td>
+    <td>FIX</td>
+    <td>Previous should link to question bank management</td>
+</tr>
+<tr>
+    <td>2.4 A4</td>
+    <td>SMG</td>
+    <td>10/22/2010</td>
+    <td>FIX</td>
+    <td>Next should link to taking a test</td>
+</tr>
+<tr>
+    <td>2.4 A5</td>
+    <td>SMG</td>
+    <td>10/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4 A6</td>
+    <td>SMG</td>
+    <td>10/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+
+</table>
+

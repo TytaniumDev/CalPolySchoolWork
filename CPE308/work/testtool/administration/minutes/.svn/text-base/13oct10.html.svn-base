@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>
+Minutes of the Tool Team Meeting, 13 October 2010 
+</title>
+</head>
+<body bgcolor=white>
+<p align=center>
+<font size=+2>
+<strong>Minutes of the Tool Time Team Meeting
+<br>
+3:40 - 4.00 PM, 13 October 2010</strong>
+
+</font>
+</p>
+<br>
+<br>
+<strong>Present</strong>: All 
+<br>
+<br>
+<strong>Absent</strong>:
+<br>
+<br>
+<strong>Excused:</strong>:
+<br>
+<br>
+<br>
+
+</br>
+Our pin code for grades: <a href="http://users.csc.calpoly.edu/~gfisher/classes/308/grades/testtool-8730">http://users.csc.calpoly.edu/~gfisher/classes/308/grades/testtool-8730</a>
+</br></br> 
+<u><em>Some comments the professor made: </em></u>
+</br> </br>
+- He talked about the Practice Test option 
+<p>
+- Alternate order of organizing the Functional requirements
+</br></br>
+- Test Generation: Need specific rules for choosing the questions in the 
+"Lazy section". Should be deterministic not random.
+</p>
+<p>
+- Database: Question dialogues should correspond to the columns. All questions
+should have the same properties/layout. Consistency.
+</p>
+<p>
+- Test Reports: Think about how the students receive their scores. Think about
+a central place for test generating, storing, grading, and viewing. 
+What path will the test take from being generated, stored, taken, graded, and
+its results posted. 
+</p>
+<p>
+- Grading: Proposed a UI that can isolate specific questions and view them across all students
+</p>
+</body>
+</html>

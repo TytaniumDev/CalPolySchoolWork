@@ -1,0 +1,48 @@
+<?
+$title = "2.3. Question Bank Management";
+require "../header.php";
+?>
+<a name="Question Bank Management">
+<h3>
+2.3.  Question Bank Management
+</h3>
+</a>
+
+<p>
+When a user clicks the "Question Bank" tab, she is presented with the main Question Bank
+screen shown in Figure 2.3.1.
+
+<a name="QuestionBankMain"></a>
+<p align=center>
+<IMG SRC="./images/TestGeneratorWireMain.png">
+</p>
+<p align=center> Figure 2.3.1: Question Bank Main Screen </p>
+<br>
+
+The tabs that run across the top of the window correlate to other actions that can be taken. The order of the tabs conforms to the order of the welcome screen.
+
+There are five scenarios in this section that describe a user managing the question bank:
+</p>
+<ul>
+<li><a href="questionbank-add.html"><h4>Adding or Editing a Question</h4></a></li>
+<li><a href="questionbank-search.html"><h4>Searching the Question Bank for a Question</h4></a></li>
+<li><a href="questionbank-remove.html"><h4>Removing a Question from the Question Bank</h4></a></li> 
+<li><a href="questionbank-remove.html"><h4>Organizing the Question Bank</h4></a></li>
+<li><a href="questionbank-sort.html"><h4>Sorting the Question Bank</h4></a></li>
+</ul>
+
+<br>
+<br>
+<br>
+<br>
+<hr width=80% size=3>
+<center>
+<font size=-1>
+<font color=black> Prev: </font><None>
+ | <font color=black> Next: </font><a href="questionbank-add.html">add or edit a question</a>
+ | <font color=black> Up: </font><a href="functional.html">functional</a>
+ | <font color=black> Top: </font><a href="index.html">index</a></font>
+</center>
+<?
+require "../footer.php";
+?>

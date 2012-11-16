@@ -1,0 +1,3 @@
+MODULE test
+SUBMODULE Procedure4
+INSTANCE UUT

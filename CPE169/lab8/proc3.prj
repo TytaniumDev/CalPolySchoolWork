@@ -1,0 +1,4 @@
+vhdl work "tflipflop.vhd"
+vhdl work "proc2.vhd"
+vhdl work "BCDto7.vhd"
+vhdl work "proc3.vhd"

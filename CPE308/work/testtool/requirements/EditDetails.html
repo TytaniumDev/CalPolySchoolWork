@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <title>TestTool | Non-Functional Requirements | General Characteristics </title>
+
+  <link href="../public/css/layout.css" rel="stylesheet" media="screen" />
+
+</head>
+
+<body>
+
+  <div id="container">
+
+    <div id="header">
+
+      <h1>TestTool</h1>
+
+      <h2 class="title">2.8 Details of Edit Commands</h2>
+
+    </div>
+
+    <div id="content">
+
+    <div id="2.8.1">
+
+<h4>
+
+2.8.1.  Undo <br/><br/>
+
+</h4>
+
+
+
+    When the user selects <tt>Undo</tt> from the <tt>Edit</tt> menu, the system
+
+undoes the effect of the most recently confirmed updating command, or the
+
+effect of a previously executed <tt>Undo</tt> command.  An <em>updating
+
+command</em> is any change to a Question or Question Attribute that leads to an unsaved change. 
+
+
+
+For any of these actions, the precise definition of <tt>Undo</tt> is that the
+
+Test Tool Question state is restored to the state that existed immediately prior
+
+to the confirmed execution of the action.  If no confirmed updating command has
+
+been executed on a Question or Question Attribute since the Test Tool was invoked, <tt>Undo</tt> has no effect.
+
+</p>
+
+<p> 
+
+
+
+If <tt>Undo</tt> is executed twice in succession, with no intervening confirmed
+
+update between the two executions, the effect of the first of the two
+
+<tt>Undo</tt> executions is undone.  That is, the state of the Question or Question Attribute is
+
+restored to the state that existed immediately prior to the first
+
+<tt>Undo</tt>.  Third and further successive executions of <tt>Undo</tt>,
+
+without an intervening updating command, cause the system to toggle between the
+
+state of the Question or Question Attribute with and without the effect of the most recently
+
+confirmed update.  This behavior means that only a single level of undo is
+
+available.  That is, only the single most recently executed updating command
+
+can be undone.
+
+</p><p> 
+
+
+
+<tt>Undo</tt> only applies to the updating commands and itself, not to any
+
+other commands.
+
+ 
+
+Specifically, <tt>Undo</tt> does <em>not</em> apply to:
+
+ 
+
+<ul class="nested"> 
+
+<li> 
+
+<tt>Find</tt>,
+
+<li> 
+
+any <tt>File</tt> command,
+
+<li> 
+
+any <tt>Edit</tt> command except itself,
+
+<li> 
+
+any typing that was not confirmed as part of the execution of an updating
+
+command
+
+<li> 
+
+any execution of <tt>Cancel</tt> or <tt>Clear</tt> in any interface dialog.
+
+</ul> 
+
+<br/><br/>
+
+</div>
+
+<div id="2.8.2"><h4>
+
+2.8.2.   Cut, Copy, and Paste <br/>
+
+</h4> 
+
+</p><p> 
+
+Operating systems typically provide a "clipboard" area through which cut and
+
+paste editing commands operate.
+
+
+
+This clipboard holds values that are cut, copied, and pasted in tools such as
+
+the "Question Editor" or the "Adding a Question".  Hence, the <tt>Cut</tt>, <tt>Copy</tt>, and
+
+<tt>Paste</tt> commands operate through such a clipboard.
+
+</p><p> 
+
+To execute the <tt>Cut</tt> or <tt>Copy</tt> command, the user must first
+
+select a segment of text in a text box.  Text selection is performed using
+
+click and drag with the mouse, or by other environment-specific means such as
+
+double or triple clicking in a text box.
+
+</p><p> 
+
+After text selection, when the user selects the <tt>Cut</tt> command from the
+
+<tt>Edit</tt> menu, the system removes the selected text from the edit box and
+
+copies the text into the clipboard.  When the user selects the <tt>Copy</tt> 
+
+command, the selected text is copied to the clipboard, but is not removed from
+
+the display in which it is selected and the text remains selected.  A
+
+particular segment of selected text is <em>unselected</em> by selecting another
+
+text segment or by single-clicking the mouse anywhere in the Test Tool display.
+
+Other environment-specific means of unselecting text may be available.
+
+</p><p> 
+
+
+
+The <tt>Cut</tt> command can only be executed in the context of a display where
+
+the text boxes are editable, i.e., where the user may type in the text boxes.
+
+
+
+In contrast to <tt>Cut</tt>, the <tt>Copy</tt> command can be executed in any
+
+dialog in which text boxes appear, including read-only text boxes.
+
+</p>
+
+<p> 
+
+To execute the <tt>Paste</tt> command, the user must first execute a
+
+<tt>Cut</tt> or <tt>Copy</tt> and then place the typing cursor within some
+
+editable text box.  After these steps, when the user selects the <tt>Paste</tt> 
+
+command from the <tt>Edit</tt> menu, the text stored in the clipboard is
+
+inserted at the point of the typing cursor, as if it had been entered by the
+
+user from the keyboard.  Pasted text appears in normal font, i.e., it is not
+
+highlighted as selected text.
+
+</p>
+
+<p> 
+
+If the user attempts to execute a <tt>Cut</tt> or <tt>Copy</tt> command without
+
+first selecting text, the commands have no effect.  If the user attempts to
+
+execute a <tt>Paste</tt> command without having executed either a <tt>Cut</tt> 
+
+or <tt>Copy</tt>, the <tt>Paste</tt> command has no effect.  The <tt>Cut</tt>,
+
+<tt>Copy</tt>, and <tt>Paste</tt> commands operate only on plain text strings
+
+within a single displayed text box.  In particular, the commands do
+
+<em>not</em> apply to a scheduled item.
+
+</p>
+
+<p> 
+
+The use of the clipboard for communication between the Test Tool and the
+
+outside operating environment depends on the capabilities of the environment.
+
+Specifically, the environment must support the insertion and removal of plain
+
+text to and from the clipboard.  If this requirement is met, and the operating
+
+environment permits inter-tool clipboard communication, then plain text copied
+
+to the clipboard from a another tool can be pasted in the Test Tool using
+
+<tt>Paste</tt>.  Similarly, plain text cut or copied in the Test Tool can
+
+be pasted or otherwise accessed as plain text in another tool, via the
+
+clipboard.
+
+</p>
+
+<br/><br/>
+
+	  </div>
+
+      </div>
+
+
+
+     <div id="navigation">
+
+       Prev: <a href ="filecommands.html">File Commands</a> | Next: <a href ="appendixa.html">Appendix A</a> | Up: <a href="functional.html">functional</a> 
+
+       | Top: <a href="index.html">index</a>
+
+     </div>
+
+</body>
+
+</html>
+

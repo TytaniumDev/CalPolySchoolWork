@@ -1,0 +1,210 @@
+--------------------------------------------------------------------------------
+-- Copyright (c) 1995-2003 Xilinx, Inc.
+-- All Right Reserved.
+--------------------------------------------------------------------------------
+--   ____  ____ 
+--  /   /\/   / 
+-- /___/  \  /    Vendor: Xilinx 
+-- \   \   \/     Version : 9.1.03i
+--  \   \         Application : ISE
+--  /   /         Filename : Proc2test.ant
+-- /___/   /\     Timestamp : Tue Jun 02 16:30:01 2009
+-- \   \  /  \ 
+--  \___\/\___\ 
+--
+--Command: 
+--Design Name: Proc2test
+--Device: Xilinx
+--
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+USE IEEE.STD_LOGIC_TEXTIO.ALL;
+USE STD.TEXTIO.ALL;
+
+ENTITY Proc2test IS
+END Proc2test;
+
+ARCHITECTURE testbench_arch OF Proc2test IS
+    FILE RESULTS: TEXT OPEN WRITE_MODE IS "C:\Documents and Settings\s169s4b1\Desktop\Lab9A\Proc2test.ano";
+
+    COMPONENT AlarmFSM
+        PORT (
+            Break_In : In std_logic;
+            Sys_On_L : In std_logic;
+            Clock : In std_logic;
+            Sys_Armed : Out std_logic;
+            Alarm : Out std_logic
+        );
+    END COMPONENT;
+
+    SIGNAL Break_In : std_logic := '0';
+    SIGNAL Sys_On_L : std_logic := '0';
+    SIGNAL Clock : std_logic := '0';
+    SIGNAL Sys_Armed : std_logic := '0';
+    SIGNAL Alarm : std_logic := '0';
+
+    SHARED VARIABLE TX_ERROR : INTEGER := 0;
+    SHARED VARIABLE TX_OUT : LINE;
+
+    constant PERIOD : time := 200 ns;
+    constant DUTY_CYCLE : real := 0.5;
+    constant OFFSET : time := 100 ns;
+
+    BEGIN
+        UUT : AlarmFSM
+        PORT MAP (
+            Break_In => Break_In,
+            Sys_On_L => Sys_On_L,
+            Clock => Clock,
+            Sys_Armed => Sys_Armed,
+            Alarm => Alarm
+        );
+
+        PROCESS    -- clock process for Clock
+        BEGIN
+            WAIT for OFFSET;
+            CLOCK_LOOP : LOOP
+                Clock <= '0';
+                WAIT FOR (PERIOD - (PERIOD * DUTY_CYCLE));
+                Clock <= '1';
+                WAIT FOR (PERIOD * DUTY_CYCLE);
+            END LOOP CLOCK_LOOP;
+        END PROCESS;
+
+        PROCESS    -- Annotation process for Clock
+            VARIABLE TX_TIME : INTEGER := 0;
+
+            PROCEDURE ANNOTATE_Sys_Armed(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", Sys_Armed, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, Sys_Armed);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_Alarm(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", Alarm, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, Alarm);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+        BEGIN
+            WAIT for 1 fs;
+            ANNOTATE_Sys_Armed(0);
+            ANNOTATE_Alarm(0);
+            WAIT for OFFSET;
+            TX_TIME := TX_TIME + 100;
+            ANNO_LOOP : LOOP
+                --Rising Edge
+                WAIT for 115 ns;
+                TX_TIME := TX_TIME + 115;
+                ANNOTATE_Sys_Armed(TX_TIME);
+                ANNOTATE_Alarm(TX_TIME);
+                WAIT for 85 ns;
+                TX_TIME := TX_TIME + 85;
+            END LOOP ANNO_LOOP;
+        END PROCESS;
+
+        PROCESS
+            BEGIN
+                -- -------------  Current Time:  585ns
+                WAIT FOR 585 ns;
+                Sys_On_L <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  985ns
+                WAIT FOR 400 ns;
+                Break_In <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  1385ns
+                WAIT FOR 400 ns;
+                Break_In <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  1785ns
+                WAIT FOR 400 ns;
+                Sys_On_L <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  2385ns
+                WAIT FOR 600 ns;
+                Sys_On_L <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  2785ns
+                WAIT FOR 400 ns;
+                Sys_On_L <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  2985ns
+                WAIT FOR 200 ns;
+                Break_In <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  3185ns
+                WAIT FOR 200 ns;
+                Sys_On_L <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  3585ns
+                WAIT FOR 400 ns;
+                Break_In <= '0';
+                Sys_On_L <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  3985ns
+                WAIT FOR 400 ns;
+                Break_In <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  4385ns
+                WAIT FOR 400 ns;
+                Break_In <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  4585ns
+                WAIT FOR 200 ns;
+                Sys_On_L <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  4985ns
+                WAIT FOR 400 ns;
+                Sys_On_L <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  5385ns
+                WAIT FOR 400 ns;
+                Break_In <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  5785ns
+                WAIT FOR 400 ns;
+                Break_In <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  6185ns
+                WAIT FOR 400 ns;
+                Break_In <= '1';
+                Sys_On_L <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  6585ns
+                WAIT FOR 400 ns;
+                Break_In <= '0';
+                Sys_On_L <= '0';
+                -- -------------------------------------
+                WAIT FOR 93615 ns;
+
+                STD.TEXTIO.write(TX_OUT, string'("Total[]"));
+                STD.TEXTIO.writeline(RESULTS, TX_OUT);
+                ASSERT (FALSE) REPORT
+                    "Success! Simulation for annotation completed"
+                    SEVERITY FAILURE;
+            END PROCESS;
+
+    END testbench_arch;
+

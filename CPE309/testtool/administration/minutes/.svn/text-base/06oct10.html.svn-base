@@ -1,0 +1,57 @@
+<h3>Week 3 Minutes</h3>
+
+<h4>Wednesday</h4>
+
+The meeting ended before each of us had a chance to present our diagrams.
+The customer had a good impression of the current concept and made several
+suggestions.
+
+<h5>Customer diagram presentation</h5>
+The instructor needs to be able to change student access to test. For closed book tests, professor decides who is eligible to take test using an administration tool. For a closed book test in the classroom, every student has a machine, all they are going to see is an authentication screen. There is one screen per student and a proctor controllable screen, much the same way the test
+is passed out on paper.
+
+For take home tests the interface is good, for in classroom tests, the interface needs to be adapted and simplified with just authentication and the single test. He likes "authentication on demand". He doesn't want to have to log in each time (this applies to the student taking the test and for himself editing the test.)
+
+There should be a way to take a practice test with the current interface. The interface can simulate an in-classroom experience from home.
+
+<h5>Index View (Nathan)</h5>
+Need to change gradebook link name to make all navigation links consistent.
+
+<h5>Question Database View  (Connor)</h5>
+This screen has a database of questions. There's a select box to select the questions to add them to the test. Can add a question, edit a question, organize (sort), search. If he hits add, it adds a question, there are many ways to add questions to the database. Would be cool to edit the question inline in the table (bell and whistle thing.) Can also edit the questions in the individual question editor. Do several different version of question editor for each question type. There needs to be a way to specify which columns are visible on the database view.
+
+Each screen has tabs so in order to navigate it's not necessary to go back to the intro page. Make sure to consolidate the names of the links on the tabs and the intro page. Show the tab bar once in the requirements (not on each screen, for consistency.)
+
+<h5>Generate Test View (Sarah)</h5>
+This shows the list of questions and the ones that are alrerady added. It also shows how to add questions automatically.
+
+He wants lazy generation: lazy = which class, how many minutes, how many questions. That covers it for basic test generation, it will go through database automatically and choose the questions. The automatic selecter should be able to choose tests of a range of difficulties and a range of types as long as they follow the basic properties of the lazy generation. It uses round robin difficulty and chooses questions of different types; the diffferent types should be mixed up evenly.
+
+There should also be a less lazy method where the options get more specific. The instructor selects the types of questions and the difficulty (checkboxes for question types i.e. no true/false) overall for the test, not for each question. The questions should be in no particular order but should be distributed fairly evenly.
+
+There should also be a least lazy method where the instructor selects each question individually.
+
+When he gets back to question by question page, he's not going to need to go back to the generation page.
+
+Show the database side by side with the current test you're working on to make it easier building it completely by hand.
+
+Questions should also be selectable and searchable by keywords (or tags)
+
+<h5>Test Distribution View (Ben or Sean, I forgot who)</h5>
+This is where the professor can distribute the tests to students, view the progress of each student, disqualify students, and get feedback about each student. On the instructor page, the professor needs a test preview to see the test the way the student is going to see it. He wants a "take" button on the banner that makes it so he can preview the test and take it the way a student would.
+
+<h5>Student View (Richie)</h5>
+
+Instructor version and student versions should be separate app
+
+need to add a grading element. the student needs to see the feedback that matches up with the instructor's feedback
+
+add notes to particular questions
+
+needs the ability to add comments to questions
+
+<h4>Friday</h4>
+
+Worked on the finishing touches for the site.
+
+Discussed using cron for handin.

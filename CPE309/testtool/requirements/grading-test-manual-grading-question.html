@@ -1,0 +1,55 @@
+<?
+$title = "2.6.3.2 Grade By Question";
+require "../header.php";
+?>
+<h3>2.6.3.2  Grade By Question</h3>
+<p>
+This scenario describes the actions an instructor can perform on tests for which
+grading has not been completed on a question by question basis.
+</p>
+<p>
+The default grading view shows one student's test. If an instructor wishes to
+grade all responses for the same question at once, he clicks on <em>All
+Responses</em> link in the upper right-hand corner of the corresponding question
+box.
+<p>
+<? echo image("2.6.3.2.a","View Test Page","images/ViewTest.png"); ?>
+
+<p>
+The grade by question page shows the responses for each student on a single
+question.
+</p>
+
+<? echo image("2.6.3.2.b","View Question Page","images/ViewQuestion.png"); ?>
+
+<p>
+The professor can add notes to a student response by clicking in the notes
+textbox and typing any remarks.
+</p>
+
+<? echo image("2.6.3.2.c","Before Adding Notes","images/QuestionChange.png"); ?>
+<? echo image("2.6.3.2.d","After Adding Notes","images/QuestionNote.png"); ?>
+
+<p>
+The professor can also change the number of points a student receives for
+a particular question.
+</p>
+
+<p>
+Once the professor is done editing the questions in the test, he can save
+the changes by clicking the <em>Save Changes</em> button at the bottom of
+the page. If undesired changes were made, instead the professor clicks
+<em>Cancel Changes</em> and none of the changes write to the database.
+</p>
+
+<? echo image("2.6.3.1.d","Save Changes","images/QuestionSave.png"); ?>
+
+<hr size=3 />
+Prev: <a href="grading-test-manual-grading-student.html">Grade By Student</a> | 
+Next: [none] | 
+Up: <a href="grading-test-manual-grading.html">Manual Grading</a> | 
+Top: <a href="index.html">index</a>
+<hr size=3 />
+<?
+require "../footer.php";
+?>

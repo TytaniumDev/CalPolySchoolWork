@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestTool</title>
+  <link href="../../public/css/layout.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>Test Tool</h1>
+      <h2 class="title"> 2.3.1 Test Generation Step 1 </h2>
+    </div>
+    <div id="content">
+       <!-- this is where you put stuff, replace the ul block with whatever -->
+	 
+      <br/>
+      <p>
+         When the instructor first presses the Test Generation button, the first screen that comes up is the 
+	 first step of the process. This step generates a completely random exam with the number of questions
+	 specified. 
+         </br></br>
+	 Figure 1 shows the first screen:
+      </p>
+      </br>
+         <IMG SRC="Vizio2 PNGs/Step1R" id="figure-2-3-1-1"/>
+
+      <p align="center">Figure 2.3.1.1: First step in Test Generation</p>
+	 <br/>
+
+	 <p>
+	    <h4> Explanation of Inputs </h4>
+	    <br/>
+            This step requires the fewest inputs required to generate a full test:
+	    <br/><br/>
+	    <ol class="nested">
+	       <li> The first required input is the Test Name  </li>
+	       <li> The second required input is the Class Name. The professor will specify the identifying suffix 
+	            and number of the class. The generator will use this as a parameter in its search for questions
+		    in the Question Database. You can search through questions for multiple classes by seperating each
+		    class with a comma, as seen in figure 2.3.1.2 </li>
+	       <li> The third required input is the number of Questions on the test. This number must be an integer.
+	            The generator will use this as one of the parameters in its search for questions in the Question
+		    Database. </li>
+	       <li> The fourth required input allows the Instructor to specify a range for the total time this test should take. 
+	            Thses numbers must be integers and are assumed to indicate minutes. 
+                    The generator will use this range as one of
+		    the parameters in its search for questions in the Question database. Should the instructor want to specify an 
+		    exact time limit, he can leave the second box blank.  </li>
+	   </ol>
+	 </p>
+	 </br>
+	 <p>
+	    The figure below shows the first screen with inputs filled out:
+	 <p>
+	 <br/>
+	    <IMG SRC="Step1RE" id="figure-2-3-1-2"/>
+            <p align="center">Figure 2.3.1.2: First step filled out in Test Generation</p>
+	 <br/>
+	 <br/>
+
+	<h4> Rules For Test Generation Step 1 </h4>
+	 <p>
+           The rules concerning the selection of Questions from the database at this stage are as follows:
+	   <ul class="nested">
+              <li> The Generator will take the Instructor's inputs and attempt to find the specified number of questions whose 
+	           estimated time will total between the range of times specified. If this is not possible, the Generator will 
+		   always err on the side less than the the Total Time Range.</li>
+	      <li> The Generator will only include valid questions that also have the correct class name(s) that were specified. </li>
+	      <li> If there are not enough Questions in the Database to fulfill the Total Questions constraint, the Generator will return a test
+	           that includes that includes the possible valid questions given that the Time Range constraint is not violated.</li>
+	      <li> The Generator will attempt to include the most variety of question types. If there are enough questions in the database,
+	           the Generator will choose question types it has not already chosen until all question types have been chosen at least once, 
+		   there are no valid questions of a specific type, or the specified number of questions for this test will not permit inclusion
+		   of one question of each type. </li>
+	   </ul>
+	 </p>
+         <p>
+	 <h4> Remember: </h4>
+	    <ul class="nested">
+	       <li> At any time, the instructor can go to an overview of the test generated so far in the process by 
+	            pressing the button: "TEST PREVIEW" </li>
+	       <li> To move on to the next step, the instructor will press the button: "NEXT" </li>
+	       <li> If the instructor wants to abort the process and go back to the home page, he can press the button: "BACK" 
+	            <br/> NOTE: This will cause all progress on this particular test to be discarded. </li>
+           </ul>
+	</p>   
+    </div>
+    
+     <div id="navigation">
+       Prev: [none] | Next: <a href="lessLazy.html">Less Lazy</a> | Up: <a href="../functional.html">functional</a> 
+       | Top: <a href="../index.html">index</a>
+     </div>
+  </div>
+</body>
+</html>

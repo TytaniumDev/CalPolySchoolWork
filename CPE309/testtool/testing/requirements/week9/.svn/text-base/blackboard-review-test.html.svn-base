@@ -1,0 +1,97 @@
+<head>
+<title>1.5.5 - Blackboard.com Inspection Test</title>
+</head>
+
+<style type="text/css">
+td {
+    border: 1px solid black;
+}
+
+th {
+    border: 1px solid black;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+</style>
+
+<h3>
+1.5.5.  Blackboard.com Inspection Test
+</h3>
+
+<table>
+<tr>
+    <th>Component</th>
+    <th>Inspector</th>
+    <th>Date</th>
+    <th>Status</th>
+    <th>Remarks</th>
+</tr>
+<tr>
+    <td>1.5.5 H1</td>
+    <td>RAS</td>
+    <td>11/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>1.5.5 P1</td>
+    <td>RAS</td>
+    <td>11/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>1.5.5 P2</td>
+    <td>RAS</td>
+    <td>11/22/2010</td>
+    <td>DONE</td>
+    <td>Get rid of spaces between bullets</td>
+</tr>
+<tr>
+    <td>1.5.5 P3</td>
+    <td>RAS</td>
+    <td>11/22/2010</td>
+    <td>DONE</td>
+    <td>Get rid of spaces between bullets</td>
+</tr>
+<tr>
+    <td>1.5.5 P4</td>
+    <td>RAS</td>
+    <td>11/22/2010</td>
+    <td>DONE</td>
+    <td>Get rid of spaces between bullets</td>
+</tr>
+<tr>
+    <td>1.5.5 A1</td>
+    <td>RAS</td>
+    <td>11/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>1.5.5 A2</td>
+    <td>RAS</td>
+    <td>11/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>1.5.5 A3</td>
+    <td>RAS</td>
+    <td>11/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>1.5.5 A4</td>
+    <td>RAS</td>
+    <td>11/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+</table>
+

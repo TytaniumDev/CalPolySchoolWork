@@ -1,0 +1,3 @@
+MODULE encoderfinal
+SUBMODULE encoder
+INSTANCE UUT

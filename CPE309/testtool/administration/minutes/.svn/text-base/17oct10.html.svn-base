@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>
+Minutes of the Test Tool Team Meeting, 17 October 2010
+</title>
+</head>
+<body bgcolor=white>
+<p align=center>
+<font size=+2>
+<strong>Minutes of the Test Tool Team Meeting
+<br>
+04:17PM - 5:03PM, 17 October 2010</strong>
+</font>
+</p>
+<br>
+<br>
+<strong>Present</strong>:
+<br>Sean Glover
+<br>Sarah Hoke
+<br>Connor Lange
+<br>Nathan Mock
+<br>Richard Steiger
+<br>Ben Voogd 
+<br>
+<br>
+<strong>Absent</strong>:
+N/A
+<br>
+<br>
+<strong>Excused:</strong>:
+N/A
+<br>
+<br>
+<ul>
+<li>Talk about and look into everyone's sections</li>
+<li>Database implementation v. File implementation</li>
+<ul>
+<li>Database: rules. higher upkeep, more versatile</li>
+<li>File: less difficult implementation, less versatile</li>
+</ul>
+<li>Web-based v Desktop application</li>
+<ul>
+<li>Web: easier implementation, simpler all around</li>
+<ul>
+<li>piggyback on portal</li>
+</ul>
+<li><b>Final Decision</b>: Web-based is the priority but we  may fall back to non-web if implementation too difficult
+</ul>
+<li>File v Database regarding the presentation</li>
+<ul>
+<li>database is used for the example</li>
+</ul>
+<li>Local v. Central Database</li>
+<ul>
+<li>XML or other config file used to tack on locally related properties</li>
+</ul>
+<li>Public v. Private questions</li>
+<ul>
+<li>Implemented similarly to the Local v Central Database (above)</li>
+</ul>
+<li>Collaboration on question database section</li>
+<ul><li> Connor and Richard collaborate</li></ul>
+<li>Online-testing allows for open book and online @ home (almost the same method)</li>
+<li>Reminder to allow for practice tests:</li>
+<li>Work/ideal ratio:</li>
+<ul>
+<li>specify things that would be nice and are plausible -> remove later if not plausible</li>
+</ul>
+<li>Exam Database officially decided to be a feature</li>
+<li>Grading Program Interface:</li>
+<ul><li>send the points/grade to grading program from test tool</li>
+<li>displays grades and stats in grade program --> not regrade</li></ul>
+<li>the presentation is about what software is and not what the reasoning is or what it WILL do. Present tense</li>
+<li>The grading section will be implemented to allow for question at a time grading</li>
+<li>presentation breakdown overview</li>
+<ul>
+<li>Present the items in order they appear in the index</li>
+<li>Approximately three slides each</lI>
+<li>Each person presents their own section</li>
+</ul>
+</body>
+</html>

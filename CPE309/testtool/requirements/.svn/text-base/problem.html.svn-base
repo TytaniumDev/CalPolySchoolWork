@@ -1,0 +1,45 @@
+<?
+$title = "1.1.  Problem Statement";
+require "../header.php";
+?>
+<a name="Problem Statement">
+<h3>
+1.1.  Problem Statement
+</h3>
+</a>
+<p>
+The problems that will be addressed by the TestTool are as follows:
+</p>
+<ul>
+<li> to provide the option to generate tests used to evaluate student knowledge of the class material using small amounts of paper.</li>
+<li> to provide a better alternative for instructors on the Cal Poly campus for test generation, as compared to Blackboard.</li>
+<li> to provide the ability for students to view and take practice tests.</li>
+<li> to provide test taking functionality for the students in which completed tests are submitted to the instructor.</li>
+<li> to provide the instructor the ability to assign each student an individual score on a particular exam.</li>
+</ul>
+<p>
+There are many software tools available today, whether obtained commercially or as open source
+software, that solve these problems.  However, the TestTool contains additional, useful
+features that make it a more appealing choice than existing software.  These include:
+</p>
+<ul>
+<li> The ability to generate and administer program code questions</li>
+<li> The ability to include graphics in test questions in an easy, convenient manner</li>
+</ul>
+
+<br>
+<br>
+<br>
+<br>
+<hr width=80% size=3>
+<center>
+<font size=-1>
+<font color=black> Prev: </font><a href="intro.html">Introduction</a>
+ | <font color=black> Next: </font><a href="personnel.html">Personnel</a>
+ | <font color=black> Up: </font><a href="intro.html">intro</a>
+ | <font color=black> Top: </font><a href="index.html">index</a></font>
+</center>
+<hr width=80% size=3>
+<?
+require "../footer.php";
+?>

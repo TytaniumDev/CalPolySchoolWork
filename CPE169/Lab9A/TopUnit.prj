@@ -1,0 +1,7 @@
+vhdl work "../FINAL/D_FF.vhd"
+vhdl work "../Experiment7/Comparator2Bit.vhd"
+vhdl work "../FINAL/BCDto7.vhd"
+vhdl work "../FINAL/AlarmFSM_D_Struct.vhd"
+vhdl work "../Experiment7/Procedure4.vhd"
+vhdl work "../Experiment6/Exp6/encoder.vhd"
+vhdl work "TopUnit.vhd"

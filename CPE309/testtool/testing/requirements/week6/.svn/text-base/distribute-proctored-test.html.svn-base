@@ -1,0 +1,183 @@
+<head>
+<title>2.4.2.1 - Proctored Setting Inspection Test</title>
+</head>
+
+<style type="text/css">
+td {
+    border: 1px solid black;
+}
+
+th {
+    border: 1px solid black;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+</style>
+
+<h3>
+2.4.2.1.  Proctored Setting Inspection Test
+</h3>
+
+<table>
+<tr>
+    <th>Component</th>
+    <th>Inspector</th>
+    <th>Date</th>
+    <th>Status</th>
+    <th>Remarks</th>
+</tr>
+<tr>
+    <td>2.4.2.1 H1</td>
+    <td>BSV</td>
+    <td>10/29/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4.2.1 P1</td>
+    <td>BSV</td>
+    <td>10/29/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4.2.1 A1</td>
+    <td>BSV</td>
+    <td>10/29/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4.2.1 I1</td>
+    <td>BSV</td>
+    <td>10/29/2010</td>
+
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4.2.1 P2</td>
+    <td>BSV</td>
+    <td>10/29/2010</td>
+
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4.2.1 P3</td>
+    <td>BSV</td>
+    <td>10/29/2010</td>
+
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4.2.1 P4</td>
+    <td>BSV</td>
+    <td>10/29/2010</td>
+
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4.2.1 I2</td>
+    <td>BSV</td>
+    <td>10/29/2010</td>
+
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4.2.1 P5</td>
+    <td>BSV</td>
+    <td>10/29/2010</td>
+
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4.2.1 I3</td>
+    <td>BSV</td>
+    <td>10/29/2010</td>
+
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4.2.1 P6</td>
+    <td>BSV</td>
+    <td>10/29/2010</td>
+
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4.2.1 P7</td>
+    <td>BSV</td>
+    <td>10/29/2010</td>
+
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4.2.1 P8</td>
+    <td>BSV</td>
+    <td>10/29/2010</td>
+
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4.2.1 I4</td>
+    <td>BSV</td>
+    <td>10/29/2010</td>
+
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4.2.1 P9</td>
+    <td>BSV</td>
+    <td>10/29/2010</td>
+
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4.2.1 A2</td>
+    <td>BSV</td>
+    <td>10/29/2010</td>
+
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4.2.1 A3</td>
+    <td>BSV</td>
+    <td>10/29/2010</td>
+
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4.2.1 A4</td>
+    <td>BSV</td>
+    <td>10/29/2010</td>
+
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4.2.1 P10</td>
+    <td>BSV</td>
+    <td>10/29/2010</td>
+
+    <td>DONE</td>
+    <td></td>
+</tr>
+</table>
+

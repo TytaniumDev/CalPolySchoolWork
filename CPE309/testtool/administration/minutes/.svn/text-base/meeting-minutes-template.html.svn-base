@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>
+Minutes of the X Team Meeting, dd Month yyyy
+</title>
+</head>
+<body bgcolor=white>
+<p align=center>
+<font size=+2>
+<strong>Minutes of the X Team Meeting
+<br>
+hh:mm - hh.mm {AM,PM}, dd Month yyyy</strong>
+</font>
+</p>
+<br>
+<br>
+<strong>Present</strong>:
+<br>
+<br>
+<strong>Absent</strong>:
+<br>
+<br>
+<strong>Excused:</strong>:
+<br>
+<br>
+<br>
+<font color=red><strong><em>The following are instructions for using this
+template; delete these instructions after use.</em></strong></font>
+<p>
+<ol type=1>
+<li>
+Record meeting minutes in a separate file for each meeting; name each file
+"ddmmmyy.html", e.g.,
+<blockquote>
+30mar04.html
+</blockquote>
+If more than one meeting is held on the same day, suffix each file name with
+"a", "b", "c", as necessary.  E.g., 30mar04a.html, 30mar04b.html.  Store these
+files in the project directory
+<blockquote>
+<tt>administration/minutes/</tt>
+</blockquote>
+<li>
+Fill in your team name where "X" appears above.
+<br>
+<br>
+<li>
+Fill in "hh:mm - hh:mm {AM,PM}, dd Month yyyy" with the time and date of the
+meeting, e.g.,
+<blockquote>
+1:40 - 2:00 PM, 30 March 2004.
+</blockquote>
+<li>
+Fill in the <strong>Present:</strong> line with the names of those who attended
+the meeting.
+<br>
+<br>
+<li>
+Fill in the <strong>Absent:</strong> line with the names of those who did not
+attend the meeting who should have (i.e., missing team members).
+<br>
+<br>
+<li>
+Fill in the <strong>Excused:</strong> line with the names of those who did not
+attend the meeting who had a valid reason not to attend and who notified at
+least one team leader in advance that the meeting would be missed.
+<br>
+<br>
+<li>
+Organize the minutes based on the itemized list of topics from the agenda, plus
+any new topics that are discussed; record succinctly the discussion of each
+topic.
+<br>
+<br>
+<li>
+As necessary, conclude the minutes with a list of <em>Action Items</em>,
+including the person(s) responsible for completing the items.  Note that action
+items need not record all of the normal work duties of team members, where
+normal work means that prescribed in the milestone schedule.  Action items are
+specific tasks to be completed other than normal work, or certain normal work
+duties that require immediate attention due to neglect or other reasons that
+caused a delay of completion.
+</ol>
+</body>
+</html>

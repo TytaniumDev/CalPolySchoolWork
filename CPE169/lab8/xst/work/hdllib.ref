@@ -1,0 +1,8 @@
+AR proc3 behavioral "C:/Documents and Settings/s169s4b1/Desktop/Lab8/proc3.vhd" sub00/vhpl07 1243470686
+AR bcdto7 behavioral "C:/Documents and Settings/s169s4b1/Desktop/Lab8/BCDto7.vhd" sub00/vhpl05 1243470548
+EN bcdto7 NULL "C:/Documents and Settings/s169s4b1/Desktop/Lab8/BCDto7.vhd" sub00/vhpl04 1243470547
+EN tflipflop NULL "C:/Documents and Settings/s169s4b1/Desktop/Lab8/tflipflop.vhd" sub00/vhpl00 1243470543
+AR proc2 behavioral "C:/Documents and Settings/s169s4b1/Desktop/Lab8/proc2.vhd" sub00/vhpl03 1243470546
+EN proc2 NULL "C:/Documents and Settings/s169s4b1/Desktop/Lab8/proc2.vhd" sub00/vhpl01 1243470545
+EN proc3 NULL "C:/Documents and Settings/s169s4b1/Desktop/Lab8/proc3.vhd" sub00/vhpl06 1243470685
+AR tflipflop behavioral "C:/Documents and Settings/s169s4b1/Desktop/Lab8/tflipflop.vhd" sub00/vhpl02 1243470544

@@ -1,0 +1,83 @@
+# Resources for the GradeQuestView class
+
+# top-level menus
+
+fileMenu.text = File
+helpMenu.text = Help
+
+# @Action resources
+
+showAboutBox.Action.text = &About...
+showAboutBox.Action.shortDescription = Show the application's information dialog
+
+# status bar resources
+
+StatusBar.messageTimeout = 5000
+StatusBar.busyAnimationRate = 30
+StatusBar.idleIcon = busyicons/idle-icon.png
+StatusBar.busyIcons[0]  = busyicons/busy-icon0.png
+StatusBar.busyIcons[1]  = busyicons/busy-icon1.png
+StatusBar.busyIcons[2]  = busyicons/busy-icon2.png
+StatusBar.busyIcons[3]  = busyicons/busy-icon3.png
+StatusBar.busyIcons[4]  = busyicons/busy-icon4.png
+StatusBar.busyIcons[5]  = busyicons/busy-icon5.png
+StatusBar.busyIcons[6]  = busyicons/busy-icon6.png
+StatusBar.busyIcons[7]  = busyicons/busy-icon7.png
+StatusBar.busyIcons[8]  = busyicons/busy-icon8.png
+StatusBar.busyIcons[9]  = busyicons/busy-icon9.png
+StatusBar.busyIcons[10] = busyicons/busy-icon10.png
+StatusBar.busyIcons[11] = busyicons/busy-icon11.png
+StatusBar.busyIcons[12] = busyicons/busy-icon12.png
+StatusBar.busyIcons[13] = busyicons/busy-icon13.png
+StatusBar.busyIcons[14] = busyicons/busy-icon14.png
+jMenu1.text=Logout
+jMenu2.text=Settings
+jLabel1.text=CPE 101: Fall MD#2
+jLabel2.text=Points:
+jLabel3.text=Type:      Checkbox
+jLabel4.text=
+jLabel5.text=Author:   Gene Fisher
+jTextField1.text=2
+jTextField2.text=
+jTextField2.TabConstraints.tabTitle=Notes
+jLabel6.text=out of 3
+jLabel7.text=     Question: Check all valid C data types.
+jCheckBox1.text=long
+jCheckBox2.text=char
+jCheckBox3.text=int
+jCheckBox8.text=int
+jCheckBox7.text=long
+jCheckBox6.text=char
+jCheckBox5.text=boolean
+#NOI18N
+jTabbedPane1.background=255, 255, 0
+#NOI18N
+jTextField2.background=255, 255, 0
+jLabel8.text=Student Answer:
+jLabel9.text=Correct Answer:
+#NOI18N
+jLabel8.background=255, 200, 0
+#NOI18N
+jLabel8.font=DejaVu Sans-Italic-12
+#NOI18N
+jLabel9.font=DejaVu Sans-Italic-12
+#NOI18N
+jLabel1.font=DejaVu Sans-Bold-12
+jScrollPane1.TabConstraints.tabTitle=Test Questions - Jstewa01
+#NOI18N
+jLabel2.font=DejaVu Sans-Plain-12
+#NOI18N
+jLabel3.font=DejaVu Sans-Plain-12
+jButton1.text=Save
+jButton2.text=Prev
+jButton3.text=Next
+#NOI18N
+jCheckBox8.disabledIcon=${null}
+jLabel10.text=Progress Bar
+#NOI18N
+jLabel10.font=DejaVu Sans-Italic-12
+#NOI18N
+jList1.font=DejaVu Sans-Plain-14
+jCheckBox4.text=boolean
+#NOI18N
+jCheckBox4.background=255, 0, 0

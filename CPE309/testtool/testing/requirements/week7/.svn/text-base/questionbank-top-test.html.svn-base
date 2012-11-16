@@ -1,0 +1,119 @@
+<head>
+<title>2.3 - Question Bank Management Inspection Test</title>
+</head>
+
+<style type="text/css">
+td {
+    border: 1px solid black;
+}
+
+th {
+    border: 1px solid black;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+</style>
+
+<h3>
+2.3.  Question Bank Management Inspection Test
+</h3>
+
+<table>
+<tr>
+    <th>Component</th>
+    <th>Inspector</th>
+    <th>Date</th>
+    <th>Status</th>
+    <th>Remarks</th>
+</tr>
+<tr>
+    <td>2.3 H1</td>
+    <td>SMH</td>
+    <td>11/5/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.3 P1</td>
+    <td>SMH</td>
+    <td>11/5/2010</td>
+    <td>FIX</td>
+    <td>Editorial Remark still here</td>
+</tr>
+<tr>
+    <td>2.3 P2</td>
+    <td>SMH</td>
+    <td>11/5/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.3 I1</td>
+    <td>SMH</td>
+    <td>11/5/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.3 P3</td>
+    <td>SMH</td>
+    <td>11/5/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.3 A1</td>
+    <td>SMH</td>
+    <td>11/5/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.3 A2</td>
+    <td>SMH</td>
+    <td>11/5/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.3 A3</td>
+    <td>SMH</td>
+    <td>11/5/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.3 A4</td>
+    <td>SMH</td>
+    <td>11/5/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.3 A5</td>
+    <td>SMH</td>
+    <td>11/5/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.3 A6</td>
+    <td>SMH</td>
+    <td>11/5/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.3 A7</td>
+    <td>SMH</td>
+    <td>11/5/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+
+</table>
+

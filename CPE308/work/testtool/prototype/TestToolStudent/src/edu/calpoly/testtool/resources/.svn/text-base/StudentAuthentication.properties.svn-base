@@ -1,0 +1,23 @@
+
+jLabel1.text=Student Authentication
+jLabel2.text=CPE 102_Midterm1
+jLabel4.text=10% of Final Grade
+jLabel5.text=20 Questions
+jLabel6.text=60 minutes
+#NOI18N
+jLabel2.font=DejaVu Sans-Plain-18
+#NOI18N
+jLabel5.font=DejaVu Sans-Plain-14
+jButton1.text=Agree
+jLabel7.text=By signing this test with your username you agree to Cal Poly's
+jLabel8.text=rules on cheating and are subject to disciplinary action.
+#NOI18N
+jLabel8.font=DejaVu Sans-Plain-14
+jTextField1.text=
+jLabel9.text=Username
+jLabel10.text=Message from Instructor
+#NOI18N
+jLabel10.font=DejaVu Sans-Bold-14
+jLabel11.text=Good luck and have a great weekend!
+verifyName.Action.shortDescription=
+verifyName.Action.text=

@@ -1,0 +1,28 @@
+
+jLabel1.text=Questions:
+jLabel22.text=20
+jLabel2.text=Time:
+jLabel5.text=Author:
+jLabel25.text=Gene Fisher
+jLabel26.text=60 mins
+jLabel4.text=Points
+jLabel24.text=100
+jLabel9.text=aeyang
+jLabel10.text=jdgood
+jLabel11.text=jrawson
+jLabel12.text=jstewa01
+jLabel13.text=mportiz
+#NOI18N
+jLabel13.font=DejaVu Sans-Bold-12
+jLabel14.text=tyhollan
+jLabel15.text=Ready
+jLabel16.text=Not Ready
+jLabel17.text=Not Ready
+jLabel21.text=Ready
+#NOI18N
+mportizReady.font=DejaVu Sans-Bold-12
+mportizReady.text=Not Ready
+jLabel20.text=Ready
+jLabel18.text=mportiz status
+jButton1.text=Take Test
+jTextField1.text=Type messages here...

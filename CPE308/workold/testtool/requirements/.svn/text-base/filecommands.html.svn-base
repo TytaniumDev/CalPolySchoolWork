@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestTool | Requirements | Problem Statment</title>
+  <link href="../public/css/layout.css" rel="stylesheet" media="screen" /></head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>TestTool</h1>
+      <h2 class="title">2.8 Details of File Commands</h2>
+    </div>
+    <div id="content">
+          <p>The scenarios in this section cover full details of file-related commands, some of which have been introduced in preceding sections. There are two file command menus to be covered, one in the Questions Database and the other in Test Generation. Questions Database commands are covered in Sections <a href="filecommands.html#Files Used by the Questions Database">2.8.1</a> through 2.8.5. Test Generation file commands are covered in 2.8.6 through ????. The concluding Sections 2.8.11 and 2.8.12 cover genral topics relevant to both regular-user and administrative files.</p>
+          <a name="Files Used by the Questions Database">
+          <p><strong>2.8.1. Files Used by the Questions Database</strong></p></a>
+          <p>There is one type of file used by the Questions Database, called a database file. Database files contain the following information:</p>
+          <ul class = nested>
+            <li>All of the Database Questions, which hold all of the standard data for a question as seen in Section 2.2: 
+              <ul class=nested>
+                <li>Class the question is for</li>
+                <li>Difficulty</li>
+                <li>Time Allowed</li>
+                <li>Last Used Date</li>
+                <li>Type of Question</li>
+                <li>Question</li>
+                <li>Answer</li>
+                <li>Optional attached HTML file</li>
+              </ul>
+            </li>
+          </ul>
+          All of this information is stored in a single database file created by the user. In this way, the single file encapsulates all questions in the Questions Database. 
+    </div>
+</div>
+ </body>
+</html>

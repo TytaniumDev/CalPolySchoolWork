@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>
+Administration of the Test Tool Project
+</title>
+</head>
+<body bgcolor=white>
+<p align=center>
+<font size=+2>
+<strong>Administration of the Test Tool Project</strong>
+</font>
+</p>
+
+<br>
+This directory contains administrative files for the Test Tool project.  Templates for
+the administrative files are in the CSC 308
+<a href="http://www.csc.calpoly.edu/~gfisher/classes/308/handouts/index.html#templates">
+handouts directory.
+</a>
+<p>
+<ul>
+
+<font color=red><li type=disc><font color=red><font color=black>
+<a href="governance.html">
+Project group governance
+</a>
+
+<font color=red><li type=disc><font color=red><font color=black>
+<a href="work-breakdown.html">
+Project work breakdown, for each team member
+</a>
+
+<font color=red><li type=disc><font color=red><font color=black>
+<a href="qa-roster.html">
+Inspection testing duty roster
+</a>
+
+<font color=red><li type=disc><font color=red><font color=black>
+<a href="agendas">
+Project meeting agendas
+</a>
+
+<font color=red><li type=disc><font color=red><font color=black>
+<a href="minutes">
+Project meeting minutes
+</a>
+</ul><font color=black>
+</body>
+</html>

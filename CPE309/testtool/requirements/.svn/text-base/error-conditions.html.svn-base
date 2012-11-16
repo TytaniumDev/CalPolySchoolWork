@@ -1,0 +1,134 @@
+<?
+$title = "2.8.  Error Conditions";
+require "../header.php";
+?>
+
+<a name="Error Conditions">
+<h3>
+2.8.  Error Conditions
+</h3>
+</a>
+
+There are a number of errors that can occur while using the software. The most generic errors that to apply to all aspects of the software are outlined below:
+<ul>
+<li>Non-numerical input in a data field that requires numbers</li>
+<li>Too long of a string</li>
+</ul>
+
+<h4><b>The following errors are section specific:</b></h4>
+
+<hr>
+<i><h4>2.2 Test Generation</h4></i>
+<u>Test Generating Front Page</u>
+
+<ol>
+<li><b>Problem:</b> User clicks 'replace' or 'delete' without selecting a question or attribute<br>
+<b>Result:</b> Message is displayed asking user to select one </li>
+<br><li><b>Problem:</b> User tries to 'preview' an empty test<br>
+<b>Result:</b> Message displayed saying test must contain at least one question or attribute</li>
+<br><li><b>Problem:</b> User tries to 'save' a test with no test title and/or date<br>
+<b>Result:</b> Asked to enter a test title and/or date</li>
+<br><li><b>Problem:</b> User tries to 'save' an empty test<br>
+<b>Result:</b> Message displayed saying an empty test cannot be saved</li>
+</ol>
+
+<u>Generation</u>
+
+<ol>
+<li><b>Problem:</b> User tries to generate a test with a course that does not have any questions saved in the database<br>
+<b>Result: </b> User is informed no questions could be added</li>
+<br><li><b>Problem:</b> Tries to generate a test with a quantity greater than the number of questions in the database for the entered course, or does not enter a quantity for any extra criteria<br>
+<b>Result:</b> Asked to change/enter the 'Qty'</li>
+<br><li><b>Problem:</b> User tries to generate a test with 1 or more of the main 4 parameters empty<br>
+<b>Result:</b> Asked to enter a value for the empty parameters</li>
+<br><li><b>Problem:</b> Generator cannot generate a test with enough questions to meet the time limit range<br>
+<b>Result:</b> Asked to change the time limit parameter</li>
+<br><li><b>Problem:</b> Generator cannot generate a test with enough questions to meet the difficulty parameter/range<br>
+<b>Result:</b> Asked to change the difficulty parameter</li>
+</ol>
+
+<u>Attributes</u>
+
+<ol>
+<li><b>Problem:</b> User tries to add an image attribute without specify a link<br>
+<b>Results:</b> Asked to specify a link</li>
+<br><li><b>Problem:</b> Tries to add a text attribute without specify a description<br>
+<b>Results:</b> Asked to input a description</li> 
+<br><li><b>Problem:</b> Tries to add an attribute without specifying an index<br>
+<b>Results:</b> Asked to specify an index</li>
+</ol>
+
+<hr>
+<i><h4>2.3 Managing the Question Bank</h4></i>
+<u>Adding and Editing Questions</u>
+
+<ol>
+<li><b>Problem:</b> User tries to add a question to the Question Bank that doesn't contain all of the required fields (Question, Answer, Course)<br>
+<b>Result: </b>The TestTool will not accept the question until it is correct and the required fields are marked with an asterisk</li>
+<br><li><b>Problem:</b> The user deletes one of the required fields while editing a question<br>
+<b>Result:</b> The TestTool will not accept the question until it is correct and the required fields are marked with an asterisk</li>
+</ol>
+
+<u>Searching for a Question</u>
+<ol>
+<li><b>Problem:</b> User searches for a question but no questions match the search criteria<br>
+<b>Results:</b> A dialog appears informing the user that no match was found</li>
+</ol>
+
+<u>Removing a Question</u>
+<ol>
+<li><b>Problem:</b> The user selects no questions and presses the Remove button<br>
+<b>Results:</b> A dialog appears informing the user that no questions were selected</li>
+</ol>
+
+<u>Organizing the Question Bank</u>
+<ol>
+<li><b>Problem:</b> The user picks the same column heading to reorder more than once (i.e the headings chosen are not unique)<br>
+<b>Results:</b> A dialog appears informing the user that all column headings must be unique</li>
+</ol>
+
+<hr>
+<i><h4>2.4 Handling Exams</h4></i>
+
+<ol>
+<li><b>Problem:</b> User has selected an invalid exam (for example, by typing in something that isn't an exam in the test preview and distribution dialogues)<br>
+<b>Results:</b> Dialog appears to notify the user they have selected an invalid exam</li>
+</ol>
+
+<hr>
+<i><h4>2.5 Taking Exams</h4></i>
+<u>Taking the Exam</u>
+
+<ol>
+<li><b>Problem:</b> The user is not able to access the exam for some reason<br>
+<b>Results:</b> An error dialog appears to the student and an email is dispatched to the professor</li>
+<br><li><b>Problem:</b> For all question types: the student doesn't select an answer before proceeding<br>
+<b>Results:</b> A popup window appears notifying the student they did not choose an answer and asks whether or not they intended to leave the question blank</li>
+<br><li><b>Problem:</b> For short answer and essay questions: the user exceeds the character limit alotted for the question<br>
+<b>Results:</b> The user is notified in a popup window</li>
+<br><li><b>Problem:</b> For code questions: The file that is created as a result of attempting to save the code answer to the database may be non-writable<br>
+<b>Results:</b> The TestTool alerts the student and proctor with a pop-up. In the case of a non-proctored setting, an email is dispatched to the professor</li>
+</ol>
+
+<u>Viewing Exam Results</u>
+<ol>
+<li><b>Problem:</b> the exam is not able to be accessed<br>
+<b>Results:</b> A a popup appears to the student and the TestTool dispatches an email to the professor.</li>
+</ol>
+
+
+<br>
+<br>
+<hr width=80% size=3>
+<center>
+<font size=-1>
+<font color=black> Prev: </font><a href="file-edit.html">file / edit functionality</a>
+ | <font color=black> Next: </font>[none]
+ | <font color=black> Up: </font><a href="functional.html">functional</a>
+ | <font color=black> Top: </font><a href="index.html">index</a></font>
+</center>
+<hr width=80% size=3>
+
+<?
+require "../footer.php";
+?>

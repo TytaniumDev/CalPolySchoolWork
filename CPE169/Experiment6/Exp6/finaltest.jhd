@@ -1,0 +1,3 @@
+MODULE finaltest
+SUBMODULE final
+INSTANCE UUT

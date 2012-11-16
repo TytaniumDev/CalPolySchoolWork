@@ -1,0 +1,172 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*******************************************************************************************/
+/*RESET*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body { line-height: 1; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content: ''; content: none; }
+:focus { outline: 0; }
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+table { border-collapse: collapse; border-spacing: 0; }
+/*******************************************************************************************/
+/*******************************************************************************************/
+html, body {
+  background: #009ec0 url("../images/background.png") no-repeat top center;
+  color: #000;
+  font-family: "Helvetica Neue", helvetica, sans-serif;
+  height: 100%;
+}
+
+a, a:visited, a:active { color: #000; text-decoration: underline; }
+a:hover { color: #e7e7e7; }
+h1 { font-size: 56px; font-weight: normal; }
+h2 { font-size: 36px; font-weight: normal; }
+h3 { font-size: 24px; font-weight: normal; }
+h4 { font-size: 18px; font-weight: normal; }
+
+li {
+  padding: 5px 0;
+}
+
+p {
+  margin: 20px 0;
+}
+
+th {
+  padding: 5px;
+}
+
+td {
+  border: 5px solid #000;
+  padding: 15px;
+  text-align: center;
+  font-size: 12px;
+}
+
+hr {
+  margin-top: 35px;
+}
+
+ul.requirements {
+  list-style: none;
+}
+
+ul.requirements ul.nested {
+  list-style: none;
+}
+
+ul.nested {
+  padding: 15px 50px 15px 50px;
+}
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
+.version {
+  font-size: 12px;
+  color: #333;
+  padding-top: 5px;
+  text-align: right;
+}
+
+.title {
+  background: transparent url("../images/check.png") no-repeat top left;
+  padding-left: 45px;
+}
+
+.checkmarks {
+  list-style-image: url("../images/check.png");
+}
+
+.checkmarks a {
+  font-size: 36px;
+  color: #000;
+  text-shadow: 0 2px 2px rgba(256, 256, 256, 0.5);
+}
+
+.checkmarks a:hover {
+  color: #e7e7e7;
+}
+
+.feature-group {
+  font-weight: bold;
+  font-size: 14px;
+  text-align: left;
+  border: none;
+}
+
+.feature {
+  padding-left: 35px;
+  text-align: left;
+}
+
+.no-border {
+  border: none;
+}
+
+.caption {
+  text-align: center;
+}
+
+#container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+#header {
+  height: 200px;
+}
+
+#header h1 {
+  background: transparent url("../images/logo.png") no-repeat top left;
+  margin-left: 100px;
+  padding: 25px 0 0 150px;
+  height: 103px;
+  font-weight: bold;
+  text-shadow: 0 2px 2px rgba(256, 256, 256, 0.5);
+}
+
+#header h3, blockquote {
+  font-size: 18px;
+  padding: 5px 15px;
+  line-height: 1.5em;
+  font-style: italic;
+  color: #333;
+}
+
+#content img {
+  display: block;
+  margin: 0 auto;
+}
+
+#navigation {
+  text-align: center;
+  font-size: 12px;
+  padding: 13px 0px;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  margin: 50px 0px 25px 0;
+}

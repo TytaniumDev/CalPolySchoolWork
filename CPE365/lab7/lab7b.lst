@@ -1,0 +1,177 @@
+10:48:32 TYHOLLAN> @lab7b
+10:48:34 TYHOLLAN> /*
+10:48:34 TYHOLLAN>   CPE 365 Lab 7b
+10:48:34 TYHOLLAN>   Tyler Holland
+10:48:34 TYHOLLAN> */
+10:48:34 TYHOLLAN> --1.
+10:48:34 TYHOLLAN> insert into parts (pno, pname, qoh, price, olevel)
+10:48:34   2  select 12345, pname, qoh, price, olevel
+10:48:34   3  from parts
+10:48:34   4  where pname = 'Sleeping Beauty';
+
+1 row created.
+
+10:48:34 TYHOLLAN> 
+10:48:34 TYHOLLAN> update odetails
+10:48:34   2  set pno = 12345
+10:48:34   3  where pno =(
+10:48:34   4  	select pno
+10:48:34   5  	from parts
+10:48:34   6  	where pname = 'Sleeping Beauty' and pno != 12345
+10:48:34   7  );
+
+3 rows updated.
+
+10:48:34 TYHOLLAN> 
+10:48:34 TYHOLLAN> delete
+10:48:34   2  from parts
+10:48:34   3  where pno =(
+10:48:34   4  	select pno
+10:48:34   5  	from parts
+10:48:34   6  	where pname = 'Sleeping Beauty' and pno != 12345
+10:48:34   7  );
+
+1 row deleted.
+
+10:48:34 TYHOLLAN> 
+10:48:34 TYHOLLAN> select *
+10:48:34   2  from parts;
+       PNO PNAME                                 QOH      PRICE     OLEVEL
+---------- ------------------------------ ---------- ---------- ----------
+     10506 Land Before Time I                    200      19.99         20
+     10507 Land Before Time II                   156      19.99         20
+     10508 Land Before Time III                  190      19.99         20
+     10509 Land Before Time IV                    60      19.99         20
+     10701 When Harry Met Sally                  120      19.99         30
+     10800 Dirty Harry                           140      14.99         30
+     10900 Dr. Zhivago                           100      24.99         30
+     12345 Sleeping Beauty                       300      24.99         20
+
+8 rows selected.
+
+10:48:34 TYHOLLAN> 
+10:48:34 TYHOLLAN> select *
+10:48:34   2  from odetails;
+       ONO        PNO        QTY
+---------- ---------- ----------
+      1020      10506          1
+      1020      10507          1
+      1020      10508          2
+      1020      10509          3
+      1021      12345          4
+      1022      12345          1
+      1022      10701          1
+      1023      10800          1
+      1023      10900          1
+      1024      10900          1
+      1025      12345          4
+
+11 rows selected.
+
+10:48:34 TYHOLLAN> 
+10:48:34 TYHOLLAN> --2.
+10:48:34 TYHOLLAN> delete
+10:48:34   2  from odetails
+10:48:34   3  where ono IN(
+10:48:34   4  	select ono
+10:48:34   5  	from orders
+10:48:34   6  	where eno IN(
+10:48:34   7  	  select eno
+10:48:34   8  	  from employees
+10:48:34   9  	  where zip = 67226
+10:48:34  10  	) or cno IN(
+10:48:34  11  	select cno
+10:48:34  12  	from customers
+10:48:34  13  	where zip = 67226
+10:48:34  14  	)
+10:48:34  15  );
+
+10 rows deleted.
+
+10:48:34 TYHOLLAN> 
+10:48:34 TYHOLLAN> delete
+10:48:34   2  from orders
+10:48:34   3  where eno IN(
+10:48:34   4  	select eno
+10:48:34   5  	from employees
+10:48:34   6  	where zip = 67226
+10:48:34   7  ) or cno IN(
+10:48:34   8  	select cno
+10:48:34   9  	from customers
+10:48:34  10  	where zip = 67226
+10:48:34  11  );
+
+5 rows deleted.
+
+10:48:34 TYHOLLAN> 
+10:48:34 TYHOLLAN> delete
+10:48:34   2  from employees
+10:48:34   3  where zip = 67226;
+
+1 row deleted.
+
+10:48:34 TYHOLLAN> 
+10:48:34 TYHOLLAN> delete
+10:48:34   2  from customers
+10:48:34   3  where zip = 67226;
+
+2 rows deleted.
+
+10:48:34 TYHOLLAN> 
+10:48:34 TYHOLLAN> delete
+10:48:34   2  from zipcodes
+10:48:34   3  where zip = 67226;
+
+1 row deleted.
+
+10:48:34 TYHOLLAN> 
+10:48:34 TYHOLLAN> select *
+10:48:34   2  from odetails;
+       ONO        PNO        QTY
+---------- ---------- ----------
+      1025      12345          4
+
+1 row selected.
+
+10:48:34 TYHOLLAN> 
+10:48:34 TYHOLLAN> select *
+10:48:34   2  from orders;
+       ONO        CNO        ENO RECEIVED  SHIPPED
+---------- ---------- ---------- --------- ---------
+      1025       3333       1001 20-JUN-97
+
+1 row selected.
+
+10:48:34 TYHOLLAN> 
+10:48:34 TYHOLLAN> select *
+10:48:34   2  from employees;
+       ENO ENAME             ZIP HDATE
+---------- ---------- ---------- ---------
+      1001 Smith           60606 01-JAN-92
+      1002 Brown           50302 01-SEP-94
+
+2 rows selected.
+
+10:48:34 TYHOLLAN> 
+10:48:34 TYHOLLAN> select *
+10:48:34   2  from customers;
+       CNO CNAME      STREET                                ZIP PHONE
+---------- ---------- ------------------------------ ---------- ------------
+      3333 Barbara    111 Inwood St.                      60606 316-111-1234
+
+1 row selected.
+
+10:48:34 TYHOLLAN> 
+10:48:34 TYHOLLAN> select *
+10:48:34   2  from zipcodes;
+       ZIP CITY
+---------- ------------------------------
+     60606 Fort Dodge
+     50302 Kansas City
+     54444 Columbia
+     66002 Liberal
+     61111 Fort Hays
+
+5 rows selected.
+
+10:48:34 TYHOLLAN> spool off

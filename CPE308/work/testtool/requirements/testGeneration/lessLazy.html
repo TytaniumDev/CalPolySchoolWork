@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestTool</title>
+  <link href="../../public/css/layout.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>Test Tool</h1>
+      <h2 class="title"> 2.3.2 Test Generation Step 2 </h2>
+    </div>
+    <div id="content">
+       <!-- this is where you put stuff, replace the ul block with whatever -->
+	 
+      <br/>
+      <p>
+         This is the second step of the Test Generation process. This step allows the Instructor to specify
+	 more search parameters to further narrow down the Question that he wants. 
+         </br></br>
+	 The figure below shows the second step's screen:
+      </p>
+      </br>
+         <IMG SRC="Step2RR" id="figure-2-3-2-1" />
+
+      <p align="center">Figure 2.3.2.1: Second step in Test Generation</p>
+	 <br/>
+
+	 <p>
+	    <h4>Explanation of Inputs</h4>
+	    <br/>
+	    This step allows the Instructor to input some more parameters:
+	    <br/><br/>
+	    <ol class="nested">
+	       <li> The first optional input is a detailed tool to allow the instructor to specify exactly  
+	            how many questions he wants with a specific type and a particular difficulty level. 
+	       <li> The second optional input allows the Instructor to choose questions that were made before or after a certain date. This is to 
+	            prevent the addition of outdated Questions into the test. The Instructor can specify a Day, Month, and Year in each box. 
+		    The Instructor does not have to fill out either field, as seen in the figure below.</li>
+ 	       <li> The third optional input allows the instructor to include or disclude questions that were written by a particular author.
+	            The Instructor can specify multiple names in each box by seperating them with a comma, as seen in the figure below.</li>
+	       <li> The fourth optional input allows the instructor to search for Questions by keywords. The generator will search the 
+	            Question database for Questions that contains the specified keywords. Then it will display the matches to the 
+		    instructor in the box below the search bar. </br> The instructor can choose to add the question to the test by checking the check
+		    box to the left of the question body. The Instructor can specify multiple keywords by seperating them with a comma as seen in
+		    the figure below.   
+	   </ol>
+	 </p>
+	 </br>
+	 <p>
+	    The figure below shows the second screen with inputs filled out:
+	 <p>
+	 <br/>
+	    <IMG SRC="Step2RRE" id="figure-2-3-2-2" />
+            <p align="center">Figure 2.3.2.2: Second Step filled out in Test Generation</p>
+	 <br/>
+	 <h4>Rules for Test Generation Step 2</h4>
+	 <p>
+           The rules concerning the selection of Questions from the database at this stage are as follows:
+	   <ul class="nested">
+	      <li>For the first set of constraints,  
+	          if the instructor does not specify as many
+		  questions as the total number of questions he specified in step 1, the generator, using the search paramters
+		  already given, will choose questions to make up the difference. <br/> If the instructor specifies more questions
+		  than he did in step 1, the generator will follow the search parameters of step 2. <br/> After taking into account
+		  the new constraints introduced at this step, the Generator will keep all of the questions previously generated that
+		  fit the constraints. </li>
+          	<li> If the Instructor has specified before or after dates, any Questions whose creation date was before the set date will be
+	          rejected and any Questions whose creation date was after the set date will be rejected. 	
+	      <li> If the Instructor has specified the Include/Disclude by author constraints, any Questions, including ones already chosen whose
+	           author is specified as "discluded" will be rejected. Any Questions, including ones already chosen whose author is specified as "included"
+		   will be kept or prioritized to be chosen over a similar question of a different author.
+	      <li> When searching for questions by keyword, the Generator searches for token matches in the text of a question that belongs to 
+	           the class(es) specified in the first step. If the Instructor wants more information about a particular question match, he can 
+		   click the <a href="../databaseHome/databasemain.html">Database</a> button and he will be able to see all the attributes of the question in the question database.</li>
+	   </ul>
+	 <br/>
+	 <p>
+	    <h4> Remember: </h4>
+	    <ul class="nested">
+	       <li> At any time, the instructor can go to an overview of the test generated so far in the process by 
+	            pressing the button: "TEST PREVIEW" </li>
+	       <li> The Instructor is not obligated to fill out every constraint in this step. If a constraint is left blank, the Generator will
+	            not take it into account when searching for questions </li>
+	       <li> To move on to the next step, the instructor will press the button: "NEXT" </li>
+	       <li> If the instructor wants to go back to the first step, he can press the button: "BACK" His inputs in step 2 will be saved. 
+           </ul>
+    </div>
+    
+     <div id="navigation">
+       Prev: <a href="maxLazy.html">Max Lazy</a>  | Next: <a href="manualStep.html">Manual Step</a> | Up: <a href="../functional.html">functional</a> 
+       | Top: <a href="../index.html">index</a>
+     </div>
+  </div>
+</body>
+</html>

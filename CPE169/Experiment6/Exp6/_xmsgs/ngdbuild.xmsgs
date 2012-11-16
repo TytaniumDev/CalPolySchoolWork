@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="error" file="NgdBuild" num="755" delta="unknown" >&quot;<arg fmt="%s" index="2">Exp6.ucf</arg>&quot; Line <arg fmt="%i" index="1">1</arg>: Could not find net(s) &apos;<arg fmt="%s" index="3">A0</arg>&apos; in the design.  To suppress this error specify the correct net name or remove the constraint.  The &apos;Allow Unmatched LOC Constraints&apos; ISE property can also be set ( -aul switch for command line users).
+</msg>
+
+<msg type="error" file="NgdBuild" num="755" delta="unknown" >&quot;<arg fmt="%s" index="2">Exp6.ucf</arg>&quot; Line <arg fmt="%i" index="1">2</arg>: Could not find net(s) &apos;<arg fmt="%s" index="3">A1</arg>&apos; in the design.  To suppress this error specify the correct net name or remove the constraint.  The &apos;Allow Unmatched LOC Constraints&apos; ISE property can also be set ( -aul switch for command line users).
+</msg>
+
+<msg type="error" file="NgdBuild" num="755" delta="unknown" >&quot;<arg fmt="%s" index="2">Exp6.ucf</arg>&quot; Line <arg fmt="%i" index="1">3</arg>: Could not find net(s) &apos;<arg fmt="%s" index="3">A2</arg>&apos; in the design.  To suppress this error specify the correct net name or remove the constraint.  The &apos;Allow Unmatched LOC Constraints&apos; ISE property can also be set ( -aul switch for command line users).
+</msg>
+
+<msg type="error" file="NgdBuild" num="755" delta="unknown" >&quot;<arg fmt="%s" index="2">Exp6.ucf</arg>&quot; Line <arg fmt="%i" index="1">4</arg>: Could not find net(s) &apos;<arg fmt="%s" index="3">A3</arg>&apos; in the design.  To suppress this error specify the correct net name or remove the constraint.  The &apos;Allow Unmatched LOC Constraints&apos; ISE property can also be set ( -aul switch for command line users).
+</msg>
+
+<msg type="error" file="NgdBuild" num="755" delta="unknown" >&quot;<arg fmt="%s" index="2">Exp6.ucf</arg>&quot; Line <arg fmt="%i" index="1">5</arg>: Could not find net(s) &apos;<arg fmt="%s" index="3">Display&lt;0&gt;</arg>&apos; in the design.  To suppress this error specify the correct net name or remove the constraint.  The &apos;Allow Unmatched LOC Constraints&apos; ISE property can also be set ( -aul switch for command line users).
+</msg>
+
+<msg type="error" file="NgdBuild" num="755" delta="unknown" >&quot;<arg fmt="%s" index="2">Exp6.ucf</arg>&quot; Line <arg fmt="%i" index="1">6</arg>: Could not find net(s) &apos;<arg fmt="%s" index="3">Display&lt;1&gt;</arg>&apos; in the design.  To suppress this error specify the correct net name or remove the constraint.  The &apos;Allow Unmatched LOC Constraints&apos; ISE property can also be set ( -aul switch for command line users).
+</msg>
+
+<msg type="error" file="NgdBuild" num="755" delta="unknown" >&quot;<arg fmt="%s" index="2">Exp6.ucf</arg>&quot; Line <arg fmt="%i" index="1">7</arg>: Could not find net(s) &apos;<arg fmt="%s" index="3">Display&lt;2&gt;</arg>&apos; in the design.  To suppress this error specify the correct net name or remove the constraint.  The &apos;Allow Unmatched LOC Constraints&apos; ISE property can also be set ( -aul switch for command line users).
+</msg>
+
+<msg type="error" file="NgdBuild" num="755" delta="unknown" >&quot;<arg fmt="%s" index="2">Exp6.ucf</arg>&quot; Line <arg fmt="%i" index="1">8</arg>: Could not find net(s) &apos;<arg fmt="%s" index="3">Display&lt;3&gt;</arg>&apos; in the design.  To suppress this error specify the correct net name or remove the constraint.  The &apos;Allow Unmatched LOC Constraints&apos; ISE property can also be set ( -aul switch for command line users).
+</msg>
+
+<msg type="error" file="NgdBuild" num="755" delta="unknown" >&quot;<arg fmt="%s" index="2">Exp6.ucf</arg>&quot; Line <arg fmt="%i" index="1">9</arg>: Could not find net(s) &apos;<arg fmt="%s" index="3">Display&lt;4&gt;</arg>&apos; in the design.  To suppress this error specify the correct net name or remove the constraint.  The &apos;Allow Unmatched LOC Constraints&apos; ISE property can also be set ( -aul switch for command line users).
+</msg>
+
+<msg type="error" file="NgdBuild" num="755" delta="unknown" >&quot;<arg fmt="%s" index="2">Exp6.ucf</arg>&quot; Line <arg fmt="%i" index="1">10</arg>: Could not find net(s) &apos;<arg fmt="%s" index="3">Display&lt;5&gt;</arg>&apos; in the design.  To suppress this error specify the correct net name or remove the constraint.  The &apos;Allow Unmatched LOC Constraints&apos; ISE property can also be set ( -aul switch for command line users).
+</msg>
+
+<msg type="error" file="NgdBuild" num="755" delta="unknown" >&quot;<arg fmt="%s" index="2">Exp6.ucf</arg>&quot; Line <arg fmt="%i" index="1">11</arg>: Could not find net(s) &apos;<arg fmt="%s" index="3">Display&lt;6&gt;</arg>&apos; in the design.  To suppress this error specify the correct net name or remove the constraint.  The &apos;Allow Unmatched LOC Constraints&apos; ISE property can also be set ( -aul switch for command line users).
+</msg>
+
+<msg type="error" file="NgdBuild" num="755" delta="unknown" >&quot;<arg fmt="%s" index="2">Exp6.ucf</arg>&quot; Line <arg fmt="%i" index="1">12</arg>: Could not find net(s) &apos;<arg fmt="%s" index="3">DP</arg>&apos; in the design.  To suppress this error specify the correct net name or remove the constraint.  The &apos;Allow Unmatched LOC Constraints&apos; ISE property can also be set ( -aul switch for command line users).
+</msg>
+
+<msg type="error" file="NgdBuild" num="755" delta="unknown" >&quot;<arg fmt="%s" index="2">Exp6.ucf</arg>&quot; Line <arg fmt="%i" index="1">13</arg>: Could not find net(s) &apos;<arg fmt="%s" index="3">L13</arg>&apos; in the design.  To suppress this error specify the correct net name or remove the constraint.  The &apos;Allow Unmatched LOC Constraints&apos; ISE property can also be set ( -aul switch for command line users).
+</msg>
+
+<msg type="error" file="NgdBuild" num="755" delta="unknown" >&quot;<arg fmt="%s" index="2">Exp6.ucf</arg>&quot; Line <arg fmt="%i" index="1">14</arg>: Could not find net(s) &apos;<arg fmt="%s" index="3">L14</arg>&apos; in the design.  To suppress this error specify the correct net name or remove the constraint.  The &apos;Allow Unmatched LOC Constraints&apos; ISE property can also be set ( -aul switch for command line users).
+</msg>
+
+<msg type="error" file="NgdBuild" num="755" delta="unknown" >&quot;<arg fmt="%s" index="2">Exp6.ucf</arg>&quot; Line <arg fmt="%i" index="1">15</arg>: Could not find net(s) &apos;<arg fmt="%s" index="3">N17</arg>&apos; in the design.  To suppress this error specify the correct net name or remove the constraint.  The &apos;Allow Unmatched LOC Constraints&apos; ISE property can also be set ( -aul switch for command line users).
+</msg>
+
+<msg type="error" file="NgdBuild" num="755" delta="unknown" >&quot;<arg fmt="%s" index="2">Exp6.ucf</arg>&quot; Line <arg fmt="%i" index="1">16</arg>: Could not find net(s) &apos;<arg fmt="%s" index="3">R17</arg>&apos; in the design.  To suppress this error specify the correct net name or remove the constraint.  The &apos;Allow Unmatched LOC Constraints&apos; ISE property can also be set ( -aul switch for command line users).
+</msg>
+
+<msg type="error" file="Parsers" num="11" delta="unknown" >Encountered unrecognized constraint while parsing.
+</msg>
+
+<msg type="error" file="NgdBuild" num="19" delta="unknown" >Errors found while parsing constraint file &quot;<arg fmt="%s" index="1">Exp6.ucf</arg>&quot;.
+</msg>
+
+</messages>
+

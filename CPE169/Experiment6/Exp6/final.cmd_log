@@ -1,0 +1,4 @@
+xst -ise "E:/CPE169/Experiment6/Exp6/Exp6.ise" -intstyle ise -ifn final.xst -ofn final.syr
+xst -ise "E:/CPE169/Experiment6/Exp6/Exp6.ise" -intstyle ise -ifn final.xst -ofn final.syr
+xst -ise "E:/CPE169/Experiment6/Exp6/Exp6.ise" -intstyle ise -ifn final.xst -ofn final.syr
+xst -ise "E:/CPE169/Experiment6/Exp6/Exp6.ise" -intstyle ise -ifn final.xst -ofn final.syr

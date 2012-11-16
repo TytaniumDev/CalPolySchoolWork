@@ -1,0 +1,119 @@
+<head>
+<title>2.6 - Grading Inspection Test</title>
+</head>
+
+<style type="text/css">
+td {
+    border: 1px solid black;
+}
+
+th {
+    border: 1px solid black;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+</style>
+
+<h3>
+2.6.  Grading Inspection Test
+</h3>
+
+<table>
+<tr>
+    <th>Component</th>
+    <th>Inspector</th>
+    <th>Date</th>
+    <th>Status</th>
+    <th>Remarks</th>
+</tr>
+<tr>
+    <td>2.6 H1</td>
+    <td>RAS</td>
+    <td>11/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.6 P1</td>
+    <td>RAS</td>
+    <td>11/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.6 P2</td>
+    <td>RAS</td>
+    <td>11/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.6 A1</td>
+    <td>RAS</td>
+    <td>11/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.6 I1</td>
+    <td>RAS</td>
+    <td>11/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.6 P3</td>
+    <td>RAS</td>
+    <td>11/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.6 A2</td>
+    <td>RAS</td>
+    <td>11/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.6 A3</td>
+    <td>RAS</td>
+    <td>11/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.6 A4</td>
+    <td>RAS</td>
+    <td>11/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.6 A5</td>
+    <td>RAS</td>
+    <td>11/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.6 A6</td>
+    <td>RAS</td>
+    <td>11/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.6 A7</td>
+    <td>RAS</td>
+    <td>11/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+
+</table>
+

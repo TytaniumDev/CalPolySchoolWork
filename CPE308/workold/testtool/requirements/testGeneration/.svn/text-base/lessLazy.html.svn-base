@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestTool</title>
+  <link href="../../public/css/layout.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>Test Tool</h1>
+      <h2 class="title"> 2.3.2 Test Generation Step 2 </h2>
+    </div>
+    <div id="content">
+       <!-- this is where you put stuff, replace the ul block with whatever -->
+	 
+      <br/>
+      <p>
+         This is the second step of the Test Generation process. This step allows the Instructor to specify
+	 more search parameters to further narrow down the Question that he wants. 
+         </br></br>
+	 The figure below shows the second step's screen:
+      </p>
+      </br>
+         <IMG SRC="Vizio2 PNGs/Step2R" height=400 width=600 />
+
+      <p align="center">Figure 2.3.2.1: Second step in Test Generation</p>
+	 <br/>
+
+	 <p>
+	    This step allows the Instructor to input some more parameters:
+	    </br>
+	    <ol class="nested">
+	       <li> The first optional input is a way for the instructor to specify the difficulty level of his questions
+	            and how many questions he wants with that difficulty level. If the instructor does not specify as many
+		    questions as the total number of questions he specified in step 1, the generator, using the search paramters
+		    already given, will choose questions to make up the difference. </br> If the instructor specifies more questions
+		    than he did in step 1, the generator will follow the search parameters of step 2.  </li>
+	       <li> The second optional input allows the Instructor to choose questions that were made after a certain date. This is to 
+	            prevent the addition of outdated Questions into the test. The Instructor can specify a Day, Month, and Year. 
+	       <li> The third optional input allows the instructor to search for Questions by keywords. The generator will search the 
+	            Question database for Questions that contains the specified keywords. Then it will display the matches to the 
+		    instructor in the box below the search bar. </br> The instructor can choose to add the question by checking the check
+		    box to the left of the question body. If the instructor wants to find out more about a particular question, he can 
+		    click the database button and he will be able to see all the attributes of the question in the question database.</li>
+		    Database. </li>
+	   </ol>
+	 </p>
+	 </br>
+	 <p>
+	    The figure below shows the second screen with inputs filled out:
+	 <p>
+	 <br/>
+	    <IMG SRC="Vizio2 PNGs/Step2RE" height=400 width=600 />
+            <p align="center">Figure 2.3.2.1: Second Step filled out in Test Generation</p>
+	 <br/>
+	 <br/>
+	 <p>
+	    <ul class="nested">
+	       <li> At any time, the instructor can go to an overview of the test generated so far in the process by 
+	            pressing the button: "TEST PREVIEW" </li>
+	       <li> To move on to the next step, the instructor will press the button: "NEXT" </li>
+	       <li> If the instructor wants to go back to the first step, he can press the button: "BACK" His inputs in step 2 will be saved. 
+           </ul>
+    </div>
+    
+     <div id="navigation">
+       Prev: <a href="maxLazy.html">Max Lazy</a>  | Next: <a href="manualStep.html">Manual Step</a> | Up: <a href="../functional.html">functional</a> 
+       | Top: <a href="../index.html">index</a>
+     </div>
+  </div>
+</body>
+</html>

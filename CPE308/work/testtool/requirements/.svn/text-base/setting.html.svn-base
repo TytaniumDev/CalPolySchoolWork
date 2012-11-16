@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestTool | Requirements | Introduction</title>
+  <link href="../public/css/layout.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>TestTool</h1>
+      <h2 class="title">Operational Setting</h2>
+    </div>
+    <div id="content">
+      There are three operational settings for the Test Tool: 
+      <ul class="nested">
+	<li>Test  creator with a question and answers database for teachers' use</li>
+	<li>Online test taking tool for students with an &quot;open book&quot; setting</li>
+	<li>Offline  test giving/taking tool for students and teachers in a &quot;closed book&quot; setting</li>
+      </ul>
+      The test tool will be written in a way so that the teacher can run a local client on their computer, allowing them to access the questions database and create tests without having to provide credentials. There will also be a version that both students and the teacher can use, but login credentials will be required in order to determine what they can see.
+      <p>There are multiple settings in which the test tool could be used. For the teacher (the main customer), the test tool will enable them to create 		and modify a database of questions and answers, as well as generate tests for their students in a number of ways.<br/>
+      </p>	
+      <p>For the students, the test tool will allow them to take an entire test  on the computer, and have a good interface for answering questions ranging 		from multiple choice to coding.
+      </p>
+      <p>For the test givers, the test tool will allow for remote or at home test taking, as well as local, &quot;closed book&quot; test taking in which 		one host machine running the test tool software can host the test for the students  to take on their slave machines. This makes it so that the 		students are able to  use computers to take the test, but not have access to any other functions of  the computer other than just taking the test.      </p>
+      <p>In addition, there are 3 organizations that will use the Test Tool:</p>
+      <ul>
+        <li>The Cal Poly computer science department</li>
+        <li>Cal Poly campus</li>
+        <li>Other Universities</li>
+      </ul>
+      <p>For just the Cal Poly CSC department, there can be a shared questions database between all of the teachers. This will allow teachers to re-use questions from past classes. Of course, there will be a way to make sure that a certain question hasn't appeared on a test in a certain number of years, etc. This will allow the CSC teachers to save lots of time when they are creating tests. Also, the Test Tool has the ability to compile and grade code, so grading tests will be much easier and faster as well.</p>
+      <p>For Cal Poly as a whole, students will have a standardized way to take tests. This will let the students become familiar with the Test Tool and making issuing tests much easier. Also, the students will be able to check their test grades using the same tool for each class, so they won't have to figure out if the teacher posts grades on Blackboard or on their website.</p>
+      <p>For other universities, they can decide to set up their own questions databases, much like the one for the Cal Poly CSC department. They can also use the Test Tool's test taking environment to make it easier for students to take tests and receive feedback on them.&nbsp;
+        </p>
+        </p>
+    </div>
+</div>
+</body>
+</html>

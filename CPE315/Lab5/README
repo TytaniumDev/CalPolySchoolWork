@@ -1,0 +1,4 @@
+Edit execute.cc
+console -> make
+console -> script.sh (uses test.c as test file)
+console -> ./mipsim -f test.sim (use -i for detailed output, or -d for dump)

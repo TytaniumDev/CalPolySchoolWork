@@ -1,0 +1,186 @@
+/*
+  CPE 365 Lab 5a
+  Tyler Holland
+*/
+
+--1.
+select count(*) as COUNT
+from (
+  select rname
+  from contains
+  where iname = 'salt'
+  intersect
+  select rname
+  from contains
+  where iname = 'pepper'
+  );
+
+--2.
+select rname, price
+from recipe
+where price = (
+  select max(price)
+  from recipe
+  )
+order by rname;
+
+--3.
+select 
+(
+  select count(distinct rname)
+  from ingredient inner join contains using(iname)
+  where foodGroup = 'dairy'
+  ) / (
+  select count(*)
+  from recipe
+  ) as RATIO
+from dual;
+
+--4.
+select 
+(
+  select count(distinct rname)
+  from recipe
+  where type = 'appetizer'
+) * 
+(
+  select count(distinct rname)
+  from recipe
+  where type = 'entree'
+) * 
+(
+  select count(distinct rname)
+  from recipe
+  where type = 'dessert'
+) as HOW_MANY
+from dual;
+
+--5.
+--5a.
+select rname, type, price
+from recipe inner join contains using(rname)
+where iname = 'egg'
+order by rname;
+
+--5b.
+select rname, type, price
+from recipe
+where rname in 
+(
+  select rname
+  from contains
+  where iname = 'egg'
+)
+order by rname;
+
+--5c.
+select rname, type, price
+from recipe R
+where 'egg' in
+(
+  select iname
+  from contains C
+  where R.rname = C.rname
+)
+order by rname;
+
+--5d.
+select rname, type, price
+from recipe R
+where 'egg' = ANY
+(
+  select iname
+  from contains C
+  where R.rname = C.rname
+)
+order by rname;
+
+--5e.
+select rname, type, price
+from recipe R
+where exists
+(
+  select *
+  from contains C
+  where R.rname = C.rname and iname = 'egg'
+)
+order by rname;
+
+--6.
+--6a.
+select rname, type, price
+from recipe
+minus
+select rname, type, price
+from recipe inner join contains using(rname)
+where iname = 'egg'
+order by rname;
+
+--6b.
+select rname, type, price
+from recipe
+where rname not in 
+(
+  select rname
+  from contains
+  where iname = 'egg'
+)
+order by rname;
+
+--6c.
+select rname, type, price
+from recipe R
+where 'egg' not in
+(
+  select iname
+  from contains C
+  where R.rname = C.rname
+)
+order by rname;
+
+--6d.
+select rname, type, price
+from recipe R 
+where 'egg' <> ALL
+(
+  select iname
+  from contains C
+  where R.rname = C.rname
+)
+order by rname;
+
+--6e.
+select rname, type, price
+from recipe R
+where not exists
+(
+  select *
+  from contains C
+  where R.rname = C.rname and iname = 'egg'
+)
+order by rname;
+
+--7.
+--7a.
+select rname
+from recipe inner join contains using(rname) inner join ingredient using(iname)
+group by rname
+having sum(calorie * amount) =
+(
+  select max(sum(calorie * amount))
+  from recipe inner join contains using(rname) inner join ingredient using(iname)
+  group by rname
+)
+order by rname;
+
+--7b.
+select rname
+from recipe inner join contains using(rname) inner join ingredient using(iname)
+group by rname
+having sum(calorie * amount) =
+(
+  select max(sum(calorie * amount))
+  from recipe inner join contains using(rname) inner join ingredient using(iname)
+  group by rname
+)
+order by rname;

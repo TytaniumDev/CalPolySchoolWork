@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>
+Minutes of the Tool Time Team Meeting, 06 October 2010
+</title>
+</head>
+<body bgcolor=white>
+<p align=center>
+<font size=+2>
+<strong>Minutes of the Tool Time Team Meeting
+<br>
+3:00 - 3:20 PM, 06 October 2010</strong>
+</font>
+</p>
+<p><br>
+  <br>
+  <strong>Present</strong>: J.Stewart, J.Good, M.Ortiz, A.Yang, T.Holland
+  <br>
+  <br>
+  <strong>Absent</strong>:None<br>
+<br>
+<strong>Excused:</strong> J. Rawson<br>
+</p>
+<p><strong>Minutes:</strong><br>
+<p>Group must decide on single application to design GUI screen interface.</p>
+<p><em><u>Login Screen:</em></u> Instructors shouldn't need to authenticate to login to software. Should have multiple tabs for program such as: File, Edit, DB, Tests, Grading, Admin, Options, Help (These are some suggestions).</p>
+<p><em><u>Database:</em></u> Have some simple fonts included with a plain text editor for writing questions. For a "type of question" be able to import an .HTML file of an already fully designed test question. Be able to sort questions based off last-used option (have some type of time stamp associated with each question). The database should be a single user database with ability for professor to create a local copy on personal computer. Have the ability to edit questions on the test and have the option to either update the question in the database or not. The number of points each question is worth should not be saved in the database, only saved to that particular test.</p>
+<p><em><u>Test Taking Screen:</em></u> Have two separate software clients, one for the professor(master) and one for the student(slave).</p>
+<p><em><u>Action Items:</em></u>
+      </br>-Jason: Grading/Report Screen
+      </br>-Allan: Test Generation Screen
+      </br>-Jeff: Student Screen/Test Taking Screen
+      </br>-Tyler: Database Screen
+      </br>-Marcus: Instructor Screen/Login Screen</p>
+<p>&nbsp; </p>
+</body>
+</html>

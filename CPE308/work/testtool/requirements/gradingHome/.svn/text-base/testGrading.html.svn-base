@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestTool | Requirements | Test Grading</title>
+  <link href="../../public/css/layout.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>TestTool</h1>
+      <h2 class="title">2.5 Test Grading</h2>
+    </div>
+    <div id="content">
+      <p>
+    When the user chooses "Grade Test" from <a href="../ui-overview.html">Figure 2.1</a> the grading tool displays Figure 2.5.1; which is the professor's home screen when trying to generate and view grade reports. 
+    <br/><br/>
+    </p>
+    <img src="main_page.png" id="figure-2-5-1"/>
+    <center><em>Figure 2.5.1</em></center>
+    <br/><br/>    
+
+    The user can choose from four different test generation options which include: 
+	<ul class="nested">
+	   <li><b>Grade Test:</b> Allows the user to generate grade reports based off of a specific test he has administered. This option automatically
+                         syncs the test scores to the students' application</li>
+       <li><b>Course Scores:</b> Allows the user to generate grade reports based off a specific course he's teaching</li>
+	   <li><b>Student Scores:</b> Allows the user to generate grade reportes based off of a specific student</li>
+	   <li><b>Test Analysis:</b> Allows the user the option to view a test unbundled into individual questions, subject, answer, and point value. The drop down menu in Figure 2.5.2 is made available by selecting the downward pointing arrow under the "Test Analysis" option.</li>
+	</ul>
+      If the professor wanted to manually edit a generated report he would click the document icon in the top right corner of each grading option. 
+      <br/><br/>
+      <img src="main_page_submenu.png" id="figure-2-5-2"/>
+      <center><em>Figure 2.5.2</em></center>
+      <br/><br/>
+      <p>
+	  When the user wishes to create a report based off of a specific test, he would press the blue circular generate button for "Grade Test"; which would prompt him with a file search screen shown in Figure 2.5.3. From here the user can specifically choose which student, test, class, or analysis option the grade report will use by way of the scroll bar or search parameter. If he wishes to create an electronic copy of the report, he would mark the PDF checkbox and input the desired document name in the field provided. Lastly the user presses the "Generate" button in Figure 2.5.3 to build the report shown in Figure 2.5.4, or press cancel if he wishes to go back to the main screen in Figure 2.5.1.
+      <br/><br/>
+      </p>
+      <img src="search_template.png" id="figure-2-5-3"/>
+      <center><em>Figure 2.5.3</em></center>
+      <p>
+       
+      </p>
+      <img src="main_page_graph.png" id="figure-2-5-4"/>
+      <center><em>Figure 2.5.4</em></center>
+      <p>
+
+    This is the breakdown of the test menu the professor can access to manually choose the features and options listed above.
+    <br/><br/>
+      </p> 
+      <img src="Menu.png" id="figure-2-5-5"/>
+      <center><em>Figure 2.5.5</em></center>
+      <br/>
+
+      <div id="navigation"> 
+          Prev: <a href="../testHome/index.html">Test Taking</a> | Next: <a href="../studentHome/index.html">Test Reports</a> | 
+          Up: <a href="../functional.html">Functional</a> | Top: <a href="../index.html">index</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

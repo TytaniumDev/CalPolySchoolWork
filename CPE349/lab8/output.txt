@@ -1,0 +1,31 @@
+Parenthesize test:
+a: True
+ab: False
+ca: True
+cab: False
+abc: True
+cba: True
+aabb: False
+ccab: False
+aabbcc: True
+ababab: True
+bababa: True
+abcabcabc: True
+cabbaccabbac: True
+acacacacaabcb: True
+
+Recover test:
+a: (a)
+ab: Result is false, unrecoverable
+ca: (ca)
+cab: Result is false, unrecoverable
+abc: Not yet implemented.
+cba: Not yet implemented.
+aabb: Result is false, unrecoverable
+ccab: Result is false, unrecoverable
+aabbcc: Not yet implemented.
+ababab: Not yet implemented.
+bababa: Not yet implemented.
+abcabcabc: Not yet implemented.
+cabbaccabbac: Not yet implemented.
+acacacacaabcb: Not yet implemented.

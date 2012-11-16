@@ -1,0 +1,115 @@
+22:54:26 TYHOLLAN> @lab4a
+22:54:28 TYHOLLAN> /*
+22:54:28 TYHOLLAN>   CPE 365 Lab 4
+22:54:28 TYHOLLAN>   Tyler Holland
+22:54:28 TYHOLLAN> */
+22:54:28 TYHOLLAN> 
+22:54:28 TYHOLLAN> --1. How many recipes are in this database?
+22:54:28 TYHOLLAN>   select count(*) as RECIPE_COUNT
+22:54:28   2  	from recipe;
+RECIPE_COUNT
+------------
+           6
+
+1 row selected.
+
+22:54:28 TYHOLLAN> 
+22:54:28 TYHOLLAN> --2.
+22:54:28 TYHOLLAN>   select count(*) as INGREDIENT_COUNT
+22:54:28   2  	from contains
+22:54:28   3  	where rname = 'Meatloaf';
+INGREDIENT_COUNT
+----------------
+               6
+
+1 row selected.
+
+22:54:28 TYHOLLAN> 
+22:54:28 TYHOLLAN> --3.
+22:54:28 TYHOLLAN>   select count(distinct rname) as RECIPE_COUNT
+22:54:28   2  	from ingredient I, contains C
+22:54:28   3  	where I.iname = C.iname and foodGroup = 'dairy';
+RECIPE_COUNT
+------------
+           4
+
+1 row selected.
+
+22:54:28 TYHOLLAN> 
+22:54:28 TYHOLLAN> --4.
+22:54:28 TYHOLLAN>   select count(*) as INGREDIENT_COUNT
+22:54:28   2  	from contains
+22:54:28   3  	where rname = 'Meatloaf';
+INGREDIENT_COUNT
+----------------
+               6
+
+1 row selected.
+
+22:54:28 TYHOLLAN> 
+22:54:28 TYHOLLAN> --5.
+22:54:28 TYHOLLAN>   select count(cost * amount) as COST, count(calorie * amount) as CALORIES
+22:54:28   2  	from ingredient inner join contains using(iname) inner join recipe using(rname)
+22:54:28   3  	where rname = 'Garlic Shrimp';
+      COST   CALORIES
+---------- ----------
+         7          7
+
+1 row selected.
+
+22:54:28 TYHOLLAN> 
+22:54:28 TYHOLLAN> --6.
+22:54:28 TYHOLLAN>   select count(*) as PLAYER_COUNT
+22:54:28   2  	from player inner join team using(tname)
+22:54:28   3  	where tname = 'Lakers';
+PLAYER_COUNT
+------------
+          15
+
+1 row selected.
+
+22:54:28 TYHOLLAN> 
+22:54:28 TYHOLLAN> --7.
+22:54:28 TYHOLLAN>   select max(height) as HEIGHT, min(weight) as WEIGHT
+22:54:28   2  	from player
+22:54:28   3  	where tname = 'Lakers';
+    HEIGHT     WEIGHT
+---------- ----------
+        84        180
+
+1 row selected.
+
+22:54:28 TYHOLLAN> 
+22:54:28 TYHOLLAN> --8.
+22:54:28 TYHOLLAN>   select sum(points)/count(pname)
+22:54:28   2  	from player inner join plays_in using(tname)
+22:54:28   3  	where tname = 'Lakers';
+SUM(POINTS)/COUNT(PNAME)
+------------------------
+              9.26470588
+
+1 row selected.
+
+22:54:28 TYHOLLAN> 
+22:54:28 TYHOLLAN> --9.
+22:54:28 TYHOLLAN>   select sum(salary)/count(salary)
+22:54:28   2  	from player
+22:54:28   3  	where tname = 'Lakers';
+SUM(SALARY)/COUNT(SALARY)
+-------------------------
+               7026235.85
+
+1 row selected.
+
+22:54:28 TYHOLLAN> 
+22:54:28 TYHOLLAN> --10.
+22:54:28 TYHOLLAN>   select count(gnum) as GAME_COUNT
+22:54:28   2  	from player inner join plays_in using(tname)
+22:54:28   3  	where tname = 'Lakers' and pname = 'Kobe Bryant';
+GAME_COUNT
+----------
+        68
+
+1 row selected.
+
+22:54:28 TYHOLLAN> spool off

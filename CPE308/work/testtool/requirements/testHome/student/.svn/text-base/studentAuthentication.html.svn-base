@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestTool | Requirements | Test Taking | Student Home</title>
+  <link href="../../../public/css/layout.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>TestTool</h1>
+      <h2 class="title">2.4.2.1 Student Authentication</h2>
+    </div>
+    <div id="content">
+      <p>After a proctor has begun to administer a test, the student is prompted with an authentication screen to remind him of the cheating policy, and ask for an electronic signature. This screen is shown in Figure 2.4.2.1.1. The username that is requested is the username that the student used to login to the Student Home. This username is a system-wide username that will match a student's calpoly ID.<br/>
+      <p><img src="StudentAuthentication.png" id="figure-2-4-2-1-1"/></p>
+      <p align="center">Figure 2.4.2.1.1: Student Authentication</p>  
+      <p>This shows the student some basic information about the exam he is about to take, and also a custom message provided by the Instructor. If a student selects &quot;Agree&quot; without providing the valid username, a dialog appears, as shown in Figure 2.4.2.1.2.</p>
+      <p><img src="StudentAuthenticationFail.png" height=380 width=682 id="figure-2-4-2-1-2"/></p> 
+      <p align="center">Figure 2.4.2.1.2: Student Invalid Authentication</p>  
+      <p>If the 
+      student provides the correct username, the test taking process is Authenticated, and the student may begin taking the test. In this case, mportiz is the valid username for the current student, and the test is Authenticated.
+      <p><img src="StudentAuthenticationSuccess.png" height=380 width=682 id="figure-2-4-2-1-3"/>
+      <p align="center">Figure 2.4.2.1.3: Student Valid Authentication</p>  
+    </div>
+    <div id="navigation">
+      Prev: [none] | Next: <a href="studentTest.html">studenttest</a> | Up: <a href="student.html">studenthome</a>
+      | Top: <a href="../../index.html">index</a>
+   </div>
+  </div>
+</body>
+</html>

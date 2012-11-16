@@ -1,0 +1,273 @@
+10:21:37 TYHOLLAN> @lab4b
+10:21:38 TYHOLLAN> /*
+10:21:38 TYHOLLAN>   CPE 365 Lab 4
+10:21:38 TYHOLLAN>   Tyler Holland
+10:21:38 TYHOLLAN> */
+10:21:38 TYHOLLAN> 
+10:21:38 TYHOLLAN> --1.
+10:21:38 TYHOLLAN>    select type as TYPE, count(type) as COUNT
+10:21:38   2  	 from recipe
+10:21:38   3  	 group by type
+10:21:38   4  	 order by type;
+TYPE                 COUNT
+--------------- ----------
+appetizer                2
+dessert                  2
+entree                   2
+
+3 rows selected.
+
+10:21:38 TYHOLLAN> 
+10:21:38 TYHOLLAN> --2.
+10:21:38 TYHOLLAN>    select type as TYPE, count(type) as COUNT
+10:21:38   2  	 from recipe
+10:21:38   3  	 group by type
+10:21:38   4  	 having count(type) > 2
+10:21:38   5  	 order by type;
+
+no rows selected
+
+10:21:38 TYHOLLAN> 
+10:21:38 TYHOLLAN> --3.
+10:21:38 TYHOLLAN>    select foodgroup as FOODGROUP, count(distinct rname) as COUNT
+10:21:38   2  	 from ingredient inner join contains using(iname) inner join recipe using(rname)
+10:21:38   3  	 group by foodgroup
+10:21:38   4  	 order by foodgroup;
+FOODGROUP            COUNT
+--------------- ----------
+dairy                    4
+herb                     2
+legume                   1
+oil                      3
+protein                  1
+seafood                  1
+seasoning                6
+starch                   4
+
+8 rows selected.
+
+10:21:38 TYHOLLAN> 
+10:21:38 TYHOLLAN> --4.
+10:21:38 TYHOLLAN>    select foodgroup as FOODGROUP, count(distinct rname) as COUNT
+10:21:38   2  	 from ingredient inner join contains using(iname) inner join recipe using(rname)
+10:21:38   3  	 group by foodgroup
+10:21:38   4  	 having count(distinct rname) > 3
+10:21:38   5  	 order by foodgroup;
+FOODGROUP            COUNT
+--------------- ----------
+dairy                    4
+seasoning                6
+starch                   4
+
+3 rows selected.
+
+10:21:38 TYHOLLAN> 
+10:21:38 TYHOLLAN> --5.
+10:21:38 TYHOLLAN>    select(price - (cost*amount))/servings
+10:21:38   2  	 from ingredient inner join contains using(iname) inner join recipe using(rname);
+(PRICE-(COST*AMOUNT))/SERVINGS
+------------------------------
+                            .6
+                            .6
+                           .41
+                          .635
+                           .61
+                         .6175
+                         .6325
+                         .2025
+                       .225625
+                          .215
+                          .215
+                        -.0125
+                       .223125
+                         .1675
+                          .165
+                       3.90625
+                       4.36875
+                      4.359375
+                         4.175
+                         4.075
+                        4.2875
+                         3.325
+                        5.9875
+                        5.9375
+                           5.9
+                           4.5
+                           5.8
+                         5.625
+                    .791666667
+                            .8
+                    .333333333
+                    .583333333
+                           2.5
+                        2.7375
+                         2.525
+                          2.55
+                          2.25
+                         2.125
+
+38 rows selected.
+
+10:21:38 TYHOLLAN> 
+10:21:38 TYHOLLAN> --6.
+10:21:38 TYHOLLAN>    select rname as RNAME, count(foodGroup) as INGREDIENT_COUNT
+10:21:38   2  	 from ingredient inner join contains using(iname) inner join recipe using(rname)
+10:21:38   3  	 group by rname
+10:21:38   4  	 order by rname;
+RNAME                INGREDIENT_COUNT
+-------------------- ----------------
+Apple Treat                         6
+Butter Cookies                      4
+Fried Cheese                        7
+Garlic Shrimp                       7
+Hummus                              8
+Meatloaf                            6
+
+6 rows selected.
+
+10:21:38 TYHOLLAN> 
+10:21:38 TYHOLLAN> --7.
+10:21:38 TYHOLLAN>    select max(count(amount)) as MAX_INGR
+10:21:38   2  	 from contains
+10:21:38   3  	 group by rname;
+  MAX_INGR
+----------
+         8
+
+1 row selected.
+
+10:21:38 TYHOLLAN> 
+10:21:38 TYHOLLAN> --8.
+10:21:38 TYHOLLAN>    select tname, points as SCORE
+10:21:38   2  	 from plays_in
+10:21:38   3  	 where gnum = 7
+10:21:38   4  	 order by points desc;
+TNAME           SCORE
+---------- ----------
+Lakers             23
+Lakers             20
+Lakers             19
+Celtics            18
+Celtics            17
+Celtics            14
+Celtics            13
+Celtics            11
+Lakers             10
+Lakers              7
+Celtics             6
+Lakers              2
+Lakers              2
+Celtics             0
+Lakers              0
+Lakers              0
+Celtics             0
+Lakers              0
+
+18 rows selected.
+
+10:21:38 TYHOLLAN> 
+10:21:38 TYHOLLAN> --9.
+10:21:38 TYHOLLAN>    select gnum, tname, sum(points) as SCORE
+10:21:38   2  	 from plays_in
+10:21:38   3  	 group by gnum, tname
+10:21:38   4  	 order by gnum, SCORE desc;
+      GNUM TNAME           SCORE
+---------- ---------- ----------
+         1 Lakers            102
+         1 Celtics            89
+         2 Celtics           103
+         2 Lakers             94
+         3 Lakers             87
+         3 Celtics            84
+         4 Celtics            96
+         4 Lakers             89
+         5 Celtics            92
+         5 Lakers             86
+         6 Lakers             89
+         6 Celtics            67
+         7 Lakers             83
+         7 Celtics            79
+
+14 rows selected.
+
+10:21:38 TYHOLLAN> 
+10:21:38 TYHOLLAN> --10.
+10:21:38 TYHOLLAN>    select tname, pid, pname, count(points) as NUM_GAMES
+10:21:38   2  	 from player inner join plays_in using(tname, pid)
+10:21:38   3  	 where minutes > 0
+10:21:38   4  	 group by tname, pid, pname
+10:21:38   5  	 having count(*) >= 3
+10:21:38   6  	 order by count(points) desc, tname, pid;
+TNAME             PID PNAME                 NUM_GAMES
+---------- ---------- -------------------- ----------
+Celtics             4 Nate Robinson                 7
+Celtics             5 Kevin Garnett                 7
+Celtics             9 Rajon Rondo                   7
+Celtics            11 Glen Davis                    7
+Celtics            20 Ray Allen                     7
+Celtics            30 Rasheed Wallace               7
+Celtics            34 Paul Pierce                   7
+Celtics            42 Tony Allen                    7
+Lakers              2 Derek Fisher                  7
+Lakers              7 Lamar Odom                    7
+Lakers             16 Pau Gasol                     7
+Lakers             17 Andrew Bynum                  7
+Lakers             24 Kobe Bryant                   7
+Lakers             37 Ron Artest                    7
+Celtics            43 Kendrick Perkins              6
+Lakers              1 Jordan Farmar                 6
+Lakers             12 Shannon Brown                 6
+Lakers             18 Sasha Vujacic                 6
+Lakers              4 Luke Walton                   4
+
+19 rows selected.
+
+10:21:38 TYHOLLAN> 
+10:21:38 TYHOLLAN> --11.
+10:21:38 TYHOLLAN>    select pname, tname, sum(points)/sum(minutes) as AVG_PT_PER_MIN
+10:21:38   2  	 from player inner join plays_in using(tname, pid)
+10:21:38   3  	 group by pname, tname
+10:21:38   4  	 having sum(minutes) > 0
+10:21:38   5  	 order by AVG_PT_PER_MIN desc, pname;
+PNAME                TNAME      AVG_PT_PER_MIN
+-------------------- ---------- --------------
+Marquis Daniels      Celtics              1.25
+Kobe Bryant          Lakers         .692041522
+Kevin Garnett        Celtics        .479820628
+Nate Robinson        Celtics        .472222222
+Paul Pierce          Celtics        .451612903
+Pau Gasol            Lakers         .443686007
+Sasha Vujacic        Lakers          .37254902
+Ray Allen            Celtics        .370909091
+Rajon Rondo          Celtics        .350553506
+Glen Davis           Celtics        .326388889
+Andrew Bynum         Lakers         .297142857
+Ron Artest           Lakers         .294820717
+Derek Fisher         Lakers         .277777778
+Lamar Odom           Lakers         .276041667
+Rasheed Wallace      Celtics        .255172414
+Shannon Brown        Lakers         .253012048
+Kendrick Perkins     Celtics        .246478873
+Jordan Farmar        Lakers         .234567901
+Tony Allen           Celtics        .215686275
+Luke Walton          Lakers         .064516129
+D.J. Mbenga          Lakers                  0
+Josh Powell          Lakers                  0
+Michael Finley       Celtics                 0
+Shelden Williams     Celtics                 0
+
+24 rows selected.
+
+10:21:38 TYHOLLAN> 
+10:21:38 TYHOLLAN> --12.
+10:21:38 TYHOLLAN>    select max(sum(points)) as HIGH, min(sum(points)) as LOW
+10:21:38   2  	 from plays_in
+10:21:38   3  	 where gnum = 1
+10:21:38   4  	 group by points;
+      HIGH        LOW
+---------- ----------
+        30          0
+
+1 row selected.
+
+10:21:38 TYHOLLAN> spool off

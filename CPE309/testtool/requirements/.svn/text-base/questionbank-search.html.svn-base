@@ -1,0 +1,47 @@
+<?
+$title = "2.3.2. Search Questions";
+require "../header.php";
+?>
+<a name="SearchQuestions">
+<h3>
+2.3.2. Search Questions
+</h3>
+</a>
+<p>
+A user is able to search the Question Bank by inputting his query into the search box at the bottom 
+of the <a href="./images/TestGeneratorWireMain.png">main GUI (Figure 2.3.1)</a>. As an example, the user 
+has inputted "write" as his query as shown below in Figure 2.3.30:  
+<br>
+<a name="Figure2310"></a>
+<CENTER>
+<IMG SRC="./images/questionbank-searchquery.png">
+</CENTER>
+<p align=center> Figure 2.3.30: A Query Inputted into the Search Box</p>
+<br>
+<br>
+Once the user clicks the search button (indicated by the magnifying glass) or presses "Enter" on his keyboard, the Test Tool begins to search the Question Bank for questions that contain the word "write" 
+somewhere in one of the sections of the question. The Test Tool then filters the questions in the bank so that only questions returned by the search are displayed. This functionality is depicted 
+in Figure 2.3.31 below:
+<br>
+<a name="Figure2311"></a>
+<CENTER>
+<IMG SRC="./images/questionbank-searchreturn.png">
+</CENTER>
+<p align=center>Figure 2.3.31: Questions Returned by the Search</p>
+<br>
+<br>
+Once the search is complete, the user can access the questions returned and perform any valid actions on them. 
+<br>
+<br>
+<hr width=80% size=3>
+<center>
+<font size=-1>
+<font color=black> Prev: </font><a href="questionbank-add.html">questionbank-add</a>
+ | <font color=black> Next: </font><a href="questionbank-remove.html">questionbank-remove</a>
+ | <font color=black> Up: </font><a href="questionbank-top.html">question bank</a>
+ | <font color=black> Top: </font><a href="index.html">index</a></font>
+</center>
+<hr width=80% size=3>
+<?
+require "../footer.php";
+?>

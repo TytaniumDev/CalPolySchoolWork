@@ -1,0 +1,3 @@
+MODULE proc1test
+SUBMODULE tflipflop
+INSTANCE UUT

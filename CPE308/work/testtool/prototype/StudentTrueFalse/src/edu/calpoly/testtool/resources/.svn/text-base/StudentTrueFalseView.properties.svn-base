@@ -1,0 +1,102 @@
+# Resources for the StudentTrueFalseView class
+
+# top-level menus
+
+fileMenu.text = File
+
+# @Action resources
+
+showAboutBox.Action.text = &About...
+showAboutBox.Action.shortDescription = Show the application's information dialog
+
+# status bar resources
+
+StatusBar.messageTimeout = 5000
+StatusBar.busyAnimationRate = 30
+StatusBar.idleIcon = busyicons/idle-icon.png
+StatusBar.busyIcons[0]  = busyicons/busy-icon0.png
+StatusBar.busyIcons[1]  = busyicons/busy-icon1.png
+StatusBar.busyIcons[2]  = busyicons/busy-icon2.png
+StatusBar.busyIcons[3]  = busyicons/busy-icon3.png
+StatusBar.busyIcons[4]  = busyicons/busy-icon4.png
+StatusBar.busyIcons[5]  = busyicons/busy-icon5.png
+StatusBar.busyIcons[6]  = busyicons/busy-icon6.png
+StatusBar.busyIcons[7]  = busyicons/busy-icon7.png
+StatusBar.busyIcons[8]  = busyicons/busy-icon8.png
+StatusBar.busyIcons[9]  = busyicons/busy-icon9.png
+StatusBar.busyIcons[10] = busyicons/busy-icon10.png
+StatusBar.busyIcons[11] = busyicons/busy-icon11.png
+StatusBar.busyIcons[12] = busyicons/busy-icon12.png
+StatusBar.busyIcons[13] = busyicons/busy-icon13.png
+StatusBar.busyIcons[14] = busyicons/busy-icon14.png
+jLabel25.text=Question 4: Choice B) should be UML instead of XML
+#NOI18N
+jLabel25.font=Tahoma 14 12 14 14 12 12 Plain
+#NOI18N
+jLabel23.font=Tahoma 14 12 Bold
+jLabel1.text=1)
+#NOI18N
+jLabel1.foreground=204, 0, 0
+#NOI18N
+jLabel1.font=Tahoma 14 Bold
+#NOI18N
+errors.border.titleFont=Tahoma 18-Bold-18
+#NOI18N
+errors.border.titleColor=204, 0, 0
+errors.border.title=KNOWN ERRORS
+#NOI18N
+status.border.titleFont=Tahoma-Bold-18
+status.border.title=Status
+previous.text=Previous Question
+next.actionCommand=Next Question
+next.text=Next Question
+displayQuestion.Action.shortDescription=
+displayQuestion.Action.text=
+questLabel.text=Question 1
+#NOI18N
+questLabel.font=Tahoma-Bold-18
+begin.text=Begin Test
+#NOI18N
+begin.font=Tahoma-Bold-20
+question.text=Are there eight bits in one byte?
+#NOI18N
+question.font=Tahoma-Plain-18
+jRadioButton1.text=True
+jRadioButton2.text=False
+#NOI18N
+jRadioButton2.font=Tahoma-Plain-18
+previous.Action.text=
+previous.Action.shortDescription=
+next.Action.shortDescription=
+next.Action.text=
+submit.text=Submit Answer
+submit.Action.text=
+submit.Action.shortDescription=
+jLabel2.text=Time Left:
+jLabel3.text=Questions Left:
+#NOI18N
+jLabel2.font=Tahoma-Bold-14
+timeLeft.text=60 mins
+questionsLeft.text=20
+#NOI18N
+questionsLeft.font=Tahoma-Plain-14
+#NOI18N
+jLabel5.font=Tahoma-Plain-14
+jLabel6.text=Question 3
+jLabel7.text=Question 4
+jLabel8.text=Question 5
+jLabel9.text=Question 6
+jLabel10.text=Question 7
+jLabel11.text=Question 8
+jLabel12.text=Question 9
+jLabel13.text=Question 10
+jLabel14.text=Question 11
+#NOI18N
+questionList.border.titleFont=Tahoma-Bold-18
+questionList.border.title=Question List
+question1.text=Question 1
+#NOI18N
+question1.font=Tahoma-Bold-14
+question2.text=Question 2
+#NOI18N
+jLabel4.font=Tahoma-Plain-14

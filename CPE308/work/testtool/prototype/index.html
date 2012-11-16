@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestTool | Prototype</title>
+  <link href="../public/css/layout.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>TestTool</h1>
+      <h2 class="title">Prototype</h2>
+    </div>
+    <div id="content">
+      <div class="new-stuff">
+        <p>
+          Our prototypes are broken down into 3 separate apps, depending on the user of the tool. There is an app for an instructor, an app for a student, and an app for a proctor.
+        </p>
+        <p>
+          To run the <strong>Teacher app</strong>, cd into the top level prototype directory, and run the following script:<br />
+          <pre><code>./prototype.sh TestTool</code></pre><br />
+          <em>Here's a brief overview of its functionality:</em><br />
+          The initial screen (by <strong>Marcus Ortiz</strong>) provides the user with 3 different sections of the prototype to explore. The 3 buttons that are displayed on this screen are clickable and bring up windows for the corresponding parts of the prototype.
+          The main database screen is brought up with the first button (by <strong>Tyler Holland</strong>), and from there, you can click the Databases->Add Question menu item to see the screen for adding questions. Within that, you can use the dropdown box to select types of questions.
+          Going back to the main screen, you can click on the middle button for the section of the prototype that deals with generating tests (by <strong>Alan Yang</strong>). Functionality on that section involes the next button, which shows the different steps of generating a test.
+          Once again from the main screen, you can click on the last button for the section of the prototype that deals with grading tests (by <strong>Jason Stewart</strong>). From there, you can click the edit button to see the next screen. That screen has a next button to show the grading screens for other questions.
+        </p>
+        <p>
+          To run the <strong>Student app</strong> (by <strong>Jonathan Rawson</strong>), cd into the top level prototype directory, and run the following commands (this differs from the others due to bizarre svn issues):<br />
+          <pre><code>cd TestToolStudentJar<br />java -jar TestToolStudentJar.jar</code></pre><br />
+          <em>Here's a brief overview of its functionality:</em><br />
+          The initial screen is where a student can log in to take a test. Since this is a prototype, any text can be entered into the username and password fields--pressing the login button will take you to the next section of the prototype.
+          The window that pops up after pressing the login button is the Student Home screen, where they can chat with proctors. If you press the take test button from there, it will take you to a prototype of taking a test.
+          From there, the begin test, submit answer, and prev/next buttons all have limited functionality.
+        </p>
+        <p>
+          To run the <strong>Proctor app</strong> (by <strong>Jeffrey Good</strong>), cd into the top level prototype directory, and run the following script:<br />
+          <pre><code>./prototype.sh ProctorMain</code></pre>
+          <em>Here's a brief overview of its functionality:</em><br />
+          The initial screen allows the proctor to login with a button, which brings up another window where you can use the drop-down box to select a test. From there, you can add or remove students from a test using the right panel.
+        </p>
+        <p>
+          <em>As a side note, I just wanted to remind Professor Fisher that we agreed that I (Marcus Ortiz) didn't need to produce as many prototype screens, since I spent so much time putting all of the other ones together and making them work with one another.</em>
+        </p>
+      </div>
+      <div class="old-stuff">
+         <p>
+           Our prototypes are in the very early stages of development, so the entire app cannot currently be run at one time. We have split up the individual components and are working on them now.
+         </p>
+         <p>
+           We have provided a shell script to make these prototypes easy to run from the command line.<br />
+           To start, please cd into the project/prototype directory.
+         </p>
+         <p>
+           To run the prototypes, provide the script with the folder name of the individual component as an argument.
+         </p>
+         <p>
+           For example:<br />
+           <code>./prototype.sh TeacherHome</code><br />
+           <code>./prototype.sh AddProgrammingQuestion</code><br />
+           <code>./prototype.sh AddShortAnswerQuestion</code><br />
+           <code>./prototype.sh TestGen</code><br />
+           <code>./prototype.sh testGrade</code><br />
+           <code>./prototype.sh gradeQuest</code><br />
+           <code>./prototype.sh QuestionDB</code><br />
+           <code>./prototype.sh AddQuestionGeneric</code><br />
+           <code>./prototype.sh ProctorMain</code><br />
+           <code>./prototype.sh AddMultipleChoiceQuestion</code><br />
+           <code>./prototype.sh StudentHome</code><br />
+           <code>./prototype.sh StudentTrueFalse</code>
+         </p>
+         <p>
+           If, for whatever reason, the prototype script fails to work properly or as expected, please manually cd into the component/dist directory and run:<br />
+           <code>java -jar ComponentName.jar</code>
+         </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

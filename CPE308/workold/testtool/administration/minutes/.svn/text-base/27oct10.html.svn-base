@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Oct 27th Minutes</title>
+  <link href="../../public/css/layout.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>TestTool</h1>
+      <h2 class="title">Minutes for Meeting on 10/27</h2>
+    </div>
+    <div id="content">
+      <p>
+        <strong>Present:</strong> J.Rawson, J.Stewart, J.Good, M.Ortiz, A.Yang, T.Holland (all)
+      </p>
+      <p>
+        <strong>Absent:</strong> None
+      </p>
+      <p>
+        <strong>Excused:</strong> N/A
+      </p>
+      <p>
+        Today, we met with Professor Fisher regarding feedback from the latest milestone. 
+      </p>
+      <p>
+        For the <em>UI Overview</em>, we discussed how it should probably include the top-level interfaces for the students and proctors as well as the instructors.
+      </p>
+      <p>
+        For section <em>2.2</em>, it was noted that the page should include a brief introductory segment, possibly including a bulleted list.
+      </p>
+      <p>
+        For section <em>2.2.1</em>, Professor Fisher remarked on the ambiguity of the phrase "old style".
+      </p>
+      <p>
+        For section <em>2.2.2</em>, we talked about how there should be more screens showing various levels of input along with examples of scripts and html attachments.
+      </p>
+      <p>
+        For section <em>2.3.1</em>, there should be more information as to how to add questions to tests.
+      </p>
+      <p>
+        For section <em>2.4</em>, more progress needs to be made.
+      </p>
+      <p>
+        For section <em>2.5</em>, Professor Fisher wants to see rules regarding "auto-grading" rules, and more examples of input. He also discussed the idea of an "unbundled gui".
+      </p>
+      <p>
+        Lastly, we decided on using CPE-102 as the overall class example for our scenarios.
+      </p>
+    </div>
+  </div>
+</body>
+</html>

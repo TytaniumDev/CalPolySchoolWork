@@ -1,0 +1,47 @@
+V3 22
+FL "C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Comparator2Bit.vhd" 2009/05/20.17:17:05 J.33
+EN work/Comparator2Bit 1242865426 \
+      FL "C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Comparator2Bit.vhd" \
+      PB ieee/std_logic_1164 1173395717 PB ieee/std_logic_arith 1173395718 \
+      PB ieee/STD_LOGIC_UNSIGNED 1173395719
+AR work/Comparator2Bit/Behavioral 1242865427 \
+      FL "C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Comparator2Bit.vhd" \
+      EN work/Comparator2Bit 1242865426
+FL "C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Procedure1.vhd" 2009/05/20.16:46:46 J.33
+AR work/Procedure1/Behavioral 1242863086 \
+      FL "C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Procedure1.vhd" \
+      EN work/Procedure1 1242863085
+EN work/HalfAdder 1242863228 \
+      FL "C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Procedure1.vhd" \
+      PB ieee/std_logic_1164 1173395717 PB ieee/std_logic_arith 1173395718 \
+      PB ieee/STD_LOGIC_UNSIGNED 1173395719
+AR work/HalfAdder/Behavioral 1242863229 \
+      FL "C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Procedure1.vhd" \
+      EN work/HalfAdder 1242863228
+FL "C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Procedure2.vhd" 2009/05/20.16:46:58 J.33
+AR work/Procedure2/Behavioral 1242863088 \
+      FL "C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Procedure2.vhd" \
+      EN work/Procedure2 1242863087
+EN work/FullAdder 1242863230 \
+      FL "C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Procedure2.vhd" \
+      PB ieee/std_logic_1164 1173395717 PB ieee/std_logic_arith 1173395718 \
+      PB ieee/STD_LOGIC_UNSIGNED 1173395719
+AR work/FullAdder/Behavioral 1242863231 \
+      FL "C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Procedure2.vhd" \
+      EN work/FullAdder 1242863230
+FL "C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Procedure3.vhd" 2009/05/20.16:45:01 J.33
+EN work/Procedure3 1242863232 \
+      FL "C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Procedure3.vhd" \
+      PB ieee/std_logic_1164 1173395717 PB ieee/std_logic_arith 1173395718 \
+      PB ieee/STD_LOGIC_UNSIGNED 1173395719
+AR work/Procedure3/Behavioral 1242863233 \
+      FL "C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Procedure3.vhd" \
+      EN work/Procedure3 1242863232 CP HalfAdder CP FullAdder
+FL "C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Procedure4.vhd" 2009/05/20.17:14:50 J.33
+EN work/Procedure4 1242865777 \
+      FL "C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Procedure4.vhd" \
+      PB ieee/std_logic_1164 1173395717 PB ieee/std_logic_arith 1173395718 \
+      PB ieee/STD_LOGIC_UNSIGNED 1173395719
+AR work/Procedure4/Behavioral 1242865778 \
+      FL "C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Procedure4.vhd" \
+      EN work/Procedure4 1242865777 CP Comparator2Bit

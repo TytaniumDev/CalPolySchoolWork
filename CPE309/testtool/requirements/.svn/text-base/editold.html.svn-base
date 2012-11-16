@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>
+2.2.2. Editing Questions 
+</title>
+</head>
+<body bgcolor = white>
+<a name="Editing Questions">
+<h3>
+2.3.2. Editing Questions
+</h3>
+</a>
+<p>
+There are two different ways to edit questions in the database. Ultimately,
+each way results in the same GUI screen, but the manner in which questions are selected 
+for editing is different. The two options are right-clicking a question, and pressing 
+the "Edit" button on the main GUI in Figure 2.3.1.
+</p>
+<br>
+<br>
+<hr>
+<a name="Selecting Questions to Edit"></a>
+<p align=center>
+<IMG SRC="./images/questionbank-add-edit.html"></IMG>
+</p>
+<p align=center> Figure 2.3.2: Editing a Question</p>
+<hr>
+</a>
+<br>
+Once the user either right clicks a question and scrolls down to edit or ticks one or more questions' tick boxes, they will
+be presented with the above question editing dialog. Initially, the fields in the question dialog will be blank. These fields
+will be filled out by the user. Not all of the fields must be filled to add a question to database, although the following fields
+are required:
+<ul>
+<li> Course </li>
+<li> Question </li>
+<li> Answer </li>
+
+An example completed dialog box is shown below:
+<a name="EditingDialog"></a>
+<p align=center>
+<IMG SRC="./images/questionbank-add-edit-ex.html"></IMG>
+</p>
+<p align=center> Figure 2.3.3: Example Completed Edit Box</P>
+<p>
+
+<br>  
+<br>
+Once the user fills out at least the required fields, he will click OK and the question(s) will be changed in
+the database. The edit operation has now completed. 
+<br>
+<br>
+</p>
+<br>
+<hr>
+<hr width=80% size=3>
+<center>
+<font size=-1>
+<font color=black> Prev: </font>[none]
+ | <font color=black> Next: </font><a href=".html">generate</a>
+ | <font color=black> Up: </font><a href="questionbank-top.html">question bank</a>
+ | <font color=black> Top: </font><a href="index.html">index</a></font>
+</center>
+<hr width=80% size=3>
+</body>
+</html>

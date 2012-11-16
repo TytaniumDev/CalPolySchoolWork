@@ -1,0 +1,92 @@
+/* Lab 10, automobile structs */
+/* Made by Tyler Holland, CPE101-01/02 */
+
+/* Declarations */
+#include <stdio.h>
+#define MAKERNAME 15 /* Length of maker's name */
+#define MODELNAME 15 /* Length of model name */
+
+/* Structs */
+typedef struct {
+   int month;
+   int day;
+   int year;
+} dateT;
+
+typedef struct {
+   double cap; /* capacity of the tank */
+   double current; /* current fuel level */
+} tankT;
+
+typedef struct {
+   char maker[MAKERNAME]; /* Company that makes the car */
+   char model[MODELNAME]; /* Name of the car */
+   int odometer; /* Odometer reading */
+} autoT;
+
+/* Functions */
+dateT ScanDate(FILE *infilep)
+{
+   dateT dates; /* Dates for this car */
+   fscanf(infilep, "%d %d %d", &dates.month, &dates.day, &dates.year);
+
+   return dates;
+}
+
+tankT ScanTank(FILE *infilep)
+{
+   tankT tank; /* Gas values */
+   fscanf(infilep,"%f %f", &tank.cap, &tank.current);
+
+   return tank;
+}
+
+autoT ScanAuto(FILE *infilep)
+{
+   autoT car; /* Car name and odometer */
+   fscanf(infilep, "%s %s %d", &car.maker, &car.model, &car.odometer);
+
+   return car;
+}
+
+void PrintDate(dateT manu, dateT purc)
+{
+   printf("The automobile was manufactured on");
+   printf(" %d-%d-%d", manu.month, manu.day, manu.year);
+   printf("and purchased on %d-%d-%d.\n\n", purc.month, purc.day, purc.year);
+}
+
+void PrintTank(tankT tank)
+{
+   printf("The gas tank has a capacity of %.2f gallons", tank.cap);
+   printf(" and currently holds %.2f gallons.\n\n", tank.current);
+}
+
+void PrintAuto(autoT car)
+{
+   printf("The automobile in question is a %s %s", car.maker, car.model);
+   printf(" and it has %d miles on the odometer.", car.odometer);
+}
+
+/* Start main function */
+int main(void)
+{
+   /* Variables */
+   dateT manufacture; /* Date car was manufactured */
+   dateT sold; /* Date car was purchased */
+   tankT tank; /* Data about the tank */
+   autoT car; /* Info about the car */
+   int i; /* LCV */
+   char check; /* Checks for EOF */
+   FILE *infilep; /* Input file */
+
+   infilep = fopen("infile.txt", "r");
+
+   car = ScanAuto(infilep);
+   manufacture = ScanDate(infilep);
+   tank = ScanTank(infilep);
+
+   fclose(infilep);
+
+   return(0);
+}

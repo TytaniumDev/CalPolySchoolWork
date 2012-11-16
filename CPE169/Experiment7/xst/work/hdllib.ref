@@ -1,0 +1,14 @@
+AR procedure2 behavioral "C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Procedure2.vhd" sub00/vhpl05 1242863088
+EN procedure1 NULL "C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Procedure1.vhd" sub00/vhpl00 1242863085
+EN procedure2 NULL "C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Procedure2.vhd" sub00/vhpl02 1242863087
+EN procedure3 NULL "C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Procedure3.vhd" sub00/vhpl03 1242863232
+EN procedure4 NULL "C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Procedure4.vhd" sub00/vhpl12 1242865777
+AR fulladder behavioral "C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Procedure2.vhd" sub00/vhpl09 1242863231
+AR comparator2bit behavioral "C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Comparator2Bit.vhd" sub00/vhpl11 1242865427
+EN halfadder NULL "C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Procedure1.vhd" sub00/vhpl06 1242863228
+EN fulladder NULL "C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Procedure2.vhd" sub00/vhpl08 1242863230
+AR procedure3 behavioral "C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Procedure3.vhd" sub00/vhpl04 1242863233
+AR halfadder behavioral "C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Procedure1.vhd" sub00/vhpl07 1242863229
+AR procedure1 behavioral "C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Procedure1.vhd" sub00/vhpl01 1242863086
+EN comparator2bit NULL "C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Comparator2Bit.vhd" sub00/vhpl10 1242865426
+AR procedure4 behavioral "C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Procedure4.vhd" sub00/vhpl13 1242865778

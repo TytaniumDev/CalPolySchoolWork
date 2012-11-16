@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>
+Minutes of the X Team Meeting, dd Month yyyy
+</title>
+</head>
+<body bgcolor=white>
+<p align=center>
+<font size=+2>
+<strong>Minutes of the Tool Time Team Meeting
+<br>
+3:00 - 3:20 PM, 27 September 2010</strong>
+</font>
+</p>
+<p><br>
+  <br>
+  <strong>Present</strong>: All
+  <br>
+  <br>
+  <strong>Absent</strong>:
+None<br>
+<br>
+<strong>Excused:</strong> None<br>
+</p>
+<p><strong>Question:</strong><br>
+  Do you want the database to be  blank first or start from an existing database?<br>
+  <strong>Customer Response:</strong><br>
+  We do not need to worry about  importing from an existing tool. There will be a data entry task. Possibly have  a department shared database for questions. Make sure that this data is secure.</p>
+<p><strong>Question:</strong><br>
+  Do you want a relationship model  for the database?<br>
+  <strong>Customer Response: </strong><br>
+  UML and ER diagrams are basically  the same thing, The model is more of a collection of things and the records.  Feel free to do a ER model. No implementation will be done, so size up users to  determine best modeling technique. Most likely, mySQL will be used for a  database, but other options are available.</p>
+<p><strong>Customer Discussion  on other products: </strong><br>
+  Randomization is a low priority  feature that I want turned on and off. Make one of the categories on the  feature matrix &ldquo;question types&rdquo;. I want to be able to write a script that will  take the code from the test, compile it, run it, and output an integer value  for a score. I want options that ask for how a student gives feedback. <br>
+  Want two modes, one that runs in a  room where the instructor&rsquo;s machine is a master control, and the student&rsquo;s are  slaves, which functions like a fully closed book test. The other mode is open  note/take home.<br>
+  Statistics are a low priority, but  the feedback is important. This gives feedback where the student sees each  point they got on each question.&nbsp; Stats  are worthy of a category in the taxonomy, but they aren&rsquo;t necessary for the  requirements. <br>
+  You (addressed at our team) are the  domain experts for test taking. Consider what you would want to see for test  taking. Needs to be as fair for test taking on a computer as on paper.<br>
+  Want to be able to have a chunk of  writing that isn&rsquo;t necessarily a question, and the questions come after it.  Possibly supply a section for notes to be added at the end of test generation.  Bigger things for formatting would be nice to be imported into the test  creation. </p>
+<p>&nbsp; </p>
+</body>
+</html>

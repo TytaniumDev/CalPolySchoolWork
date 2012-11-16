@@ -1,0 +1,142 @@
+<?
+$title = "2.4.2.1  Proctored Setting";
+require "../header.php";
+?>
+<a name="Proctored Setting">
+<h3>
+2.4.2.1  Proctored Setting
+</h3>
+</a>
+<p>
+The proctored exam setting consists of an instructor administering an exam to a group of students in the same, physical room.  The instructor and
+each student each sits at his own personal computer while the exam is being taken.   
+<br>
+<br>
+Once the instructor clicks on the Handling tab, the system displays a window in the form of Figure 2.4.1a as shown on the 
+<a href="preview.html">preview exam page</a>.  Assuming the instructor clicks the Distribute a Graded or Practice Exam button, the
+system displays a page similar to Figure 2.4.2.1a.
+</p>
+<br>
+<br>
+<hr>
+<center>
+<p><img src='images/distribute-initial.png'></p>
+<p>Figure 2.4.2.1a:  Preparing to Distribute Test.</p>
+</center>
+<hr>
+
+<br>
+
+<p>
+The <em>Exam</em> field is where the instructor can specify which previously generated exam, as stored in an exam database, is distributed. 
+The <em>Method</em> dropdown menu lets the user choose how he wants to administer the exam.  To administer in a proctored format, the
+instructor picks the proctored option.
+<br>
+<br>
+The <em>View Type</em> dropdown menu lets the instructor decide the layout of the test.  He can decide to have all the questions available on a single 
+page of the exam, or have each question on its own page.  The instructor can distribute his test as a graded or practice exam through the
+<em>Distribute As</em> dropdown menu.  Finally, <em>Backtracking</em> checkbox allows the instructor to decide whether to let test takers edit 
+previously finished questions.  
+
+A filled in version of this dialogue is presented in Figure 2.4.2.1.b.
+<br>
+<br>
+<hr>
+<center>
+<p><img src='images/distribute-initial-filled.png'></p>
+<p>Figure 2.4.2.1b:  Filled in Exam Preparation Page.</p>
+</center>
+<hr>
+<br>
+<br>
+</p>
+<p>
+The instructor then fills in the various fields by either typing in his desired choice or by selecting a choice from the menus and checkboxes.
+Once he is satisfied with his selections, the user then clicks the Distribute button.  Upon clicking that button, the
+system displays another window looking like Figure 2.4.2.1c.
+</p>
+
+<br>
+<br>
+<hr>
+<center>
+<p><img src='images/distribute-pre-proctor.png'></p>
+<p>Figure 2.4.2.1c:  Waiting for Students to Connect.</p>
+</center>
+<hr>
+<br>
+<br>
+<p>
+The system waits for the instructor to initiate the start of the test.  Once the instructor is satisfied that all eligible students have connected, he then 
+clicks the Start button.  Once he presses the Start button, the system searches for the desired exam in the exam database and displays it to each student
+present in the room as discussed in Section 2.5.  In addition, the system displays to the instructor a window in the form of Figure 2.4.2.1d.
+<br>
+<br>
+<hr>
+<center>
+<p><img src='images/distribute-proctor.png'></p>
+<p>Figure 2.4.2.1d:  Proctoring an Exam.</p>
+</center>
+<hr>
+<br>
+<br>
+
+<p>
+The <em>Student</em> dropdown menu allows the instructor to choose which Student he wants to "focus" on.  When a student is selected, the instructor can:
+</p>
+<ul>
+<li>View his individual answer to each exam question.</li>
+<li>View which questions he has completed, not completed, or is currently completing.</li>
+<li>View, as a percentage, how much of the exam he has completed.</li>
+<li>Disqualify the student</li>
+</ul>
+<p>
+The <em>Time Left</em> field indicates how much time still remains on the current exam.  The <em>Change</em> button allows this number to be altered.
+Finally, the <em>Tests Submitted</em> field indicates how many students in the class have completed the current exam.
+<br>
+<br>
+A filled in menu is presented in Figure 2.4.2.1e.
+<br>
+<br>
+<hr>
+<center>
+<p><img src='images/distribute-proctor-filled.png'></p>
+<p>Figure 2.4.2.1e: Filled in proctored setting.</p>
+</center>
+<hr>
+<br>
+<br>
+Once all students have finished the exam, the instructor then clicks the <em>Close Session</em> button.  Once the button is clicked, the system then takes
+the instructor to a page similar to that of Figure 2.4.2.1f.
+</p>
+<br>
+<br>
+<hr>
+<center>
+<p><img src='images/distribute-post-proctor.png'></p>
+<p>Figure 2.4.2.1f: Finished Proctoring an Exam.</p>
+</center>
+<hr>
+<br>
+<br>
+<p>
+If the instructor clicks the <em>Grade Remaining Questions</em> link, then the system displays the interface for the Grading tab, which is detailed in the next section.
+If the instructor clicks the <em>View Scores</em> link, then the system displays the interface for the Reports tab, which is detailed in a later section as well.
+Finally, if the instructor clicks the <em>Go Back Home</em> link, then the system displays the home page.
+</p>
+<br>
+<br>
+<br>
+<br>
+<hr width=80% size=3>
+<center>
+<font size=-1>
+<font color=black> Prev: </font>[none]
+ | <font color=black> Next: </font><a href="distribute-home.html">take at home</a>
+ | <font color=black> Up: </font><a href="distribute-top.html">distribute</a>
+ | <font color=black> Top: </font><a href="index.html">index</a></font>
+</center>
+<hr width=80% size=3>
+<?
+require "../footer.php"
+?>

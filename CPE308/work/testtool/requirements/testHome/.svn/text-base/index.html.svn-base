@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestTool | Requirements | Test Taking</title>
+  <link href="../../public/css/layout.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>TestTool</h1>
+      <h2 class="title">2.4 Test Taking</h2>
+    </div>
+    <div id="content">
+      This is the test taking environment in a dedicated classroom with one proctor 
+       computer and several student computers. <br/>
+       <img src="roomlayout.png" height="600" width="400" id="figure-2-4-1"/>
+        <p align="center">Figure 2.4.1: Logical Layout of the Network</p>
+       The following screens are examples of what the proctor will see when he logs in.<br/><br/>
+      <ul class="nested"><a href="proctor/proctor.html">Proctor Screen</a><br/><br/></ul>
+      The following screens are examples of what the student will see when he logs in.<br/><br/>
+      <ul class="nested"><a href="student/student.html">Student Screen</a><br/><br/></ul>
+    </div>
+    <div id="navigation"> 
+      Prev: <a href="../testGeneration/index.html">generation</a> | Next: <a href="../gradingHome/testGrading.html">grading</a> | Up: <a href="../functional.html">functional</a> | Top: <a href="../index.html">index</a> 
+    </div> 
+  </div>
+</body>
+</html>

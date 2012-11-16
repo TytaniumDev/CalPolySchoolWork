@@ -1,0 +1,92 @@
+<?
+$title = "2.6.1. View Results";
+require "../header.php";
+?>
+
+<h3>2.6.1. View Results</h3>
+<p>
+This scenario describes the actions an instructor can perform on tests for which
+grading has already been completed.
+</p>
+
+<p>
+When an instructor goes to the grading section, he sees a list of all tests that
+have been deployed. The tests are divided up into three sections: in-progress,
+pending, and completed.
+</p>
+
+<? echo image("2.6.1.a","Grading Categories","images/GradingCategories.png"); ?>
+
+<p>
+The in-progress category of tests lists all of the tests that the instructor
+deployed which have not ended. All links in this section link directly to the
+<em>Proctoring an Exam</em> page where the instructor can view the current
+status of each student. Both proctored tests and take at home tests are
+displayed in this section.
+</p>
+
+<p>
+The pending category of tests lists all of the tests for which the ending time
+has been reached, but grading is not complete. Each of the links in this section
+link to the <em>Manual Grading</em> page where the instructor grades tests.
+</p>
+
+<p>
+The completed category of tests lists all of the tests for which the instructor
+has marked as graded. The links in this section go to the <em>View Grades</em>
+page, where the instructor can view the completed tests, make grade changes, and
+export grades.
+</p>
+
+<p>
+When an instructor goes to the <em>View Grades</em> page by selecting a
+particular test, he sees a list of students that took the test. Alongside each
+student is the student's score on each section of the test.
+</p>
+
+<? echo image("2.6.1.b","View Grades Page","images/ViewGrades.png"); ?>
+
+<p>
+To view a test, the instructor clicks on the corresponding student's name. The
+<em>View Test</em> page is similar to the page a student sees when taking the
+test, but has a few options added for the instructor. He has the ability to
+write notes for the student, change the number of points the student receives,
+and change the student's answer for a particular question. 
+</p>
+
+<? echo image("2.6.1.c","View Test Page","images/ViewTest.png"); ?>
+
+<p>
+The professor can add notes to a student response by clicking in the notes
+textbox.
+</p>
+
+<? echo image("2.6.1.d","Write Notes","images/AddNote.png"); ?>
+
+<p>
+The professor can also change the number of points a student receives for
+a particular question.
+</p>
+
+<? echo image("2.6.1.e","Change Score","images/ChangeScore.png"); ?>
+
+<p>
+Once the professor is done editing the questions in the test, he can save
+the changes by clicking the <em>Save Changes</em> button at the bottom of
+the page. If undesired changes were made, instead the professor clicks
+<em>Cancel Changes</em> and none of the changes write to the database.
+</p>
+
+<? echo image("2.6.1.f","Save Changes","images/SaveChanges.png"); ?>
+
+
+<div class="bbox">
+Prev: [none] |
+Next: <a href="grading-test-automatic-grading.html">Automatic Grading</a> |
+Up: <a href="grading-test.html">Grading</a> | 
+Top: <a href="index.html">index</a>
+</div>
+
+<?
+require "../footer.php";
+?>

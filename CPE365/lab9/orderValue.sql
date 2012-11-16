@@ -1,0 +1,32 @@
+/**
+ * Lab 9 Part 1 Q 2
+ * Tyler Holland (tyhollan)
+ * CPE 365
+ */
+ 
+CREATE OR REPLACE FUNCTION orderValue(ono_ odetails.ono%type) RETURN number
+AS
+--DECLARE
+  returnVal NUMERIC(7,2);
+  
+  throwaway_ odetails.ono%TYPE;
+
+BEGIN
+ select ono
+ into throwaway_
+ from orders
+ where ono = ono_;
+ 
+ select sum(qty*price)
+ into returnVal
+ from odetails inner join parts using (pno)
+ where ono = ono_;
+ return (returnVal);
+ 
+EXCEPTION
+ WHEN OTHERS THEN
+  dbms_output.put_line('Error occurred: ' || SQLERRM);
+  return (NULL);
+ END;
+/
+show errors

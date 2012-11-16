@@ -1,0 +1,9 @@
+xst -ise "E:/CPE169/Experiment5/Experiment5.ise" -intstyle ise -ifn exp5.xst -ofn exp5.syr
+xst -ise "E:/CPE169/Experiment5/Experiment5.ise" -intstyle ise -ifn exp5.xst -ofn exp5.syr
+xst -ise "E:/CPE169/Experiment5/Experiment5.ise" -intstyle ise -ifn exp5.xst -ofn exp5.syr
+xst -ise "E:/CPE169/Experiment5/Experiment5.ise" -intstyle ise -ifn exp5.xst -ofn exp5.syr
+ngdbuild -ise "E:/CPE169/Experiment5/Experiment5.ise" -intstyle ise -dd _ngo -nt timestamp -uc "constraints.ucf" -p xc3s500e-fg320-4 "exp5.ngc" exp5.ngd
+map -ise "E:/CPE169/Experiment5/Experiment5.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o exp5_map.ncd exp5.ngd exp5.pcf
+par -ise "E:/CPE169/Experiment5/Experiment5.ise" -w -intstyle ise -ol std -t 1 exp5_map.ncd exp5.ncd exp5.pcf
+trce -ise "E:/CPE169/Experiment5/Experiment5.ise" -intstyle ise -e 3 -s 4 -xml exp5 exp5.ncd -o exp5.twr exp5.pcf -ucf constraints.ucf
+bitgen -ise "E:/CPE169/Experiment5/Experiment5.ise" -intstyle ise -f exp5.ut exp5.ncd

@@ -1,0 +1,25 @@
+Phys 141 day 2
+Chapter 1 Extra Problems: 
+53,57,69,83,87,92,95
+
+
+3 decimal places (significant figures)
+
+Notes 1.7:
+Scalars:
+-quantity with a unit
+--50 m/h
+--7gal
+--500 J
+
+Vector:
+-scalar with a direction
+--15 m/s West
+--8 N j^
+
+i^ is a unit vector, 1 unit long, magnitude is 1 unit
+
+Right hand rule:
+vector a x vector b 
+point the fingers of my right hand in the direction of a, curl them toward b, thumb points 
+in the direction of a x b

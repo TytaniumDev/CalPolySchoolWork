@@ -1,0 +1,428 @@
+16:54:13 TYHOLLAN> @lab3
+16:54:16 TYHOLLAN> /*
+16:54:16 TYHOLLAN>  CPE 365
+16:54:16 TYHOLLAN>  Tyler Holland
+16:54:16 TYHOLLAN>  */
+16:54:16 TYHOLLAN> -- 1. List each row in the RECIPE table, in increasing alphabetical order of rname.
+16:54:16 TYHOLLAN>  select *
+16:54:16   2   from RECIPE
+16:54:16   3   order by rname;
+RNAME                TYPE                 PRICE   SERVINGS
+-------------------- --------------- ---------- ----------
+Apple Treat          dessert                5.5          2
+Butter Cookies       dessert                  5          6
+Fried Cheese         appetizer              6.5         10
+Garlic Shrimp        entree                17.5          4
+Hummus               appetizer             4.55         20
+Meatloaf             entree                  12          2
+
+6 rows selected.
+
+16:54:17 TYHOLLAN> 
+16:54:17 TYHOLLAN> -- 2. List each row in the INGREDIENT table, in increasing alphabetical order of rname.
+16:54:17 TYHOLLAN>  select *
+16:54:17   2   from INGREDIENT
+16:54:17   3   order by iname;
+INAME                FOODGROUP             COST    CALORIE
+-------------------- --------------- ---------- ----------
+almonds              seasoning               .5        795
+apple sauce          seasoning             1.25        150
+bread                starch                 .25        100
+bread crumbs         starch                 .35        390
+butter               dairy                  .75        100
+cheese               dairy                  .65        500
+egg                  dairy                   .2         90
+flour                starch                 .05        400
+garbanzo beans       legume                1.25        300
+garlic               seasoning               .6         10
+ground beef          protein                1.5        250
+lemon juice          seasoning              .35          5
+milk                 dairy                  .45        150
+olive oil            oil                    1.2        191
+onion                seasoning               .2         50
+oregano              herb                    .5          0
+paprika              seasoning               .5          0
+parsley              herb                    .8          2
+pepper               seasoning               .5          0
+salt                 seasoning              .05          0
+seasame seeds        seasoning                2         45
+shrimp               seafood                2.5        400
+sugar                seasoning                1        770
+tomato sauce         seasoning              .85         75
+
+24 rows selected.
+
+16:54:17 TYHOLLAN> 
+16:54:17 TYHOLLAN> -- 3. List each row in the CONTAINS table, in increasing alphabetical order of
+16:54:17 TYHOLLAN> --	 rname then increasing alphabetical order of iname.
+16:54:17 TYHOLLAN>  select *
+16:54:17   2   from CONTAINS
+16:54:17   3   order by rname, iname;
+RNAME                INAME                    AMOUNT
+-------------------- -------------------- ----------
+Apple Treat          apple sauce                   1
+Apple Treat          bread                         4
+Apple Treat          egg                           2
+Apple Treat          milk                          1
+Apple Treat          salt                         .5
+Apple Treat          sugar                        .5
+Butter Cookies       almonds                       3
+Butter Cookies       butter                        4
+Butter Cookies       flour                         4
+Butter Cookies       sugar                       .25
+Fried Cheese         bread crumbs                 .5
+Fried Cheese         cheese                       .5
+Fried Cheese         egg                           2
+Fried Cheese         flour                         3
+Fried Cheese         olive oil                     2
+Fried Cheese         oregano                       1
+Fried Cheese         paprika                       1
+Garlic Shrimp        garlic                        7
+Garlic Shrimp        lemon juice                   1
+Garlic Shrimp        olive oil                     1
+Garlic Shrimp        parsley                       1
+Garlic Shrimp        pepper                     .125
+Garlic Shrimp        salt                         .5
+Garlic Shrimp        shrimp                      .75
+Hummus               garbanzo beans                1
+Hummus               garlic                        2
+Hummus               lemon juice                 .25
+Hummus               olive oil                     4
+Hummus               paprika                      .5
+Hummus               pepper                       .5
+Hummus               salt                        .75
+Hummus               seasame seeds               .25
+Meatloaf             bread                         3
+Meatloaf             egg                           2
+Meatloaf             ground beef                   2
+Meatloaf             onion                         1
+Meatloaf             pepper                      .25
+Meatloaf             salt                         .5
+
+38 rows selected.
+
+16:54:18 TYHOLLAN> 
+16:54:18 TYHOLLAN> -- 4.
+16:54:18 TYHOLLAN>  select rname
+16:54:18   2   from CONTAINS
+16:54:18   3   where iname = 'salt'
+16:54:18   4   order by rname;
+RNAME
+--------------------
+Apple Treat
+Garlic Shrimp
+Hummus
+Meatloaf
+
+4 rows selected.
+
+16:54:18 TYHOLLAN> 
+16:54:18 TYHOLLAN> -- 5.
+16:54:18 TYHOLLAN>  select rname
+16:54:18   2   from CONTAINS
+16:54:18   3   where iname <> 'salt'
+16:54:18   4   order by rname;
+RNAME
+--------------------
+Apple Treat
+Apple Treat
+Apple Treat
+Apple Treat
+Apple Treat
+Butter Cookies
+Butter Cookies
+Butter Cookies
+Butter Cookies
+Fried Cheese
+Fried Cheese
+Fried Cheese
+Fried Cheese
+Fried Cheese
+Fried Cheese
+Fried Cheese
+Garlic Shrimp
+Garlic Shrimp
+Garlic Shrimp
+Garlic Shrimp
+Garlic Shrimp
+Garlic Shrimp
+Hummus
+Hummus
+Hummus
+Hummus
+Hummus
+Hummus
+Hummus
+Meatloaf
+Meatloaf
+Meatloaf
+Meatloaf
+Meatloaf
+
+34 rows selected.
+
+16:54:18 TYHOLLAN> 
+16:54:18 TYHOLLAN> -- 6.
+16:54:18 TYHOLLAN>  select rname
+16:54:18   2   from CONTAINS
+16:54:18   3   where iname = 'salt'
+16:54:18   4   union
+16:54:18   5   select rname
+16:54:18   6   from CONTAINS
+16:54:18   7   where iname = 'pepper'
+16:54:18   8   order by rname;
+RNAME
+--------------------
+Apple Treat
+Garlic Shrimp
+Hummus
+Meatloaf
+
+4 rows selected.
+
+16:54:19 TYHOLLAN> 
+16:54:19 TYHOLLAN> -- 7.
+16:54:19 TYHOLLAN>  select rname
+16:54:19   2   from CONTAINS
+16:54:19   3   where iname = 'salt'
+16:54:19   4   intersect
+16:54:19   5   select rname
+16:54:19   6   from CONTAINS
+16:54:19   7   where iname = 'pepper'
+16:54:19   8   order by rname;
+RNAME
+--------------------
+Garlic Shrimp
+Hummus
+Meatloaf
+
+3 rows selected.
+
+16:54:19 TYHOLLAN> 
+16:54:19 TYHOLLAN> -- 8.
+16:54:19 TYHOLLAN>  select rname
+16:54:19   2   from CONTAINS
+16:54:19   3   where iname = 'salt'
+16:54:19   4   minus
+16:54:19   5   select rname
+16:54:19   6   from CONTAINS
+16:54:19   7   where iname = 'pepper'
+16:54:19   8   order by rname;
+RNAME
+--------------------
+Apple Treat
+
+1 row selected.
+
+16:54:19 TYHOLLAN> 
+16:54:19 TYHOLLAN> -- 9.
+16:54:19 TYHOLLAN>  select rname
+16:54:19   2   from CONTAINS
+16:54:19   3   where iname != 'salt'
+16:54:19   4   intersect
+16:54:19   5   select rname
+16:54:19   6   from CONTAINS
+16:54:19   7   where iname != 'pepper'
+16:54:19   8   order by rname;
+RNAME
+--------------------
+Apple Treat
+Butter Cookies
+Fried Cheese
+Garlic Shrimp
+Hummus
+Meatloaf
+
+6 rows selected.
+
+16:54:19 TYHOLLAN> -- 10.
+16:54:19 TYHOLLAN>  select C.rname, I.iname, C.amount, I.foodGroup
+16:54:19   2   from CONTAINS C, INGREDIENT I
+16:54:19   3   where C.iname = I.iname
+16:54:19   4   order by C.rname, I.iname;
+RNAME                INAME                    AMOUNT FOODGROUP
+-------------------- -------------------- ---------- ---------------
+Apple Treat          apple sauce                   1 seasoning
+Apple Treat          bread                         4 starch
+Apple Treat          egg                           2 dairy
+Apple Treat          milk                          1 dairy
+Apple Treat          salt                         .5 seasoning
+Apple Treat          sugar                        .5 seasoning
+Butter Cookies       almonds                       3 seasoning
+Butter Cookies       butter                        4 dairy
+Butter Cookies       flour                         4 starch
+Butter Cookies       sugar                       .25 seasoning
+Fried Cheese         bread crumbs                 .5 starch
+Fried Cheese         cheese                       .5 dairy
+Fried Cheese         egg                           2 dairy
+Fried Cheese         flour                         3 starch
+Fried Cheese         olive oil                     2 oil
+Fried Cheese         oregano                       1 herb
+Fried Cheese         paprika                       1 seasoning
+Garlic Shrimp        garlic                        7 seasoning
+Garlic Shrimp        lemon juice                   1 seasoning
+Garlic Shrimp        olive oil                     1 oil
+Garlic Shrimp        parsley                       1 herb
+Garlic Shrimp        pepper                     .125 seasoning
+Garlic Shrimp        salt                         .5 seasoning
+Garlic Shrimp        shrimp                      .75 seafood
+Hummus               garbanzo beans                1 legume
+Hummus               garlic                        2 seasoning
+Hummus               lemon juice                 .25 seasoning
+Hummus               olive oil                     4 oil
+Hummus               paprika                      .5 seasoning
+Hummus               pepper                       .5 seasoning
+Hummus               salt                        .75 seasoning
+Hummus               seasame seeds               .25 seasoning
+Meatloaf             bread                         3 starch
+Meatloaf             egg                           2 dairy
+Meatloaf             ground beef                   2 protein
+Meatloaf             onion                         1 seasoning
+Meatloaf             pepper                      .25 seasoning
+Meatloaf             salt                         .5 seasoning
+
+38 rows selected.
+
+16:54:20 TYHOLLAN> 
+16:54:20 TYHOLLAN> -- 11.
+16:54:20 TYHOLLAN>  select rname, iname, amount, foodGroup
+16:54:20   2   from CONTAINS natural join INGREDIENT
+16:54:20   3   order by rname, iname;
+RNAME                INAME                    AMOUNT FOODGROUP
+-------------------- -------------------- ---------- ---------------
+Apple Treat          apple sauce                   1 seasoning
+Apple Treat          bread                         4 starch
+Apple Treat          egg                           2 dairy
+Apple Treat          milk                          1 dairy
+Apple Treat          salt                         .5 seasoning
+Apple Treat          sugar                        .5 seasoning
+Butter Cookies       almonds                       3 seasoning
+Butter Cookies       butter                        4 dairy
+Butter Cookies       flour                         4 starch
+Butter Cookies       sugar                       .25 seasoning
+Fried Cheese         bread crumbs                 .5 starch
+Fried Cheese         cheese                       .5 dairy
+Fried Cheese         egg                           2 dairy
+Fried Cheese         flour                         3 starch
+Fried Cheese         olive oil                     2 oil
+Fried Cheese         oregano                       1 herb
+Fried Cheese         paprika                       1 seasoning
+Garlic Shrimp        garlic                        7 seasoning
+Garlic Shrimp        lemon juice                   1 seasoning
+Garlic Shrimp        olive oil                     1 oil
+Garlic Shrimp        parsley                       1 herb
+Garlic Shrimp        pepper                     .125 seasoning
+Garlic Shrimp        salt                         .5 seasoning
+Garlic Shrimp        shrimp                      .75 seafood
+Hummus               garbanzo beans                1 legume
+Hummus               garlic                        2 seasoning
+Hummus               lemon juice                 .25 seasoning
+Hummus               olive oil                     4 oil
+Hummus               paprika                      .5 seasoning
+Hummus               pepper                       .5 seasoning
+Hummus               salt                        .75 seasoning
+Hummus               seasame seeds               .25 seasoning
+Meatloaf             bread                         3 starch
+Meatloaf             egg                           2 dairy
+Meatloaf             ground beef                   2 protein
+Meatloaf             onion                         1 seasoning
+Meatloaf             pepper                      .25 seasoning
+Meatloaf             salt                         .5 seasoning
+
+38 rows selected.
+
+16:54:20 TYHOLLAN> 
+16:54:20 TYHOLLAN> -- 12.
+16:54:20 TYHOLLAN>  select R.rname, R.type
+16:54:20   2   from CONTAINS C, RECIPE R
+16:54:20   3   where C.rname = R.rname AND C.iname = 'salt'
+16:54:20   4   order by R.rname;
+RNAME                TYPE
+-------------------- ---------------
+Apple Treat          dessert
+Garlic Shrimp        entree
+Hummus               appetizer
+Meatloaf             entree
+
+4 rows selected.
+
+16:54:20 TYHOLLAN> 
+16:54:20 TYHOLLAN> -- 13.
+16:54:20 TYHOLLAN>  select rname, type
+16:54:20   2   from CONTAINS inner join RECIPE using (rname)
+16:54:20   3   where iname = 'salt'
+16:54:20   4   order by rname;
+RNAME                TYPE
+-------------------- ---------------
+Apple Treat          dessert
+Garlic Shrimp        entree
+Hummus               appetizer
+Meatloaf             entree
+
+4 rows selected.
+
+16:54:20 TYHOLLAN> 
+16:54:20 TYHOLLAN> -- 14.
+16:54:20 TYHOLLAN>  select rname
+16:54:20   2   from CONTAINS inner join INGREDIENT using (iname)
+16:54:20   3   where foodGroup = 'dairy'
+16:54:20   4   order by rname;
+RNAME
+--------------------
+Apple Treat
+Apple Treat
+Butter Cookies
+Fried Cheese
+Fried Cheese
+Meatloaf
+
+6 rows selected.
+
+16:54:21 TYHOLLAN> 
+16:54:21 TYHOLLAN> -- 15.
+16:54:21 TYHOLLAN>  select rname
+16:54:21   2   from CONTAINS
+16:54:21   3   minus
+16:54:21   4   select rname
+16:54:21   5   from CONTAINS inner join INGREDIENT using (iname)
+16:54:21   6   where foodGroup = 'dairy'
+16:54:21   7   order by rname;
+RNAME
+--------------------
+Garlic Shrimp
+Hummus
+
+2 rows selected.
+
+16:54:21 TYHOLLAN> 
+16:54:21 TYHOLLAN> -- 16.
+16:54:21 TYHOLLAN>  select DISTINCT rname, price
+16:54:21   2   from CONTAINS inner join RECIPE using (rname) inner join INGREDIENT using (iname)
+16:54:21   3   where foodGroup = 'dairy'
+16:54:21   4   order by rname;
+RNAME                     PRICE
+-------------------- ----------
+Apple Treat                 5.5
+Butter Cookies                5
+Fried Cheese                6.5
+Meatloaf                     12
+
+4 rows selected.
+
+16:54:21 TYHOLLAN> 
+16:54:21 TYHOLLAN> -- 17.
+16:54:21 TYHOLLAN>  select iname
+16:54:21   2   from INGREDIENT
+16:54:21   3   minus
+16:54:21   4   select A.iname
+16:54:21   5   from INGREDIENT A, INGREDIENT B
+16:54:21   6   where A.cost > B.cost
+16:54:21   7   order by iname;
+INAME
+--------------------
+flour
+salt
+
+2 rows selected.
+
+16:54:22 TYHOLLAN> spool off

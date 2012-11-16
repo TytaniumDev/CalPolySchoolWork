@@ -1,0 +1,57 @@
+--Tyler Holland's VHDL code for Project3 in CPE129-05
+
+Library IEEE;
+use IEEE.std_logic_1164.all;
+
+Entity TrafficLightController is
+	Port(S_EW, S_N, Clock, Reset : in std_logic;
+		 Light_EW_Red, Light_EW_Yellow, Light_EW_Green : out std_logic;
+		 Light_N_Red, Light_N_Yellow, Light_N_Green : out std_logic);
+end TrafficLightController;
+
+Architecture internalstuff of TrafficLightController is
+
+type STATE_Type is (Reset, EWGreen, Wait1, Wait2, EWYellow, EWRed, NYellow);
+
+signal PS, NS : STATE_Type := Reset;
+
+begin
+
+synch : process(Clock, NS, Reset) is
+begin
+	if(Reset = '1') then PS <= Reset;
+	elsif(rising_edge(clock)) then PS <= NS;
+	end if;
+end process synch;
+
+lights : process(PS, S_EW, S_N) is
+begin
+	case PS is
+		when Reset =>
+			if (S_EW = '1') then NS <= EWGreen; Light_EW_RED <= '1'; Light_EW_Yellow <= '0'; Light_EW_Green <= '0'; Light_N_Red <= '1'; Light_N_Yellow <= '0'; Light_N_Green <= '0';
+			else 
+				if (S_N = '1') then NS <= EWRed; Light_EW_RED <= '1'; Light_EW_Yellow <= '0'; Light_EW_Green <= '0'; Light_N_Red <= '0'; Light_N_Yellow <= '0'; Light_N_Green <= '1';
+				else NS <= Reset; Light_EW_RED <= '1'; Light_EW_Yellow <= '0'; Light_EW_Green <= '0'; Light_N_Red <= '1'; Light_N_Yellow <= '0'; Light_N_Green <= '0';
+				end if;
+			end if;
+		when EWGreen => NS <= Wait1; Light_EW_RED <= '0'; Light_EW_Yellow <= '0'; Light_EW_Green <= '1'; Light_N_Red <= '1'; Light_N_Yellow <= '0'; Light_N_Green <= '0';
+		when Wait1 => NS <= Wait2; Light_EW_RED <= '0'; Light_EW_Yellow <= '0'; Light_EW_Green <= '1'; Light_N_Red <= '1'; Light_N_Yellow <= '0'; Light_N_Green <= '0';
+		when Wait2 =>
+			if(S_EW = '1') then NS <= Wait2; Light_EW_RED <= '0'; Light_EW_Yellow <= '0'; Light_EW_Green <= '1'; Light_N_Red <= '1'; Light_N_Yellow <= '0'; Light_N_Green <= '0';
+			else
+				if (S_N = '1') then NS <= EWYellow; Light_EW_RED <= '0'; Light_EW_Yellow <= '1'; Light_EW_Green <= '0'; Light_N_Red <= '1'; Light_N_Yellow <= '0'; Light_N_Green <= '0';
+				else NS <= Wait2; Light_EW_RED <= '0'; Light_EW_Yellow <= '0'; Light_EW_Green <= '1'; Light_N_Red <= '1'; Light_N_Yellow <= '0'; Light_N_Green <= '0';
+				end if;
+			end if;
+		when EWYellow => NS <= EWRed; Light_EW_RED <= '1'; Light_EW_Yellow <= '0'; Light_EW_Green <= '0'; Light_N_Red <= '0'; Light_N_Yellow <= '0'; Light_N_Green <= '1';
+		when EWRed =>
+			if (S_EW = '1') then NS <= NYellow; Light_EW_RED <= '1'; Light_EW_Yellow <= '0'; Light_EW_Green <= '0'; Light_N_Red <= '0'; Light_N_Yellow <= '1'; Light_N_Green <= '0';
+			else
+				if (S_N = '1') then NS <= EWRed; Light_EW_RED <= '1'; Light_EW_Yellow <= '0'; Light_EW_Green <= '0'; Light_N_Red <= '0'; Light_N_Yellow <= '0'; Light_N_Green <= '1';
+				else NS <= NYellow; Light_EW_RED <= '1'; Light_EW_Yellow <= '0'; Light_EW_Green <= '0'; Light_N_Red <= '0'; Light_N_Yellow <= '1'; Light_N_Green <= '0';
+				end if;
+			end if;
+		when NYellow => NS <= EWGreen; Light_EW_RED <= '0'; Light_EW_Yellow <= '0'; Light_EW_Green <= '1'; Light_N_Red <= '1'; Light_N_Yellow <= '0'; Light_N_Green <= '0';
+	end case;
+end process lights;
+end internalstuff;

@@ -1,0 +1,315 @@
+<?
+$title = "2.3.1. Add or Edit Questions";
+require "../header.php";
+?>
+<a name="AddOrEditQuestions">
+<h3>
+2.3.1. Add or Edit Questions
+</h3>
+</a>
+<p>
+There are two different ways to add or edit questions to the database. The first way is to add or edit the question using the "Add" or "Edit" buttons shown on 
+the main GUI in <a href="./images/TestGeneratorWireMain.png">figure 2.3.1</a>. The other way to add or edit a question is to right click on an existing 
+question or an empty space in the database, and choose to either add a question above, or below the selected question or to edit the selected question. For these scenarios, 
+the user begins with the blank question bank pictured in <a href="./images/TestGeneratorWireMain.png">figure 2.3.1</a>.
+<br><br>
+<B>Adding a question using a button</B>
+<br>
+Once a user clicks the "add" button on the <a href="./images/TestGeneratorWireMain.png">main question database GUI</a>, they are presented with a question
+addition dialog. This dialog is shown below in Figure 2.3.2.
+<br>
+<br>
+<a name="Figure232"></a>
+<CENTER>
+<IMG SRC="./images/addquestion-base.png">
+</CENTER>
+<p align=center> Figure 2.3.2: Question Add Dialog </p>
+
+
+<B>Adding a question using right-clicks</B>
+<br>
+Once the user right clicks a question in the question bank, a dropdown similar to Figure 2.3.3 shown below
+is displayed. At this point, the user then clicks "Add Q After". This brings up the same question addition dialog 
+as illustrated in Figure 2.3.2 above. 
+<br>
+<a name="Figure234"></a>
+<CENTER>
+<IMG SRC="./images/WireMainFilled-click.png">
+</CENTER>
+<p align=center> Figure 2.3.3: The right click dropdown </p>
+<br>
+Once this dialog appears, all the fields is completely blank as shown above in Figure 2.3.3. From there, the user will use the textboxes and dropdown menus to add 
+information to the question. The answer, and any question specific information, is displayed when the user selects the question's type. The various sub-scenarios for each 
+type of questions are shown below: 
+
+The supported types of questions are:
+<ul>
+<li>Short Answer</li>
+<li>Essay</li>
+<li>Fill in the Blank</li>
+<li>True/False</li>
+<li>Multiple Choice</li>
+<li>Matching</li>
+<li>Code</lI>
+</ul>
+
+<B>Adding a Short Answer Question:</B><br>
+When the user selects "Short Answer" from the question type drop down in Figure 2.3.3 above, the dialog in Figure 2.3.3 expands to display the question specific information 
+as shown below in Figure 2.3.4.
+<br>
+<br>
+<a name="Figure234"></a>
+<p align=center>
+<IMG SRC="./images/questionbank-saempty.png">
+</p>
+<p align=center> Figure 2.3.4: The expanded dialog for a Short Answer question</p>
+
+Once the question is expanded for short answer questions, the user then proceeds to fill in the question dialog as shown in Figure 2.3.5 below.
+<br>
+<br>
+<a name="Figure236"></a>
+<p align=center>
+<IMG SRC="./images/questionbank-safilled.png">
+</p>
+<p align=center> Figure 2.3.5: The completed dialog for a short answer question</p>
+<br>
+Once the user clicks "OK", the question is added to the question bank as shown below in figure 2.3.6.
+<br><br>
+
+<p align=center>
+<IMG SRC="./images/questionbank-1added.png">
+</p>
+<p align=center> Figure 2.3.6: The question bank after the initial question addition</p>
+<br>
+<B>Adding an Essay Question</B><br>
+When the user selects "Essay" from the question type drop down in Figure 2.3.2 above, the dialog in Figure 2.3.2 expands to display the question specific information 
+as shown below in Figure 2.3.7.
+<br>
+<br>
+<a name="Figure237"></a>
+<p align=center>
+<IMG SRC="./images/questionbank-essempty.png">
+</p>
+<p align=center> Figure 2.3.7: The expanded dialog for the Essay Questions</p>
+
+The user then fills in the add essay question dialog, resulting in figure 2.3.8 below. 
+<br>
+<br>
+<a name="Figure238"></a>
+<p align=center>
+<IMG SRC="./images/questionbank-essfilled.png">
+</p>
+<p align=center> Figure 2.3.8: The completed dialog for the Essay Questions</p>
+<br>
+Once the user clicks "OK", the question is added to the question bank as shown below in figure 2.3.9.
+<br><br>
+
+<p align=center>
+<IMG SRC="./images/questionbank-2added.png">
+</p>
+<p align=center> Figure 2.3.9: The question bank after the second question addition</p>
+<br>
+
+<B>Adding a Fill in the Blank Question</B><br>
+When the user selects "Fill in the Blank" from the type dropdown menu in Figure 2.3.2 above, the expanded dialog with Fill in the Blank specific
+options is displayed as shown in Figure 2.3.10 below: 
+<br>
+<br>
+<a name="Figure239"></a>
+<p align=center>
+<IMG SRC="./images/questionbank-flblempty.png">
+</p>
+<p align=center> Figure 2.3.10: The expanded dialog for Fill in the Blank Questions</p>
+
+The user then proceeds to fill out the dialog, which results in figure 2.3.11 below:
+<br>
+<br>
+<a name="Figure2310"></a>
+<p align=center>
+<IMG SRC="./images/questionbank-flblfilled.png">
+</p>
+<p align=center> Figure 2.3.11: The completed dialog for Fill in the Blank Questions</p>
+<br>
+Once the user clicks "OK", the question is added to the question bank as shown below in figure 2.3.12.
+<br>
+<p align=center>
+<IMG SRC="./images/questionbank-3added.png">
+</p>
+<p align=center> Figure 2.3.12: The question bank after the third question addition</p>
+
+<b>Adding a True/False Question</b>
+<p>
+When the user selects "True/False" from the type dropdown menu in 
+Figure 2.3.2 above, the expanded dialog with True/False specific options 
+is displayed as shown in Figure 2.3.13 below:
+</p>
+<? image("2.3.13","Empty true/false question","images/questionbank-TrueFalseEmpty.png"); ?>
+<p>
+The user then proceeds to fill out the dialog, which results in figure 2.3.14 below:
+</p>
+<? image("2.3.14","Completed true/false question","images/questionbank-TrueFalseFilled.png"); ?>
+<br>
+Once the user clicks "OK", the question is added to the question bank as shown below in figure 2.3.15.
+<br>
+<p align=center>
+<IMG SRC="./images/questionbank-4added.png">
+</p>
+<p align=center> Figure 2.3.15: The question bank after the fourth question addition</p>
+
+<b>Adding a Code Question</b>
+<p>
+When the user selects "Code" from the type dropdown menu in 
+Figure 2.3.2 above, the expanded dialog with Code specific options 
+is displayed as shown in Figure 2.3.16 below:
+</p>
+<? image("2.3.16","Empty code question","images/questionbank-CodeEmpty.png"); ?>
+<p>
+The user then proceeds to fill out the dialog, which results in figure 2.3.17 below:
+</p>
+<? image("2.3.17","Completed code question","images/questionbank-CodeFilled.png"); ?>
+<p>
+The format of the script and the way code grading works is discussed in section 2.6.
+</p>
+<br>
+Once the user clicks "OK", the question is added to the question bank as shown below in figure 2.3.18.
+<br><br>
+
+<p align=center>
+<IMG SRC="./images/questionbank-5added.png">
+</p>
+<p align=center> Figure 2.3.18: The question bank after the fifth question addition</p>
+
+<b>Adding a Matching Question</b>
+<p>
+When the user selects "Matching" from the type dropdown menu in 
+Figure 2.3.2 above, the expanded dialog with Matching specific options 
+is displayed as shown in Figure 2.3.19 below:
+</p>
+<? image("2.3.19","Empty matching question","images/questionbank-MatchingEmpty.png"); ?>
+<p>
+The user then proceeds to fill out the dialog, which results in figure 2.3.21 below:
+</p>
+<? image("2.3.20","Completed matching question","images/questionbank-MatchingFilled.png"); ?>
+<p>
+The application will enforce that each key has a unique mapping to
+an answer upon saving the question.
+</p>
+<br>
+Once the user clicks "OK", the question is added to the question bank as shown below in figure 2.3.21.
+<br><br>
+
+<p align=center>
+<IMG SRC="./images/questionbank-6added.png">
+</p>
+<p align=center> Figure 2.3.21: The question bank after the sixth question addition</p>
+
+<b>Adding a Multiple Choice Question</b>
+<p>
+When the user selects "Multiple Choice" from the type dropdown menu in 
+Figure 2.3.2 above, the expanded dialog with Multiple Choice specific options 
+is displayed as shown in Figure 2.3.22 below:
+</p>
+<? image("2.3.22","Empty multiple choice question","images/questionbank-MultipleChoiceEmpty.png"); ?>
+<p>
+The user then proceeds to fill out the dialog, which results in figure 2.3.23 below:
+</p>
+<? image("2.3.23","Completed multiple choice question","images/questionbank-MultipleChoiceFilled.png"); ?>
+<p>
+The user may select any number of correct answers. If the user selects only
+one correct answer, then the question on the test allows the student to
+select only one answer via radio buttons. If zero or many answers are selected
+then the question on the test allows the student to select multiple answers
+via checkboxes.
+<p>
+<br>
+Once the user clicks "OK", the question is added to the question bank as shown below in figure 2.3.24.
+<br><br>
+
+<p align=center>
+<IMG SRC="./images/questionbank-7added.png">
+</p>
+<p align=center> Figure 2.3.24: The question bank after the seventh question addition</p>
+<br>
+<B>Inputting HTML (WYSIWYG formatting) into a question</B><br>
+The user then proceeds to add his first formatted question. In previous examples, the user has simply inputted text without any 
+formatting to the question dialog, although HTML formatting is always available. When the user clicks "Short Answer" in the dropdown menu in figure 2.3.2 above, 
+the <a href="./images/questionbank-saempty.png">short answer dialog</a> is displayed. The user then completes the dialog as shown below in figure 2.3.25.
+<br>
+<p align=center>
+<IMG SRC="./images/questionbank-htmlformat.png">
+</p>
+<p align=center> Figure 2.3.25: The completed formatted short answer question</p>
+<br>
+Once the user clicks "OK", the question is added to the question bank as shown below in figure 2.3.26.
+<br><br>
+<p align=center>
+<IMG SRC="./images/questionbank-8added.png">
+</p>
+<p align=center> Figure 2.3.26: The question bank after the eigth question addition</p>
+<br> 
+
+The user now proceeds to add more questions. This leads to a fully-populated question bank, where "fully" means the question bank is populated to 
+a level sufficient for test generation in section 2.2. Furthermore, a significant number of CPE103 questions are added to the question bank to a level such
+ that all future CPE103 questions can be assumed to already exist in the question bank.
+<br> 
+<B>Editing a question using a button</B>
+<br>
+Once a user clicks the "edit" button on the <a href="./images/TestGeneratorWireMain.png">main question database GUI</a>, they is presented with a question
+editing dialog. This dialog is in the same format as the addition dialog illustrated in <a href="./images/addquestion-base.png">Figure 2.3.2.</a> referenced earlier.
+<br>
+<br>
+Once this dialog appears, at least some of the fields are populated as shown below in Figure 2.3.27.
+<br>
+<br>
+<a name="Figure220"></a>
+<CENTER>
+<IMG SRC="./images/questionbank-edit.png">
+</CENTER>
+<p align=center> Figure 2.3.27: Example Edit Dialog with Pre-existing Information </p>
+<br>
+<br>
+From there, the user will use the textboxes and dropdown menus to add information to the question or change the information currently in the question. 
+In the example in Figure 2.3.28 below a user has decided to remove the author from the question. As with the add dialog, the only required fields are:
+<ul>
+<li> Course </li>
+<li> Question </li>
+<li> Answer </li>
+</ul>
+<a name="Figure2321"></a>
+<p align=center>
+<IMG SRC="./images/questionbank-edit-ex.png">
+</p>
+<p align=center> Figure 2.3.28: Question Edit Dialog - In Progress </p>
+<br>
+Once the user is done making changes to the question information, and presses OK, the question will appear in the 
+database in a similar fashion to Figure 2.3.29 below.
+<br>
+<br>
+<a name="Figure2322"></a>
+<p align=center>
+<IMG SRC="./images/questionbank-added-edit.png">
+</p>
+<p align=center> Figure 2.3.29: The edited question now appears in the question bank</p>
+<br>
+<br>
+<B>Editing a question using right-clicks</B>
+<br>
+Once the user right clicks a question in the question bank, a dropdown similar to <a href="./images/WireMainFilled-click.png">Figure 2.3.3</a>
+is displayed. At this point, the user then clicks "Edit Q". This brings up the same edit dialog 
+as illustrated in Figure 2.3.27 above. Once the user completes the dialog in the same fashion as Figure 2.3.28 and clicks OK
+the question database will display that the question has been edited. This is illustrated in the above example in Figure 2.3.29.
+<br>
+<br><br><br>
+
+<hr width=80% size=3>
+<center>
+<font size=-1>
+<font color=black> Prev: </font>[None]
+ | <font color=black> Next: </font><a href="questionbank-search.html">questionbank-search</a>
+ | <font color=black> Up: </font><a href="questionbank-top.html">question bank</a>
+ | <font color=black> Top: </font><a href="index.html">index</a></font>
+</center>
+<hr width=80% size=3>
+<?
+require "../footer.php";
+?>

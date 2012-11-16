@@ -1,0 +1,49 @@
+<?
+$title = "1.5.3  Easy Test Maker Review";
+require "../header.php";
+?>
+<h3>
+1.5.3  Easy Test Maker Review
+</h3>
+</a>
+<p>
+EasyTestMaker is a free online test generator to help you create your tests. With Easy Test Maker you can create multiple-choice, fill-in-the-blank, matching, short answer and true and false questions all on the same test. You can also insert instructions and divide your test into multiple sections.
+</p>
+
+<B>Good Features: </B>
+<ul>
+   <li>Multiple Choice</li>
+   <li>True and False</li>
+   <li>Matching</li>
+   <li>Fill in the blank</li>
+   <li>Short Answer</li>
+   <li>Section Headings</li>
+   <li>Printing of Test</li>
+</ul>
+<B>Missing Features: </B>
+<ul>
+   <li>Make copies of tests. Create a template test and make as many copies as you want. </li>
+   <li>Generate and print alternate versions of the same test, questions and answers automatically randomized for you.</li>
+   <li>Create exams without retyping a single question by copying questions from one test to another. </li>
+   <li>Spell Check your test before you print.</li>
+   <li>Organize your tests into folders for better organization.</li>
+   <li>Download as Microsoft Word documents.</li>
+   <li>Can't take exams from software</li>
+   <li>Ugly</li>
+</ul>
+<br>
+<br>
+<br>
+<br>
+<hr width=80% size=3>
+<center>
+<font size=-1>
+<font color=black> Prev: </font><a href="testshop-review.html">Test Generator</a>
+ | <font color=black> Next: </font><a href="exambuilder-review.html">Exam Builder</a>
+ | <font color=black> Up: </font><a href="related.html">related</a>
+ | <font color=black> Top: </font><a href="index.html">index</a></font>
+</center>
+<hr width=80% size=3>
+<?
+require "../footer.php";
+?>

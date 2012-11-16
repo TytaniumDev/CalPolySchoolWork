@@ -1,0 +1,1 @@
+This package contains the major UI classes interacting with the question database model of the test tool system. These classes will display the question bank, the add question view, and a view for each of the different styles of question answer types.

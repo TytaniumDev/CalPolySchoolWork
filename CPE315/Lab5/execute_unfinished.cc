@@ -1,0 +1,128 @@
+/* Lab 5: MIPS simulator
+ * Written by Tyler Holland and Ryan Coonan
+ */
+#include "mipsim.hpp"
+
+Stats stats;
+Caches caches(0);
+
+unsigned int signExtend16to32ui(short i) {
+  return static_cast<unsigned int>(static_cast<int>(i));
+}
+
+void execute() {
+  Data32 instr = imem[pc];
+  GenericType rg(instr);
+  RType rt(instr);
+  IType ri(instr);
+  JType rj(instr);
+  unsigned int pctarget = pc + 4;
+  unsigned int addr;
+  stats.instrs++;
+  pc = pctarget;
+  switch(rg.op) {
+  case OP_SPECIAL:
+    switch(rg.func) {
+    case SP_ADDU:
+      rf.write(rt.rd, rf[rt.rs] + rf[rt.rt]);
+      break;
+    case SP_SLL:
+      rf.write(rt.rd, rf[rt.rt] << rt.sa);
+      break;
+    /*Added code*/
+   case SP_SLT:
+      if((static_cast<int>(rf[rt.rs])) < (static_cast<int>(rf[rt.rt])))
+      {
+      rf.write(rt.rd, 1);
+      }
+      else
+      {
+      rf.write(rt.rd, 0);
+      }
+      break;
+   case SP_JR:
+      pc.write(rf[rt.rs]);
+      break;
+   case SP_SRL:
+      rf.write(rt.rd, rf[rt.rt] >> rt.sa);
+      break;
+    default:
+      cout << "Unsupported instruction: ";
+      instr.printI(instr);
+      exit(1);
+      break;
+    }
+    break;
+  case OP_ADDIU:
+    rf.write(ri.rt, rf[ri.rs] + signExtend16to32ui(ri.imm));
+    break;
+  case OP_SW:
+    addr = rf[ri.rs] + signExtend16to32ui(ri.imm);
+    caches.access(addr);
+    dmem.write(addr, rf[ri.rt]);
+    break;
+  case OP_LW:
+    addr = rf[ri.rs] + signExtend16to32ui(ri.imm);
+    caches.access(addr);
+    rf.write(ri.rt, dmem[addr]);
+    break;
+  /*Added code*/
+   case OP_SLTI:
+      if((static_cast<int>(rf[ri.rs]) < (static_cast<int>(signExtend16to32ui(ri.imm)))))
+      {
+         rf.write(ri.rt, 1);
+      }
+      else
+      {
+         rf.write(ri.rt, 0);
+      }
+      break;
+   case OP_SLTIU:
+      if((static_cast<int>(rf[ri.rs]) < (signExtend16to32ui(ri.imm))))
+      {
+         rf.write(ri.rt, 1);
+      }
+      else
+      {
+         rf.write(ri.rt, 0);
+      }
+      break;
+   case OP_BNE:
+      if(rf[ri.rs] != rf[ri.rt])
+      {
+         pc.write((pctarget) + ((signExtend16to32ui(ri.imm))<<2));
+      }
+      break;
+   case OP_BEQ:
+      if(rf[ri.rs] == rf[ri.rt])
+      {
+         pc.write((pctarget) + ((signExtend16to32ui(ri.imm))<<2));
+      }
+      break;
+   case OP_BLEZ:
+      if(rf[ri.rs] <= 0)
+      {
+         pc.write((pctarget) + ((signExtend16to32ui(ri.imm))<<2));
+      }
+      break;
+   case OP_ORI:
+      rf.write(ri.rt, rf[ri.rs] | (signExtend16to32ui(ri.imm)))
+      break;
+   case OP_LUI:
+      rf.write(ri.rt, (signExtend16to32ui(ri.imm)<<16));
+      break;
+   case OP_J: /*Subtract 4 to avoid increasing PC after Jump*/
+      pc.write(((pctarget - 4) & 0xF0000000) | (rj.target)<<2));
+      break;
+   case OP_JAL: /*Subtract 4 to avoid increasing PC after Jump*/
+      rf.write(31, pctarget + 4);
+      pc.write(((pctarget - 4) & 0xF0000000) | (rj.target)<<2));
+      break;
+  default:
+    cout << "Unsupported instruction: ";
+    instr.printI(instr);
+    exit(1);
+    break;
+  }
+}
+

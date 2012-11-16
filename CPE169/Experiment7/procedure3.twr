@@ -1,0 +1,80 @@
+--------------------------------------------------------------------------------
+Release 9.1.03i Trace 
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\ISE91\bin\nt\trce.exe -ise
+C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Experiment7.ise
+-intstyle ise -e 3 -s 4 -xml Procedure3 Procedure3.ncd -o Procedure3.twr
+Procedure3.pcf -ucf finalprocedure3.ucf
+
+Design file:              procedure3.ncd
+Physical constraint file: procedure3.pcf
+Device,package,speed:     xc3s500e,fg320,-4 (PRODUCTION 1.26 2006-10-19)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+A<0>           |CarryOut       |   11.125|
+A<0>           |Sum<0>         |    7.767|
+A<0>           |Sum<1>         |    7.733|
+A<0>           |Sum<2>         |    7.877|
+A<0>           |Sum<3>         |    9.985|
+A<1>           |CarryOut       |   10.667|
+A<1>           |Sum<1>         |    6.822|
+A<1>           |Sum<2>         |    7.419|
+A<1>           |Sum<3>         |    9.527|
+A<2>           |CarryOut       |   10.467|
+A<2>           |Sum<2>         |    7.241|
+A<2>           |Sum<3>         |    9.327|
+A<3>           |CarryOut       |    9.760|
+A<3>           |Sum<3>         |    8.022|
+B<0>           |CarryOut       |   12.195|
+B<0>           |Sum<0>         |    7.477|
+B<0>           |Sum<1>         |    7.849|
+B<0>           |Sum<2>         |    8.947|
+B<0>           |Sum<3>         |   11.055|
+B<1>           |CarryOut       |   11.295|
+B<1>           |Sum<1>         |    6.903|
+B<1>           |Sum<2>         |    8.047|
+B<1>           |Sum<3>         |   10.155|
+B<2>           |CarryOut       |   10.243|
+B<2>           |Sum<2>         |    7.208|
+B<2>           |Sum<3>         |    9.103|
+B<3>           |CarryOut       |    9.648|
+B<3>           |Sum<3>         |    7.200|
+---------------+---------------+---------+
+
+
+Analysis completed Wed May 20 16:50:40 2009 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 109 MB
+
+
+

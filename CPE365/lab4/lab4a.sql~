@@ -1,0 +1,41 @@
+/*
+  CPE 365 Lab 4
+  Tyler Holland
+*/
+
+--1. How many recipes are in this database?
+  select count(*) as RECIPE_COUNT
+  from recipe;
+  
+--2.
+  select count(*) as INGREDIENT_COUNT
+  from contains
+  where rname = 'Meatloaf';
+  
+--3.
+  select count(distinct rname) as RECIPE_COUNT
+  from ingredient I, contains C
+  where I.iname = C.iname and foodGroup = 'dairy';
+  
+--4.
+  select count(*) as INGREDIENT_COUNT
+  from contains
+  where rname = 'Meatloaf';
+  
+--5.
+  
+  
+--6.
+  
+  
+--7.
+  
+  
+--8.
+  
+  
+--9.
+  
+  
+--10.
+  

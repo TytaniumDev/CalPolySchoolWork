@@ -1,0 +1,6 @@
+xst -ise "C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Experiment7.ise" -intstyle ise -ifn Procedure4.xst -ofn Procedure4.syr
+ngdbuild -ise "C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Experiment7.ise" -intstyle ise -dd _ngo -nt timestamp -uc "finalprocedure3.ucf" -p xc3s500e-fg320-4 "Procedure4.ngc" Procedure4.ngd
+map -ise "C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Experiment7.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o Procedure4_map.ncd Procedure4.ngd Procedure4.pcf
+par -ise "C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Experiment7.ise" -w -intstyle ise -ol std -t 1 Procedure4_map.ncd Procedure4.ncd Procedure4.pcf
+trce -ise "C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Experiment7.ise" -intstyle ise -e 3 -s 4 -xml Procedure4 Procedure4.ncd -o Procedure4.twr Procedure4.pcf -ucf finalprocedure3.ucf
+bitgen -ise "C:/Documents and Settings/s169s4b1/Desktop/Experiment7/Experiment7.ise" -intstyle ise -f Procedure4.ut Procedure4.ncd

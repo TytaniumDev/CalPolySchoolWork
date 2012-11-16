@@ -1,0 +1,24 @@
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+
+jLabel1.text=Test Generator
+jLabel4.text=Do not include questions since:
+jLabel5.text=/
+jLabel6.text=/
+jLabel7.text=/
+jLabel8.text=Search by keyword:
+jButton1.text=BACK
+jButton2.text=NEXT
+jButton3.text=TEST PREVIEW
+jLabel9.text=Matches Found:
+jLabel3.text=Include Questions by Author:
+#NOI18N
+jLabel1.font=DejaVu Sans-Plain-24
+jLabel10.text=No. Questions
+jLabel11.text=Difficulty
+fileMenu.text=File
+helpMenu.text=Edit
+jMenu1.text=Databases
+jMenu3.text=Tests
+jMenu4.text=Options
+jMenu5.text=Help

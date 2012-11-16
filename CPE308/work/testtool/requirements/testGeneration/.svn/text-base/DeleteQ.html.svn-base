@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestTool</title>
+  <link href="../../public/css/layout.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>Test Tool</h1>
+      <h2 class="title"> 2.3.3.1 Delete Questions </h2>
+    </div>
+    <div id="content">
+       <!-- this is where you put stuff, replace the ul block with whatever -->
+	 
+      <br/>
+      <p>
+	To delete a Question from the Test, check the check box next to the
+	Question in <a href="manualStep.html">Step 3</a>. You can check multiple Questions to be deleted. 
+	<br/> Then click the "DELETE" button on the right side of the pane.
+	
+      </p>
+      <p> For example, Figure 2.3.3.1.1 shows a partially completed test after <a href="lessLazy.html">Step 2</a>. If the Instructor
+      Decides that she does not want Questions 9 and 10, she can DELETE them using the method stated above.
+      <br/><br/>
+         <IMG SRC="5.7" id="figure-2-3-3-1-1" />
+
+      <p align="center">Figure 2.3.3.1.1: Partially Completed Test Generated after Step 2</p>
+	 <br/>
+
+	 <p>
+	   Figure 2.3.3.1.2 is the resultant Test after Deleting Questions 9 and 10 
+	    <br/><br/>
+	    The figure below shows the first screen with inputs filled out:
+	 <br/><br/>
+	    <IMG SRC="DeleteFromTest.png" id="figure-2-3-3-1-2"/>
+            <p align="center">Figure 2.3.3.1.2: Partially Completed Test with 2 Questions removed</p>
+	</p>   
+
+	<p>
+	<h4><b><u>REMEMBER:</h4></b></u><br/>
+	It is imperative for the Instructor to keep in mind, that DELETING a Question will effect the Total Time of a test.<br/><br/> 
+	The Instructor may wish to use the "SEARCH and REPLACE" function in the <a href="QEdit.html">Edit</a> pane to search
+        for a replacement Question to keep the Total Time within the Total Time Range Constraint!	
+	</p>
+    </div>
+    
+     <div id="navigation">
+       Prev: <a href="manualStep.html">Step 3</a> | Next: [none] | Up: <a href="index.html">Test Generation</a> 
+       | Top: <a href="../index.html">index</a>
+     </div>
+  </div>
+</body>
+</html>

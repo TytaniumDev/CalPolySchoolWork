@@ -1,0 +1,8 @@
+CREATE OR REPLACE TRIGGER deleteOrders
+BEFORE DELETE ON orders
+FOR EACH ROW
+BEGIN
+  DELETE FROM odetails WHERE ono = :old.ono;
+END;
+/
+SHOW ERRORS 

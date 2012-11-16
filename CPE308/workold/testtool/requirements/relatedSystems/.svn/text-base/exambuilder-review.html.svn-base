@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestTool | Requirements | Related Systems | ExamBuilder</title>
+  <link href="../../public/css/layout.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>TestTool</h1>
+      <h2 class="title">1.5.2 ExamBuilder</h2>
+    </div>
+    <div id="content">
+        ExamBuilder is used in industry for training purposes for such companies as 
+        Wal-Mart, Microsoft, 3M, and ADP(among many others).  It supports several 
+        “non-writing” question types, such as multiple choice(one or multiple answers), 
+        true/false, fill in the blank, and matching. ExamBuilder has a question pool 
+        that chooses questions based on subject-matter and students can be organized 
+        into different groups(i.e class/section). Student gets immediate feedback with
+        results after submitting, in which instructors can manually add their personal feedback to.<br/>
+        <p>
+	Overall, ExamBuilder provides a decent level of functionality that runs in a web browser,
+        but it does not support programming and short-answer/essay questions.<br/>
+        </p>
+        <strong>Good Features:</strong>
+        <ul class="nested">
+          <li>used in a web browser, and thus is cross platform</li>
+          <li>question pool, that allows instructor to categorize questions into similar topics</li>
+          <li>randomization, instructor sets the number of each type from each question pool</li>
+          <li>simple and intuitive interface</li>
+          <li>same website for both students and instructor</li>
+          <li>individual randomization of question order to each student</li>
+          <li>export of reports into PDF or Excel files</li>
+          <li>ExamBuilder will customize products to certain companies demands</li>
+        </ul>
+        <strong>Bad Features:</strong>
+        <ul class="nested">
+          <li>built more for industry(training) uses, rather than education</li>
+          <li>requires internet at all times you are using it</li>
+          <li>pricey for an individual to purchase</li>
+          <li>can only be run using their host, cannot be put onto a local(intranet) server</li>
+        </ul>
+        <strong>Missing Features:</strong>
+        <ul class="nested">
+          <li>lack of essay/short answer support</li>
+          <li>lack of coding environment</li>
+          <li>lack of consentual sharing between multiple instructors</li>
+        </ul>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

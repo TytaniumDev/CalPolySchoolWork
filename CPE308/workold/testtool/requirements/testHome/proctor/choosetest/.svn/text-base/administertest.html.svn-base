@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestTool | Requirements | Test Taking | Proctor Home | Administer Test</title>
+  <link href="../../../../public/css/layout.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>TestTool</h1>
+      <h2 class="title">2.4.1.1 Administer Test</h2>
+    </div>
+    <div id="content">
+      <p>
+        <p>Upon logging in the user is greeted with the default proctor screen as shown
+        in Figure 2.4.1.1.1, in which they can hit select test to choose which test 
+        they are about to administer to the students.</p>
+        <img src="../ProctorHomeDefault.png" height="400" width="600" id="figure-2-4-1-1-1"/>
+         <p align="center">Figure 2.4.1.1.1: Proctor Default Screen</p>
+        <p>After hitting select test, a dialog of all tests in which the proctor 
+        has been designated to proctor. Clicking on a test and hitting done will 
+        load the test info onto their screen</p>
+        <img src="ProctorHomeChooseTest.png" height="400" width="600" id="figure-2-4-1-1-2"/>
+         <p align="center">Figure 2.4.1.1.2: Proctor Test Selection Screen</p>
+        <p>After loading up a test the proctor can switch to a different test by
+        repeating the previous step, add or drop students to/from instructor 
+        designated class list(covered in 
+        <a href="testchosen/addstudent.html">Section 2.4.1.2</a> and 
+        <a href="testchosen/dropstudent.html">Section 2.4.1.3</a>, respectively),
+        or administer the test to the students.  Hitting the administer test button
+        sends all student computers to the student authentication screen(see 
+        <a href="../../../ui-overview.html#figure-2-3">Figure 2.3</a>).</p>
+        <img src="testchosen/ProctorHomeTestChosen.png" height="400" width="600" id="figure-2-4-1-1-3"/>
+         <p align="center">Figure 2.4.1.1.3: Proctor Test Screen</p>
+        <p>After the test has been administered and all students have authenticated
+        the screen will look similar to Figure 2.4.1.1.4.  Students will be allowed
+        to ask the proctor questions and the proctor will be able to send found 
+        errors to students if need be.</p>
+        <img src="testchosen/administertest/ProctorAdminTest.png" height="400" width="600" id="figure-2-4-1-1-4"/>
+         <p align="center">Figure 2.4.1.1.4: Test Administered</p>
+        <p>Figure 2.4.1.1.5 shows an example of an added error.</p>
+        <img src="testchosen/administertest/erroradded/ProctorAdminTest.png" height="400" width="600" id="figure-2-4-1-1-5"/>
+         <p align="center">Figure 2.4.1.1.5: Error Added</p>
+      </p>
+    </div>
+   <div id="navigation">
+       Prev: [none] | Next: <a href="testchosen/addstudent.html">addstudent</a> | Up: <a href="../proctor.html">proctor</a> 
+       | Top: <a href="../../../index.html">index</a>
+     </div>
+  </div>
+</body>
+</html>

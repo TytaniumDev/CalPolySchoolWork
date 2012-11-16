@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <title>TestTool | Requirements | Problem Statment</title>
+
+  <link href="../public/css/layout.css" rel="stylesheet" media="screen" /></head>
+
+<body>
+
+  <div id="container">
+
+    <div id="header">
+
+      <h1>TestTool</h1>
+
+      <h2 class="title">2.7 Details of File Commands</h2>
+
+    </div>
+
+    <div>
+
+          <p>The scenarios in this section cover full details of file-related commands, some of which have been introduced in preceding sections. There are two file command menus to be covered, one in the Questions Database and the other in Test Generation. Questions Database commands are covered in Sections <a href="filecommands.html#2.7.1">2.7.1</a> through <a href="filecommands.html#2.7.4">2.7.4</a>. Test Generation file information is covered in <a href="filecommands.html#2.7.5">2.7.5</a>. Proctor file information is covered in <a href="filecommands.html#2.7.6">2.7.6</a>. Student file information is covered in <a href="filecommands.html#2.7.7">2.7.7</a>. Test Grading file information is covered in <a href="filecommands.html#2.7.8">2.7.8</a>. The concluding Sections <a href="filecommands.html#2.7.9">2.7.9</a> and <a href="filecommands.html#2.7.10">2.7.10</a> cover general topics relevant to both regular-user and administrative files.</p>
+          </div>
+<div id="2.7.1">
+      <p><strong>2.7.1. Files Used by the Questions Database</strong></p>
+
+          <p>There is one type of file used by the Questions Database, called a database file. Database files contain the following information:</p>
+
+          <ul class = nested>
+
+            <li>All of the Database Questions, which hold all of the standard data for a question as seen in <a href="databasehome/index.html">Section 2.2: </a>
+
+              <ul class=nested>
+
+                <li>Class the question is for</li>
+
+                <li>Difficulty</li>
+
+                <li>Time Allowed</li>
+
+                <li>Last Used Date</li>
+
+                <li>Type of Question</li>
+
+                <li>Question</li>
+
+                <li>Answer</li>
+
+                <li>Optional attached HTML file</li>
+
+              </ul>
+
+            </li>
+
+          </ul>
+
+          <p>All of this information is stored in a single database file created by the user. In this way, the single file encapsulates all questions in the Questions Database.      </p>
+          <p>There are no naming requirements for database files. However, the filename extension that is required for the database files is &quot;.qdb&quot;, standing for Questions Database.If this extension conflicts with that used by some other application, then the installation process can assign a particular extension to be used in a particular operating environment.</p>
+          <p> The internal data format of the database file is not specified in these requirements, and therefore left to the implementors. In particular, there are no requirements that these files be editable as plain text or other external data format understandable to application programs other than the Questions Database. It is required that the Questions Database be able to identify database files as such, so they can be distinguished from each other and from other types of files. The specific means to accomplish this identification is left to the implementors. <br/>
+          </p>
+          </div>
+          <div id="2.7.2">
+            <p><strong>2.7.2. </strong><strong>New and Open</strong></p>
+          <p>When the user executes the 'New' command in the 'File' menu, the system responds by prompting for the database name, and then creating a new database file with the given name and the &quot;.qdb&quot; file extension. The program also opens this new database in a new Questions Database window, so that the old database you were working on is hidden by this new window, but is still open and able to be selected and worked on. The new database will appear as shown in <a href="databaseHome/databasemain.html">Figure 2.2.1.1</a>.</p>
+          <p>When the user executes the 'Open' command in the 'File' menu, the system responds by opening the standard file explorer that is built in to the user's operating system. The user is then free to select any valid file with file extension &quot;.qdb&quot;. The program will then open up this  database file in a new Questions Database window, so that the old database you were working on is hidden by this new window, but is still open and able to be selected and worked on.</p>
+          <p>When the Questions Database is executed, by default it will open the Questions Database file named &quot;maindb.qdb&quot; in the directory that the Test Tool program is installed in. Any other .qdb files will need to be opened seperately by the user. If the user wants to change what database file opens at startup, the user simply needs to rename the files appropriately so that the database they want to open on startup is named &quot;maindb.qdb&quot; and is in the Test Tool installation directory.</p>
+          </div>
+          <div id="2.7.3">
+          <p><strong>2.7.3. &quot;Save&quot; and Export</strong></p>
+          <p>The Questions Database does not have an explicit &quot;Save&quot; command in the file menu. Instead, whenever any change is made to the database, it is automatically saved. This includes adding a question, editing a question, deleting a question, and changing any part of any value in any question from the main database screen.</p>
+          <p>When the user executes the 'Export' command in the 'File' menu, the system responds by opening the standard file explorer that is built in to the user's operating system. The user is then free to select the name and path of the file that will be the exported database. By default, the Questions Database will be exported with the &quot;.qdb&quot; file extension. No other file extensions are currently supported.</p>
+          <p>The 'Export' command works as the 'Save As' function, but could later have support for multiple file types during exporting. Thus the 'Save As' function would be redundant and has been discarded.</p>
+          </div>
+          <div id="2.7.4">
+          <p><strong>2.7.4. Exit</strong></p>
+          <p>When the user selects the 'Exit' command in the 'File' menu, the system begins the exiting process by closing all open database windows. Because the database is constantly saving, it is not necessary to ask the user if they want to save before exiting. Upon completion of the 'Exit' command, and all windows have thus been closed, the user is returned to the underlying operating environment.<br/>
+          </p>
+          </div>
+          <div id="2.7.5">
+      <p><strong>2.7.5. Files Used by the Test Generation process</strong></p>
+
+	  <p> The Test Generation process creates a Test file. This file is stored in the Test Database and can be accessed in the "TESTS" tab in the top menu. Test files contain the following information:</p>
+	  <ul class = nested>
+        <li>All of the Test Questions, which hold all of the standard data for a test question as seen in <a href="/databasehome/index.html">Section 2.2</a>, as well 
+          additonal data pertaining to the test:
+          <ul class=nested>
+              <li>Class the question is for</li>
+              <li>Difficulty</li>
+              <li>Time Allowed</li>
+              <li>Last Used Date</li>
+              <li>Type of Question</li>
+              <li>Question</li>
+              <li>Answer</li>
+              <li>Optional attached HTML file</li>
+              <li>Question Number</li>
+              <li>Points Possible</li>
+              <li>Points Earned</li>
+              <li>Student Answer</li>
+              <li>Teacher Feedback</li>
+              <li>Grading Status</li>
+          </ul>
+        </li>
+        <li>Name of the test</li>
+	    <li>Message that will be displayed to the test takers</li>
+        <li>Teacher</li>
+	    <li>Proctor</li>
+	    <li>Student</li>
+	  </ul>
+      </div>
+      <div id="2.7.6">
+	  <p><strong>2.7.6. Files Used by the Proctor process</strong></p>
+
+      <p> The Proctor process involves opening a Test from the Test Database. This test is then administered and sent to all students in the test room when the proctor begins the test taking process. This Test file contains the same information as seen in section 2.7.5 above.</p>
+      </div>
+<div id="2.7.7">
+      <p><strong>2.7.7. Files Used by the Student process</strong></p>
+
+      <p> The Student process takes a Test from the Proctor and updates this test with answers for questions. When the student is done, the test file is modified and sent to the grading process. This Test file contains the same information as seen in section 2.7.5 above.</p>
+</div>
+<div id="2.7.8">
+      <p><strong>2.7.8. Files Used by the Test Grading process</strong></p>
+
+      <p> The Test Grading process gives the user the option of creating a Test Report PDF. This file is stored on the user's local machine. Although this isn't executed through the file menu, it is notable that the PDF file will be created by following the standard PDF creation rules, and it is up to the implementor to comply with these standards.</p>
+      </div>
+      <div id="2.7.9">
+      <p><strong>2.7.9. External Changes to Test Tool files</strong></p>
+      <p> As explained in the preceding scenarios of this section, the Questions Database and all other parts of the Test Tool normally attempt to disallow opening and saving to ineligible files. However, if a user changes or deletes files when the Test Tool is running, normal operation may be disrupted. The errors section of this requirements section enumerates the conditions under which file-related errors can occur and the associated error messages. </p>
+     </div>
+     <div id="2.7.10">
+      <p><strong>2.7.10. Operating Environment Conditions</strong></p>
+      <p>Different operating environments may have conventions for many aspects of file handling. There may be conventions for file naming, including characters allowed in file names, the length of file names, and the designation of a users "home" directory. There may be varying functionality for file-selection dialogs, filespace navigation, and other basic features of file management. Environments may also have conventions for the location of installed files and directories, such as a user's Test Tool directory.</p>
+      <p>Implementors may follow required or appropriate conventions, but must implement the features described in these requirements insofar as is possible.<br/>
+      </p>
+    </div>
+<div id="navigation"> 
+          Prev: <a href="studentHome/index.html">Test Reports</a> | Next: <a href="EditDetails.html">Edit Commands</a> | 
+          Up: <a href="functional.html">Functional</a> | Top: <a href="../index.html">index</a>      </div>
+</div>
+
+ </body>
+
+</html>
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestTool | Requirements | Related Systems | Exam-Software</title>
+  <link href="../../public/css/layout.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>TestTool</h1>
+      <h2 class="title">1.5.4 Exam-Software</h2>
+    </div>
+    <div id="content">
+      <blockquote>
+        "Exam Software is a Test Management Software to create and conduct computer based online examination. -from <a href="http://www.exam-software.com">www.exam-software.com</a>"
+      </blockquote>
+      <p>This software is very flexible and has a large variety of options in the way of question customization. Its major drawbacks are its lack of database support for "question banks" and doesn't have any programming specific features. Its user interface is a bit outdated, but it does an adequate job nonetheless. Here's a breakdown of its features:
+      </p>
+      <strong>Good Features:</strong>
+        <ul class="nested">
+          <li>can attach video, sound, and graphics to questions</li>
+          <li>can set window to always be on top, preventing distractions</li>
+        </ul>
+      <strong>Bad Features:</strong>
+        <ul class="nested">
+          <li>no programming specific features</li>
+          <li>antiquated user interface</li>
+        </ul>
+      <strong>Missing features:</strong>
+        <ul class="nested">
+          <li>database functionality doesn't exist</li>
+          <li>no simple way to re-use questions in different tests</li>
+        </ul>
+    </div>
+  </div>
+</body>
+</html>

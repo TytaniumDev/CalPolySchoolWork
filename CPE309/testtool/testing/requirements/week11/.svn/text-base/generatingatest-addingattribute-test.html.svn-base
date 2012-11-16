@@ -1,0 +1,139 @@
+<head>
+<title>2.2.4 - Adding an Attribute Inspection Test</title>
+</head>
+
+<style type="text/css">
+td {
+    border: 1px solid black;
+}
+
+th {
+    border: 1px solid black;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+</style>
+
+<h3>
+2.2.4.  Adding an Attribute Inspection Test
+</h3>
+
+<table>
+<tr>
+    <th>Component</th>
+    <th>Inspector</th>
+    <th>Date</th>
+    <th>Status</th>
+    <th>Remarks</th>
+</tr>
+<tr>
+    <td>2.2.4 H1</td>
+    <td>NMOCK</td>
+    <td>12/6/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.2.4 P1</td>
+    <td>NMOCK</td>
+    <td>12/6/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.2.4 P2</td>
+    <td>NMOCK</td>
+    <td>12/6/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.2.4 P3</td>
+    <td>NMOCK</td>
+    <td>12/6/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.2.4 I1</td>
+    <td>NMOCK</td>
+    <td>12/6/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.2.4 P4</td>
+    <td>NMOCK</td>
+    <td>12/6/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.2.4 I2</td>
+    <td>NMOCK</td>
+    <td>12/6/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.2.4 P5</td>
+    <td>NMOCK</td>
+    <td>12/6/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.2.4 I3</td>
+    <td>NMOCK</td>
+    <td>12/6/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.2.4 P6</td>
+    <td>NMOCK</td>
+    <td>12/6/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.2.4 I4</td>
+    <td>NMOCK</td>
+    <td>12/6/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.2.4 A1</td>
+    <td>NMOCK</td>
+    <td>12/6/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.2.4 A2</td>
+    <td>NMOCK</td>
+    <td>12/6/2010</td>
+    <td>FIX</td>
+    <td>Wrong font size</td>
+</tr>
+<tr>
+    <td>2.2.4 A3</td>
+    <td>NMOCK</td>
+    <td>12/6/2010</td>
+    <td>FIX</td>
+    <td>Wrong font size</td>
+</tr>
+<tr>
+    <td>2.2.4 A4</td>
+    <td>NMOCK</td>
+    <td>12/6/2010</td>
+    <td>FIX</td>
+    <td>Wrong font size</td>
+</tr>
+</table>
+

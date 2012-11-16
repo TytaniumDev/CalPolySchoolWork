@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestTool</title>
+  <link href="../../public/css/layout.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>Test Tool</h1>
+      <h2 class="title"> 2.3.3 Test Generation Step 3 </h2>
+    </div>
+    <div id="content">
+       <!-- this is where you put stuff, replace the ul block with whatever -->
+	 
+      <br/>
+      <p>
+         This is the third step of the Test Generation process. This step allows the Instructor to manually 
+	 change the questions generated so far. The Instructor is shown a list of the questions. The Instructor
+	 is then given the option to add, delete and edit the Questions. He can even go into the Question Database
+	 and search for a suitable question. 
+         </br></br>
+	 The figure below shows the third step's screen:
+      </p>
+      </br>
+         <IMG SRC="Step3RR" id="figure-2-3-3-1" />
+
+      <p align="center">Figure 2.3.3.1: Third step in Test Generation</p>
+	 <br/>
+
+	 <h4> Explanation of Inputs </h4>
+	 <p>
+	    After being shown a list of the questions generated so far, the Instructor can select each individually and decide
+	    to save, delete or edit that question.
+	    </br>
+	    <ol class="nested">
+	       <li> After checkmarking the box beside each question, the Instructor can save that question permanently to the test 
+	            by clicking the button: "SAVE" </li>
+	       <li> After checkmarking the box beside each question, the Instructor can <a href="DeleteQ.html">DELETE</a> that question permanently from the test 
+	            by clicking the button: "DELETE" This will remove it from view.<br/> <br/>
+		    <b>WARNING!</b> Should the Instructor DELETE a Question permanently from the test, the total time for the test MAY VIOLATE the 
+		    Total Time Range constraint! It is up
+		    to the Instructor to decide if he wants to DELETE a Question and thus make the test shorter.</li> 
+	       <li> After checkmarking the box beside each question, the Instructor can <a href="QEdit.html">Edit</a> that question by clicking the button: "EDIT"</li> 
+	       
+	       <li> To move officially generate the test, the instructor will press the button: "GENERATE" This will store a copy of the 
+	            newly made test in the Test Database. The Instructor can retrieve the test by clicking on the "test" tab on the top menu bar. </li>
+	   </ol>
+	 </p>
+
+	 <p>
+	 <br/>
+         <h4> Final Generated Test:</h4><br/>
+	 Figure 2.3.3.2 is a sample Generated Test. <br/><br/>
+
+         <IMG SRC="FinishedTest" id="figure-2-3-3-2"/>
+         <p align="center">Figure 2.3.3.2: Final Generated Test</p>
+
+	 <br/>
+	 <p>
+	 <h4>Remember: </h4>
+	    <ul class="nested">
+	       <li> At any time, the instructor can go to an overview of the test generated so far in the process by 
+	            pressing the button: "TEST PREVIEW" </li>
+	       <li> If the instructor wants to go back to the previous step, he can press the button: "BACK" 
+           </ul>
+    </div>
+
+     <div id="navigation">
+       Prev: <a href="lessLazy.html">Less Lazy</a>  | Next: <a href="QEdit.html">Question Edit</a> | Up: <a href="../functional.html">functional</a> 
+       | Top: <a href="../index.html">index</a>
+     </div>
+  </div>
+</body>
+</html>

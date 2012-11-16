@@ -1,0 +1,46 @@
+/*
+  CPE 365 Lab 6
+  Tyler Holland
+*/
+--1.
+select to_char(bdate, 'MON DD, YYYY') as BIRTHDAY
+from player
+where pname = 'Kobe Bryant' and tname = 'Lakers';
+
+--2.
+select floor(months_between(sysdate, bdate)/12) as AGE
+from player
+where pname = 'Kobe Bryant' and tname = 'Lakers';
+
+--3.
+select pname, 
+       to_char(bdate, 'MON DD, YYYY') as BIRTHDAY, 
+       floor(months_between(sysdate, bdate)/12) as AGE
+from player
+where tname = 'Lakers'
+order by AGE desc, pname;
+
+--4.
+select pname, 
+       floor(months_between(sysdate, bdate)/12) as AGE
+from player
+where tname = 'Lakers'
+order by AGE;
+--5.
+
+
+--6.
+
+
+--7.
+
+
+--8.
+
+
+--9.
+
+
+--10.
+
+

@@ -1,0 +1,78 @@
+Release 9.1.03i ngdbuild J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\ISE91\bin\nt\ngdbuild.exe -ise
+E:/CPE169/Experiment6/Exp6/Exp6.ise -intstyle ise -dd _ngo -nt timestamp -uc
+Exp6.ucf -p xc3s500e-fg320-4 encoder.ngc encoder.ngd
+
+Reading NGO file "E:/CPE169/Experiment6/Exp6/encoder.ngc" ...
+
+Applying constraints in "Exp6.ucf" to the design...
+ERROR:NgdBuild:755 - "Exp6.ucf" Line 1: Could not find net(s) 'A0' in the
+   design.  To suppress this error specify the correct net name or remove the
+   constraint.  The 'Allow Unmatched LOC Constraints' ISE property can also be
+   set ( -aul switch for command line users).
+ERROR:NgdBuild:755 - "Exp6.ucf" Line 2: Could not find net(s) 'A1' in the
+   design.  To suppress this error specify the correct net name or remove the
+   constraint.  The 'Allow Unmatched LOC Constraints' ISE property can also be
+   set ( -aul switch for command line users).
+ERROR:NgdBuild:755 - "Exp6.ucf" Line 3: Could not find net(s) 'A2' in the
+   design.  To suppress this error specify the correct net name or remove the
+   constraint.  The 'Allow Unmatched LOC Constraints' ISE property can also be
+   set ( -aul switch for command line users).
+ERROR:NgdBuild:755 - "Exp6.ucf" Line 4: Could not find net(s) 'A3' in the
+   design.  To suppress this error specify the correct net name or remove the
+   constraint.  The 'Allow Unmatched LOC Constraints' ISE property can also be
+   set ( -aul switch for command line users).
+ERROR:NgdBuild:755 - "Exp6.ucf" Line 5: Could not find net(s) 'Display<0>' in
+   the design.  To suppress this error specify the correct net name or remove
+   the constraint.  The 'Allow Unmatched LOC Constraints' ISE property can also
+   be set ( -aul switch for command line users).
+ERROR:NgdBuild:755 - "Exp6.ucf" Line 6: Could not find net(s) 'Display<1>' in
+   the design.  To suppress this error specify the correct net name or remove
+   the constraint.  The 'Allow Unmatched LOC Constraints' ISE property can also
+   be set ( -aul switch for command line users).
+ERROR:NgdBuild:755 - "Exp6.ucf" Line 7: Could not find net(s) 'Display<2>' in
+   the design.  To suppress this error specify the correct net name or remove
+   the constraint.  The 'Allow Unmatched LOC Constraints' ISE property can also
+   be set ( -aul switch for command line users).
+ERROR:NgdBuild:755 - "Exp6.ucf" Line 8: Could not find net(s) 'Display<3>' in
+   the design.  To suppress this error specify the correct net name or remove
+   the constraint.  The 'Allow Unmatched LOC Constraints' ISE property can also
+   be set ( -aul switch for command line users).
+ERROR:NgdBuild:755 - "Exp6.ucf" Line 9: Could not find net(s) 'Display<4>' in
+   the design.  To suppress this error specify the correct net name or remove
+   the constraint.  The 'Allow Unmatched LOC Constraints' ISE property can also
+   be set ( -aul switch for command line users).
+ERROR:NgdBuild:755 - "Exp6.ucf" Line 10: Could not find net(s) 'Display<5>' in
+   the design.  To suppress this error specify the correct net name or remove
+   the constraint.  The 'Allow Unmatched LOC Constraints' ISE property can also
+   be set ( -aul switch for command line users).
+ERROR:NgdBuild:755 - "Exp6.ucf" Line 11: Could not find net(s) 'Display<6>' in
+   the design.  To suppress this error specify the correct net name or remove
+   the constraint.  The 'Allow Unmatched LOC Constraints' ISE property can also
+   be set ( -aul switch for command line users).
+ERROR:NgdBuild:755 - "Exp6.ucf" Line 12: Could not find net(s) 'DP' in the
+   design.  To suppress this error specify the correct net name or remove the
+   constraint.  The 'Allow Unmatched LOC Constraints' ISE property can also be
+   set ( -aul switch for command line users).
+ERROR:NgdBuild:755 - "Exp6.ucf" Line 13: Could not find net(s) 'L13' in the
+   design.  To suppress this error specify the correct net name or remove the
+   constraint.  The 'Allow Unmatched LOC Constraints' ISE property can also be
+   set ( -aul switch for command line users).
+ERROR:NgdBuild:755 - "Exp6.ucf" Line 14: Could not find net(s) 'L14' in the
+   design.  To suppress this error specify the correct net name or remove the
+   constraint.  The 'Allow Unmatched LOC Constraints' ISE property can also be
+   set ( -aul switch for command line users).
+ERROR:NgdBuild:755 - "Exp6.ucf" Line 15: Could not find net(s) 'N17' in the
+   design.  To suppress this error specify the correct net name or remove the
+   constraint.  The 'Allow Unmatched LOC Constraints' ISE property can also be
+   set ( -aul switch for command line users).
+ERROR:NgdBuild:755 - "Exp6.ucf" Line 16: Could not find net(s) 'R17' in the
+   design.  To suppress this error specify the correct net name or remove the
+   constraint.  The 'Allow Unmatched LOC Constraints' ISE property can also be
+   set ( -aul switch for command line users).
+ERROR:Parsers:11 - Encountered unrecognized constraint while parsing.
+ERROR:NgdBuild:19 - Errors found while parsing constraint file "Exp6.ucf".
+
+Writing NGDBUILD log file "encoder.bld"...

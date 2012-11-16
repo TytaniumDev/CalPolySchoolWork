@@ -1,0 +1,16 @@
+/*
+  CPE 365 Lab 7c
+  Tyler Holland
+*/
+
+set AUTOCOMMIT OFF
+whenever oserror
+continue commit;
+whenever sqlerror
+continue commit;
+
+select *
+from zipcodes;
+
+select *
+from customers;

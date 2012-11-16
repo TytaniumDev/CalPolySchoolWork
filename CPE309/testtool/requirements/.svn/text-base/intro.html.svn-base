@@ -1,0 +1,53 @@
+<?
+$title = "Introduction";
+require "../header.php";
+?>
+<a name="Introduction">
+<h2>
+1.  Introduction
+</h2>
+</a>
+<p>
+This outline defines the requirements for a piece of software which that allows for the production, taking, and grading of exams. Once exam data is entered into a centralized database, the bank of questions can be automatically selected and compiled based on options/parameters set by the instructor. Students can take the exams in a secure environment with a central computer (server) serving out the test questions to the client computers (students). This product will save time for instructors because all test data will be saved, and exams can be generated as to not reuse old exam questions as well as presenting questions in a random order if specified. Statistical data can be made available so class performance can be accurately and precisely analyzed, as well as be used to generate future exams based on past student performance. An instructor can also easily generate practice exams.
+</p><p>
+Further introductory material is presented in these subsections:
+<ul>
+<li>
+<a href="problem.html">
+problem statement for the the Calendar Tool project
+</a>
+<li>
+<a href="personnel.html">
+project personnel
+</a>
+<li>
+<a href="setting.html">
+operational setting
+</a>
+<li>
+<a href="impacts.html">
+impacts of an installed product
+</a>
+<li>
+<a href="related.html">
+related systems
+</a>
+</ul>
+
+
+<br>
+<br>
+<br>
+<br>
+<hr width=80% size=3>
+<center>
+<font size=-1>
+<font color=black> Prev: </font>[none]
+ | <font color=black> Next: </font><a href="problem.html">Problem Statement</a>
+ | <font color=black> Up: </font><a href="index.html">Index</a>
+ | <font color=black> Top: </font><a href="index.html">Index</a></font>
+</center>
+<hr width=80% size=3>
+<?
+require "../footer.php";
+?>

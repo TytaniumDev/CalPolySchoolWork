@@ -1,0 +1,15 @@
+<html>
+<head>
+<title>SpecL Data Dictionary</title>
+<frameset cols="20%,80%">
+<frameset rows="24%,38%,38%">
+<frame src="module-index.html" name="moduleIndexFrame">
+<frame src="all-objs-index.html" name="objsIndexFrame">
+<frame src="all-ops-index.html" name="opsIndexFrame">
+</frameset>
+<frameset rows="70%,30%">
+<frame src="dd.html" name="dictFrame">
+<frame src="dd-tree.html" name="treeFrame">
+</frameset>
+</frameset>
+</head>

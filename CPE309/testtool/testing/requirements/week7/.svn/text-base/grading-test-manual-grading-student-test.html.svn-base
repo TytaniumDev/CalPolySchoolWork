@@ -1,0 +1,70 @@
+<head>
+<title>2.6.3.1 - Grading By Student Inspection Test</title>
+</head>
+
+<style type="text/css">
+td {
+    border: 1px solid black;
+}
+
+th {
+    border: 1px solid black;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+</style>
+
+<h3>
+2.6.3.1  Grading By Student Inspection Test
+</h3>
+
+<table>
+<tr>
+    <th>Component</th>
+    <th>Inspector</th>
+    <th>Date</th>
+    <th>Status</th>
+    <th>Remarks</th>
+</tr>
+<tr>
+    <td>2.6.3.1 H1</td>
+    <td>SMH</td>
+    <td>11/5/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.6.3.1 P1</td>
+    <td>SMH</td>
+    <td>11/5/2010</td>
+    <td>FIX</td>
+    <td>Placeholder needs to be replaced</td>
+</tr>
+<tr>
+    <td>2.6.3.1 A1</td>
+    <td>SMH</td>
+    <td>11/5/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.6.3.1 A2</td>
+    <td>SMH</td>
+    <td>11/5/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.6.3.1 A3</td>
+    <td>SMH</td>
+    <td>11/5/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+
+</table>
+

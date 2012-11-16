@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestTool | Requirements | Test Reports</title>
+  <link href="../../public/css/layout.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>TestTool</h1>
+      <h2 class="title">2.4 Test Reports</h2>
+    </div>
+    <div id="content">
+      <p>
+        The screen below will greet a student after they do a web login.<br/><br/>
+        <img src="StudentWebHome.png" height="400" width="600"/>
+         <p align="center">Figure 2.4.1: Student Home</p>
+          Settings leads to account settings(password, reporting email, etc.)
+          <br/><br/>
+          Logout ends the current session
+          <br/><br/>
+          The calendar displays upcoming tests. After taking a test, it becomes a link
+           to the report.
+          <br/><br/>
+          My classes tab lists currently enrolled classes which are links to class 
+           homes
+          <br/><br/>
+          Previous classes tab lists previous courses you have taken, grade reports 
+           are 
+           still available.
+          <br/><br/>
+          Class Announcements lists announcements and reminders from teachers.
+          <br/><br/><br/>
+          The following screen pops up when the student clicks on a class page<br/><br/>
+        <img src="ClassHome.png" height="400" width="600"/>
+         <p align="center">Figure 2.4.2: Class Page</p>
+          All lists all available reports regardless of type
+          <br/><br/>
+          Quizzes list all available quiz reports
+          <br/><br/>
+          Tests lists all available test reports
+          <br/><br/>
+          Calendar and class announcements are the same as before except for a 
+           specific class
+          <br/><br/><br/>
+          The following screen pops up when the student clicks on a test<br/><br/>
+        <img src="GradeReport.png" height="400" width="600"/>
+         <p align="center">Figure 2.4.3: Grade Report</p>
+          Click arrow next to test question to expand and display the question 
+           itself, correct answer, your answer, and feedback
+          <br/><br/>
+          Expand all expands all the questions<br/><br/>
+
+      </p>
+    </div>
+  </div>
+</body>
+</html>

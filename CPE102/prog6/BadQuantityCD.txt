@@ -1,0 +1,1 @@
+CD, 3000, -5701, Description 3000, 3000.11, 3000.22, Some Title 3000, Artist Last3000, Artist First3000, Artist Middle3000

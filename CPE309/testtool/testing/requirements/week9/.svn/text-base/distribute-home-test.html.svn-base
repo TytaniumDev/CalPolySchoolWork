@@ -1,0 +1,104 @@
+<head>
+<title>2.4.2.2 - Take at Home Inspection Test</title>
+</head>
+
+<style type="text/css">
+td {
+    border: 1px solid black;
+}
+
+th {
+    border: 1px solid black;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+</style>
+
+<h3>
+2.4.2.  Take at Home Inspection Test
+</h3>
+
+<table>
+<tr>
+    <th>Component</th>
+    <th>Inspector</th>
+    <th>Date</th>
+    <th>Status</th>
+    <th>Remarks</th>
+</tr>
+<tr>
+    <td>2.4.2.2 H1</td>
+    <td>RAS</td>
+    <td>11/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4.2.2 P1</td>    
+    <td>RAS</td>
+    <td>11/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4.2.2 A1</td>
+    <td>RAS</td>
+    <td>11/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4.2.2 P2</td>
+    <td>RAS</td>
+    <td>11/22/2010</td>
+    <td>FIX</td>
+    <td>"the system will display" -- "the system displays"</td>
+</tr>
+<tr>
+    <td>2.4.2.2 I1</td>
+    <td>RAS</td>
+    <td>11/22/2010</td>
+    <td>FIX</td>
+    <td>Image does not exist</td>
+</tr>
+<tr>
+    <td>2.4.2.2 P3</td>
+    <td>RAS</td>
+    <td>11/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4.2.2 A2</td>
+    <td>RAS</td>
+    <td>11/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4.2.2 A3</td>
+    <td>RAS</td>
+    <td>11/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4.2.2 A4</td>
+    <td>RAS</td>
+    <td>11/22/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4.2.2 P4</td>
+    <td>RAS</td>
+    <td>11/22/2010</td>
+    <td>FIX</td>
+    <td>"will be able to take" -- "can take"</td>
+</tr>
+</table>
+

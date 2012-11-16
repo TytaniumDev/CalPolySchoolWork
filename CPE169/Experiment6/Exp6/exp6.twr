@@ -1,0 +1,78 @@
+--------------------------------------------------------------------------------
+Release 9.1.03i Trace 
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\ISE91\bin\nt\trce.exe -ise E:/CPE169/Experiment6/Exp6/Exp6.ise
+-intstyle ise -e 3 -s 4 -xml Exp6 Exp6.ncd -o Exp6.twr Exp6.pcf -ucf Exp6.ucf
+
+Design file:              exp6.ncd
+Physical constraint file: exp6.pcf
+Device,package,speed:     xc3s500e,fg320,-4 (PRODUCTION 1.26 2006-10-19)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+L13            |Display<0>     |    7.619|
+L13            |Display<1>     |    7.247|
+L13            |Display<2>     |    7.934|
+L13            |Display<3>     |    7.620|
+L13            |Display<4>     |    7.919|
+L13            |Display<5>     |    7.651|
+L13            |Display<6>     |    6.595|
+L14            |Display<0>     |    7.876|
+L14            |Display<1>     |    7.444|
+L14            |Display<2>     |    8.191|
+L14            |Display<3>     |    8.469|
+L14            |Display<4>     |    8.383|
+L14            |Display<5>     |    7.848|
+L14            |Display<6>     |    7.417|
+N17            |Display<0>     |    8.845|
+N17            |Display<1>     |    8.478|
+N17            |Display<2>     |    9.160|
+N17            |Display<3>     |    8.319|
+N17            |Display<4>     |    9.297|
+N17            |Display<5>     |    8.882|
+N17            |Display<6>     |    7.332|
+R17            |Display<0>     |    8.471|
+R17            |Display<1>     |    8.064|
+R17            |Display<2>     |    8.786|
+R17            |Display<3>     |    8.486|
+R17            |Display<4>     |    8.814|
+R17            |Display<5>     |    8.468|
+R17            |Display<6>     |    7.492|
+---------------+---------------+---------+
+
+
+Analysis completed Wed May 13 17:09:49 2009 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 109 MB
+
+
+

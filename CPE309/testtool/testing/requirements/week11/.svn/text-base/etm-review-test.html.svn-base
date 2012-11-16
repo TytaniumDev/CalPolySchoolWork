@@ -1,0 +1,91 @@
+<head>
+<title>1.5.3 - Easy Test Maker Inspection Test</title>
+</head>
+
+<style type="text/css">
+td {
+    border: 1px solid black;
+}
+
+th {
+    border: 1px solid black;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+</style>
+
+<h3>
+1.5.3. Easy Test Maker Inspection Test
+</h3>
+
+<table>
+<tr>
+    <th>Component</th>
+    <th>Inspector</th>
+    <th>Date</th>
+    <th>Status</th>
+    <th>Remarks</th>
+</tr>
+<tr>
+    <td>1.5.3 H1</td>
+    <td>NMOCK</td>
+    <td>12/6/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>1.5.3 P1</td>
+    <td>NMOCK</td>
+    <td>12/6/2010</td>
+    <td>FIX</td>
+    <td>Use "present tense, third person, active voice"</td>
+</tr>
+<tr>
+    <td>1.5.3 P2</td>
+    <td>NMOCK</td>
+    <td>12/6/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>1.5.3 P3</td>
+    <td>NMOCK</td>
+    <td>12/6/2010</td>
+    <td>FIX</td>
+    <td>Use "present tense, third person, active voice"</td>
+</tr>
+<tr>
+    <td>1.5.3 A1</td>
+    <td>NMOCK</td>
+    <td>12/6/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>1.5.3 A2</td>
+    <td>NMOCK</td>
+    <td>12/6/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>1.5.3 A3</td>
+    <td>NMOCK</td>
+    <td>12/6/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>1.5.3 A4</td>
+    <td>NMOCK</td>
+    <td>12/6/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+
+</table>
+

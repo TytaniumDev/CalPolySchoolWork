@@ -1,0 +1,541 @@
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.0   1948   292 ?        Ss   Oct18   0:17 /sbin/init
+root         2  0.0  0.0      0     0 ?        S<   Oct18   0:00 [kthreadd]
+root         3  0.0  0.0      0     0 ?        S<   Oct18   0:30 [migration/0]
+root         4  0.0  0.0      0     0 ?        S<   Oct18   4:28 [ksoftirqd/0]
+root         5  0.0  0.0      0     0 ?        S<   Oct18   0:01 [watchdog/0]
+root         6  0.0  0.0      0     0 ?        S<   Oct18   0:33 [migration/1]
+root         7  0.0  0.0      0     0 ?        S<   Oct18   5:09 [ksoftirqd/1]
+root         8  0.0  0.0      0     0 ?        S<   Oct18   0:00 [watchdog/1]
+root         9  0.0  0.0      0     0 ?        S<   Oct18   0:27 [migration/2]
+root        10  0.0  0.0      0     0 ?        S<   Oct18   1:47 [ksoftirqd/2]
+root        11  0.0  0.0      0     0 ?        S<   Oct18   0:00 [watchdog/2]
+root        12  0.0  0.0      0     0 ?        S<   Oct18   0:20 [migration/3]
+root        13  0.0  0.0      0     0 ?        S<   Oct18   1:14 [ksoftirqd/3]
+root        14  0.0  0.0      0     0 ?        S<   Oct18   0:00 [watchdog/3]
+root        15  0.0  0.0      0     0 ?        S<   Oct18   0:21 [events/0]
+root        16  0.0  0.0      0     0 ?        S<   Oct18   0:16 [events/1]
+root        17  0.0  0.0      0     0 ?        S<   Oct18   0:07 [events/2]
+root        18  0.0  0.0      0     0 ?        S<   Oct18   0:06 [events/3]
+root        19  0.0  0.0      0     0 ?        S<   Oct18   0:00 [khelper]
+root        74  0.0  0.0      0     0 ?        S<   Oct18   0:01 [kblockd/0]
+root        75  0.0  0.0      0     0 ?        S<   Oct18   0:10 [kblockd/1]
+root        76  0.0  0.0      0     0 ?        S<   Oct18   0:02 [kblockd/2]
+root        77  0.0  0.0      0     0 ?        S<   Oct18   0:00 [kblockd/3]
+root        79  0.0  0.0      0     0 ?        S<   Oct18   0:00 [kacpid]
+root        80  0.0  0.0      0     0 ?        S<   Oct18   0:00 [kacpi_notify]
+root       136  0.0  0.0      0     0 ?        S<   Oct18   0:00 [cqueue]
+root       138  0.0  0.0      0     0 ?        S<   Oct18   0:00 [ksuspend_usbd]
+root       143  0.0  0.0      0     0 ?        S<   Oct18   0:00 [khubd]
+root       146  0.0  0.0      0     0 ?        S<   Oct18   0:00 [kseriod]
+root       198  0.0  0.0      0     0 ?        S    Oct18   1:10 [pdflush]
+root       199  0.0  0.0      0     0 ?        S    Oct18   0:57 [pdflush]
+root       200  0.0  0.0      0     0 ?        S<   Oct18   6:19 [kswapd0]
+root       243  0.0  0.0      0     0 ?        S<   Oct18   0:00 [aio/0]
+root       244  0.0  0.0      0     0 ?        S<   Oct18   0:00 [aio/1]
+root       245  0.0  0.0      0     0 ?        S<   Oct18   0:00 [aio/2]
+root       246  0.0  0.0      0     0 ?        S<   Oct18   0:00 [aio/3]
+mwrosen    320  0.0  0.2  15172  2868 pts/116  S+   22:25   0:00 vim arrayfromfile.c
+sohuynh    327  0.0  0.0   1676   436 pts/62   T    22:25   0:00 a.out
+root       397  0.0  0.0      0     0 ?        S<   Oct18   0:00 [kpsmoused]
+root       474  0.0  0.0      0     0 ?        S<   Oct18   0:00 [scsi_eh_0]
+root       490  0.0  0.0      0     0 ?        S<   Oct18   0:08 [kjournald]
+root       538  0.0  0.0   2592   224 ?        S<s  Oct18   0:01 /sbin/udevd -d
+root       588  0.0  0.2  15064  3000 ?        Ss   17:14   0:00 sshd: ttonder [priv]
+root       680  0.0  0.0      0     0 ?        S<   Oct18   1:00 [ata/0]
+root       682  0.0  0.0      0     0 ?        S<   Oct18   0:01 [ata/1]
+root       685  0.0  0.0      0     0 ?        S<   Oct18   0:01 [ata/2]
+root       693  0.0  0.0      0     0 ?        S<   Oct18   1:46 [ata/3]
+root       697  0.0  0.0      0     0 ?        S<   Oct18   0:00 [ata_aux]
+root       745  0.0  0.0      0     0 ?        S<   Oct18   1:55 [scsi_eh_1]
+root       747  0.0  0.0      0     0 ?        S<   Oct18   0:00 [scsi_eh_2]
+root       799  0.0  0.0      0     0 ?        S<   Oct18   0:10 [kauditd]
+sohuynh    883  0.0  0.0   1676   436 pts/62   T    22:28   0:00 a.out
+root      1313  0.0  0.0      0     0 ?        S<   Oct18   0:00 [kstriped]
+root      1326  0.0  0.0      0     0 ?        S<   Oct18   0:00 [kmpathd/0]
+root      1327  0.0  0.0      0     0 ?        S<   Oct18   0:00 [kmpathd/1]
+root      1328  0.0  0.0      0     0 ?        S<   Oct18   0:00 [kmpathd/2]
+root      1329  0.0  0.0      0     0 ?        S<   Oct18   0:00 [kmpathd/3]
+root      1424  0.0  0.0      0     0 ?        S<   Oct18   0:44 [kjournald]
+root      1425  0.0  0.0      0     0 ?        S<   Oct18   0:00 [kjournald]
+root      1426  0.0  0.0      0     0 ?        S<   Oct18   0:50 [kjournald]
+root      1427  0.0  0.0      0     0 ?        S<   Oct18   0:00 [kjournald]
+ttonder   1558  0.0  0.1  15064  1628 ?        S    17:15   0:02 sshd: ttonder@pts/49,pts/111
+mhui      1744  0.0  0.1  15312  1264 pts/63   S+   Oct31   0:00 vim interpreter.sml
+root      1805  0.0  0.0  13360   500 ?        S<sl Oct18   1:22 auditd
+root      1807  0.0  0.0  14280   576 ?        S<sl Oct18   0:47 /sbin/audispd
+root      1819  0.0  0.0  35416   764 ?        Sl   Oct18   2:16 rsyslogd -c 3
+root      1831  0.0  0.0   2852   300 ?        Ss   Oct18   0:46 irqbalance
+rpc       1838  0.0  0.0   2336   268 ?        Ss   Oct18   0:00 rpcbind
+rpcuser   1857  0.0  0.0   2072   276 ?        Ss   Oct18   0:00 rpc.statd
+jtdreisb  1873  0.0  0.2  15192  3048 pts/60   S+   22:31   0:00 vim -p mytar.c
+jtdreisb  1874  0.0  0.0   2476   576 pts/60   S+   22:31   0:00 /usr/bin/cscope -dl -f cscope.out
+root      1887  0.0  0.0      0     0 ?        S<   Oct18   9:20 [rpciod/0]
+root      1888  0.2  0.0      0     0 ?        S<   Oct18  60:14 [rpciod/1]
+root      1889  0.0  0.0      0     0 ?        S<   Oct18   3:28 [rpciod/2]
+root      1891  0.0  0.0      0     0 ?        S<   Oct18   3:07 [rpciod/3]
+root      1898  0.0  0.0   5884   472 ?        Ss   Oct18   0:10 rpc.idmapd
+root      1934  0.0  0.0   3212   352 ?        Ss   Oct18   0:37 rpc.gssd
+dbus      1948  0.0  0.0   9608   340 ?        Ss   Oct18   0:01 dbus-daemon --system
+root      1999  0.0  0.0  23200   464 ?        Ssl  Oct18   0:00 pcscd
+root      2008  0.0  0.0   1824   260 ?        Ss   Oct18   0:00 /usr/sbin/acpid
+68        2017  0.0  0.1  12280  1160 ?        Ss   Oct18   0:51 hald
+root      2020  0.0  0.0   9448   620 ?        Ssl  Oct18   0:00 /usr/sbin/console-kit-daemon
+root      2021  0.0  0.0   3604   400 ?        S    Oct18   0:00 hald-runner
+root      2101  0.0  0.0   3680   340 ?        S    Oct18   0:00 hald-addon-input: Listening on /dev/input/event4 /dev/input/event1
+root      2106  0.0  0.0   3684   388 ?        S    Oct18   2:16 hald-addon-storage: polling /dev/sr0 (every 2 sec)
+68        2110  0.0  0.0   2204   268 ?        S    Oct18   0:00 hald-addon-acpi: listening on acpid socket /var/run/acpid.socket
+root      2118  0.0  0.0   3684   384 ?        S    Oct18   0:12 hald-addon-storage: no polling on /dev/fd0 because it is explicitly disabled
+cwallis   2123  0.0  0.0  13280   236 ?        Ss   Oct27   0:00 SCREEN
+cwallis   2124  0.0  0.0   8920   560 pts/37   Ss+  Oct27   0:00 /bin/bash
+cwallis   2134  0.0  0.0   8920   560 pts/47   Ss+  Oct27   0:00 /bin/bash
+cwallis   2152  0.0  0.0   8920   560 pts/78   Ss+  Oct27   0:00 /bin/bash
+root      2250  0.0  0.0   2164   192 ?        Ss   Oct18   0:00 /usr/bin/vmnet-bridge -d /var/run/vmnet-bridge-0.pid -n 0 -i eth1
+root      2262  0.0  0.0   2828    72 ?        Ss   Oct18   0:00 /usr/bin/vmnet-dhcpd -cf /etc/vmware/vmnet1/dhcpd/dhcpd.conf -lf /etc/vmware/vmnet1/dhcpd/dhcpd.leases -pf /var/run/vmnet-dhcpd-vmnet1.pid vmnet1
+root      2280  0.0  0.0   2828    72 ?        Ss   Oct18   0:00 /usr/bin/vmnet-dhcpd -cf /etc/vmware/vmnet8/dhcpd/dhcpd.conf -lf /etc/vmware/vmnet8/dhcpd/dhcpd.leases -pf /var/run/vmnet-dhcpd-vmnet8.pid vmnet8
+root      2285  0.0  0.0   2628   288 ?        Ss   Oct18   4:26 /usr/bin/vmnet-natd -d /var/run/vmnet-natd-8.pid -m /var/run/vmnet-natd-8.mac -c /etc/vmware/vmnet8/nat/nat.conf
+sohuynh   2484  0.0  0.0   1676   436 pts/62   T    22:33   0:00 a.out
+root      2551  0.0  0.0   4796   464 ?        S    Oct18   0:00 /bin/sh /usr/bin/vmware-watchdog -s webAccess -u 30 -q 5 /usr/lib/vmware/webAccess/java/jre1.5.0_15/bin/webAccess -client -Xmx64m -XX:MinHeapFreeRatio=30 -XX:MaxHeapFreeRatio=30 -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djava.endorsed.dirs=/usr/lib/vmware/webAccess/tomcat/apache-tomcat-6.0.16/common/endorsed -classpath /usr/lib/vmware/webAccess/tomcat/apache-tomcat-6.0.16/bin/bootstrap.jar:/usr/lib/vmware/webAccess/tomcat/apache-tomcat-6.0.16/bin/commons-logging-api.jar -Dcatalina.base=/usr/lib/vmware/webAccess/tomcat/apache-tomcat-6.0.16 -Dcatalina.home=/usr/lib/vmware/webAccess/tomcat/apache-tomcat-6.0.16 -Djava.io.tmpdir=/usr/lib/vmware/webAccess/tomcat/apache-tomcat-6.0.16/temp org.apache.catalina.startup.Bootstrap start
+root      2556  0.0  0.0   2640   184 ?        Ss   Oct18   0:14 /usr/sbin/vmware-authdlauncher
+root      2561  0.0  0.6 247176  6500 ?        Ssl  Oct18   4:01 /usr/lib/vmware/webAccess/java/jre1.5.0_15/bin/webAccess -client -Xmx64m -XX:MinHeapFreeRatio=30 -XX:MaxHeapFreeRatio=30 -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djava.endorsed.dirs=/usr/lib/vmware/webAccess/tomcat/apache-tomcat-6.0.16/common/endorsed -classpath /usr/lib/vmware/webAccess/tomcat/apache-tomcat-6.0.16/bin/bootstrap.jar:/usr/lib/vmware/webAccess/tomcat/apache-tomcat-6.0.16/bin/commons-logging-api.jar -Dcatalina.base=/usr/lib/vmware/webAccess/tomcat/apache-tomcat-6.0.16 -Dcatalina.home=/usr/lib/vmware/webAccess/tomcat/apache-tomcat-6.0.16 -Djava.io.tmpdir=/usr/lib/vmware/webAccess/tomcat/apache-tomcat-6.0.16/temp org.apache.catalina.startup.Bootstrap start
+root      2665  0.0  0.0   2140    76 ?        Ss   Oct18   0:00 /usr/bin/vmnet-netifup -d /var/run/vmnet-netifup-vmnet8.pid /dev/vmnet8 vmnet8
+root      2668  0.0  0.0   2140    76 ?        Ss   Oct18   0:00 /usr/bin/vmnet-netifup -d /var/run/vmnet-netifup-vmnet1.pid /dev/vmnet1 vmnet1
+root      2691  0.0  0.2  76220  2252 ?        Ssl  Oct18   2:57 /usr/lib/vmware/bin/vmware-hostd -a -d -u /etc/vmware/hostd/config.xml
+nscd      2738  0.0  9.1 1333760 94440 ?       Ssl  Oct18  15:20 /usr/sbin/nscd
+root      2860  0.0  0.0  11260   440 ?        Ss   Oct18   1:23 /usr/sbin/sshd
+root      2873  0.0  0.0   6688   308 ?        Ss   Oct18   0:00 xinetd -stayalive -pidfile /var/run/xinetd.pid
+ntp       2881  0.0  0.0   8952   616 ?        Ss   Oct18   0:02 ntpd -u ntp:ntp -p /var/run/ntpd.pid -g
+root      2885  0.0  0.3  15064  3580 ?        Ss   22:35   0:00 sshd: aomiller [priv]
+root      2901  0.0  0.0  14268   672 ?        Ss   Oct18   0:44 sendmail: accepting connections
+smmsp     2909  0.0  0.0  12904   480 ?        Ss   Oct18   0:00 sendmail: Queue runner@01:00:00 for /var/spool/clientmqueue
+aomiller  2912  0.0  0.2  15064  2084 ?        S    22:35   0:00 sshd: aomiller@pts/11
+aomiller  2914  0.0  0.1   8924  1544 pts/11   Ss+  22:35   0:00 -bash
+root      2918  0.0  0.0  14092   756 ?        Ss   Oct18   1:12 crond
+kschapan  3132  0.0  0.0   6880   312 ?        Ss   Oct30   0:00 /bin/dbus-daemon --fork --print-pid 11 --print-address 15 --session
+kschapan  3134  0.0  0.0  10356   792 ?        S    Oct30   0:00 /usr/libexec/gvfsd
+kschapan  3167  0.0  0.0  10596   848 ?        S    Oct30   0:00 /usr/libexec/gvfsd-burn --spawner :1.1 /org/gtk/gvfs/exec_spaw/1
+root      3228  0.0  0.0  14912   520 ?        Ss   Oct18   0:00 cupsd
+root      3271  0.0  0.0   9688   404 ?        Ss   Oct18   0:26 kerneloops
+root      3272  0.0  0.3  15064  3568 ?        Ss   22:36   0:00 sshd: lgarofal [priv]
+root      3278  0.0  0.0   6368   284 ?        Ss   Oct18   0:00 /usr/sbin/atd
+lgarofal  3286  0.0  0.2  15064  2152 ?        S    22:36   0:00 sshd: lgarofal@notty
+lgarofal  3288  0.0  0.1  10872  1604 ?        Ss   22:36   0:00 /usr/libexec/openssh/sftp-server
+root      3305  0.0  0.0   8788   204 ?        S    Oct18   0:00 /bin/bash /etc/rc5.d/S98csl-logmonitor start
+root      3306  0.0  0.0   3900   232 ?        S    Oct18   0:10 tail -F /var/log/messages
+root      3307  0.0  0.3  14932  3120 ?        Ss   22:36   0:00 sshd: jtdreisb [priv]
+root      3308  0.0  0.0   9044   380 ?        S    Oct18   0:22 /bin/bash /etc/rc5.d/S98csl-logmonitor start
+jtdreisb  3310  0.0  0.3  16804  3408 ?        S    22:36   0:00 sshd: jtdreisb@pts/77
+jtdreisb  3311  0.0  0.1   8956  1680 pts/77   Ss+  22:36   0:00 -bash
+root      3366  0.0  0.0   9756   168 ?        Ss   Oct18   0:00 sudoscriptd: main
+root      3422  0.0  0.0   8792   432 ?        S    Oct18   0:01 /bin/sh /etc/rc5.d/S99csl-updatesd start
+root      3432  0.0  0.3  15064  3548 ?        Ss   22:36   0:00 sshd: lgarofal [priv]
+lgarofal  3439  0.0  0.2  15064  2136 ?        S    22:36   0:00 sshd: lgarofal@notty
+lgarofal  3441  0.0  0.1  10872  1540 ?        Ss   22:36   0:00 /usr/libexec/openssh/sftp-server
+root      3445  0.0  0.0   9756   156 ?        Ss   Oct18   0:00 sudoscriptd: merger
+root      3449  0.0  0.0  11288   552 ?        Ss   Oct18   0:00 /usr/sbin/gdm-binary -nodaemon
+root      3450  0.0  0.0   1812   196 tty4     Ss+  Oct18   0:00 /sbin/mingetty tty4
+root      3451  0.0  0.0   1812   196 tty5     Ss+  Oct18   0:00 /sbin/mingetty tty5
+root      3452  0.0  0.0   1812   196 tty2     Ss+  Oct18   0:00 /sbin/mingetty tty2
+root      3453  0.0  0.0   1812   196 tty3     Ss+  Oct18   0:00 /sbin/mingetty tty3
+root      3454  0.0  0.0   1812   196 tty1     Ss+  Oct18   0:00 /sbin/mingetty tty1
+root      3455  0.0  0.0   1812   196 tty6     Ss+  Oct18   0:00 /sbin/mingetty tty6
+sohuynh   3510  0.0  0.0   1676   436 pts/62   T    22:37   0:00 a.out
+amarti51  3535  0.0  0.0   1672   324 ?        S    Nov04   0:00 sleeper
+root      3559  0.0  0.0  11648   552 ?        S    Oct18   0:00 /usr/libexec/gdm-simple-slave --display-id /org/gnome/DisplayManager/Display1
+root      3560  0.2  0.1  15996  1324 tty7     Ss+  Oct18  65:51 /usr/bin/Xorg :0 -br -verbose -auth /var/run/gdm/auth-cookie-XXYR6IKV-for-gdm -nolisten tcp
+root      3664  0.0  0.2  15064  2992 ?        Ss   20:12   0:00 sshd: jdamelio [priv]
+gdm       3669  0.0  0.0   7080   240 ?        S    Oct18   0:00 /usr/bin/dbus-launch --exit-with-session
+gdm       3670  0.0  0.0   6880   184 ?        Ss   Oct18   0:00 /bin/dbus-daemon --fork --print-pid 5 --print-address 7 --session
+gdm       3671  0.0  0.3  60472  4072 ?        Ssl  Oct18   3:47 /usr/libexec/gdm-simple-greeter
+gdm       3678  0.0  0.0  12092   756 ?        S    Oct18   0:02 /usr/libexec/gconfd-2 5
+jdamelio  3684  0.1  0.1  15484  1576 ?        S    20:12   0:12 sshd: jdamelio@pts/75
+jdamelio  3686  0.0  0.1   8924  1528 pts/75   Ss   20:12   0:00 -bash
+gdm       3710  0.0  0.0  17684  1016 ?        S    Oct18  17:59 /usr/libexec/at-spi-registryd
+gdm       3712  0.0  0.0  34528   544 ?        Ssl  Oct18   0:00 /usr/libexec/bonobo-activation-server --ac-activate --ior-output-fd=13
+gdm       3721  0.0  0.0  47380   756 ?        Sl   Oct18   0:01 /usr/libexec/gnome-settings-daemon
+gdm       3724  0.0  0.0  11144   580 ?        S    Oct18   3:31 /usr/bin/pulseaudio --log-target=syslog
+gdm       3725  0.0  0.0  32168  1004 ?        Ss   Oct18   0:03 gnome-power-manager
+gdm       3757  0.0  0.0   9640   448 ?        S    Oct18   0:00 /usr/libexec/pulse/gconf-helper
+gdm       3769  0.0  0.0   6312   500 ?        S    Oct18   0:00 /usr/libexec/gvfsd
+gdm       3771  0.0  0.1  21488  1104 ?        S    Oct18   0:12 metacity --replace
+amarti51  3972  0.0  0.0   1672   324 ?        S    Nov04   0:00 sleeper
+root      4710  0.0  0.3  15064  3588 ?        Ss   22:43   0:00 sshd: lgarofal [priv]
+lgarofal  4723  0.0  0.2  15064  2132 ?        S    22:43   0:00 sshd: lgarofal@pts/54
+lgarofal  4726  0.0  0.1   8924  1576 pts/54   Ss   22:43   0:00 -bash
+lgarofal  4840  0.0  0.7  25448  7508 pts/54   S+   22:43   0:00 sqlplus
+root      4920  0.0  0.0   3796   428 ?        S    Oct18   0:00 /usr/libexec/gdm-session-worker
+mshak     5026  0.0  0.0   6880   180 ?        Ss   Oct19   0:00 /bin/dbus-daemon --fork --print-pid 5 --print-address 7 --session
+mshak     5028  0.0  0.0  10352   500 ?        S    Oct19   0:00 /usr/libexec/gvfsd
+root      5269  0.0  0.3  15064  3580 ?        Ss   22:45   0:00 sshd: emazer [priv]
+blaub     5291  0.0  0.1   3116  1144 pts/109  S+   22:46   0:00 BoardTest PylosBoard
+root      5298  0.0  0.0  15064   452 ?        Ss   Oct19   0:00 sshd: rsundber [priv]
+emazer    5308  0.0  0.2  15064  2076 ?        S    22:46   0:00 sshd: emazer@pts/99
+emazer    5310  0.0  0.1   8920  1532 pts/99   Ss+  22:46   0:00 -bash
+rsundber  5322  0.0  0.0  15064   408 ?        S    Oct19   0:00 sshd: rsundber@pts/98
+rsundber  5324  0.0  0.0   8924   592 pts/98   Ss+  Oct19   0:00 -bash
+root      5751  0.0  0.3  15064  3552 ?        Ss   22:49   0:00 sshd: phatalsk [priv]
+phatalsk  5774  0.0  0.2  15196  2196 ?        S    22:49   0:00 sshd: phatalsk@notty
+phatalsk  5776  0.0  0.1  11036  1604 ?        Ss   22:49   0:00 /usr/libexec/openssh/sftp-server
+root      5905  0.0  0.3  15064  3556 ?        Ss   22:50   0:00 sshd: fpike [priv]
+fpike     5917  0.0  0.2  15064  2124 ?        S    22:50   0:00 sshd: fpike@notty
+fpike     5919  0.0  0.1  10660  1404 ?        Ss   22:50   0:00 /usr/libexec/openssh/sftp-server
+root      6654  0.0  0.3  15064  3600 ?        Ss   22:53   0:00 sshd: hlew [priv]
+hlew      6668  0.0  0.2  15064  2180 ?        S    22:53   0:00 sshd: hlew@pts/79
+hlew      6670  0.0  0.1   8920  1528 pts/79   Ss   22:53   0:00 -bash
+hlew      6671  0.0  0.1  10880  1600 ?        Ss   22:53   0:00 /usr/libexec/openssh/sftp-server
+root      6907  0.0  0.3  15172  3676 ?        Ss   22:54   0:00 sshd: anguye50 [priv]
+anguye50  6936  0.0  0.2  15172  2264 ?        S    22:54   0:00 sshd: anguye50@pts/123
+anguye50  6939  0.0  0.1   8920  1560 pts/123  Ss+  22:54   0:00 -bash
+anguye50  7013  0.0  0.1  10872  1596 ?        Ss   22:54   0:00 /usr/libexec/openssh/sftp-server
+root      7050  0.0  0.3  15064  3564 ?        Ss   22:54   0:00 sshd: hrasby [priv]
+hrasby    7072  0.0  0.2  15064  2088 ?        S    22:54   0:00 sshd: hrasby@pts/45,pts/6
+hrasby    7074  0.0  0.1   9180  1632 pts/45   Ss   22:54   0:00 -bash
+cwallis   7105  0.0  0.0  13524   324 ?        Ss   Nov02   0:00 SCREEN
+cwallis   7106  0.0  0.0   8920  1008 pts/33   Ss+  Nov02   0:00 /bin/bash
+cwallis   7115  0.0  0.0   8920  1008 pts/36   Ss   Nov02   0:00 /bin/bash
+rsteiger  7162  0.0  0.1  16036  1432 pts/5    S+   Oct30   0:33 vim BoardTest.cpp
+amarti51  7258  0.0  0.0   1672   276 ?        S    Nov04   0:00 sleeper
+hrasby    7430  0.0  0.1   8844  1640 pts/45   S+   22:55   0:00 pico part1.c
+hlew      7461  0.0  0.7  25312  7484 pts/79   S+   22:56   0:00 sqlplus
+root      7524  0.0  0.3  15064  3596 ?        Ss   20:24   0:00 sshd: abrown30 [priv]
+abrown30  7548  0.0  0.1  15064  2060 ?        S    20:24   0:00 sshd: abrown30@pts/118
+abrown30  7550  0.0  0.1   8924  1548 pts/118  Ss   20:24   0:00 -bash
+hrasby    7884  0.0  0.1   9180  1636 pts/6    Ss   22:58   0:00 -bash
+hrasby    8019  0.0  0.0   1840   460 pts/6    S+   22:58   0:00 /home/phatalsk/moonlander
+root      8394  0.0  0.3  15172  3696 ?        Ss   23:00   0:00 sshd: mdshah [priv]
+mdshah    8439  0.0  0.2  15172  2240 ?        S    23:00   0:00 sshd: mdshah@pts/72
+mdshah    8441  0.0  0.1   8788  1524 pts/72   Ss   23:00   0:00 -bash
+sohuynh   8565  0.4  0.3  15224  3172 pts/65   S+   23:00   0:05 vim part1.c
+rmulliki  8601  0.0  0.0  19524   496 ?        S    Oct19   0:00 /usr/bin/gnome-keyring-daemon -d --login
+mdshah    8610  0.0  0.1  10880  1604 ?        Ss   23:00   0:00 /usr/libexec/openssh/sftp-server
+thhall    8899  0.0  0.0  13932   236 ?        Ss   Oct24   0:01 SCREEN
+thhall    8901  0.0  0.0   8924   572 pts/90   Ss+  Oct24   0:00 /bin/bash
+root      8916  0.0  0.3  15064  3604 ?        Ss   20:28   0:00 sshd: kmnakamu [priv]
+thhall    8969  0.0  0.0   8924   576 pts/94   Ss   Oct24   0:00 /bin/bash
+kmnakamu  9037  0.0  0.1  15064  2068 ?        S    20:28   0:00 sshd: kmnakamu@pts/119
+kmnakamu  9039  0.0  0.1   8792  1520 pts/119  Ss+  20:28   0:00 -bash
+sohuynh   9055  0.0  0.0   1676   436 pts/62   T    23:01   0:00 a.out
+amwise    9066  0.0  0.0  12992   324 ?        Ss   Nov02   0:00 SCREEN
+amwise    9067  0.0  0.1   8924  1056 pts/40   Ss+  Nov02   0:00 /bin/bash
+blaub     9075  0.2  0.3  15552  3180 pts/100  S+   23:01   0:02 vim PylosBoard.cpp
+cwallis   9142  0.0  0.0  13180   232 ?        Ss   Oct19   0:00 SCREEN
+cwallis   9143  0.0  0.0   8920   568 pts/56   Ss+  Oct19   0:00 /bin/bash
+amwise    9144  0.0  0.0   4864   508 pts/40   T    Nov02   0:00 /bin/csh -f ./runall interpreter.sml
+cwallis   9152  0.0  0.0   8920   568 pts/57   Ss+  Oct19   0:00 /bin/bash
+root      9228  0.0  0.3  15064  3544 ?        Ss   23:02   0:00 sshd: rkhudai [priv]
+rkhudai   9244  0.0  0.2  15064  2144 ?        S    23:02   0:00 sshd: rkhudai@notty
+rkhudai   9246  0.0  0.1  10876  1584 ?        Ss   23:02   0:00 /usr/libexec/openssh/sftp-server
+amwise    9502  0.0  0.0   4652   480 pts/40   T    Nov02   0:00 /bin/csh -f ./run1 interpreter.sml tests/2_dynamic_typing/type_error04.df
+amwise    9508  0.0  0.0  20932   384 pts/40   T    Nov02   0:00 /usr/share/smlnj/bin/.run/run.x86-linux @SMLcmdname=/usr/bin/sml @SMLload=/usr/share/smlnj/bin/.heap/sml
+root      9574  0.0  0.3  15064  3600 ?        Ss   23:04   0:00 sshd: jdamelio [priv]
+jdamelio  9586  0.0  0.2  15064  2084 ?        S    23:04   0:00 sshd: jdamelio@pts/70
+jdamelio  9588  0.0  0.1   8924  1560 pts/70   Ss   23:04   0:00 -bash
+rmulliki  9634  0.0  0.0  19524   496 ?        S    Oct19   0:00 /usr/bin/gnome-keyring-daemon -d --login
+root      9701  0.0  0.3  15064  3620 ?        Ss   20:32   0:00 sshd: dwalton [priv]
+dwalton   9731  0.0  0.2  15064  2308 ?        S    20:32   0:00 sshd: dwalton@pts/20
+dwalton   9734  0.0  0.1  10872  1580 ?        Ss   20:32   0:00 /usr/libexec/openssh/sftp-server
+dwalton   9735  0.0  0.1   8924  1572 pts/20   Ss+  20:32   0:00 -bash
+ko-cs357  9764  0.0  0.0  19524   496 ?        S    Oct28   0:00 /usr/bin/gnome-keyring-daemon -d --login
+thhall    9887  0.0  0.0  13192   584 pts/43   Ss+  Oct24   0:00 /bin/bash
+ko-cs101  9995  0.0  0.0  19524   448 ?        S    Oct28   0:00 /usr/bin/gnome-keyring-daemon -d --login
+rmulliki  9999  0.0  0.0  19524   496 ?        S    Oct19   0:00 /usr/bin/gnome-keyring-daemon -d --login
+ko-cs102 10136  0.0  0.0  19524   444 ?        S    Oct28   0:00 /usr/bin/gnome-keyring-daemon -d --login
+rsteiger 10160  0.0  0.0  14160   580 ?        Ss   Oct23   0:36 SCREEN
+rsteiger 10197  0.0  0.0   8920   688 pts/5    Ss   Oct23   0:00 /bin/bash
+cfarwell 10251  0.0  0.0  13912   324 ?        Ss   Nov03   0:01 SCREEN
+cwallis  10481  0.0  0.0  13664   236 ?        Ss   Oct20   0:00 SCREEN
+cwallis  10482  0.0  0.0   8920   572 pts/31   Ss+  Oct20   0:00 /bin/bash
+mdshah   10571  0.0  0.7  25292  7524 pts/72   S+   23:05   0:00 sqlplus              
+root     10599  0.0  0.2  15064  2968 ?        Ss   15:37   0:00 sshd: limendez [priv]
+cfarwell 10602  0.0  0.0  13532   324 ?        Ss   Oct31   0:00 SCREEN
+cfarwell 10603  0.0  0.1   8920  1052 pts/21   Ss   Oct31   0:00 /bin/bash
+bbagley  10619  0.0  0.2  15224  3076 pts/106  S+   23:06   0:00 vim WumpusWorld.cpp
+limendez 10629  0.0  0.1  15064  1500 ?        S    15:37   0:00 sshd: limendez@notty
+limendez 10632  0.0  0.1  10984  1236 ?        Ss   15:37   0:00 /usr/libexec/openssh/sftp-server
+root     10741  0.0  0.3  15064  3584 ?        Ss   23:07   0:00 sshd: dquock [priv]
+dquock   10756  0.0  0.2  15064  2080 ?        S    23:07   0:00 sshd: dquock@pts/8
+dquock   10758  0.0  0.1   8924  1568 pts/8    Ss   23:07   0:00 -bash
+bsweedle 10820  0.0  0.1  12704  1960 pts/101  S+   20:39   0:00 screen -r
+root     10831  0.0  0.3  15064  3580 ?        Ss   23:07   0:00 sshd: scmarsha [priv]
+cfarwell 10847  0.0  0.1   8920  1044 pts/88   Ss   Oct31   0:00 /bin/bash
+root     10851  0.0  0.3  15064  3588 ?        Ss   20:39   0:00 sshd: abrown30 [priv]
+dquock   10857  0.0  0.7  25256  7388 pts/8    S+   23:07   0:00 sqlplus
+abrown30 10865  0.0  0.2  15064  2104 ?        S    20:39   0:00 sshd: abrown30@pts/122
+abrown30 10867  0.0  0.1   8924  1556 pts/122  Ss+  20:39   0:00 -bash
+root     10868  0.0  0.3  15064  3584 ?        Ss   23:07   0:00 sshd: scmarsha [priv]
+cfarwell 10882  0.0  0.1  15212  1244 pts/88   S+   Oct31   0:00 vim BSTDriver.java
+cfarwell 10885  0.0  0.1   8920  1052 pts/95   Ss+  Oct31   0:00 /bin/bash
+scmarsha 10887  0.0  0.2  15064  2152 ?        S    23:08   0:00 sshd: scmarsha@pts/44
+scmarsha 10889  0.0  0.1   8924  1528 pts/44   Ss   23:08   0:00 -bash
+scmarsha 10974  0.0  0.2  15872  2972 ?        S    23:08   0:00 sshd: scmarsha@pts/82
+scmarsha 10976  0.0  0.1   8924  1520 pts/82   Ss   23:08   0:00 -bash
+scmarsha 11046  0.0  0.2  11340  2352 pts/44   S+   23:08   0:00 ssh -X encap2.calpoly-netlab.net
+scmarsha 11052  0.0  0.2  11624  2568 pts/82   S+   23:08   0:00 ssh -X encap2.calpoly-netlab.net
+thhall   11254  0.0  0.0  15436   336 pts/94   S+   Oct24   0:30 vim EditDistance.java
+mshak    11392  0.0  0.0   6880   100 ?        Ss   Oct19   0:00 /bin/dbus-daemon --fork --print-pid 5 --print-address 7 --session
+sohuynh  11460  0.0  0.0   1676   436 pts/62   T    23:11   0:00 a.out
+root     11735  0.0  0.3  15064  3608 ?        Ss   20:44   0:00 sshd: wpatten [priv]
+wpatten  11765  0.0  0.2  15064  2200 ?        S    20:44   0:01 sshd: wpatten@pts/124
+wpatten  11767  0.0  0.1   8924  1584 pts/124  Ss+  20:44   0:00 -bash
+root     13064  0.0  0.3  15064  3572 ?        Ss   23:14   0:00 sshd: cmcgill [priv]
+cmcgill  13090  0.0  0.2  15064  2080 ?        S    23:14   0:00 sshd: cmcgill@pts/66
+cmcgill  13092  0.0  0.1   8920  1556 pts/66   Ss   23:14   0:00 -bash
+cwallis  13131  0.0  0.0   3120   444 pts/36   S+   Nov02   0:34 lc3sim UP1.obj
+cfarwell 13290  0.0  0.1   8920  1052 pts/107  Ss   Nov03   0:00 /bin/bash
+cfarwell 13315  0.0  0.0  11344   700 pts/107  S+   Nov03   0:00 ssh unix1
+root     13390  0.0  0.3  15064  3536 ?        Ss   23:15   0:00 sshd: amarti51 [priv]
+amarti51 13412  0.0  0.2  15064  2152 ?        S    23:16   0:00 sshd: amarti51@notty
+amarti51 13416  0.0  0.1  10880  1624 ?        Ss   23:16   0:00 /usr/libexec/openssh/sftp-server
+cmcgill  13426  0.0  0.1   4600  1372 pts/66   S+   23:16   0:00 nano moonlander.c
+root     13437  0.0  0.3  15064  3576 ?        Ss   23:16   0:00 sshd: tyhollan [priv]
+tyhollan 13445  0.0  0.2  15208  2228 ?        S    23:16   0:00 sshd: tyhollan@pts/102
+tyhollan 13447  0.0  0.1  10872  1600 ?        Ss   23:16   0:00 /usr/libexec/openssh/sftp-server
+root     13549  0.0  0.3  15172  3676 ?        Ss   23:16   0:00 sshd: cmcgill [priv]
+root     13576  0.0  0.3  15064  3580 ?        Ss   23:16   0:00 sshd: rlcontre [priv]
+cmcgill  13588  0.0  0.2  15172  2176 ?        S    23:16   0:00 sshd: cmcgill@pts/108
+cmcgill  13590  0.0  0.1   8920  1540 pts/108  Ss+  23:16   0:00 -bash
+rlcontre 13669  0.0  0.2  15064  2072 ?        S    23:16   0:00 sshd: rlcontre@pts/117
+rlcontre 13671  0.0  0.1   8920  1528 pts/117  Ss   23:16   0:00 -bash
+jdamelio 13870  0.5  0.9  27236  9804 pts/70   S+   23:17   0:01 emacs part1.c
+root     13921  0.0  0.3  15064  3580 ?        Ss   23:17   0:00 sshd: cpolis [priv]
+cpolis   13939  0.0  0.2  15064  2076 ?        S    23:17   0:00 sshd: cpolis@pts/126
+cpolis   13941  0.0  0.1   8924  1548 pts/126  Ss+  23:17   0:00 -bash
+tyhollan 14036  0.0  0.1   8920  1548 pts/102  Ss   23:18   0:00 -bash
+root     14148  0.0  0.3  15064  3576 ?        Ss   23:18   0:00 sshd: wstarr [priv]
+wstarr   14163  0.0  0.2  15228  2228 ?        S    23:18   0:00 sshd: wstarr@notty
+wstarr   14165  0.0  0.1  10996  1748 ?        Ss   23:18   0:00 /usr/libexec/openssh/sftp-server
+amarti51 14492  0.0  0.2  15168  2844 pts/105  S+   23:20   0:00 vim lab7a.sql
+rlcontre 14557  0.0  0.1   4996  1792 pts/117  S+   23:21   0:00 nano atm.c
+dconcors 14560  0.0  0.1   8924  1188 pts/71   Ss   Nov06   0:00 /bin/bash
+geddingt 14575  0.0  0.0   8784   488 ?        S    Oct20   0:00 bash
+cfarwell 14587  0.0  0.1  15148  1244 pts/21   S+   Oct31   0:00 vim LQueue.java
+bsweedle 14593  0.0  0.1   8920  1456 pts/4    Ss   23:21   0:00 /bin/bash
+bsweedle 14616  0.1  0.2  15372  3072 pts/4    S+   23:21   0:00 vim Othello.4
+geddingt 14743  0.0  0.0   1680   148 ?        S    Oct20   0:00 server .7
+jugardne 14812  0.0  0.0   1668   228 ?        S    Nov05   0:00 ./sleeper
+kgirardi 14871  1.2  0.2  15252  2928 pts/18   S+   23:22   0:00 vim moonlander.c
+blaub    14904  1.3  0.2  15420  2872 pts/85   S+   23:23   0:00 vim BoardTest.cpp
+tshopshi 14907  0.0  0.0   4800   204 ?        Ss   Oct19   0:12 /usr/bin/gpg-agent -s --daemon
+tyhollan 14921  0.0  0.0   8584   928 pts/102  R+   23:23   0:00 ps aux
+tyhollan 14922  0.0  0.0   4252   724 pts/102  S+   23:23   0:00 less
+tshopshi 14989  0.0  0.0   6880   200 ?        Ss   Oct19   0:00 /bin/dbus-daemon --fork --print-pid 5 --print-address 7 --session
+tnelso03 15009  0.0  0.0  13004   236 ?        Ss   Oct19   0:00 SCREEN bash
+tnelso03 15010  0.0  0.0   8788   556 pts/34   Ss+  Oct19   0:00 bash
+tnelso03 15065  0.0  0.0   8788   556 pts/35   Ss   Oct19   0:00 /bin/bash
+root     15223  0.0  0.3  15064  3604 ?        Ss   20:56   0:00 sshd: wpatten [priv]
+wpatten  15233  0.0  0.2  15064  2200 ?        S    20:56   0:00 sshd: wpatten@pts/64
+wpatten  15236  0.0  0.1   8924  1580 pts/64   Ss   20:56   0:00 -bash
+jdgood   15342  0.0  0.1   8920  1560 pts/96   Ss   20:57   0:00 -bash
+bsweedle 15369  0.0  0.0   6880   188 ?        Ss   Oct27   0:00 dbus-daemon --fork --print-address 17 --print-pid 19 --session
+bsweedle 15386  0.0  0.0  10356   520 ?        S    Oct27   0:00 /usr/libexec/gvfsd
+smgarret 15712  0.0  0.0   1812   140 ?        S    Oct25   1:03 ./server 0.5
+tshopshi 15771  0.0  0.0   6880   168 ?        Ss   Oct19   0:00 /bin/dbus-daemon --fork --print-pid 5 --print-address 7 --session
+ejgraham 15874  0.0  0.0  42964   296 ?        S    Oct19   0:01 ./server 0
+root     16206  0.0  0.0  14932   792 ?        Ss   Nov03   0:00 sshd: kogorman [priv]
+kogorman 16214  0.0  0.0  15060   720 ?        SN   Nov03   0:02 sshd: kogorman@pts/22
+kogorman 16215  0.0  0.1   9180  1192 pts/22   SNs+ Nov03   0:00 -bash
+smgarret 16312  0.0  0.0   1812   144 ?        S    Oct25   1:03 ./server 0.5
+amarti51 16461  0.0  0.0   1672   272 ?        S    Nov04   0:00 sleeper
+tnelso03 16761  0.0  0.0   9116   288 pts/35   S+   Oct19   0:00 vi example_quiz1.asm
+root     16809  0.0  0.3  15064  3624 ?        Ss   21:00   0:00 sshd: wdreyer [priv]
+wdreyer  16851  0.0  0.2  15064  2088 ?        S    21:00   0:00 sshd: wdreyer@pts/121,pts/125
+wdreyer  16853  0.0  0.1   8920  1536 pts/121  Ss+  21:00   0:00 -bash
+wdreyer  16854  0.0  0.1   8924  1560 pts/125  Ss   21:00   0:00 -bash
+wpatten  17122  0.0  0.7  25448  7500 pts/64   S+   21:02   0:00 sqlplus
+wdreyer  17128  0.0  0.0   1840   464 pts/125  S+   21:02   0:00 /home/phatalsk/moonlander
+amarti51 17324  0.0  0.0   1672   328 ?        S    Nov04   0:01 sleeper
+amwise   17332  0.0  0.0  15620   240 ?        Ss   Oct24   0:01 SCREEN
+dconcors 17575  0.0  1.2  47088 12868 pts/71   Sl+  Nov06   0:16 finch
+geddingt 18100  0.0  0.0   1812   208 ?        S    Oct20   0:00 server .99999999
+mshak    18163  0.0  0.0   6880   312 ?        Ss   Nov02   0:00 /bin/dbus-daemon --fork --print-pid 5 --print-address 7 --session
+mshak    18165  0.0  0.0  10352   772 ?        S    Nov02   0:00 /usr/libexec/gvfsd
+geddingt 18197  0.0  0.0      0     0 ?        Z    Oct20   0:00 [server] <defunct>
+geddingt 18199  0.0  0.0      0     0 ?        Z    Oct20   0:00 [server] <defunct>
+geddingt 18200  0.0  0.0      0     0 ?        Z    Oct20   0:00 [server] <defunct>
+geddingt 18201  0.0  0.0      0     0 ?        Z    Oct20   0:00 [server] <defunct>
+geddingt 18202  0.0  0.0      0     0 ?        Z    Oct20   0:00 [server] <defunct>
+geddingt 18203  0.0  0.0      0     0 ?        Z    Oct20   0:00 [server] <defunct>
+geddingt 18204  0.0  0.0      0     0 ?        Z    Oct20   0:00 [server] <defunct>
+geddingt 18205  0.0  0.0      0     0 ?        Z    Oct20   0:00 [server] <defunct>
+geddingt 18206  0.0  0.0      0     0 ?        Z    Oct20   0:00 [server] <defunct>
+geddingt 18207  0.0  0.0      0     0 ?        Z    Oct20   0:00 [server] <defunct>
+rmckelvi 18330  0.0  0.1  19524  1124 ?        S    Nov05   0:00 /usr/bin/gnome-keyring-daemon -d --login
+hklett   18682  0.0  0.0  13668   732 ?        Ss   Nov06   0:00 SCREEN
+hklett   18683  0.0  0.1   8920  1176 pts/76   Ss   Nov06   0:00 /bin/bash
+root     18785  0.0  0.3  15064  3568 ?        Ss   21:11   0:00 sshd: ebistola [priv]
+bsweedle 18790  0.0  0.1   8920  1264 pts/84   Ss   Oct30   0:00 /bin/bash
+ebistola 18792  0.0  0.2  15204  2552 ?        S    21:11   0:00 sshd: ebistola@notty
+ebistola 18794  0.0  0.1  10996  1656 ?        Ss   21:11   0:00 /usr/libexec/openssh/sftp-server
+root     18839  0.0  0.3  15172  3724 ?        Ss   21:12   0:00 sshd: ckarras [priv]
+ckarras  18887  0.0  0.2  15172  2196 ?        S    21:12   0:00 sshd: ckarras@pts/1
+ckarras  18889  0.0  0.1   8924  1568 pts/1    Ss   21:12   0:00 -bash
+ckarras  19010  0.0  0.8  25992  8504 pts/1    S+   21:12   0:00 emacs create.c
+smgarret 19186  0.0  0.0   1812   144 ?        S    Oct25   1:02 ./server 0.6
+jdgood   19409  0.0  0.7  25312  7340 pts/74   S+   21:16   0:00 sqlplus
+jdgood   19612  0.0  0.7  25392  7428 pts/96   S+   21:17   0:00 sqlplus
+abrown30 19645  0.0  0.1   4468  1252 pts/118  S+   21:17   0:00 nano play.c
+kvoelker 19727  0.0  0.0  19524   724 ?        SN   Nov01   0:00 /usr/bin/gnome-keyring-daemon -d --login
+kvoelker 19782  0.0  0.0  19524   724 ?        SN   Nov01   0:00 /usr/bin/gnome-keyring-daemon -d --login
+root     19884  0.0  0.3  15064  3596 ?        Ss   21:18   0:00 sshd: kgirardi [priv]
+root     19906  0.0  0.3  15064  3588 ?        Ss   21:18   0:00 sshd: tyhollan [priv]
+kgirardi 19912  0.0  0.2  15064  2216 ?        S    21:18   0:04 sshd: kgirardi@pts/18
+kgirardi 19914  0.0  0.1   8960  1688 pts/18   Ss   21:18   0:00 -bash
+tyhollan 19996  0.0  0.2  15224  2204 ?        S    21:18   0:00 sshd: tyhollan@pts/48
+tyhollan 19998  0.0  0.1  10876  1620 ?        Ss   21:18   0:00 /usr/libexec/openssh/sftp-server
+tyhollan 20375  0.0  0.1   8920  1564 pts/48   Ss   21:21   0:00 -bash
+tshopshi 20431  0.0  0.0   6880   172 ?        Ss   Oct26   0:00 /bin/dbus-daemon --fork --print-pid 5 --print-address 7 --session
+tyhollan 20468  0.0  0.7  25312  7368 pts/48   S+   21:22   0:00 sqlplus
+ttonder  20573  0.0  0.1   4468  1280 pts/111  S+   21:22   0:00 nano strings.c
+ttonder  20612  0.0  0.1   4468  1252 pts/49   S+   21:23   0:00 nano main.c
+root     21016  0.0  0.3  15064  3596 ?        Ss   21:25   0:00 sshd: kgirardi [priv]
+kgirardi 21067  0.0  0.2  15064  2204 ?        S    21:25   0:00 sshd: kgirardi@pts/86
+kgirardi 21069  0.0  0.1   8924  1576 pts/86   Ss+  21:25   0:00 -bash
+root     21282  0.0  0.3  15064  3572 ?        Ss   21:26   0:00 sshd: dekhtyar-grader [priv]
+1224     21296  0.0  0.2  15564  2576 ?        S    21:26   0:00 sshd: dekhtyar-grader@pts/89,pts/53
+1224     21298  0.0  0.1   8920  1572 pts/89   Ss+  21:26   0:00 -bash
+bsweedle 21559  0.0  0.2  14060  2100 ?        Ss   Oct30   0:19 SCREEN
+bsweedle 21729  0.0  0.1   8920  1488 pts/91   Ss+  21:29   0:00 /bin/bash
+hklett   22152  0.0  0.1   8924  1184 pts/14   Ss+  Nov06   0:00 /bin/bash
+root     22307  0.0  0.3  14932  3572 ?        Ss   21:31   0:00 sshd: blaub [priv]
+blaub    22319  0.0  0.2  15064  2080 ?        S    21:31   0:01 sshd: blaub@pts/85
+blaub    22321  0.0  0.1   9204  1684 pts/85   Ss   21:31   0:00 -bash
+root     22392  0.0  0.2  15064  3000 ?        Ss   18:51   0:00 sshd: bsweedle [priv]
+bsweedle 22408  0.1  0.1  15064  1572 ?        S    18:51   0:16 sshd: bsweedle@pts/101
+bsweedle 22410  0.0  0.1   8924  1488 pts/101  Ss   18:51   0:00 -bash
+dconcors 22561  0.0  0.1  14208  1092 ?        Ss   Nov05   0:02 SCREEN 1
+tshopshi 22562  0.0  0.0  34664   716 ?        S    Oct26   0:00 /usr/libexec/xfce4/panel-plugins/xfce4-mixer-plugin socket_id 16777267 name xfce4-mixer id 20 display_name Volume Control size 30 screen_position 1
+root     22575  0.0  0.3  15064  3588 ?        Ss   21:33   0:00 sshd: amarti51 [priv]
+root     22603  0.0  0.3  14932  3576 ?        Ss   21:33   0:00 sshd: blaub [priv]
+amarti51 22617  0.0  0.2  15064  2204 ?        S    21:33   0:00 sshd: amarti51@pts/55
+amarti51 22619  0.0  0.1   8924  1580 pts/55   Ss   21:33   0:00 -bash
+blaub    22693  0.0  0.2  15064  2096 ?        S    21:33   0:02 sshd: blaub@pts/100
+blaub    22695  0.0  0.1   9180  1584 pts/100  Ss   21:33   0:00 -bash
+root     22770  0.0  0.3  15064  3588 ?        Ss   21:33   0:00 sshd: amarti51 [priv]
+amarti51 22781  0.0  0.2  15064  2204 ?        S    21:33   0:00 sshd: amarti51@pts/105
+amarti51 22783  0.0  0.1   8924  1580 pts/105  Ss   21:33   0:00 -bash
+mshak    22935  0.0  0.0   6880   180 ?        Ss   Oct19   0:00 /bin/dbus-daemon --fork --print-pid 11 --print-address 15 --session
+mshak    22937  0.0  0.0  10352   500 ?        S    Oct19   0:00 /usr/libexec/gvfsd
+ejgraham 22961  0.0  0.0 124916   300 ?        S    Oct22   0:00 ./server 0
+root     23186  0.0  0.3  15064  3580 ?        Ss   21:35   0:00 sshd: njpowers [priv]
+adeets   23195  0.0  0.0  19524   724 ?        S    Oct31   0:00 /usr/bin/gnome-keyring-daemon -d --login
+njpowers 23227  0.0  0.2  15064  2076 ?        S    21:35   0:00 sshd: njpowers@pts/28
+njpowers 23229  0.0  0.1   8920  1540 pts/28   Ss   21:35   0:00 -bash
+rsteiger 23458  0.0  0.1  13184  1112 pts/41   Ss+  Oct31   0:02 /bin/bash
+root     23679  0.0  0.3  14932  3120 ?        Ss   21:38   0:00 sshd: jtdreisb [priv]
+jtdreisb 23686  0.0  0.1  14932  1572 ?        S    21:38   0:00 sshd: jtdreisb@pts/60
+jtdreisb 23687  0.0  0.1   8924  1580 pts/60   Ss   21:38   0:00 -bash
+amarti51 23989  0.0  0.7  25292  7512 pts/55   S+   21:40   0:00 sqlplus                
+bsweedle 23992  0.2  0.3  16072  4008 pts/84   S+   21:40   0:13 vim PylosBoard.cpp
+root     24204  0.0  0.3  15064  3580 ?        Ss   21:41   0:00 sshd: sohuynh [priv]
+sohuynh  24223  0.0  0.2  15064  2080 ?        S    21:41   0:00 sshd: sohuynh@pts/62
+sohuynh  24225  0.0  0.1   8924  1568 pts/62   Ss+  21:41   0:00 -bash
+dconcors 24444  0.0  0.1   8924  1192 pts/7    Ss   11:12   0:00 /bin/bash
+dconcors 24523  0.0  0.2  13204  2256 pts/7    S+   11:13   0:02 irssi
+amwise   24598  0.0  0.0  13188   580 pts/17   Ss+  Oct25   0:00 /bin/bash
+cfarwell 24753  0.0  0.0  13520   324 ?        Ss   Nov02   0:00 SCREEN
+cfarwell 24754  0.0  0.1   8920  1052 pts/51   Ss+  Nov02   0:00 /bin/bash
+cfarwell 24786  0.0  0.1   8920  1044 pts/52   Ss   Nov02   0:00 /bin/bash
+cfarwell 24800  0.0  0.1  15212  1308 pts/52   S+   Nov02   0:02 vim BST.java
+ndtaylor 24807  0.0  0.0  13124   300 ?        Ss   Oct21   0:00 SCREEN -S calpoly1
+ndtaylor 24808  0.0  0.0   8920   736 pts/19   Ss+  Oct21   0:00 /bin/bash
+root     25315  0.3  0.1  15512  1428 ?        Ssl  19:08   0:46 automount
+amwise   25620  0.0  0.0   8924   572 pts/42   Ss+  Oct25   0:00 /bin/bash
+root     25641  0.0  0.3  15172  3148 ?        Ss   19:08   0:00 sshd: jdgood [priv]
+jdgood   25779  0.0  0.1  15172  1700 ?        S    19:08   0:00 sshd: jdgood@pts/74,pts/96
+jdgood   25781  0.0  0.1   8924  1492 pts/74   Ss   19:08   0:00 -bash
+root     25829  0.0  0.3  15064  3580 ?        Ss   21:52   0:00 sshd: hrasby [priv]
+njpowers 25832  0.0  0.1   4600  1344 pts/28   S+   21:52   0:00 nano p15.cc
+hrasby   25847  0.0  0.2  15064  2112 ?        S    21:52   0:00 sshd: hrasby@pts/16,pts/93
+hrasby   25850  0.0  0.1   9180  1636 pts/16   Ss   21:52   0:00 -bash
+jdgood   25865  0.0  0.1  10992  1284 ?        Ss   19:09   0:00 /usr/libexec/openssh/sftp-server
+rsteiger 25897  0.0  0.0   8920  1020 pts/92   Ss+  Nov03   0:00 /bin/bash
+hrasby   25950  0.0  0.1   8844  1620 pts/16   S+   21:52   0:00 pico part1.c
+hrasby   26383  0.0  0.1   9180  1640 pts/93   Ss   21:55   0:00 -bash
+hrasby   26538  0.0  0.0   1840   464 pts/93   S+   21:55   0:00 /home/phatalsk/moonlander
+root     26653  0.0  0.2  15064  2992 ?        Ss   19:15   0:00 sshd: bbagley [priv]
+root     26655  0.0  0.2  15172  2992 ?        Ss   19:15   0:00 sshd: bbagley [priv]
+bbagley  26665  0.0  0.1  15064  1572 ?        S    19:15   0:00 sshd: bbagley@pts/26
+bbagley  26667  0.0  0.1   8924  1512 pts/26   Ss+  19:15   0:00 -bash
+ttonder  26748  0.0  0.1   8920  1504 pts/49   Ss   19:15   0:00 -bash
+bbagley  26866  0.0  0.1  15172  1584 ?        S    19:16   0:02 sshd: bbagley@pts/106
+bbagley  26868  0.0  0.1   8924  1512 pts/106  Ss   19:16   0:00 -bash
+root     26952  0.0  0.2  15064  2940 ?        Ss   19:16   0:00 sshd: bbagley [priv]
+bbagley  26959  0.0  0.3  16772  3292 ?        S    19:16   0:00 sshd: bbagley@notty
+bbagley  26961  0.0  0.2  12208  2696 ?        Ss   19:16   0:00 /usr/libexec/openssh/sftp-server
+root     27015  0.0  0.3  14932  3568 ?        Ss   21:58   0:00 sshd: blaub [priv]
+blaub    27024  0.0  0.2  15064  2076 ?        S    21:58   0:00 sshd: blaub@pts/109
+blaub    27026  0.0  0.1   9180  1588 pts/109  Ss   21:58   0:00 -bash
+root     27311  0.0  0.3  15064  3552 ?        Ss   21:59   0:00 sshd: wpatten [priv]
+wpatten  27318  0.0  0.2  15064  2156 ?        S    21:59   0:00 sshd: wpatten@notty
+wpatten  27320  0.0  0.1  10872  1596 ?        Ss   21:59   0:00 /usr/libexec/openssh/sftp-server
+sohuynh  27358  0.0  0.0   1676   432 pts/62   T    21:59   0:00 a.out
+1224     27382  0.0  0.1   8920  1576 pts/53   Ss+  22:00   0:00 -bash
+root     27554  0.0  0.3  15172  3708 ?        Ss   22:00   0:00 sshd: mdimapil [priv]
+tshopshi 27751  0.0  0.0  50936   544 ?        Sl   Oct19   0:00 ksmserver
+hklett   27983  0.0  0.1  15692  1932 pts/76   S+   Nov06   0:00 vim src/EvaluateCF.scala
+mdimapil 28010  0.0  0.2  15172  2192 ?        S    22:01   0:00 sshd: mdimapil@pts/9
+mdimapil 28012  0.0  0.1   8924  1564 pts/9    Ss+  22:01   0:00 -bash
+ttonder  28105  0.0  0.1   8920  1456 pts/111  Ss   19:26   0:00 -bash
+tshopshi 28213  0.0  0.0      0     0 ?        Z    Oct19   0:00 [iceauth] <defunct>
+jdamelio 28221  0.0  0.9  27060  9476 pts/75   S+   22:02   0:00 emacs part1.c
+root     28331  0.0  0.0  15172   792 ?        Ss   Nov01   0:00 sshd: dekhtyar-grader [priv]
+1224     28387  0.0  0.0  15172   592 ?        S    Nov01   0:00 sshd: dekhtyar-grader@pts/112
+1224     28389  0.0  0.1   8924  1052 pts/112  Ss+  Nov01   0:00 -bash
+root     28441  0.0  0.2  15172  2996 ?        Ss   16:56   0:00 sshd: rsundber [priv]
+rsundber 28467  0.0  0.1  15172  1460 ?        S    16:56   0:00 sshd: rsundber@pts/46
+rsundber 28469  0.0  0.1   8924  1300 pts/46   Ss+  16:56   0:00 -bash
+root     28470  0.0  0.3  15064  3592 ?        Ss   22:04   0:00 sshd: jsbishop [priv]
+jsbishop 28499  0.0  0.2  15064  2080 ?        S    22:04   0:00 sshd: jsbishop@pts/81
+jsbishop 28501  0.0  0.1   8920  1536 pts/81   Ss+  22:04   0:00 -bash
+ndtaylor 28781  0.0  0.0  13036   300 ?        Ss   Oct21   0:00 SCREEN -S calpoly2
+ndtaylor 28782  0.0  0.0   8920   760 pts/38   Ss+  Oct21   0:00 /bin/bash
+sohuynh  28962  0.0  0.0   1676   436 pts/62   T    22:06   0:00 a.out
+root     29105  0.0  0.0   3872   452 ?        S    22:07   0:00 sleep 7200
+rsomers  29129  0.0  0.0  19524   444 ?        S    Oct25   0:00 /usr/bin/gnome-keyring-daemon -d --login
+sohuynh  29418  0.0  0.0   1676   432 pts/62   T    22:09   0:00 a.out
+root     29424  0.0  0.3  15064  3584 ?        Ss   22:09   0:00 sshd: alipscom [priv]
+alipscom 29447  0.0  0.2  15208  2200 ?        S    22:09   0:00 sshd: alipscom@pts/50
+alipscom 29449  0.0  0.1   8920  1540 pts/50   Ss+  22:09   0:00 -bash
+root     29525  0.0  0.3  15064  3572 ?        Ss   22:09   0:00 sshd: awaas [priv]
+awaas    29537  0.0  0.2  15064  2180 ?        S    22:09   0:00 sshd: awaas@pts/104
+awaas    29539  0.0  0.1   8920  1548 pts/104  Ss+  22:09   0:00 -bash
+alipscom 29611  0.0  0.1  10876  1600 ?        Ss   22:09   0:00 /usr/libexec/openssh/sftp-server
+sohuynh  29846  0.0  0.0   1676   436 pts/62   T    22:10   0:00 a.out
+root     29889  0.0  0.3  15064  3592 ?        Ss   22:10   0:00 sshd: wpatten [priv]
+wpatten  29926  0.0  0.2  15064  2084 ?        S    22:10   0:00 sshd: wpatten@pts/113
+wpatten  29928  0.0  0.1   8924  1576 pts/113  Ss   22:10   0:00 -bash
+wpatten  30129  0.0  0.2  15140  2816 pts/113  S+   22:11   0:00 vim lab7a.sql
+root     30143  0.0  0.3  15064  3616 ?        Ss   22:11   0:00 sshd: dekhtyar [priv]
+dekhtyar 30160  0.0  0.2  15064  2092 ?        SN   22:11   0:00 sshd: dekhtyar@pts/87
+dekhtyar 30162  0.0  0.1   8924  1576 pts/87   SNs  22:11   0:00 -bash
+dekhtyar 30235  0.0  0.4  19464  5048 pts/87   SN+  22:11   0:00 alpine
+root     30255  0.0  0.2  15064  2976 ?        Ss   19:42   0:00 sshd: sohuynh [priv]
+sohuynh  30285  0.0  0.1  15064  1576 ?        S    19:42   0:05 sshd: sohuynh@pts/65
+sohuynh  30291  0.0  0.1   8924  1492 pts/65   Ss   19:42   0:00 -bash
+sohuynh  30551  0.3  0.2  15324  2664 pts/65   T    19:44   0:47 vim part1.c
+root     30687  0.0  0.3  15064  3568 ?        Ss   22:15   0:00 sshd: mstircha [priv]
+mstircha 30699  0.0  0.2  15064  2140 ?        S    22:15   0:00 sshd: mstircha@notty
+mstircha 30701  0.0  0.1  10880  1580 ?        Ss   22:15   0:00 /usr/libexec/openssh/sftp-server
+sohuynh  30714  0.0  0.0   1676   436 pts/62   T    22:15   0:00 a.out
+root     30816  0.0  0.2  15064  2972 ?        Ss   17:12   0:00 sshd: jdalbey [priv]
+jdalbey  30833  0.0  0.1  15224  1492 ?        S    17:12   0:00 sshd: jdalbey@notty
+jdalbey  30835  0.0  0.1  10980  1164 ?        Ss   17:12   0:00 /usr/libexec/openssh/sftp-server
+awaas    31040  0.0  0.1  10876  1596 ?        Ss   22:16   0:00 /usr/libexec/openssh/sftp-server
+root     31576  0.0  0.3  15064  3556 ?        Ss   22:19   0:00 sshd: mstircha [priv]
+mstircha 31583  0.0  0.2  15064  2112 ?        S    22:19   0:00 sshd: mstircha@notty
+mstircha 31586  0.0  0.1  10668  1400 ?        Ss   22:19   0:00 /usr/libexec/openssh/sftp-server
+root     31771  0.0  0.3  15064  3572 ?        Ss   22:20   0:00 sshd: wdreyer [priv]
+wdreyer  31788  0.0  0.2  15064  2088 ?        S    22:20   0:00 sshd: wdreyer@pts/30,pts/97
+wdreyer  31791  0.0  0.1   8920  1532 pts/30   Ss+  22:20   0:00 -bash
+wdreyer  31792  0.0  0.1   8920  1552 pts/97   Ss   22:20   0:00 -bash
+mhui     31796  0.0  0.0  13652   328 ?        Ss   Oct31   0:00 SCREEN
+mhui     31797  0.0  0.0   8920  1012 pts/63   Ss   Oct31   0:00 /bin/bash
+root     31808  0.0  0.3  15064  3176 ?        Ss   19:52   0:00 sshd: mwrosen [priv]
+mwrosen  31823  0.0  0.1  15064  1812 ?        S    19:52   0:02 sshd: mwrosen@pts/116
+mwrosen  31825  0.0  0.1   8924  1524 pts/116  Ss   19:52   0:00 -bash
+mhui     31868  0.0  0.0   8920  1012 pts/67   Ss   Oct31   0:00 /bin/bash
+wdreyer  31964  0.0  0.0   1840   464 pts/97   S+   22:20   0:00 /home/phatalsk/moonlander
+sohuynh  32316  0.0  0.0   1676   432 pts/62   T    22:21   0:00 a.out
+sohuynh  32436  0.0  0.0   1676   436 pts/62   T    22:22   0:00 a.out
+mhui     32445  0.0  0.0  20356   412 pts/67   S+   Oct31   0:02 /usr/share/smlnj/bin/.run/run.x86-linux @SMLcmdname=/usr/bin/sml @SMLload=/usr/share/smlnj/bin/.heap/sml
+1224     32559  0.0  0.1  11248  1928 ?        Ss   22:24   0:00 /usr/libexec/openssh/sftp-server

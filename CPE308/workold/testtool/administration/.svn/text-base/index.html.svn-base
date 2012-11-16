@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>Administration of the TestTool Project</title>
+    <link href="../public/css/layout.css" rel="stylesheet" media="screen" />
+</head>
+<!-- <body bgcolor=white>
+<p align=center>
+<font size=+2>
+<strong>Administration of the TestTool Project</strong>
+</font>
+</p> -->
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>Administration of the TestTool Project</h1>
+    </div>
+    <div id="content">
+      This directory contains administrative files for the TestTool project.
+      Templates for the administrative files are in the CSC 308
+      <a href="http://www.csc.calpoly.edu/~gfisher/classes/308/handouts/index.html#templates">handouts directory.
+      </a>
+      <ul class="nested">
+        <li><a href="governance.html">Project group governance</a>
+        <li><a href="work-breakdown.html">Project work breakdown, for each
+        team member</a>
+        <li><a href="inspection-roster.html">Inspection testing duty roster</a>
+        <li><a href="agendas">Project meeting agendas</a>
+        <li><a href="minutes">Project meeting minutes</a>
+    </div>
+  </div>
+</body>
+</html>

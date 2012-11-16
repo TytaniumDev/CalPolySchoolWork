@@ -1,0 +1,304 @@
+10:04:15 TYHOLLAN> @lab5a
+10:04:17 TYHOLLAN> /*
+10:04:17 TYHOLLAN>   CPE 365 Lab 5a
+10:04:17 TYHOLLAN>   Tyler Holland
+10:04:17 TYHOLLAN> */
+10:04:17 TYHOLLAN> 
+10:04:17 TYHOLLAN> --1.
+10:04:17 TYHOLLAN> select count(*) as COUNT
+10:04:17   2  from (
+10:04:17   3  	select rname
+10:04:17   4  	from contains
+10:04:17   5  	where iname = 'salt'
+10:04:17   6  	intersect
+10:04:17   7  	select rname
+10:04:17   8  	from contains
+10:04:17   9  	where iname = 'pepper'
+10:04:17  10  	);
+     COUNT
+----------
+         3
+
+1 row selected.
+
+10:04:17 TYHOLLAN> 
+10:04:17 TYHOLLAN> --2.
+10:04:17 TYHOLLAN> select rname, price
+10:04:17   2  from recipe
+10:04:17   3  where price = (
+10:04:17   4  	select max(price)
+10:04:17   5  	from recipe
+10:04:17   6  	)
+10:04:17   7  order by rname;
+RNAME                     PRICE
+-------------------- ----------
+Garlic Shrimp              17.5
+
+1 row selected.
+
+10:04:17 TYHOLLAN> 
+10:04:17 TYHOLLAN> --3.
+10:04:17 TYHOLLAN> select
+10:04:17   2  (
+10:04:17   3  	select count(distinct rname)
+10:04:17   4  	from ingredient inner join contains using(iname)
+10:04:17   5  	where foodGroup = 'dairy'
+10:04:17   6  	) / (
+10:04:17   7  	select count(*)
+10:04:17   8  	from recipe
+10:04:17   9  	) as RATIO
+10:04:17  10  from dual;
+     RATIO
+----------
+.666666667
+
+1 row selected.
+
+10:04:17 TYHOLLAN> 
+10:04:17 TYHOLLAN> --4.
+10:04:17 TYHOLLAN> select
+10:04:17   2  (
+10:04:17   3  	select count(distinct rname)
+10:04:17   4  	from recipe
+10:04:17   5  	where type = 'appetizer'
+10:04:17   6  ) *
+10:04:17   7  (
+10:04:17   8  	select count(distinct rname)
+10:04:17   9  	from recipe
+10:04:17  10  	where type = 'entree'
+10:04:17  11  ) *
+10:04:17  12  (
+10:04:17  13  	select count(distinct rname)
+10:04:17  14  	from recipe
+10:04:17  15  	where type = 'dessert'
+10:04:17  16  ) as HOW_MANY
+10:04:17  17  from dual;
+  HOW_MANY
+----------
+         8
+
+1 row selected.
+
+10:04:17 TYHOLLAN> 
+10:04:17 TYHOLLAN> --5.
+10:04:17 TYHOLLAN> --5a.
+10:04:17 TYHOLLAN> select rname, type, price
+10:04:17   2  from recipe inner join contains using(rname)
+10:04:17   3  where iname = 'egg'
+10:04:17   4  order by rname;
+RNAME                TYPE                 PRICE
+-------------------- --------------- ----------
+Apple Treat          dessert                5.5
+Fried Cheese         appetizer              6.5
+Meatloaf             entree                  12
+
+3 rows selected.
+
+10:04:17 TYHOLLAN> 
+10:04:17 TYHOLLAN> --5b.
+10:04:17 TYHOLLAN> select rname, type, price
+10:04:17   2  from recipe
+10:04:17   3  where rname in
+10:04:17   4  (
+10:04:17   5  	select rname
+10:04:17   6  	from contains
+10:04:17   7  	where iname = 'egg'
+10:04:17   8  )
+10:04:17   9  order by rname;
+RNAME                TYPE                 PRICE
+-------------------- --------------- ----------
+Apple Treat          dessert                5.5
+Fried Cheese         appetizer              6.5
+Meatloaf             entree                  12
+
+3 rows selected.
+
+10:04:17 TYHOLLAN> 
+10:04:17 TYHOLLAN> --5c.
+10:04:17 TYHOLLAN> select rname, type, price
+10:04:17   2  from recipe R
+10:04:17   3  where 'egg' in
+10:04:17   4  (
+10:04:17   5  	select iname
+10:04:17   6  	from contains C
+10:04:17   7  	where R.rname = C.rname
+10:04:17   8  )
+10:04:17   9  order by rname;
+RNAME                TYPE                 PRICE
+-------------------- --------------- ----------
+Apple Treat          dessert                5.5
+Fried Cheese         appetizer              6.5
+Meatloaf             entree                  12
+
+3 rows selected.
+
+10:04:17 TYHOLLAN> 
+10:04:17 TYHOLLAN> --5d.
+10:04:17 TYHOLLAN> select rname, type, price
+10:04:17   2  from recipe R
+10:04:17   3  where 'egg' = ANY
+10:04:17   4  (
+10:04:17   5  	select iname
+10:04:17   6  	from contains C
+10:04:17   7  	where R.rname = C.rname
+10:04:17   8  )
+10:04:17   9  order by rname;
+RNAME                TYPE                 PRICE
+-------------------- --------------- ----------
+Apple Treat          dessert                5.5
+Fried Cheese         appetizer              6.5
+Meatloaf             entree                  12
+
+3 rows selected.
+
+10:04:17 TYHOLLAN> 
+10:04:17 TYHOLLAN> --5e.
+10:04:17 TYHOLLAN> select rname, type, price
+10:04:17   2  from recipe R
+10:04:17   3  where exists
+10:04:17   4  (
+10:04:17   5  	select *
+10:04:17   6  	from contains C
+10:04:17   7  	where R.rname = C.rname and iname = 'egg'
+10:04:17   8  )
+10:04:17   9  order by rname;
+RNAME                TYPE                 PRICE
+-------------------- --------------- ----------
+Apple Treat          dessert                5.5
+Fried Cheese         appetizer              6.5
+Meatloaf             entree                  12
+
+3 rows selected.
+
+10:04:17 TYHOLLAN> 
+10:04:17 TYHOLLAN> --6.
+10:04:17 TYHOLLAN> --6a.
+10:04:17 TYHOLLAN> select rname, type, price
+10:04:17   2  from recipe
+10:04:17   3  minus
+10:04:17   4  select rname, type, price
+10:04:17   5  from recipe inner join contains using(rname)
+10:04:17   6  where iname = 'egg'
+10:04:17   7  order by rname;
+RNAME                TYPE                 PRICE
+-------------------- --------------- ----------
+Butter Cookies       dessert                  5
+Garlic Shrimp        entree                17.5
+Hummus               appetizer             4.55
+
+3 rows selected.
+
+10:04:17 TYHOLLAN> 
+10:04:17 TYHOLLAN> --6b.
+10:04:17 TYHOLLAN> select rname, type, price
+10:04:17   2  from recipe
+10:04:17   3  where rname not in
+10:04:17   4  (
+10:04:17   5  	select rname
+10:04:17   6  	from contains
+10:04:17   7  	where iname = 'egg'
+10:04:17   8  )
+10:04:17   9  order by rname;
+RNAME                TYPE                 PRICE
+-------------------- --------------- ----------
+Butter Cookies       dessert                  5
+Garlic Shrimp        entree                17.5
+Hummus               appetizer             4.55
+
+3 rows selected.
+
+10:04:17 TYHOLLAN> 
+10:04:17 TYHOLLAN> --6c.
+10:04:17 TYHOLLAN> select rname, type, price
+10:04:17   2  from recipe R
+10:04:17   3  where 'egg' not in
+10:04:17   4  (
+10:04:17   5  	select iname
+10:04:17   6  	from contains C
+10:04:17   7  	where R.rname = C.rname
+10:04:17   8  )
+10:04:17   9  order by rname;
+RNAME                TYPE                 PRICE
+-------------------- --------------- ----------
+Butter Cookies       dessert                  5
+Garlic Shrimp        entree                17.5
+Hummus               appetizer             4.55
+
+3 rows selected.
+
+10:04:17 TYHOLLAN> 
+10:04:17 TYHOLLAN> --6d.
+10:04:17 TYHOLLAN> select rname, type, price
+10:04:17   2  from recipe R
+10:04:17   3  where 'egg' <> ALL
+10:04:17   4  (
+10:04:17   5  	select iname
+10:04:17   6  	from contains C
+10:04:17   7  	where R.rname = C.rname
+10:04:17   8  )
+10:04:17   9  order by rname;
+RNAME                TYPE                 PRICE
+-------------------- --------------- ----------
+Butter Cookies       dessert                  5
+Garlic Shrimp        entree                17.5
+Hummus               appetizer             4.55
+
+3 rows selected.
+
+10:04:17 TYHOLLAN> 
+10:04:17 TYHOLLAN> --6e.
+10:04:17 TYHOLLAN> select rname, type, price
+10:04:17   2  from recipe R
+10:04:17   3  where not exists
+10:04:17   4  (
+10:04:17   5  	select *
+10:04:17   6  	from contains C
+10:04:17   7  	where R.rname = C.rname and iname = 'egg'
+10:04:17   8  )
+10:04:17   9  order by rname;
+RNAME                TYPE                 PRICE
+-------------------- --------------- ----------
+Butter Cookies       dessert                  5
+Garlic Shrimp        entree                17.5
+Hummus               appetizer             4.55
+
+3 rows selected.
+
+10:04:17 TYHOLLAN> 
+10:04:17 TYHOLLAN> --7.
+10:04:17 TYHOLLAN> --7a.
+10:04:17 TYHOLLAN> select rname
+10:04:17   2  from recipe inner join contains using(rname) inner join ingredient using(iname)
+10:04:17   3  group by rname
+10:04:17   4  having sum(calorie * amount) =
+10:04:17   5  (
+10:04:17   6  	select max(sum(calorie * amount))
+10:04:17   7  	from recipe inner join contains using(rname) inner join ingredient using(iname)
+10:04:17   8  	group by rname
+10:04:17   9  )
+10:04:17  10  order by rname;
+RNAME
+--------------------
+Butter Cookies
+
+1 row selected.
+
+10:04:17 TYHOLLAN> 
+10:04:17 TYHOLLAN> --7b.
+10:04:17 TYHOLLAN> select rname
+10:04:17   2  from recipe inner join contains using(rname) inner join ingredient using(iname)
+10:04:17   3  group by rname
+10:04:17   4  having sum(calorie * amount) >= ALL
+10:04:17   5  (
+10:04:17   6  	select sum(calorie * amount)
+10:04:17   7  	from recipe inner join contains using(rname) inner join ingredient using(iname)
+10:04:17   8  	group by rname
+10:04:17   9  )
+10:04:17  10  order by rname;
+RNAME
+--------------------
+Butter Cookies
+
+1 row selected.
+
+10:04:17 TYHOLLAN> spool off

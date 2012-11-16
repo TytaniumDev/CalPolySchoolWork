@@ -1,0 +1,39 @@
+jMenu5.text=Options
+fileMenu.text=File
+helpMenu.text=Edit
+jMenu1.text=File
+jMenu3.text=Database
+jMenu4.text=Tests
+jLabel1.text=Test Generator
+#NOI18N
+jLabel1.font=Trebuchet MS-Bold-24
+jMenu2.text=Edit
+jMenu6.text=Help
+#NOI18N
+jList1.font=Times New Roman 18-Bold-18
+jLabel2.text=# of Questions
+jLabel3.text=Difficulty
+jTextField1.text=
+jTextField2.text=
+jTextField3.text=
+jTextField4.text=
+jLabel4.text=Do Not Include Questions Since:
+#NOI18N
+jLabel4.font=Tahoma-Plain-14
+jTextField5.text=
+jLabel5.text=/
+jTextField6.text=
+jTextField7.text=
+jLabel6.text=/
+jLabel7.text=Include Questions By Author:
+#NOI18N
+jLabel7.font=Tahoma 14-Plain-14
+jTextField8.text=
+jLabel8.text=Search By Keywords:
+#NOI18N
+jLabel8.font=Tahoma 14 14-Plain-14
+jTextField9.text=
+jLabel9.text=Matches Found:
+jButton1.text=BACK
+jButton2.text=NEXT
+jButton3.text=TEST PREVIEW

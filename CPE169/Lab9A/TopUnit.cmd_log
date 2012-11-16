@@ -1,0 +1,6 @@
+xst -ise "C:/Documents and Settings/s169s4b1/Desktop/Lab9A/Lab9A.ise" -intstyle ise -ifn TopUnit.xst -ofn TopUnit.syr
+ngdbuild -ise "C:/Documents and Settings/s169s4b1/Desktop/Lab9A/Lab9A.ise" -intstyle ise -dd _ngo -nt timestamp -uc "finalpins.ucf" -p xc3s500e-fg320-4 "TopUnit.ngc" TopUnit.ngd
+map -ise "C:/Documents and Settings/s169s4b1/Desktop/Lab9A/Lab9A.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o TopUnit_map.ncd TopUnit.ngd TopUnit.pcf
+par -ise "C:/Documents and Settings/s169s4b1/Desktop/Lab9A/Lab9A.ise" -w -intstyle ise -ol std -t 1 TopUnit_map.ncd TopUnit.ncd TopUnit.pcf
+trce -ise "C:/Documents and Settings/s169s4b1/Desktop/Lab9A/Lab9A.ise" -intstyle ise -e 3 -s 4 -xml TopUnit TopUnit.ncd -o TopUnit.twr TopUnit.pcf -ucf finalpins.ucf
+bitgen -ise "C:/Documents and Settings/s169s4b1/Desktop/Lab9A/Lab9A.ise" -intstyle ise -f TopUnit.ut TopUnit.ncd

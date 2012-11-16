@@ -1,0 +1,9 @@
+//Symbol Name		Page Address
+//----------------	------------
+//	DDR                     3311
+//	DSR                     3310
+//	Next                    330B
+//	Ready                   3304
+//	SaveR2                  3312
+//	SaveR3                  3313
+//	SaveR7                  3314

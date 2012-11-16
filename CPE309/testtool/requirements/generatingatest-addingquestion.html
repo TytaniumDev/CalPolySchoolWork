@@ -1,0 +1,110 @@
+<?
+$title = "2.2.1  Basic Generation";
+require "../header.php";
+?>
+<a name="Basic Generation">
+<h3>
+2.2.1 Basic Generation
+</h3>
+</a>
+<p>
+Once the user clicks the <i> add a question</i> button on the generating a test front page, a new dialog is opened. This dialog enables the user to add a question or multiple questions to the test in two levels of laziness. The first level, or most lazy level, is discussed in this section. An advanced level is discussed in section 2.2.2.</p>
+<p><br>
+
+<p>
+By default the dialog opens in the most lazy mode. This is shown in Figure 2.2.2
+
+
+<p><br><hr>
+
+
+
+<a name="Basic Generation">
+<p align=center>
+<img src="images/basicgenerationclean.JPG" border="1">
+</p>
+</a>
+<p align=center> <i>Figure 2.2.2: The dialog where the user can add a question or multiple questions to the test he is building. By default the most lazy mode is opened.</i></p>
+
+<hr>
+</a>
+<br>
+<p>
+
+This mode allows for simplicity and easy test generation for the user. There are 4 fields in this mode that must be filled in (by clicking and typing). In the top right corner is the <i>course</i>. This is the course, as listed in the question database, the Test Tool will pull questions from. Directly to the right of that is the <i>qty</i> field. This is the number of questions the test is to have. Below <i>course</i> is <i>time limit</i>. This is how long the user wants the test to be. To the right of the <i>time limit</i> is a drop down menu field where the user chooses a time range of passed use for the question the test generator will not choose questions from. </p>
+
+<p> Upon clicking the generate button at the bottom of the dialog the test generator will select questions from the database that match all the criteria (always matching the <i>qty</i> parameter exactly).</p>
+
+<p><br>
+An example is shown in figure 2.2.2.1 where the <i>qty</i> is 3, the <i>course</i> is CPE 308, there is a 20 min. time limit, and questions are not to be pulled that have been used in the last 2 years. 
+
+
+<p><br>
+
+<hr>
+<a name="Basic Generation Example">
+<p align=center>
+<img src="images/basicgenerationfilled.jpg" border="1">
+</p>
+</a>
+<p align=center> <i>Figure 2.2.2.1: An example of basic generation with all required fields filled in.</i></p>
+
+<hr>
+</a>
+<br>
+<p>
+
+<p><br>
+The front page of the generating a test section will be updated as well when the user clicks <i>Generate</i>. In the previous example, the first two CPE 308 questions are short answer and the third is a coding. Any type of question would result in the same behavior while using the basic form of generation. 
+
+
+<p><br>
+<hr>
+<p><br>
+<a name="Front Page with Added Questions">
+<p align=center>
+<img src="images/testgenerationfrontfilled1.jpg" border="1" width="800" height="650">
+</p>
+</a>
+<p align=center> <i>Figure 2.2.2.2: Front page with 3 added questions.</i></p>
+
+<hr>
+</a>
+<br>
+<p>
+
+
+
+
+<p><br><b><u>Rules the test generator will follow</u></b></p>
+
+<p><br>
+<li>The test generator will pull all the questions from the database in the <i>course</i> parameter. If there are fewer questions with the desired course then an error will be displayed and the user will be asked to change the quantity.</li></p>
+<p>
+<li>It will run through the pulled questions starting with the first and moving on through them. If the question meets all the parameters, i.e. the <i>time limit</i> and the last used, then it is added, otherwise it is skipped. </li></p>
+
+<p><li>When the quantity of questions desired is fulfilled the test generater will add the question set pulled to the test.</li></p>
+
+
+<p><li>If there are not enough questions in the database to fulfill the time limit requirement the test generator will run through the pulled questions (the ones from the desired course) and pull questions that meet the time limit with a plus or minus one minute range. If there are still not enough questions it will repeat with a plus or minus two minute range. This can continue up to a plus or minus five minute range. If at that time a full test cannot be generated the user will be notified of an error and asked to adjust the parameter.<br>
+See table in advanced generation section.</li></p>
+
+<p>
+<li>If there are not enough questions in the database to fulfill the last used parameter then the next closest question(s) will be pulled.</li>
+<p>
+<br>
+<br>
+<br>
+<br>
+<hr width=80% size=3>
+<center>
+<font size=-1>
+<font color=black> Prev: </font><a href="generatingatest-overview.html">Generating A Test</a></font>
+ | <font color=black> Next: </font><a href="generatingatest-addingquestionadvanced">Advanced Generation</a></font>
+ | <font color=black> Up: </font><a href="generatingatest-overview.html">Generating A Test</a>
+ | <font color=black> Top: </font><a href="index.html">Index</a></font>
+</center>
+<hr width=80% size=3>
+<?
+require "../footer.php";
+?>

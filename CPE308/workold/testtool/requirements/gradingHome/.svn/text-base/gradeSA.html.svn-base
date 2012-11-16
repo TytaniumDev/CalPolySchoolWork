@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestTool | Requirements | Test Grading</title>
+  <link href="../../public/css/layout.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>TestTool</h1>
+      <h2 class="title">2.5.9 Grading Short Answer Question</h2>
+    </div>
+    <div id="content">
+      <p>
+    This is the professor's home screen when trying to grade a Short Answer question. 
+	<ul class="nested">
+	   <li><b>Auto Grading:</b> The program will compare all words in the student's answer to key words specified by the creator of the question, in <a href="../databaseHome/databaseaddshortanswer.html">Figure 2.2.2.9.2</a>, in order to generate a score.</li>
+       <li><b>Manual Grading:</b> After evaulating the question and the student's answers with the key words highlighted, the professor can leave a note for the 
+              student and edit the point-value field by clicking on the grey box in order to input a score.</li>
+	</ul>
+      <br/><br/>
+      </p>
+      <img src="questionsShortAnswer.png"/>
+      <center><em>Figure 2.5.9.1 - Correct Answer</em></center>
+      <br/><br/>
+      <p>
+      </p>
+      <img src="questionsShortAnswerAlt.png"/>
+      <center><em>Figure 2.5.9.2 - Incorrect Answer</em></center>
+      <p>
+      <div id="navigation"> 
+          Prev: <a href ="gradeProgram.html"> Programming Question</a> | Next: <a href="gradeTF.html">True/False Question</a> | 
+          Up: <a href="../functional.html">Functional</a> | Top: <a href="../index.html">index</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

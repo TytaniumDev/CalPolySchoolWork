@@ -1,0 +1,22 @@
+Phys day 1:
+meter = length
+kilogram = mass
+second = time
+
+kilo  = 1000x
+milli = 1/1000
+centi = 1/100
+
+Unit Conversions:
+2.54 cm = 1 inch --> (1 in / 2.54cm)
+1km = 1000m
+1km^2 = 1000^2 m^2
+
+problem:
+1.013x10^5 N/m^2 --> lb/in^2
+9.8N = 2.2lb
+answer:
+1m^2 = 100^2 cm^2
+1 = 1m^2 / 100^2 cm^2
+
+1.013x10^5 N/m^2 * 1m^2 / 100^2cm^2 * 2.54^2 cm^2/1 in^2 * 2.2lb / 9.8N = 

@@ -1,0 +1,105 @@
+# Resources for the StudentHomeView class
+
+# top-level menus
+
+fileMenu.text = File
+showAboutBox.Action.text = About...
+showAboutBox.Action.shortDescription = Show the application's information dialog
+
+# status bar resources
+
+StatusBar.messageTimeout = 5000
+StatusBar.busyAnimationRate = 30
+StatusBar.idleIcon = busyicons/idle-icon.png
+StatusBar.busyIcons[0]  = busyicons/busy-icon0.png
+StatusBar.busyIcons[1]  = busyicons/busy-icon1.png
+StatusBar.busyIcons[2]  = busyicons/busy-icon2.png
+StatusBar.busyIcons[3]  = busyicons/busy-icon3.png
+StatusBar.busyIcons[4]  = busyicons/busy-icon4.png
+StatusBar.busyIcons[5]  = busyicons/busy-icon5.png
+StatusBar.busyIcons[6]  = busyicons/busy-icon6.png
+StatusBar.busyIcons[7]  = busyicons/busy-icon7.png
+StatusBar.busyIcons[8]  = busyicons/busy-icon8.png
+StatusBar.busyIcons[9]  = busyicons/busy-icon9.png
+StatusBar.busyIcons[10] = busyicons/busy-icon10.png
+StatusBar.busyIcons[11] = busyicons/busy-icon11.png
+StatusBar.busyIcons[12] = busyicons/busy-icon12.png
+StatusBar.busyIcons[13] = busyicons/busy-icon13.png
+StatusBar.busyIcons[14] = busyicons/busy-icon14.png
+logout.Action.text=
+logout.Action.shortDescription=
+#NOI18N
+testInfo.border.titleFont=Tahoma-Bold-18
+testInfo.border.title=Test Information: CPE102_Midterm1
+students.border.title=Students In Test Room
+#NOI18N
+students.border.titleFont=Tahoma-Bold-18
+jLabel1.text=Questions:
+#NOI18N
+jLabel1.font=Tahoma-Bold-14
+#NOI18N
+jLabel2.font=Tahoma-Bold-14
+jLabel2.text=Time:
+jLabel3.text=Author:
+displayCheck.Action.text=
+displayCheck.Action.shortDescription=
+jLabel9.text=aeyang
+#NOI18N
+jLabel9.font=Tahoma-Plain-14
+jLabel10.text=jdgood
+jLabel11.text=jrawson
+jLabel12.text=jstewa01
+jLabel13.text=mportiz
+jLabel14.text=tyhollan
+#NOI18N
+jLabel15.font=Tahoma 14 Plain
+jLabel15.text=Ready
+jLabel16.text=Not Ready
+#NOI18N
+jLabel16.font=Tahoma 14 12 Plain
+#NOI18N
+jLabel17.font=Tahoma 14 12 12 Plain
+jLabel20.text=Ready
+#NOI18N
+jLabel20.font=Tahoma 14 12 12 12 Plain
+jLabel17.text=Ready
+#NOI18N
+jLabel21.font=Tahoma 14 12 12 Plain
+jLabel21.text=Not Ready
+mportizReady.text=Not Ready
+#NOI18N
+mportizReady.font=Tahoma 14 12 12-Bold-14
+displayNotReady.Action.text=
+displayNotReady.Action.shortDescription=
+#NOI18N
+jComboBox1.font=Tahoma-Plain-18
+jLabel18.text=mportiz Status:
+#NOI18N
+jLabel18.font=Tahoma-Plain-18
+#NOI18N
+jLabel14.font=Tahoma-Plain-14
+jLayeredPane1.border.title=Messages
+#NOI18N
+jLayeredPane1.border.titleFont=Tahoma-Bold-18
+jTextField1.text=Type Messages here...
+jLabel23.text=
+#NOI18N
+jLabel23.font=Tahoma 14 Bold
+jLabel22.text=20
+#NOI18N
+jLabel22.font=Tahoma 14 12 14 14 Plain
+jLabel5.text=Author:
+#NOI18N
+jLabel5.font=Tahoma 14-Bold-14
+jLabel25.text=Gene Fisher
+#NOI18N
+jLabel25.font=Tahoma 14 12 14 14 12 Plain
+jLabel26.text=60 mins
+#NOI18N
+jLabel26.font=Tahoma 14 12 14 14 12 Plain
+jLabel24.text=100
+#NOI18N
+jLabel24.font=Tahoma 14 12 14 14 12 Plain
+jLabel4.text=Points:
+#NOI18N
+jLabel4.font=Tahoma 14-Bold-14

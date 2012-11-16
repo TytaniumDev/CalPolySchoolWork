@@ -1,0 +1,32 @@
+/**
+ * Lab 9 Part 1 Q 3
+ * Tyler Holland (tyhollan)
+ * CPE 365
+ */
+ 
+CREATE OR REPLACE PROCEDURE addToOrder(ono_ odetails.ono%type,
+    pno_ odetails.pno%type, qty_ odetails.qty%type, commit_ boolean)
+AS
+--DECLARE
+  orderValue_ parts.price%type;
+  
+
+BEGIN
+ dbms_output.put_line('**** Before the change ****');
+ select ono
+ into throwaway_
+ from orders
+ where ono = ono_;
+ 
+ for order_rec in order_cur loop
+  exit when order_cur%notfound;
+  dbms_output.put_line('ONO ' || ono_ || ', PNO: ' ||
+    order_rec.pno || ', QTY: ' || order_rec.qty);
+  end loop;
+ 
+EXCEPTION
+ WHEN OTHERS THEN
+  dbms_output.put_line('Error occurred: ' || SQLERRM);
+ END;
+/
+show errors

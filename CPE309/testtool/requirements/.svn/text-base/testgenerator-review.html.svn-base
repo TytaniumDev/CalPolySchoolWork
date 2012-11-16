@@ -1,0 +1,62 @@
+
+<?
+$title = "1.5.2 Fain & Company Test Generator Review";
+require "../header.php";
+?>
+
+<h3>
+1.5.2 Fain & Company Test Generator Review
+</h3>
+</a>
+<p>
+The Test Generator created by Fain & Company has been around since 1999. During its 11 years, it has had time to
+mature and become an excellent product with a wide array of useful features. However, given the large number of
+options, they must be implemented in an easy to use interface that makes sense. This is where the Test Generator
+falls short. The Test Generator GUI is fairly cluttered and common actions such as adding single questions to a
+database are not immediately apparent. The Test Generator makes an attempt to ease the frustration of the user by
+constantly having blank info panels filled with tutorial information, but this is insufficient.  Overall, this tool
+feels very powerful, but it’s complicated UI often hinders timely completion of simple tasks.
+</p>
+<B>Good Features: </B>
+<ul>
+<li> Course properties contain  all pertinent information such as class name, start time, instructor, students enrolled,
+and any administrators or test creators for the particular class
+<li> Score/Grade data is retained from given exams
+<li> All deleted tests are archived for possible retrieval or analysis
+<li> In addition to tests, study guides can also be created
+<li> Secure login to the program
+<li> 80+ default question criteria
+<li> Creation, distribution, and grading of tests in the same application
+<li> Visually displays all users and properties of those users such as type (Admin, Instructor, Student), location,
+classes enrolled or teaching, and past performance. It should be noted that permissions are required to view this
+information
+<li> Allows for the easy removal of duplicate questions in a question bank
+<li> Email notifications can be enabled
+<li> Common formatting options such as bold, italics, and justification are available for use on tests
+</ul>
+<B>Bad Features: </B>
+<ul>
+<li> Complicated, counter-intuitive UI
+<li> Question types are limited to the default types
+</ul>
+<B>Missing Features: </B>
+<ul>
+<li> The ability to have coding questions is not available</li>
+<li> Execution of scripts or other applications is not supported
+<li> Unable to organize or sort questions in the question banks
+<li> Questions can not be assigned a difficulty level
+</ul>
+<br>
+<br>
+<br>
+<br>
+<hr width=80% size=3>
+<center>
+<font size=-1>
+<font color=black> Prev: </font><a href="webassign-review.html">WebAssign</a>
+ | <font color=black> Next: </font><a href="etm-review.html">Easy Test Maker</a>
+ | <font color=black> Up: </font><a href="related.html">related</a>
+ | <font color=black> Top: </font><a href="index.html">index</a></font>
+</center>
+<hr width=80% size=3>
+<? require "../footer.php" ?>

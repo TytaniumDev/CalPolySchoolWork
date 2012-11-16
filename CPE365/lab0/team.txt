@@ -1,0 +1,2 @@
+Celtics,E,Boston
+Lakers,W,Los Angeles

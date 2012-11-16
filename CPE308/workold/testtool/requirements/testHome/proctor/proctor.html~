@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestTool | Requirements | Test Taking | Proctor Home</title>
+  <link href="../../../public/css/layout.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>TestTool</h1>
+      <h2 class="title">2.3.1 Proctor Home</h2>
+    </div>
+    <div id="content">
+      <p>
+          Below is the home screen for the proctor's computer after they have logged 
+           into their specialized computer.<br/><br/>
+        Refer to<a href="../ui-overview.html#figure-1-3">Figure 1.3</a>
+          Errors in test allows the proctor to broadcast messages to all computers 
+           informing students of errors on the test
+          <br/><br/>
+          The student list shows the current list of students that are eligible to take 
+           the test.  The add and remove buttons allow a proctor to add or remove 
+           students from the list if need be.
+          <br/><br/>
+          Begin Test takes control of student computers and forces them to the student 
+           authentication screen.<br/><br/>
+          <a href="choosetest/administertest.html">Administer Test</a><br/>
+          <a href="choosetest/testchosen/addstudent.html">Add Student</a><br/>
+          <a href="choosetest/testchosen/dropstudent.html">Drop Student</a><br/>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

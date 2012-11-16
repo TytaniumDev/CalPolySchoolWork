@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestTool | Requirements | Test Taking | Proctor Home | Add Student</title>
+  <link href="../../../../../public/css/layout.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>TestTool</h1>
+      <h2 class="title">2.4.1.2 Add Student</h2>
+    </div>
+    <div id="content">
+      <p>
+        <p>After the teacher has loaded up a test, see Figures
+        <a href="../administertest.html#figure-2-4-1-1-1">2.4.1.1.1</a>, 
+        <a href="../administertest.html#figure-2-4-1-1-2">2.4.1.1.2</a>, and
+        <a href="../administertest.html#figure-2-4-1-1-3">2.4.1.1.3</a>, 
+        they can add a student to the list by clicking on the Add button in 
+        the student list pane.  This will result in a dialog as seen
+        in Figure 2.4.1.2.1.</p>
+        <img src="addstudent/ProctorHomeAddStudentEmpty.png" height="400" width="600"/>
+         <p align="center">Figure 2.4.1.2.1: Empty Add Student Dialogue</p>
+        <p>Figures 2.4.1.2.2 and 2.4.1.2.3 show an attempt to add a student 
+        that does not exist in the user database.</p>
+        <img src="addstudent/addfail/ProctorHomeAddNonStudent.png" height="400" width="600"/>
+         <p align="center">Figure 2.4.1.2.2: Filled Add Student Dialogue</p>
+        <img src="addstudent/addfail/ProctorHomeAddStudentNotExistError.png" height="400" width="600"/>
+         <p align="center">Figure 2.4.1.2.3: Failed Add Student Dialogue</p>
+        <p>Figures 2.4.1.2.4 and 2.4.1.2.5 show a successful attempt to add a 
+        student to the test.</p>
+        <img src="addstudent/addsuccess/ProctorHomeAddStudent.png" height="400" width="600"/>
+         <p align="center">Figure 2.4.1.2.4: Filled Add Student Dialogue</p>
+        <img src="addstudent/addsuccess/ProctorHomeAddStudentSuccess.png" height="400" width="600"/>
+         <p align="center">Figure 2.4.1.2.5: Successful Add Student Dialogue</p>
+      </p>
+    </div>
+   <div id="navigation">
+       Prev: <a href="../administertest.html">administrate</a> | Next: <a href="dropstudent.html">dropstudent</a> | Up: <a href="../../proctor.html">proctor</a> 
+       | Top: <a href="../../../../index.html">index</a>
+     </div>
+  </div>
+</body>
+</html>

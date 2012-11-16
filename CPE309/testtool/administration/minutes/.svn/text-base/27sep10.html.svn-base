@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>
+Minutes of the Most Interesting Team in the World Team Meeting, 27 September 2010
+</title>
+</head>
+<body bgcolor=white>
+<p align=center>
+<font size=+2>
+<strong>Minutes of the Most Interesting Team in the World Team Meeting
+<br>
+3:20 - 3:40 PM, 27 September 2010</strong>
+</font>
+</p>
+<br>
+<br>
+<strong>Present</strong>:
+Ben Voogd, Richard Steiger, Sarah Hoke, Nathan Mock, Connor Lange
+<br>
+<br>
+<strong>Absent</strong>:
+<br>
+<br>
+<strong>Excused:</strong>:
+Sean Glover
+<br>
+<br>
+
+
+<B>3:20</B> - Asked Fisher about grading policy.  Learned that Testtool should provide option for offline grading by instructor and immediate feedback.<br>
+<B>3:23</B> - Discussed how test questions should be viewed by taking, came to conclusion that Testtool should provide option to view one question at a time or all at once.<br>
+<B>3:25</B> - Discussed functionality of adding questions to database.  As the question type is entered, the rest of the page will adjust to accomodate.<br>
+<B>3:27</B> - Confirmed option of sortable database columns.<br>
+<B>3:29</B> - Fisher expressed his desire for option to include short snippets of text and diagrams to introduce or explain forthcoming questions.<br>
+<B>3:31</B> - Discussed how tests would be taken using Testtool, Fisher indicated a master to slave relationship inside a closed classroom.<br>
+<B>3:34</B> - Inquired about how coding questions should be graded.  Fisher stated his desire of having a script written by the instructor be used to compare output of student program with that of the instructor.<br>
+<B>3:36</B> - Learned that Testtool should provide the instructor the ability to save generated tests for later use.<br>
+<B>3:39</B> - Fisher indicated that he would like the option to restrict or allow student navigation to previous test questions during the exam.<br>
+<B>3:40</B> - Meeting ended.<br>
+
+
+</body>
+</html>

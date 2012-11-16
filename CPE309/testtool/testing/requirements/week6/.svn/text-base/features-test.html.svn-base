@@ -1,0 +1,63 @@
+<head>
+<title>1.5.7 - Feature Comparison Matrix Inspection Test</title>
+</head>
+
+<style type="text/css">
+td {
+    border: 1px solid black;
+}
+
+th {
+    border: 1px solid black;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+</style>
+
+<h3>
+1.5.7.  Feature Comparison Matrix Inspection Test
+</h3>
+
+<table>
+<tr>
+    <th>Component</th>
+    <th>Inspector</th>
+    <th>Date</th>
+    <th>Status</th>
+    <th>Remarks</th>
+</tr>
+<tr>
+    <td>1.5.7 H1</td>
+    <td>BSV</td>
+    <td>10/29/2010</td>
+    <td>FIX</td>
+    <td>Wrong size/font</td>
+</tr>
+<tr>
+    <td>1.5.7 A1</td>
+    <td>BSV</td>
+    <td>10/29/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>1.5.7 A2</td>
+    <td>BSV</td>
+    <td>10/29/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>1.5.7 A3</td>
+    <td>BSV</td>
+    <td>10/29/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+
+</table>
+

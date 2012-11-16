@@ -1,0 +1,92 @@
+<head>
+<title>2.4.1 - Preview Exams Inspection Test</title>
+</head>
+
+<style type="text/css">
+td {
+    border: 1px solid black;
+}
+
+th {
+    border: 1px solid black;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+</style>
+
+<h3>
+2.4.1.  Preview Exams Inspection Test
+</h3>
+
+<table>
+<tr>
+    <th>Component</th>
+    <th>Inspector</th>
+    <th>Date</th>
+    <th>Status</th>
+    <th>Remarks</th>
+</tr>
+<tr>
+    <td>2.4.1 H1</td>
+    <td>RCL</td>
+    <td>11/12/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4.1 P1</td>
+    <td>RCL</td>
+    <td>11/12/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4.1 I1</td>
+    <td>RCL</td>
+    <td>11/12/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4.1 P2</td>
+    <td>RCL</td>
+    <td>11/12/2010</td>
+    <td>FIX</td>
+    <td>Figure 2.4.1.2 does not exist</td>
+</tr>
+<tr>
+    <td>2.4.1 P3</td>
+    <td>RCL</td>
+    <td>11/12/2010</td>
+    <td>FIX</td>
+    <td>Under dev</td>
+</tr>
+<tr>
+    <td>2.4.1 A1</td>
+    <td>RCL</td>
+    <td>11/12/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4.1 A2</td>
+    <td>RCL</td>
+    <td>11/12/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2.4.1 A3</td>
+    <td>RCL</td>
+    <td>11/12/2010</td>
+    <td>DONE</td>
+    <td></td>
+</tr>
+
+
+</table>
+

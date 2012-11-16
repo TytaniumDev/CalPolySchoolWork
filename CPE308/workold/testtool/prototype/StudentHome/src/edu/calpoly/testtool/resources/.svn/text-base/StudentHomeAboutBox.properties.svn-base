@@ -1,0 +1,5 @@
+title = About: ${Application.title} ${Application.version} 
+
+closeAboutBox.Action.text = &Close
+closeButton.text=Yes, I'm sure
+closeButton1.text=No

@@ -1,0 +1,62 @@
+<?
+$title = "2.4.2.  Preview Exams";
+require "../header.php";
+?>
+<a name="Preview Exams">
+<h3>
+2.4.1.  Preview Exams
+</h3>
+</a>
+<p>
+To preview an exam, the instructor first clicks on the Handling tab.  Once he selects the Handling tab, the system displays a window 
+in the form of Figure 2.4.1a.
+</p>
+<br>
+<br>
+<hr>
+<center>
+<p><img src='images/handling-top.png'></p>
+<p>Figure 2.4.1a:  Initial UI.</p>
+</center>
+</p>
+<br>
+<br>
+<hr>
+<br>
+<br>
+The instructor then clicks on the Preview an Existing Exam button.  Once the instructor selects that button, the system displays a figure in 
+the form of Figure 2.4.1b.
+<br>
+<br>
+<hr>
+<center>
+<p><img src='images/preview.png'></p>
+<p>Figure 2.4.1b:  Picking an Exam to Preview.</p>
+</center>
+</p>
+<br>
+<br>
+<hr>
+The <em>Exam</em> field represents which exam in the exam database that the instructor would like to preview.  The <em>Questions Per Page</em> field
+enables the instructor to indicate how he wants the exam to be formatted, specifically in how many questions appear per exam page.  
+<br>
+<br>
+The instructor then clicks the Preview button.  Upon clicking that button, the system displays <a href="images/splash_screen_student.gif">
+Figure 2.5.1</a>.  The instructor then takes the test, as provided by the exam database, that he selected.
+For information regarding the test taking process, see <a href="taking-test.html">Section 2.5</a>.
+
+<br>
+<br>
+<br>
+<hr width=80% size=3>
+<center>
+<font size=-1>
+<font color=black> Prev: </font>[none]
+ | <font color=black> Next: </font><a href="distribute-top.html">distribute</a>
+ | <font color=black> Up: </font><a href="handling-top.html">handling</a>
+ | <font color=black> Top: </font><a href="index.html">index</a></font>
+</center>
+<hr width=80% size=3>
+<?
+require "../footer.php";
+?>
